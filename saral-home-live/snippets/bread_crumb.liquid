@@ -1,0 +1,71 @@
+ <style>
+   ul:not(.list-unstyled):not([list-unstyled]) li::before {
+    display: none;
+    content: '';
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-left: -16px;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+}
+   ul:not(.list-unstyled):not([list-unstyled]) li {
+    padding-left: 0px;
+}
+        /* Breadcrumb container */
+        .breadcrumb {
+           padding: 25px 0 10px 0;
+            list-style: none;
+        }
+
+        /* Breadcrumb list items */
+        .breadcrumb li {
+            display: inline;
+            font-size: 15px;
+           
+         
+        }
+
+        /* Separator between breadcrumb items */
+        .breadcrumb li::after {
+            content: '>';
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        /* Last item in the breadcrumb */
+        .breadcrumb li:last-child::after {
+            content: '  ';
+        }
+
+        /* Breadcrumb links */
+        .breadcrumb a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Breadcrumb link hover effect */
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+   .breadcrumb ul {
+    margin: 0px;
+    padding: 0px;
+
+}
+   .breadcrumb ul li a {
+    font-family: 'Inter-Regular'!important;
+}
+    </style>
+
+    <div class="breadcrumb section-padding">
+       <ul>
+            <li><a href="{{ shop.url }}">Home</a></li>
+            <li><a href="{{ 'collections/my-collection-handle' | collection_url }}">{{ 'My Collection' }}</a></li>
+           <li>SKU:{{ product.variants.first.sku }}</li>
+        </ul>
+      
+    </div>
+
+   
+

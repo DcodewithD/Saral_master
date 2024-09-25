@@ -1,0 +1,203 @@
+<style>
+.instagram-feed{
+  background: #FAF8F5;
+  padding:50px 120px;
+  margin: 30px 0px;
+  text-align:center;
+}
+
+.instagram-feed h2{
+  margin:20px 0px 40px!important;
+}
+  .instagram-feed .if1 {
+    display: flex;
+    gap:25px;
+}
+
+.instagram-feed .if2 {
+    display: flex;
+  flex-direction:column;
+    gap:25px;
+  
+}
+
+.instagram-feed .if3 {
+    display: flex;
+  flex-direction:column;
+  gap:25px;
+}
+
+  .instagram-feed .if4 {
+    display: flex;
+    gap:25px
+}
+
+    .instagram-feed .if4 {
+    display: flex;
+    gap:25px
+}
+
+  .instagram-feed .if5 {
+    display: flex;
+    gap:25px;
+}
+
+.instagram-feed .if4 img {
+    flex: 0 0 calc(100%/4 - 25px*3/4);
+    max-width: calc(100%/4 - 25px*3/4);
+}
+
+.instagram-feed .if5 img {
+    flex: 0 0 calc(100%/3 - 25px*2/3);
+    max-width: calc(100%/3 - 25px*2/3);
+}
+
+.instagram-feed .if3 img {
+height:100%
+}
+
+.instagram-feed button{
+      width: 219px;
+    height: 48px;
+    background: #3A3844;
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: #ffffff;
+    margin: 38px auto 0px;
+    font-family: "WorkSans-Regular";
+}
+
+@media(max-width:768px){
+  .instagram-feed{
+  background: #FFFDFA;
+  padding:25px 16px;
+  margin: 20px 0px;
+}
+
+.instagram-feed h2 {
+    margin: 20px 0px 30px!important;
+}
+
+.instagram-feed .if1 {
+    flex-direction: column;
+}
+.instagram-feed .if4 {
+    flex-wrap: wrap;
+}
+
+.instagram-feed .if4 img {
+    flex: 0 0 calc(100%/2 - 25px/2);
+    max-width: calc(100%/2 - 25px/2);
+}
+
+.instagram-feed .if5 img {
+    flex: 0 0 calc(100%/2 - 25px/2);
+    max-width: calc(100%/2 - 25px/2);
+}
+
+.instagram-feed .if5 {
+    flex-wrap: wrap;
+}
+
+.if5>img:nth-child(3) {
+    flex: 0 0 100%!important;
+    max-width: 100%!important;
+}
+}
+</style>
+<div class="instagram-feed">
+  <h2 class="hed">{{ section.settings.section_name }}</h2>
+  <div class="if1">
+    <div class="if2">
+    <div class="if4">
+  <img src="{{ section.settings.image1  | image_url }}">
+  <img src="{{ section.settings.image2  | image_url }}">
+  <img src="{{ section.settings.image3  | image_url }}">
+  <img src="{{ section.settings.image4 | image_url }}">
+    </div>
+    <div class="if5">
+  <img src="{{ section.settings.image5 | image_url }}">
+  <img src="{{ section.settings.image6 | image_url }}">
+  <img src="{{ section.settings.image7 | image_url }}">
+    </div>
+    </div>
+    <div class="if3">
+  <img src="{{ section.settings.image8 | image_url }}">
+  <img src="{{ section.settings.image9 | image_url }}">
+    </div>
+  </div>
+  <a href="/collections/customisation"><button>CONNECT</button></a>
+</div>
+{% schema %}
+{
+"name": "instagram-feed",
+"settings": [
+      {
+    "type":"text",
+    "label":"Section name",
+    "id":"section_name"
+  },
+          {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image1"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image2"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image3"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image4"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image5"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image6"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image7"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image8"
+        },
+            {
+          "type":"image_picker",
+          "label":"instagram image",
+          "id":"image9"
+        }
+  
+],
+"presets": [
+{
+"name": "instagram-feed",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

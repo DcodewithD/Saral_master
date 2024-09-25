@@ -1,0 +1,113 @@
+<style>
+  .tag_product_grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    gap: 10px;
+}
+  .tag_product_grid .d-block {
+    width: 40vw;
+    display: block !important;
+}
+  @media(min-width:600px)
+  {
+    .tag_product_grid .d-block {
+    width: 18vw;
+    display: block !important;
+}
+  }
+</style>
+{%- assign manual_tags = "Chawla90BEIGE,Chawla90MAROON,Chawla90BLUE-,Uneven90LIGHT_GREY,Uneven90RED-,Uneven90BEIGE,Waffle90GOLD,Waffle90BEIGE,Waffle90LIGHT_GREY,Waffle90IVORY-,All_Over90MAROON,All_Over90IVORY,All_Over90BLUE-,AWNING90GOLD, AWNING90LIGHT_GREY,BALANCED90GOLD,BALANCED90MAROO,MAJESTY90BROWN,MAJESTY90BLUE-,MAJESTY90MAROON,Royalty90WHITE,Royalty90BLUE-,Royalty90BEIGE,DHADKI90MAROO,DHADKI90LIGHT_GREY,DHADKI90BEIGE,CHITKI90BEIGE,CHITKI90YELLOW,CHITKI90LIGHT_GREY,CHECKRO90LT.BLUE,CHECKRO90MAROON-,CHECKRO90GOLD" | split: ',' -%}
+{%- assign current_tags = product.tags -%}
+{%- assign matched_tags = "" -%}
+
+{%- for manual_tag in manual_tags -%}
+  {%- if current_tags contains manual_tag -%}
+    {%- assign matched_tags = matched_tags | append: manual_tag | append: ", " -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if matched_tags != "" -%}
+  {%- assign matched_tags = matched_tags | remove: ", " -%}
+  <style>
+    .slid {
+    display: none;
+}
+  </style>
+  <!-- <p>Matched Tags: {{ matched_tags }}</p> -->
+{%- else -%}
+  <!-- <p>No tags matched.</p> -->
+  
+{%- endif -%}
+{%- assign product_count = 0 -%}
+{%- assign found_products = false -%}
+{% paginate collections.all.products by 900 -%}
+  {%- for product in collections.all.products -%}
+    {%- if product.tags contains matched_tags and product_count < 5 -%}
+      {%- assign found_products = true -%}
+      {%- break -%}
+    {%- endif -%}
+  {%- endfor -%}
+{% endpaginate %}
+
+{% if found_products %}
+<div class="container section-content section-wrap">
+  <h1 class="carousal-main-heading"> Similar Products</h1>
+  <div class="tag_product_grid">
+    {%- assign product_count = 0 -%}
+    {% paginate collections.all.products by 900 -%}
+      {%- for product in collections.all.products -%}
+        {%- if product.tags contains matched_tags and product_count < 5 -%}
+          <div class="product-grid__item">
+            {% include 'product-collection', product: product %}
+          </div>
+          {%- assign product_count = product_count | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {% endpaginate %}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Tagged Products",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_section",
+      "label": "Show section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tagged Products"
+    },
+    {
+      "type": "range",
+      "id": "size_of_columns",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": "Number of columns",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "max_count",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "label": "Max number of products",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name":"Tagged Products"
+    }
+  ]
+}
+{% endschema %}

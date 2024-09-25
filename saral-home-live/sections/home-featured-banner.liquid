@@ -1,0 +1,469 @@
+{{ 'home-featured-banner.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+   #homepage-slider-{{ section.id }} .custom-dots-wrapper .custom-dot{
+      background-color:{{ section.settings.dots_bg }};
+    }
+    #homepage-slider-{{ section.id }} .custom-dots-wrapper .custom-dot.active{
+      background-color:{{ section.settings.dots_bg_active }};
+    }
+   .homepage-featured-banner-section .slider-mobile-wrap{
+     display: none !important;
+   }
+
+  .banner-url{
+    background-color: #fff;
+  }
+  
+    @media(max-width:768px){
+      .homepage-featured-banner-section .slider-arrows{
+        display:none;
+      }
+      .homepage-featured-banner-section .slider-mobile-wrap{
+     display: block !important;
+       }
+      .desk-position-center.mob-position-center.slider-content{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+
+      }
+   }
+    @media(min-width:768px){
+      .homepage-featured-banner-section .banner-slider-heading{
+       line-height:56px;
+       width: 488px;
+   }
+   .homepage-featured-banner-section .banner-slider-subheading{
+       margin-bottom: 48px;
+       margin-top: 48px;
+       width: 410px;
+   }
+   .homepage-featured-banner-section .slider-content.desk-position-center {
+
+   }
+   .homepage-featured-banner-section .slider-content.desk-position-left {
+
+   }
+
+   .homepage-featured-banner-section .slider-content.desk-position-right {
+
+   }
+
+  .homepage-featured-banner-section a {
+     color: #2c2c2c;
+     padding: 15px 22px;
+     background: #ffcc38;
+     border-radius: 30px;
+     margin-top: 0;
+
+
+    font-size: 16px !important;
+
+   }
+  
+      
+  .homepage-featured-banner-section h5 {
+    font-size: 16px !important;
+   }
+
+   .homepage-featured-banner-section .desktop-image-wrap {
+     display: block;
+   }
+
+  .homepage-featured-banner-section .slider-mobile-wrap {
+     display: none !important;
+   }
+   }
+{% endstyle %}
+
+<div id="homepage-slider-{{ section.id }}" class="homepage-featured-banner-section">
+  <div class="section-width {% unless section.settings.section_width == 'full-width' %}section-padding{% endunless %}">
+    <div class="slider-wrap {% if section.settings.bottom_gap %} section-wrap {% endif %}{% unless section.settings.section_border == 'default' %}section-corner{% endunless %}">
+      <div class="slide-content">
+        {% for block in section.blocks %}
+          {% if block.type == 'slide' %}
+            <div class="slider-block {% if forloop.index == 1 %}active{% endif %}">
+              <div class="slider-image">
+                {% assign mob_image = block.settings.mob_image %}
+                {% assign desk_image = block.settings.desk_image %}
+                {% if mob_image != blank %}
+                  
+                  <div
+                    class="slider-mobile-wrap"
+                    style="position:relative;padding-bottom:{{ 100 | divided_by : mob_image.aspect_ratio }}%"
+                  >
+                     <a aria-label="image-link"
+                      href="{{  block.settings.pageurl }}" class="banner-url" style="background-color: #fff"
+                    >
+                    <img
+                      onclick="redirectToPage()"
+                      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+                      srcset="
+                        {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 350w,{%- endif -%}
+                        {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 375 }} 450w,{%- endif -%}
+                        {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 400 }} 470w,{%- endif -%}
+                        {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 425 }} 490w,{%- endif -%}
+                        {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 450 }} 500w,{%- endif -%}
+                        {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 500}} 500w,{%- endif -%}
+                        {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+                        {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+                        {{ mob_image | image_url }} {{ mob_image.width }}w
+                      "
+                      src="{{ mob_image | image_url: width: 400 }}"
+                      loading="lazy"
+                      alt="{{ mob_image.alt | escape }}"
+                      width="{{ mob_image.width }}"
+                      height="auto"
+                    >
+                     </a>
+                    {% if block.settings.link != blank %}
+                      <a
+                        aria-label="image-link"
+                        href="{{ block.settings.link }}"
+                        style="position:absolute;width:100%;height:100%;top:0px;left:0px"
+                      ></a>
+                    {% endif %}
+                  </div>
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'mobile-banner-placeholder' }}
+                {% endif %}
+                {% if desk_image != blank %}
+                  <div
+                    class="desktop-image-wrap"
+                    style="position:relative;padding-bottom:{{ 100 | divided_by : desk_image.aspect_ratio }}%"
+                  >
+                  <a aria-label="image-link"
+                      href="{{  block.settings.pageurl }}" class="banner-url" style="background-color: #fff"
+                    >
+                    <img
+                      onclick="redirectToPage()"
+                      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+                      srcset="
+                        {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                        {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                        {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                        {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                        {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                        {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                        {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                        {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                        {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                        {{ desk_image | image_url }} {{ desk_image.width }}w
+                      "
+                      src="{{ desk_image | image_url: width: 1500 }}"
+                      loading="lazy"
+                      alt="{{ desk_image.alt | escape }}"
+                      width="{{ desk_image.width }}"
+                      height="auto"
+                    > </a>
+                    {% if block.settings.link != blank %}
+                      <a
+                        aria-label="image-link"
+                        href="{{ block.settings.link }}"
+                        style=""
+                      ></a>
+                    {% endif %}
+                  </div>
+                {% else %}
+                  {{ 'lifestyle-1' | placeholder_svg_tag: 'desktop-banner-placeholder' }}
+                {% endif %}
+              </div>
+              {% if block.settings.banner_heading != blank
+                or block.settings.banner_subHeading != blank
+                or block.settings.banner_button != blank
+              %}
+                <div
+                  class="slider-content desk-position-{{ block.settings.text_position_desktop }} mob-position-{{ block.settings.text_position_mobile }}"
+                  style="background-color:{{ block.settings.text_bg_color }}"
+                >
+                  {% if block.settings.banner_heading != blank %}
+                    <h2 class="heading banner-slider-heading h1">
+                      {{ block.settings.banner_heading }}
+                    </h2>
+                  {% endif %}
+                  {% if block.settings.banner_subHeading != blank %}
+                    <h4 class="sub_heading banner-slider-subheading">
+                      {{ block.settings.banner_subHeading }}
+                    </h4>
+                  {% endif %}
+
+                  <a href="{{ block.settings.ul }}">
+                    <h5 class="tctc">{{- block.settings.banner_button -}}</h5>
+                  </a>
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% if section.blocks.size > 1 %}
+  <script>
+    function customSlideInit() {
+      new CardSlider({
+        parent: '#homepage-slider-{{ section.id }} .slide-content',
+        slidesToShow: 1,
+        autoplay: {{ section.settings.enable_autoplay }},
+        arrows: {{ section.settings.show_arrows }},
+        dots: {{ section.settings.show_dots }},
+        responsive: [
+          {
+            breakpoint: [991, 'auto'],
+            slidesToShow: 1,
+            gap: 20,
+            arrows: {{ section.settings.show_arrows }},
+            dots: {{ section.settings.show_dots }},
+            time: {{ section.settings.autoplay_duration | times : 1000 }},
+            autoplay: {{ section.settings.enable_autoplay }},
+          },
+          {
+            breakpoint: [481, 990],
+            slidesToShow: 1,
+            gap: 10,
+            arrows: {{ section.settings.show_arrows }},
+            dots: {{ section.settings.show_dots }},
+            time: {{ section.settings.autoplay_duration | times : 1000 }},
+            autoplay: {{ section.settings.enable_autoplay }},
+          },
+          {
+            breakpoint: [0, 480],
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            gap: 10,
+            arrows: {{ section.settings.show_arrows }},
+            dots: {{ section.settings.show_dots }},
+            time: {{ section.settings.autoplay_duration | times : 1000 }},
+            autoplay: {{ section.settings.enable_autoplay }},
+          },
+        ],
+      }).slide();
+    }
+  </script>
+{% endif %}
+<script>
+  function redirectToPage() {
+      console.log("Clicked!"); // Debugging statement
+      // Redirect to the desired page when the image is clicked
+      window.location.href = "https://saralhome.com/collections/customization"; // Replace "xx_page.html" with your desired URL
+  }
+</script>
+{% schema %}
+{
+  "name": "home-featured-banner",
+  "settings": [
+    {
+      "type": "select",
+      "label": "t:sections.all.width.name",
+      "id": "section_width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "t:sections.all.width.options_1.label"
+        },
+        {
+          "value": "default-width",
+          "label": "t:sections.all.width.options_2.label"
+        }
+      ],
+      "default": "full-width"
+    },
+
+    {
+      "type": "checkbox",
+      "label": "Bottom gap",
+      "id": "bottom_gap",
+      "default": true
+    },
+    {
+      "type": "select",
+      "label": "t:sections.all.border_radius.name",
+      "id": "section_border",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.border_radius.options_1.label"
+        },
+        {
+          "value": "curved",
+          "label": "t:sections.all.border_radius.options_2.label"
+        }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "checkbox",
+      "label": "t:sections.homepage-featured-banner.settings.display_arrows.label",
+      "id": "show_arrows"
+    },
+    {
+      "type": "checkbox",
+      "label": "t:sections.homepage-featured-banner.settings.display_dots.label",
+      "id": "show_dots"
+    },
+    {
+      "type": "checkbox",
+      "label": "Enable autoplay",
+      "id": "enable_autoplay"
+    },
+    {
+      "type": "range",
+      "label": "Autoplay duration",
+      "id": "autoplay_duration",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 5,
+      "unit": "sec"
+    },
+    {
+      "type": "color",
+      "label": "Dots background",
+      "id": "dots_bg",
+      "default": "#cbcbcb"
+    },
+    {
+      "type": "color",
+      "label": "Active dots background",
+      "id": "dots_bg_active",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.homepage-featured-banner.blocks.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "t:sections.all.image.image_mobile.label",
+          "id": "mob_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "t:sections.all.image.image_desktop.label",
+          "id": "desk_image"
+        },
+         {
+          "type": "url",
+          "label": "page url",
+          "id": "pageurl"
+        },
+        {
+          "type": "url",
+          "label": "Button url",
+          "id": "ul"
+        },
+        {
+          "type": "text",
+          "label": "t:sections.all.headings.heading.label",
+          "id": "banner_heading",
+          "default": "Heading"
+        },
+        {
+          "type": "textarea",
+          "label": "t:sections.all.headings.sub_heading.label",
+          "id": "banner_subHeading",
+          "default": "Sub heading"
+        },
+        {
+          "type": "text",
+          "label": "t:sections.all.button.name",
+          "id": "banner_button",
+          "default": "Shop"
+        },
+        {
+          "type": "select",
+          "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_desktop.name",
+          "id": "text_position_desktop",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_desktop.options_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_desktop.options_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_desktop.options_3.label"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_mobile.name",
+          "id": "text_position_mobile",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_mobile.options_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_mobile.options_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.homepage-featured-banner.blocks.settings.text_position_mobile.options_3.label"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "color",
+          "label": "Text background color",
+          "id": "text_bg_color",
+          "default": "#e7e7e7"
+        },
+        {
+          "type": "select",
+          "label": "t:sections.all.button.settings.button_bg.name",
+          "id": "button_bg",
+          "options": [
+            {
+              "value": "default",
+              "label": "t:sections.all.button.settings.button_bg.options_1.label"
+            },
+            {
+              "value": "transparent",
+              "label": "t:sections.all.button.settings.button_bg.options_2.label"
+            },
+            {
+              "value": "text",
+              "label": "t:sections.all.button.settings.button_bg.options_3.label"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "label": "t:sections.all.button.settings.margin_top.label",
+          "id": "btn_gap",
+          "min": 10,
+          "max": 200,
+          "step": 2,
+          "default": 40,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "home-featured-banner",
+      "blocks": [
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

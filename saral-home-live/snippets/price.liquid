@@ -1,0 +1,104 @@
+<div class="price-wrap {% if class != blank %}{{class}}{% endif %}">
+  {% if class != blank %}
+    <p class="price-note">MRP in Indian currency:</p>
+  {% endif %}
+  {% if product.compare_at_price > product.price %}
+    {% if layout == blank or layout == 'layout-1' %}
+      <p class="compare-price">
+        <s>
+          {{ product.selected_or_first_available_variant.compare_at_price | money }}
+        </s>
+      </p>
+    {% endif %}
+    <p class="sale-price custom-card-price">
+      {{ product.selected_or_first_available_variant.price | money }}
+    </p>
+  {% else %}
+    <p class="custom-card-price">{{ product.selected_or_first_available_variant.price | money }}</p>
+  {% endif %}
+
+  {% render 'discount', product: product %}
+
+  {% if class != blank %}
+    <p class="price-inclusive">(Inclusive of all taxes)</p>
+  {% endif %}
+</div>
+
+<style>
+  .card-price .price-wrap{
+    max-width: 80%;
+  }
+  .custom-card-price{
+
+  padding: 10px;
+    padding-right: 25px !important;
+  border-radius: 50px;
+  font-size: 16px !important;
+  font-family: var(--button-font) !important;
+    margin-right: 3px;
+  margin-bottom: 0!important;
+  }
+  .flash-sale-section-wrap .custom-card-price{
+      padding-right: 8px !important;
+  }
+  
+  .compare-price{
+    margin-bottom:0 !important;
+  }
+  .compare-price *{
+    margin-bottom:0 !important;
+    font-size: 16px !important;
+  }
+    .shop-by-category-section .price-wrap{
+      padding: 10px 2px;
+      align-items: center;
+      gap: 3px!important;
+      
+    }
+    .shop-by-category-section .price-wrap *{
+      padding: 0 !important;
+      letter-spacing: -0.4px;
+      
+      
+    }
+    .flash-sale-section-wrap .price-wrap{
+      padding: 5px 1px;
+      align-items: center;
+      gap: 2px!important;
+      
+    }
+    .flash-sale-section-wrap .price-wrap *{
+      padding: 0 !important;
+      letter-spacing: -0.4px;
+      
+      
+    }
+ .custom-card-price{
+      color: #2c2c2c !important;
+    }
+
+
+  @media (max-width: 768px){
+      .shop-by-categpory-section .price-wrap *{
+      font-size: 15px !important;
+    }
+      .shop-by-categpory-section .price-wrap{
+      padding: 8px !important;
+    }
+    .flash-sale-section-wrap .price-wrap *{
+      font-size: 12px !important;
+    }
+
+    .custom-card-price{
+
+    padding: 0.07px;
+    }
+
+    .custom-card-price{
+      color: #2c2c2c !important;
+    }
+  .shop-by-categpory-section .price-wrap, .flash-sale-section-wrap .price-wrap{
+      margin-top: 0 !important;
+  }
+  
+</style>

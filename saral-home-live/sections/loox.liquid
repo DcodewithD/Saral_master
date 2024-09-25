@@ -1,0 +1,38 @@
+<style>
+  div#looxReviews {
+    padding: 0px!important;
+    max-width: -webkit-fill-available!important;
+}
+  .loox-reviews #grid .grid-item {
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    background: #fffdf8!important;
+}
+</style>
+<div class="looox section-width section-padding ">
+  <div class="loox-reviews">
+    <!-- <h3 class="section-heading">Our Clients Love Us</h3> -->
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when '@app' %}
+          {% render block %}
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "loox reviews",
+  "tag": "section",
+  "settings": [],
+  "blocks": [
+          {
+        "type": "@app"
+      }
+  ],
+  "presets": [
+    {
+      "name": "loox reviews"
+    }
+  ]
+}
+{% endschema %}

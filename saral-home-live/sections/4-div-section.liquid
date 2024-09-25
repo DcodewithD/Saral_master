@@ -1,0 +1,210 @@
+<style>
+      .two_box {
+        margin-bottom: 25px;
+    }
+                                .two_box {
+                          display: flex;
+                          justify-content: center;
+                          column-gap: 20px;
+                          padding: 0;
+                      }
+                              .box1 {
+                                width: 54%;
+                                background: #1d3c60;
+                            }
+                             .box2 {
+                        width: 50%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                    .p_txt {
+                      background: #1d3c60;
+                      padding: 20px;
+                  }
+                  .p_txt h4 {
+                    color: white;
+                    /* font-family: var(--button-font); */
+
+                }.p_txt h3 {
+                    color: white;
+                    font-weight: bold;
+                     /* font-family: var(--heading-font); */
+
+                }
+               .box2 div {
+    width: 50%;
+    margin-bottom: 1%;
+}
+              .sub_box4 button {
+                padding: 20px 30px;
+                border-radius: 50px;
+                background: #f9cc47;
+                color: black;
+                border: 0px;
+                /* font-family: var(--button-font) */
+            } 
+              .sub_box4 {
+                text-align: center;
+            }
+            @media(max-width:600px)
+            {
+              .two_box {
+              flex-direction: column;
+              }
+              .box1 {
+              width: 100%;
+          }
+              .box2 {
+              width: 100%;
+          }
+              .box2 {
+            justify-content: space-between;
+        }
+              .box1 {
+          margin: 20px 0px;
+      }
+              .box2 div {
+                  width: 48%;
+              }
+              .sub_box3 {
+      margin-top: 15px;
+  }
+               .sub_box4 button {
+                padding: 20px 25px;
+                border-radius: 50px;
+                background: #f9cc47;
+                color: black;
+                border: 0px;
+                 font-size: 12px;
+                /* font-family: var(--button-font) */
+            } 
+              .\33 boxes.b1 {
+    border-left: 1px solid #444444!important;
+}
+              .\33 boxes.b3 {
+    border-right: 1px solid #444444!important;
+}
+              .three_box.container {
+    padding: 0;
+}
+            }
+</style>
+<div class="container-fluid section-padding">
+  <div class="section-wrap">
+    <div class="">
+      <div class="two_box">
+        <div class="box1">
+          <dv class="p_box">
+            <a href="{{ section.settings.ul1 }}">
+              <div class="p_img">
+                <img
+                  src="{{ section.settings.img1 | image_url }}"
+                  alt="images"
+                >
+              </div>
+              <div class="p_txt">
+                <h4>{{ section.settings.ttl }}</h4>
+                <h3>{{ section.settings.offer }}</h3>
+              </div>
+            </a>
+          </dv>
+        </div>
+        <div class="box2 ">
+          <div class="sub_box1">
+            <a href="{{ section.settings.ul2 }}"> <img src="{{ section.settings.img2 | image_url }}" alt="images"> </a>
+          </div>
+          <div class="sub_box2">
+            <a href="{{ section.settings.ul3 }}"> <img src="{{ section.settings.img3 | image_url }}" alt="images"></a>
+          </div>
+          <div class="sub_box3">
+            <a href="{{ section.settings.ul4 }}"> <img src="{{ section.settings.img4 | image_url }}" alt="images"></a>
+          </div>
+          <div class="sub_box4">
+            <a href="{{section.settings.btn_url}}">
+              <button>{{ section.settings.btn }}</button></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "4-div-section",
+  "settings": [
+    {
+      "type":"text",
+      "label":"Title",
+      "id":"ttl"
+    },
+    {
+      "type":"text",
+      "label":"offer",
+      "id":"offer"
+    },
+    {
+      "type":"image_picker",
+      "label":"img1",
+      "id":"img1"
+    },
+    {
+      "type":"url",
+      "label":"Img url 1",
+      "id":"ul1"
+    },
+    {
+      "type":"image_picker",
+      "label":"img2",
+      "id":"img2"
+    },
+    {
+      "type":"url",
+      "label":"Img url 2",
+      "id":"ul2"
+    },
+    {
+      "type":"image_picker",
+      "label":"img3",
+      "id":"img3"
+    },
+    {
+      "type":"url",
+      "label":"Img url 3",
+      "id":"ul3"
+    },
+    {
+      "type":"image_picker",
+      "label":"img4",
+      "id":"img4"
+    },
+    {
+      "type":"url",
+      "label":"Img url 4",
+      "id":"ul4"
+    },
+    {
+      "type":"text",
+      "label":"Button_value",
+      "id":"btn"
+    },
+    {
+      "type":"url",
+      "label":"button",
+      "id":"btn_url"
+    }
+  ],
+  "presets":[{
+    "name":"4-div-section",
+    "category":"blog"
+  }]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

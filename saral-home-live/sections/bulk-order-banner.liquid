@@ -1,0 +1,238 @@
+<style>
+.bulk-order-banner .sec-1 {
+    position: relative;
+}
+.bulk-order-banner .sec-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    -webkit-transform: translate(-50%,-50%);
+}
+
+.bulk-order-banner .sec-1 .d-image {
+    margin-top: 70px;
+}
+
+.bulk-order-banner .sec-2 h3, h2, h4 {
+    color: white;
+  font-family: var(--heading_font)!important;
+}
+
+.bulk-order-banner .sec-2 h2 {
+    font-weight: 900;
+    font-family: var(--body_font);
+    margin: 20px 0px 30px;
+  font-size: 45px;
+}
+
+.bulk-order-banner .sec-3 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  gap: 20px;
+}
+
+ .btn1 {
+    border-radius: 5px;
+    background: #3A3844!Important;
+    font-size: 18px;
+       font-weight: 900;
+    padding: 13px 60px;
+    color: white;
+    border: none;
+   font-family: var(--heading_font)!important;
+}
+   .btn2 {
+    background: #ffffff!Important;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 11px 28px;
+    color: #000000;
+    border: none;
+     font-family: var(--heading_font)!important;
+}
+
+.bulk-order-banner .sec-1 .d-image:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width:768px){
+  .bulk-order-banner .sec-2 {
+    width: 100%;
+}
+.bulk-order-banner .sec-1 .m-image {
+    margin-top: 50px;
+}
+.bulk-order-banner .sec-2 h3 {
+    font-size: 1.5rem;
+}
+.bulk-order-banner .sec-2 h2 {
+    font-size: 1.75rem;
+}
+   .btn1 {
+    font-size: 14px;
+    padding: 10px 50px;
+}
+     .btn2 {
+    font-size: 14px;
+    padding: 10px 50px;
+}
+
+.bulk-order-banner .sec-3 {
+    gap: 10px;
+    flex-direction: column;
+}
+
+.bulk-order-banner .sec-1 .m-image img{
+  width:100%!important;
+}
+
+.bulk-order-banner .sec-1 .m-image:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+}
+</style>
+<div class="bulk-order-banner">
+  <div class="sec-1">
+            {% assign mob_image = section.settings['m-image'] %}
+        {% assign desk_image = section.settings['d-image'] %}
+        <div
+          class="m-image"
+          style="position:relative;padding-bottom:{{ 100 | divided_by : mob_image.aspect_ratio }}%"
+        >
+          <img
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+            srcset="
+              {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 350w,{%- endif -%}
+              {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 375 }} 450w,{%- endif -%}
+              {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 400 }} 470w,{%- endif -%}
+              {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 425 }} 490w,{%- endif -%}
+              {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 450 }} 500w,{%- endif -%}
+              {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 500}} 500w,{%- endif -%}
+              {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+              {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+              {{ mob_image | image_url }} {{ mob_image.width }}w
+            "
+            src="{{ mob_image | image_url: width: 400 }}"
+            loading="lazy"
+            alt="{{ mob_image.alt | escape }}"
+            width="{{ mob_image.width }}"
+            height="auto"
+          >
+          {% if section.settings.link != blank %}
+            <a href="{{ section.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+          {% endif %}
+        </div>
+        <div
+          class="d-image"
+          style="position:relative;padding-bottom:{{ 100 | divided_by : desk_image.aspect_ratio }}%"
+        >
+          <img
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+            srcset="
+              {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 350w,{%- endif -%}
+              {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 110w,{%- endif -%}
+              {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+              {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000}} 2000w,{%- endif -%}
+              {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+              {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+              {{ desk_image | image_url }} {{ desk_image.width }}w
+            "
+            src="{{ desk_image | image_url: width: 400 }}"
+            loading="lazy"
+            alt="{{ desk_image.alt | escape }}"
+            width="{{ desk_image.width }}"
+            height="auto"
+          >
+          {% if section.settings.link != blank %}
+            <a href="{{ section.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+          {% endif %}
+        </div>
+      <div class="sec-2">
+    <h3 class="">{{ section.settings.banner_text_1 }}</h3>
+    <h2 class="">{{ section.settings.banner_text_2 }}</h2>
+    <div class="sec-3">
+      <button onClick="navigateHere()" class="btn1">{{ section.settings.banner_button_1  }}</button>
+      <h4 class="">{{ section.settings.banner_text_3 }}</h2>
+      <a href="tel:+91 81999 51914"><button class="btn2">{{ section.settings.banner_button_2  }}</button></a>
+    </div>
+  </div>
+  </div>
+</div>
+<script>
+  function navigateHere(){
+    $("#navigateHere")[0].scrollIntoView();
+  };
+</script>
+{% schema %}
+  {
+    "name": "bulk-order-banner",
+    "settings": [
+      {
+    "type":"image_picker",
+    "label":"Choose mobile image",
+    "id":"m-image"
+  },
+        {
+    "type":"image_picker",
+    "label":"Choose dekstop image",
+    "id":"d-image"
+  },
+            {
+            "type": "text",
+            "label": "banner text 1",
+            "id": "banner_text_1"
+          },
+                  {
+            "type": "text",
+            "label": "banner text 2",
+            "id": "banner_text_2"
+          },
+                        {
+            "type": "text",
+            "label": "banner button 1",
+            "id": "banner_button_1"
+          },
+                              {
+            "type": "text",
+            "label": "banner text 3",
+            "id": "banner_text_3"
+          },
+                              {
+            "type": "text",
+            "label": "banner button 2",
+            "id": "banner_button_2"
+          }
+
+    ],
+    "presets": [
+{
+"name": "bulk-order-banner",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

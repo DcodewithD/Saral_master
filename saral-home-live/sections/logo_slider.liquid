@@ -1,0 +1,164 @@
+<style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .logo_slider {
+        background: #f2f2f2;
+      }
+
+      @keyframes slide {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      .logos {
+        overflow: hidden;
+        padding: 60px 0;
+        background: white;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      .logos:before,
+      .logos:after {
+        position: absolute;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+      }
+
+      .logos:before {
+        left: 0;
+        background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+      }
+
+      .logos:after {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+      }
+
+      .logos:hover .logos-slide {
+        animation-play-state: paused;
+      }
+
+      .logos-slide {
+        display: inline-flex;
+        animation: 30s slide infinite linear;
+      }
+
+      .logos-slide img {
+        height: 55px;
+        margin: 0 70px;
+      }
+      @media(max-width:600px)
+      {
+       .logos-slide img {
+        height: 40px;
+        margin: 0px 100px;
+    }
+
+        .logos:before,
+      .logos:after {
+        display:none;
+      }
+
+  .logos-slide {
+        display: inline-flex;
+        animation: 15s slide infinite linear;
+      }
+      }
+</style>
+<div class="logo_slider">
+  <div class="logos">
+    <div class="logos-slide">
+      <a href="{{ section.settings.ul1 }}"><img src="{{ section.settings.img1 | image_url }}"></a>
+      <a href="{{ section.settings.ul2 }}"><img src="{{ section.settings.img2 | image_url }}"></a>
+      <a href="{{ section.settings.ul3 }}"><img src="{{ section.settings.img3 | image_url }}"></a>
+      <a href="{{ section.settings.ul4 }}"><img src="{{ section.settings.img4 | image_url }}"></a>
+      <a href="{{ section.settings.ul5 }}"><img src="{{ section.settings.img5 | image_url }}"></a>
+    </div>
+  </div>
+  <script>
+    var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+  </script>
+</div>
+
+{% schema %}
+{
+  "name": "logo_slider",
+  "settings": [
+    {
+  "type": "image_picker",
+  "label": "1st Image",
+  "id": "img1"
+},
+    {
+  "type": "image_picker",
+  "label": "2st Image",
+  "id": "img2"
+},
+    {
+  "type": "image_picker",
+  "label": "3st Image",
+  "id": "img3"
+},
+    {
+  "type": "image_picker",
+  "label": "4st Image",
+  "id": "img4"
+},
+    {
+  "type": "image_picker",
+  "label": "5st Image",
+  "id": "img5"
+},
+    {
+      "type":"url",
+      "label":"Img url 1",
+      "id":"ul1"
+    },
+    {
+      "type":"url",
+      "label":"Img url 2",
+      "id":"ul2"
+    },
+    {
+      "type":"url",
+      "label":"Img url 3",
+      "id":"ul3"
+    },
+    {
+      "type":"url",
+      "label":"Img url 4",
+      "id":"ul4"
+    },
+    {
+      "type":"url",
+      "label":"Img url 5",
+      "id":"ul5"
+    }
+  ],
+  "presets":[
+    {
+      "category":"block",
+      "name":"logo_slider"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

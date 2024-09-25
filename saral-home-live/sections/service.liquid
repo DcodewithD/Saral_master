@@ -1,0 +1,198 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<style>
+  span.txtt p {
+    height: 50px;
+}
+  .mySliderr.row {
+    justify-content: center!important;
+}
+.slideshow__text.banner__box {
+    display: none!important;
+}
+.slideshow__controls.slideshow__controls--top.slider-buttons.no-js-hidden.slideshow__controls--border-radius-mobile {
+    display: none;
+}
+  h1 {
+  margin-top: 32px;
+}
+
+.cardd {
+  margin-bottom: 20px;
+}
+
+.mySlider {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.slick-dots {
+  display: block;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  margin: 0;
+  bottom: 10px;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+    
+    button {
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-radius: 100%;
+      background-color: rgba(#000, 0.20);
+      text-indent: -999999px;
+    }
+
+    &.slick-active {
+      button {
+        background-color: #2b9fdf;
+      }
+    }
+  }
+  
+}
+   .rev ul.slick-dots button {
+    display: none!important;
+}
+  .rev ul.slick-dots li{width:30px;}
+   ul.slick-dots li.slick-active{color:red;}
+  ul.slick-dots button {
+    display: none;
+}
+  .slick-dots {
+    display: inline-flex;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  ul:not(.list-unstyled):not([list-unstyled]) li::before {
+    display: inline-block;
+    content: '';
+    margin-bottom: 2px;
+    margin-right: 10px;
+    margin-left: -16px;
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    background: none;
+    border: 1px solid  #3A3844;!important;
+}
+  ul:not(.list-unstyled):not([list-unstyled]) li.slick-active:before {
+    background:#3A3844;!important ;
+}
+  .review_pg {margin:15px 0px;}
+  .service{width:100%!important;}
+  .col-8.p-0 h4 {
+    font-size: 20px!important;
+}
+  .col-8.p-0 p {
+    font-size: 14px!important;
+}
+</style>
+
+<div class="site-wrapperr  container fix_padding ">
+  <div class="mySliderr row">
+   {%for block in section.blocks %}
+    <div class="mySlider__itemm col-lg-4 col-md-6 p-0">
+      <div class="cardd">
+        <div class="card-bodyy">
+<!-- 			?????????????????????????????? card ??????????????????????????????????????? -->
+           <div class="row">
+			<div class="col-12 d-flex service" >
+              <div class="svg_img col-4">
+                <center>{{block.settings.svgg}}</center>
+              </div>
+              <div class="col-8 p-0">
+                <h4>{{block.settings.hed}}</h4>
+                <span class="txtt">{{block.settings.dis}}</span>
+              </div>
+          </div>
+          </div>
+<!-- 			?????????????????????????????? card ??????????????????????????????????????? -->
+        
+        </div>
+       
+      </div>
+   
+    </div>
+   {% endfor %}
+  </div>
+</div>
+
+
+<script>
+mobileOnlySlider(".mySliderr", true, false, 767);
+
+function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+  var slider = $($slidername);
+  var settings = {
+    mobileFirst: true,
+    dots: $dots,
+    arrows: $arrows,
+     autoplay: true,
+  autoplaySpeed: 4000,
+    responsive: [
+      {
+        breakpoint: $breakpoint,
+        settings: "unslick"
+      }
+    ]
+  };
+
+  slider.slick(settings);
+
+  $(window).on("resize", function () {
+    if ($(window).width() > $breakpoint) {
+      return;
+    }
+    if (!slider.hasClass("slick-initialized")) {
+      return slider.slick(settings);
+    }
+  });
+} // Mobile Only Slider
+</script>
+{% schema %}
+  {
+    "name": "services",
+      "blocks": [{
+        "type":"blog",
+        "name":"review",
+        "settings":[
+		{
+          "type":"text",
+          "label":"Name",
+          "id":"svgg"
+        },
+{
+          "type":"text",
+          "label":"Head",
+          "id":"hed"
+        },
+        {
+          "type":"richtext",
+          "label":"Discription",
+          "id":"dis"
+        }
+                   ]
+      
+      }],
+	"settings":[{
+			"type":"text",
+			"label":"Heading",
+			"id":"heed"
+}],
+       "presets":[{"name":"services"}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

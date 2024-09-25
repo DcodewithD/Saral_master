@@ -1,0 +1,65 @@
+{% comment %}
+{% assign exclude-color = true %}
+vakue here
+{% for option in product.options_with_values %}
+  {% for value in option.values %}
+    {% if value == option.selected_value %}
+        Value here- {{ value }}
+    {%  endif %}
+  {% endfor %}
+{%  endfor %}
+{% assign option_images_values = options | split : ';' %}
+<div class="variant-selectors">
+            {% if exclude-color %}
+               {% for option in product.options_with_values %}
+                {%  assign selected = option.selected_value %}
+                {% assign option-name = option.name | downcase %}
+                 {% if option-name == 'color' or option-name == 'colour' %}
+                    <div class="variant-block">
+                        <div class="variant-head">
+                            <p>{{option.name}}:</p>
+                        </div>
+                        {% for value in option.values %}
+                          {% if value == selected %}
+                            <div class="variants-option">
+                                {% assign option-val = value | downcase %}
+                                    <label for="{{option.name}}-{{value}}"><img src="{{value | downcase | append : '.png' | file_url }}"/></label>
+                            </div>
+                            {% endif %}
+                        {% endfor %}                        
+                    </div>
+                 {% endif %}
+               {% endfor %}
+            {% endif %}
+            {% for option in product.options_with_values %}
+                {%  assign selected = option.selected_value %}
+                {% assign option-name = option.name | downcase %}
+                {% if exclude-color and option-name == 'color' or option-name == 'colour' %}
+                      {% continue %}
+                {% else %}
+                <div class="variant-block">
+                    <div class="variant-head">
+                        <p>{{ option.name }}:</p>
+                    </div>
+                {% for value in option.values %}
+                  {% if value == selected %}
+                    <div class="variants-option">
+                        <label for="{{options.name}}-{{value}}">{{ value }}</label>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+{% endcomment %}
+<div class="popup-car-options">
+{% for option in item.options_with_values %}
+  {% assign option_name = option.name | downcase %}
+    {%  if option_name == 'color' or option_name == 'colour' %}
+    <div class="cart-option"><div class="cart-option-label">{{ option.name }}:</div><img src="{{option.value | downcase | append : '_40x.png' | file_url }}"/></div>
+  {% else %}
+    <div class="cart-option"><div class="cart-option-label">{{ option.name }}:</div><div class="cart-value-label">{{ option.value }}</div></div>
+  {% endif  %}
+{%  endfor %}
+</div>

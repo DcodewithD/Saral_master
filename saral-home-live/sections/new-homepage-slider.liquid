@@ -1,0 +1,378 @@
+{{ 'new-homepage-slider.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .slider-dots .slider-dot{
+    background-color:{{ section.settings.dots_bg }};
+  }
+  .slider-dots .slider-dot.active{
+    background-color:{{ section.settings.dots_bg_active }};
+  }
+{% endstyle %}
+
+<div id="homepage-slider-{{ section.id }}" class="homepage-slider-section">
+  <div class="section-width {% unless section.settings.section_width == 'full-width' %}{% endunless %}">
+    <div class="slider-wrap {% unless section.settings.section_border == 'default' %}section-corner{% endunless %}">
+      <div class="slide-content">
+        {% for block in section.blocks %}
+          {% if block.type == 'image-banner' %}
+            {% assign mob_image = block.settings.mob_image %}
+            {% assign desk_image = block.settings.desk_image %}
+            <div class="slider-block {% if forloop.index == 1 %}active{% endif %}">
+              <div class="slider-image">
+                <div
+                  class="slider-mobile-wrap"
+                  style="position:relative;padding-bottom:{{ 100 | divided_by : mob_image.aspect_ratio }}%"
+                >
+                  <img
+                    rel="preload"
+                    as="image"
+                    style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+                    srcset="
+                      {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 350w,{%- endif -%}
+                      {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 375 }} 450w,{%- endif -%}
+                      {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 400 }} 470w,{%- endif -%}
+                      {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 425 }} 490w,{%- endif -%}
+                      {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 450 }} 500w,{%- endif -%}
+                      {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 500}} 500w,{%- endif -%}
+                      {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+                      {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+                      {{ mob_image | image_url }} {{ mob_image.width }}w
+                    "
+                    src="{{ mob_image | image_url: width: 400 }}"
+                    alt="{{ mob_image.alt | escape }}"
+                    width="{{ mob_image.width }}"
+                    height="auto"
+                  >
+                  {% if block.settings.link != blank %}
+                    <a
+                      href="{{ block.settings.link }}"
+                      style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index: 1;"
+                    ></a>
+                  {% endif %}
+                </div>
+                <div
+                  class="desktop-image-wrap"
+                  style="position:relative;padding-bottom:{{ 100 | divided_by : desk_image.aspect_ratio }}%"
+                >
+                  <img
+                    rel="preload"
+                    as="image"
+                    style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+                    srcset="
+                      {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                      {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                      {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                      {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                      {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                      {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                      {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                      {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                      {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                      {{ desk_image | image_url }} {{ desk_image.width }}w
+                    "
+                    src="{{ desk_image | image_url: width: 1500 }}"
+                    alt="{{ desk_image.alt | escape }}"
+                    width="{{ desk_image.width }}"
+                    height="auto"
+                  >
+                  {% if block.settings.link != blank %}
+                    <a
+                      href="{{ block.settings.link }}"
+                      style="position:absolute;top:0px;left:0px;width:100%;height:100%;z-index: 1;"
+                    ></a>
+                  {% endif %}
+                </div>
+              </div>
+              {% if block.settings.banner_heading != blank
+                or block.settings.banner_subHeading != blank
+                or block.settings.banner_button != blank
+              %}
+                <div class="slider-content desk-position-{{ block.settings.text_position_desktop }} mob-position-{{ block.settings.text_position_mobile }}">
+                  {% if block.settings.banner_heading != blank %}
+                    <h1 class="heading banner-heading">
+                      {{ block.settings.banner_heading }}
+                    </h1>
+                  {% endif %}
+                  {% if block.settings.banner_subHeading != blank %}
+                    <h2 class="sub_heading banner-subheading">
+                      {{ block.settings.banner_subHeading }}
+                    </h2>
+                  {% endif %}
+                  {% if block.settings.banner_button != blank %}
+                    <a
+                      href="{{ block.settings.url }}"
+                      style="margin-top:{{ block.settings.btn_gap }}px"
+                      class="banner-button secondary-button {% if block.settings.button_bg == 'default' %} secondary-button-bg {% else %} secondary-button-transparent{% endif %}"
+                    >
+                      {{- block.settings.banner_button -}}
+                    </a>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="slider__arrows">
+        <button class="previous__slide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+          >
+            <path
+              d="M1 13L7 7L1 1"
+              stroke="#1E1E1E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <button class="next__slide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="8"
+            height="14"
+            viewBox="0 0 8 14"
+            fill="none"
+          >
+            <path
+              d="M1 13L7 7L1 1"
+              stroke="#1E1E1E"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let scrollingForward = true;
+let automaticScrollInterval;
+
+function scrollContent() {
+  const scrollAmount = window.innerWidth * 0.6; // 60vw
+  const scrollableDiv = document.querySelector(".slide-content");
+
+  if (scrollingForward) {
+    scrollableDiv.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  } else {
+    scrollableDiv.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  }
+
+  // Check if reached the end or start
+  if (scrollingForward && scrollableDiv.scrollLeft + scrollableDiv.clientWidth >= scrollableDiv.scrollWidth) {
+    scrollingForward = false;
+  } else if (!scrollingForward && scrollableDiv.scrollLeft === 0) {
+    scrollingForward = true;
+  }
+}
+
+function pauseAutomaticScroll() {
+  clearInterval(automaticScrollInterval); // Clear the automatic scrolling interval
+  automaticScrollInterval = setInterval(scrollContent, 5000); // Restart the interval after 5 seconds
+}
+
+document.querySelector(".previous__slide").addEventListener("click", function() {
+  const scrollableDiv = document.querySelector(".slide-content");
+  const scrollAmount = window.innerWidth * 0.6; // 20vw for the manual scroll
+
+  // Scroll to the right by 20vw
+  scrollableDiv.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+
+  pauseAutomaticScroll(); // Pause the automatic scroll when the button is clicked
+});
+
+document.querySelector(".next__slide").addEventListener("click", function() {
+  const scrollableDiv = document.querySelector(".slide-content");
+  const scrollAmount = window.innerWidth * 0.6; // 20vw for the manual scroll
+
+  // Scroll to the right by 20vw
+  scrollableDiv.scrollBy({ left: scrollAmount, behavior: "smooth" });
+
+  pauseAutomaticScroll(); // Pause the automatic scroll when the button is clicked
+});
+
+// Start automatic scrolling
+automaticScrollInterval = setInterval(scrollContent, 5000); // 5000 milliseconds = 5 seconds
+</script>
+
+{% schema %}
+{
+  "name": "new homepage slider",
+  "settings": [
+    {
+      "type": "select",
+      "label": "t:sections.all.width.name",
+      "id": "section_width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "t:sections.all.width.options_1.label"
+        },
+        {
+          "value": "default-width",
+          "label": "t:sections.all.width.options_2.label"
+        }
+      ],
+      "default": "default-width"
+    },
+    {
+      "type": "select",
+      "label": "t:sections.all.border_radius.name",
+      "id": "section_border",
+      "options": [
+        {
+          "value": "default",
+          "label": "t:sections.all.border_radius.options_1.label"
+        },
+        {
+          "value": "curved",
+          "label": "t:sections.all.border_radius.options_2.label"
+        }
+      ],
+      "default": "curved"
+    },
+    {
+      "type": "checkbox",
+      "label": "t:sections.homepage_slider.settings.display_arrows.label",
+      "id": "show_arrows"
+    },
+    {
+      "type": "checkbox",
+      "label": "t:sections.homepage_slider.settings.display_dots.label",
+      "id": "show_dots"
+    },
+    {
+      "type": "color",
+      "label": "t:sections.homepage_slider.settings.dot_bg.label",
+      "id": "dots_bg",
+      "default": "#cbcbcb"
+    },
+    {
+      "type": "color",
+      "label": "t:sections.homepage_slider.settings.dot_active_bg.label",
+      "id": "dots_bg_active",
+      "default": "#000000"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image-banner",
+      "name": "t:sections.homepage_slider.blocks.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "t:sections.all.image.image_mobile.label",
+          "id": "mob_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "t:sections.all.image.image_desktop.label",
+          "id": "desk_image"
+        },
+        {
+          "type": "url",
+          "label": "t:sections.homepage_slider.blocks.settings.redirection_link.label",
+          "id": "link"
+        },
+        {
+          "type": "text",
+          "label": "t:sections.all.headings.heading.label",
+          "id": "banner_heading"
+        },
+        {
+          "type": "textarea",
+          "label": "t:sections.all.headings.sub_heading.label",
+          "id": "banner_subHeading"
+        },
+        {
+          "type": "text",
+          "label": "t:sections.all.button.name",
+          "id": "banner_button"
+        },
+        {
+          "type": "url",
+          "label": "t:sections.homepage_slider.blocks.settings.redirection_link.label",
+          "id": "url"
+        },
+        {
+          "type": "select",
+          "label": "t:sections.homepage_slider.blocks.settings.text_position_desktop.name",
+          "id": "text_position_desktop",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.homepage_slider.blocks.settings.text_position_desktop.options_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.homepage_slider.blocks.settings.text_position_desktop.options_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.homepage_slider.blocks.settings.text_position_desktop.options_3.label"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "label": "t:sections.homepage_slider.blocks.settings.text_position_mobile.name",
+          "id": "text_position_mobile",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.homepage_slider.blocks.settings.text_position_mobile.options_1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.homepage_slider.blocks.settings.text_position_mobile.options_2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.homepage_slider.blocks.settings.text_position_mobile.options_3.label"
+            }
+          ],
+          "default": "center"
+        },
+        {
+          "type": "select",
+          "label": "t:sections.all.button.settings.button_bg.name",
+          "id": "button_bg",
+          "options": [
+            {
+              "value": "default",
+              "label": "t:sections.all.button.settings.button_bg.options_1.label"
+            },
+            {
+              "value": "transparent",
+              "label": "t:sections.all.button.settings.button_bg.options_2.label"
+            }
+          ]
+        },
+        {
+          "type": "range",
+          "label": "t:sections.all.button.settings.margin_top.label",
+          "id": "btn_gap",
+          "min": 10,
+          "max": 200,
+          "step": 2,
+          "default": 40,
+          "unit": "px"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "new homepage slider"
+    }
+  ]
+}
+{% endschema %}

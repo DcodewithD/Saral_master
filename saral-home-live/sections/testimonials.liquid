@@ -1,0 +1,244 @@
+<style>
+      ul:not(.list-unstyled):not([list-unstyled]) li::before{
+        display:none;
+      }
+
+      .t1 {
+          text-align: center;
+        padding: 1px;
+      scroll-padding: 1px;
+  }
+      }
+
+      .testimonials{
+          padding: 0px 16px 0px!important;
+          margin:20px 0px!important;
+            position: relative;
+
+      }
+
+      .testimonials h2{
+            font-style: normal;
+          font-weight: 900;
+          font-size: 22px;
+          line-height: 28px;
+          color: #525159;
+          text-align: center;
+          margin-bottom: 30px;
+          margin-top: 20px;
+        font-family: var(--heading_font)!important;
+        letter-spacing: 0px!important;
+      }
+
+      .t2 img {
+        width: 100%;
+      height: 250px;
+          max-height: 250px;
+        min-height: 250px;
+      }
+
+      .t3 {
+            padding: 25px 15px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+
+      }
+
+      .t3 h3 {
+          font-size: 18px;
+            font-weight: 500;
+      }
+
+      .t3 p svg path {
+          fill: #E7C594;
+      }
+
+      .t3 p svg {
+      width: 25px;
+          height: 15px;
+          padding-inline: 5px;
+      }
+
+      .t3 p>svg:nth-child(2) {
+          transform: rotate(180deg);
+      }
+
+      .t3 p {
+          font-size: 12px;
+            padding-inline: 5px;
+        color: #3A3844;
+        line-height: 24px;
+            text-align: left;
+        font-family:var(--body_font);
+        margin-bottom: 0px;
+      }
+
+      .t1 ul.slick-dots {
+          position: absolute;
+          bottom: -39px;
+          left: 0;
+          right: 0;
+          margin: 0px;
+          padding: 0px;
+          gap: 8px;
+          width: 100%;
+      }
+
+      .t1 ul.slick-dots .slick-active {
+          border-color: #3B3B3B!important;
+          background: #3B3B3B!important;
+          margin: 0px;
+      }
+
+      .t1 ul.slick-dots li {
+          border: 2px solid #F5F9FA!important;
+          background: #F5F9FA!important;
+          width: 24px!important;
+          height: 0px!important;
+          border-radius: 0px;
+          margin: 0px;
+      }
+
+      .t1 ul.slick-dots li button{
+        display:none;
+      }
+
+      .t1 button.slick-prev {
+          display: none!important;
+      }
+
+      .t1 button.slick-next {
+          display: none!important;
+      }
+
+      .testimonials .oc6 {
+          margin-bottom: 0.5rem;
+      }
+
+      .testimonials .oc6 svg path{
+        fill:#333333!important;
+          border-color: #333333;
+          stroke: #333333;
+      }
+
+      .testimonials .oc6 svg{
+        width:16px;
+        height:16px;
+      }
+
+      .testimonials .oc6{
+        text-align:left;
+      }
+
+      .testimonials .t4 {
+          display: flex;
+          align-items: baseline;
+          justify-content: space-between;
+      }
+
+      .t4 span {
+          font-family: var(--body_font);
+          color: #808080;
+      }
+
+      @media (min-width: 768px){
+
+      .t3 p {
+          font-size: 13px;
+      }
+
+
+    /*     .t2 {
+      margin-left: 20px;
+      } */
+
+        .t1 .slick-track{
+      margin-left: -10px;
+          padding-bottom: 30px;
+      }
+
+        .testimonials{
+              padding: 0px 120px 0px!important;
+          margin: 30px auto!important;
+        }
+
+        .testimonials h2{
+              font-weight: 900;
+          font-size: 32px;
+          line-height: 49px;
+          margin: 20px 0px 40px;
+        }
+
+        .t1 ul.slick-dots {
+          bottom: 0px;
+      }
+
+
+      }
+</style>
+
+<div class="testimonials">
+  <h2>Our Customers</h2>
+  <div class="t1">
+    {% for block in section.blocks %}
+      <div class="t2">
+        {% render 'review-image', image: block.settings.image %}
+        <div class="t3">
+          <div class="t4">
+            <h3>{{ block.settings.reviewer_name }}</h3>
+            <span>{{ block.settings.date }}</span>
+          </div>
+          {% include 'stars' %}
+          <p>{{ block.settings.text }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<script></script>
+
+{% schema %}
+{
+"name": "testimonials",
+"settings": [],
+  "blocks":[
+    {
+      "type":"review",
+      "name":"review",
+      "settings":[
+        {
+          "type":"image_picker",
+          "label":"Review image",
+          "id":"image"
+        },
+        {
+          "type":"text",
+          "label":"Reviewer name",
+          "id":"reviewer_name"
+        },
+        {
+          "type":"textarea",
+          "label":"Review text",
+          "id":"text"
+        },
+        {
+          "type":"text",
+          "label":"Review date",
+          "id":"date"
+        }
+      ]
+    }
+  ],
+"presets": [
+{
+"name": "testimonials",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

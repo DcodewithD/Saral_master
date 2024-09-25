@@ -1,0 +1,40 @@
+{% comment %}
+  <link
+    rel="preload"
+    as="font"
+    href="{{ settings.font_base | font_url }}"
+    type="font/woff2"
+    crossorigin
+  >
+  <link
+    rel="preload"
+    as="font"
+    href="{{ settings.font_heading | font_url }}"
+    type="font/woff2"
+    crossorigin
+  >
+{% endcomment %}
+{% liquid
+  assign heading_bold = settings.font_heading | font_modify: 'weight', 'bolder'
+  assign heading_italic = settings.font_heading | font_modify: 'style', 'italic'
+  assign heading_regular = settings.font_heading | font_modify: 'weight', 'normal'
+  assign heading_light = settings.font_heading | font_modify: 'weight', 'lighter'
+  assign body_bold = settings.font_heading | font_modify: 'weight', 'bolder'
+  assign body_italic = settings.font_heading | font_modify: 'style', 'italic'
+  assign body_regular = settings.font_heading | font_modify: 'weight', 'normal'
+  assign body_light = settings.font_heading | font_modify: 'weight', 'lighter'
+%}
+<style>
+    /* :root{
+        --heading_font : {{ settings.font_heading.family }};
+        --body_font : {{ settings.font_base.family }};
+        --body_font_bold : {{ body_bold.style }};
+  } */
+  :root{
+        --heading_font : 'Inter-SemiBold';
+        --body_font : 'Inter-Regular';
+        --body_font_bold : {{ body_bold.style }};
+  }
+  {{ settings.font_heading | font_face }}
+  {{ settings.font_base | font_face }}
+</style>

@@ -1,0 +1,229 @@
+<!-- custom calculator -->
+<style>
+    .cart_button{
+      border: 1px solid #2E2E2E;
+      border-radius: 6px;
+      background: #ffffff;
+      padding: 1rem 2rem;
+      color: #3A3844;
+      font-family: var(--body_font);
+      font-size: 16px;
+      min-height: 48px;
+      box-shadow: 0 0 0;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      display:block!important;
+    }
+    .cart_button.loading::before {
+      content: "";
+      display: inline-block;
+      width: 20px; /* Adjust as needed */
+      height: 20px; /* Adjust as needed */
+      border: 2px solid #fff;
+      border-top: 2px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+  }
+  button#sb:disabled {
+      opacity: 0.5;
+  }
+
+  @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+</style>
+<div class="calculator">
+  <div class="price">Price : Rs 0</div>
+  <div>
+    <input type="number" id="wd" placeholder="Width in cm" name="width">
+    <p class="error width" style="color:red;display:none">Enter width</p>
+  </div>
+  <div>
+    <input type="number" id="hg" placeholder="length in cm" name="length">
+    <p class="error lenght" style="color:red;display:none">Enter height</p>
+  </div>
+  <button class="cart_button" id="sb">Add To Cart</button>
+</div>
+<script>
+          const wdInput = document.querySelector("#wd");
+          const hgInput = document.querySelector("#hg");
+          const priceElement = document.querySelector("div.price");
+          const cart_button = document.querySelector("#sb");
+          let priceData,calculatorData;
+          const shopUrl = "https://saralhome.com";
+          console.log("shop url", shopUrl, "{{ product.variants[0].sku }}");
+          cart_button.addEventListener("click", submissionHandler);
+          wdInput.addEventListener("input", calculatePrice);
+          hgInput.addEventListener("input", calculatePrice);
+        
+          document.addEventListener("DOMContentLoaded", () => {
+            cart_button.setAttribute("disabled", "true");
+      let dt = { productId: "{{ product.id }}" };
+            getPriceList(dt, (data) => {
+              priceData = data.price;
+              calculatorData = data.calculator;
+            });
+          });
+        
+          function getPriceList(data, callback) {
+            fetch(shopUrl + "/apps/express-proxy/get-price", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                callback(data);
+              })
+              .catch((err) => console.log("calculator error",err));
+          }
+        
+          function submissionHandler(e) {
+            e.preventDefault();
+            // Make an API request here when the "Submit" button is clicked
+            cart_button.setAttribute("disabled", "true");
+            cart_button.innerHTML = "Wait Adding..."
+            const form_data = {
+              width: parseFloat(wdInput.value),
+              height : parseFloat(hgInput.value),
+              productId: "{{ product.id }}",
+            };
+        
+            updateData(form_data);
+          }
+        
+        
+function calculatePrice() {
+    cart_button.setAttribute("disabled", "true");
+    const width = parseFloat(wdInput.value);
+    const length = parseFloat(hgInput.value);
+
+    if (isNaN(width) || isNaN(length)) {
+        // Handle the case where the input values are not numbers
+        priceElement.innerHTML = "Price: Rs 0";
+        priceElement.style.color= '#141414';
+        return;
+    }
+
+    if (width < calculatorData.minMaxWidth.min) {
+        priceElement.innerHTML = `Minimum width is ${calculatorData.minMaxWidth.min}`;
+        priceElement.style.color= '#ff0000';
+        priceElement.style.fontWeight= 'bold';
+        return;
+    }
+    if (width > calculatorData.minMaxWidth.max) {
+        priceElement.innerHTML = `Maximum width is ${calculatorData.minMaxWidth.max}`;
+        priceElement.style.color= '#ff0000';
+        priceElement.style.fontWeight= 'bold';
+        return;
+    }
+
+    if (length < calculatorData.minMaxHeight.min) {
+        priceElement.innerHTML = `Minimum length is ${calculatorData.minMaxHeight.min}`; 
+        priceElement.style.color= '#ff0000';
+        priceElement.style.fontWeight= 'bold';
+        return;
+    }
+    if (length > calculatorData.minMaxHeight.max) {
+        priceElement.innerHTML = `Maximum length is ${calculatorData.minMaxHeight.max}`;
+        priceElement.style.color= '#ff0000';
+        priceElement.style.fontWeight= 'bold';
+        return;
+    }
+
+    const area = width * length;
+    const matchingPrice = findMatchingPrice(area);
+    let totalPrice;
+    console.log(area, matchingPrice)
+
+    if (matchingPrice) {
+        cart_button.removeAttribute("disabled");
+        const totalArea = area;
+        totalPrice = (matchingPrice.price / matchingPrice.area) * totalArea;
+        totalPrice = parseInt(totalPrice);
+        priceElement.innerHTML = `Price: Rs ${totalPrice}`;
+        priceElement.style.color= '#141414';
+    } else {
+        cart_button.setAttribute("disabled", "true");
+        totalPrice = parseInt(totalPrice);
+        priceElement.innerHTML = `Price: Rs ${totalPrice}`;
+        priceElement.style.color= '#141414';
+    }
+}
+          
+          function findMatchingPrice(area) {
+              // Assuming that priceData is an array of objects with 'area' and 'price' properties
+              const sortedPrices = priceData.sort((a, b) => a.area - b.area);
+          
+              for (let i = 0; i < sortedPrices.length; i++) {
+                  if (area <= sortedPrices[i].area) {
+                      return sortedPrices[i];
+                  }
+              }
+          
+              return null; // If no matching price is found
+          }
+                  
+          function updateData(data) {
+            fetch(shopUrl + "/apps/express-proxy/create-variant", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(data),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                addToCart(data.id)
+              })
+              .catch((err) => console.log(err));
+          }
+
+          function addToCart(id) {
+            fetch("/cart/add.js", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    quantity: 1,
+                    id: id,
+                    properties: {
+                      "width": parseFloat(wdInput.value),
+                      "length": parseFloat(hgInput.value),
+                      "SKU" : "{{ product.variants[0].sku }}"
+                    }
+                }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    setTimeout(() => {
+                        window.location.href = "/cart";
+                    }, 4000);
+                } else {
+                    console.error("Failed to add product to cart.");
+                }
+            })
+            .catch(error => {
+                console.error("An error occurred while adding the product to the cart:", error);
+            });
+        }
+    
+  
+
+        document.body.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+            }
+        });
+    
+  
+</script>
+
+<!-- custom calculator -->

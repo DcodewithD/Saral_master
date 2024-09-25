@@ -1,0 +1,76 @@
+<div class="popup-cart py-25 px-20 js-popup-cart-ajax" data-popup-content>
+  <div class="popup-cart__head d-flex align-items-center">
+    <h5 class="m-0">Your Cart</h5>
+    <i class="popup-cart__close ml-auto cursor-pointer" data-js-popup-close>{% render 'icon-theme-164' %}</i>
+  </div>
+  {%- if cart.items.size > 0 -%}
+    <div class="popup-cart__content">
+      <div class="popup-cart__items mt-15">
+        {%- for item in cart.items -%}
+          {% render 'opc-includes', script: 'cart' %}
+          {% include 'product-cart' with disable_lazyload: disable_lazyload,product:item.product,item:item %}
+        {%- endfor -%}
+      </div>
+      <div class="popup-cart__footer position-sticky bottom-0 border-top pt-5 pb-25">
+        {%- if cart.cart_level_discount_applications.size > 0 -%}
+          <div class="popup-cart__discounts">
+            {%- for discount_application in cart.cart_level_discount_applications -%}
+              <div class="popup-cart__discount h6 d-flex align-items-center my-10">
+                <span class="d-flex align-items-center mr-10">
+                  <i class="mt-2 mr-6">{% include 'icon-theme-137' %}</i>
+                  <span>{{ discount_application.title | upcase }}</span>
+                </span>
+                <span class="h5 d-flex align-items-center mb-0 ml-auto">
+                  <span class="mb-2">-</span
+                  ><span>
+                    {%- include 'product-get-price' with price: discount_application.total_allocated_amount -%}
+                  </span>
+                </span>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+        {%- if cart.total_discounts > 0 and cart.cart_level_discount_applications.size > 1 -%}
+          <div class="popup-cart__discounts">
+            <div class="popup-cart__discount h6 d-flex align-items-center my-10">
+              <span class="d-flex align-items-center mr-10">
+                {{ 'cart.general.savings' | t }}
+              </span>
+              <span class="h5 d-flex align-items-center mb-0 ml-auto">
+                {% include 'product-get-price' with price: cart.total_discounts %}
+              </span>
+            </div>
+          </div>
+        {%- endif -%}
+        <div class="popup-cart__subtotal h5 d-flex align-items-center mt-10 mb-0">
+          <p class="m-0">{{ 'general.popups.cart.subtotal' | t }}</p>
+          <span class="ml-auto">
+            {% include 'product-get-price' with price: cart.total_price %}
+          </span>
+        </div>
+        {%- if settings.cart_show_free_shipping -%}
+          <div class="popup-cart__free-shipping my-20">
+            {% render 'free-shipping' %}
+          </div>
+        {%- endif -%}
+        <div class="popup-cart__buttons mt-15">
+          <a
+            href="{{ routes.root_url }}{% if routes.root_url != '/' %}/{% endif %}checkout"
+            class="btn btn--full btn--secondary"
+            >BUY NOW</a
+          >
+          <a href="{{ routes.cart_url }}" class="btn btn--full mt-20">{{ 'general.popups.cart.button_to_cart' | t }}</a>
+        </div>
+        {% comment %}<div class="card-banner">{% include 'cart-banner' %}</div>{% endcomment %}
+      </div>
+    </div>
+  {%- else -%}
+    <div class="popup-cart__empty mt-20">
+      <h5>Your shopping bag is empty.</h5>
+      <svg xmlns="http://www.w3.org/2000/svg" width="700pt" height="700pt" version="1.1" viewBox="0 0 700 700">
+        <path d="m237.76 389.53c-0.53125-1.2812-0.95312-2.6289-1.2461-4.0312l-42.242-201.31c-0.30078-0.60156-0.54688-1.2422-0.73828-1.9102l-20.055-70.277h-47.492c-6.1758 0-11.184-5.0156-11.184-11.199 0-6.1875 5.0078-11.199 11.184-11.199h64.367l19.434 68.102c0.55469-0.16016 1.1211-0.30469 1.6953-0.42578 1.5117-0.31641 3.0547-0.47656 4.6016-0.47656h357.95c12.355 0 22.371 10.027 22.371 22.398 0 1.4961-0.14844 2.9883-0.44531 4.4531l-37.043 182.89c-2.0039 9.8906-10.363 17.219-20.422 17.898l-278.58 18.801c-1.3359 0.089843-2.6562 0.058593-3.9492-0.082032l-11.207 22.449h295.11c6.1758 0 11.184 5.0117 11.184 11.199 0 6.1836-5.0078 11.199-11.184 11.199h-313.2c-8.3125 0-13.723-8.7617-10.004-16.207zm-21.676-210.33 42.324 201.69 278.58-18.801 37.043-182.89zm55.32 324.8c-12.355 0-22.375-10.027-22.375-22.398 0-12.371 10.02-22.402 22.375-22.402 12.355 0 22.371 10.031 22.371 22.402 0 12.371-10.016 22.398-22.371 22.398zm246.09 0c-12.355 0-22.371-10.027-22.371-22.398 0-12.371 10.016-22.402 22.371-22.402s22.371 10.031 22.371 22.402c0 12.371-10.016 22.398-22.371 22.398zm-122.69-380.8c0 6.1875-5.0156 11.199-11.199 11.199-6.1875 0-11.203-5.0117-11.203-11.199v-67.199c0-6.1875 5.0156-11.199 11.203-11.199 6.1836 0 11.199 5.0117 11.199 11.199zm-61.148-6.3047c2.6133 5.6055 0.1875 12.27-5.418 14.883-5.6055 2.6133-12.27 0.1875-14.887-5.418l-14.199-30.453c-2.6133-5.6055-0.1875-12.27 5.418-14.883 5.6055-2.6133 12.27-0.1875 14.883 5.418zm120.2 9.4648c-2.6133 5.6055-9.2773 8.0312-14.887 5.418-5.6055-2.6133-8.0312-9.2773-5.4141-14.883l14.199-30.453c2.6133-5.6055 9.2773-8.0312 14.883-5.418 5.6055 2.6133 8.0312 9.2773 5.418 14.883z"/>
+      </svg>
+      <a href="https://saralhome.com/">Continue Shopping</a>
+    </div>
+  {%- endif -%}
+</div>

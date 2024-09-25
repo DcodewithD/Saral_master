@@ -1,0 +1,122 @@
+<style>
+    .homepage-banner .banner img{
+      width:100%;
+      height:100%;
+    }
+
+      .homepage-banner .banner{
+      position:relative;
+    }
+
+    .homepage-banner{
+      margin:60px 0px;
+      padding:0px 0px;
+    }
+
+  @media(max-width:768px){
+    .homepage-banner{
+      padding:0px 0px;
+      margin:30px 0px;
+
+    }
+  }
+</style>
+<div class="homepage-banner">
+  <div class="banner">
+    {% comment %}<img loading="lazy" class="d-image" src="{{ section.settings.d-image  | img_url: '1200x' }}">{% endcomment %}
+    {% comment %}<img loading="lazy" class="m-image" src="{{ section.settings.m-image  | img_url: '600x' }}">{% endcomment %}
+    {% assign mob_image = section.settings['m-image'] %}
+    {% assign desk_image = section.settings['d-image'] %}
+    <div
+      class="m-image"
+      style="position:relative;padding-bottom:{{ 100 | divided_by : mob_image.aspect_ratio }}%"
+    >
+      <img
+        loading="lazy"
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+        srcset="
+          {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 350w,{%- endif -%}
+          {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 375 }} 450w,{%- endif -%}
+          {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 400 }} 470w,{%- endif -%}
+          {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 425 }} 490w,{%- endif -%}
+          {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 450 }} 500w,{%- endif -%}
+          {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 500}} 500w,{%- endif -%}
+          {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+          {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+          {{ mob_image | image_url }} {{ mob_image.width }}w
+        "
+        src="{{ mob_image | image_url: width: 400 }}"
+        loading="lazy"
+        alt="{{ mob_image.alt | escape }}"
+        width="{{ mob_image.width }}"
+        height="auto"
+      >
+      {% if block.settings.link != blank %}
+        <a href="{{ block.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+      {% endif %}
+    </div>
+    <div
+      class="d-image"
+      style="position:relative;padding-bottom:{{ 100 | divided_by : desk_image.aspect_ratio }}%"
+    >
+      <img
+        style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+        srcset="
+          {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 350w,{%- endif -%}
+          {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 375 }} 450w,{%- endif -%}
+          {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 400 }} 470w,{%- endif -%}
+          {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 425 }} 490w,{%- endif -%}
+          {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 450 }} 500w,{%- endif -%}
+          {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 500}} 500w,{%- endif -%}
+          {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 500 }} 500w,{%- endif -%}
+          {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 500 }} 500w,{%- endif -%}
+          {{ desk_image | image_url }} {{ desk_image.width }}w
+        "
+        src="{{ desk_image | image_url: width: 400 }}"
+        loading="lazy"
+        alt="{{ desk_image.alt | escape }}"
+        width="{{ desk_image.width }}"
+        height="auto"
+      >
+      {% if block.settings.link != blank %}
+        <a href="{{ block.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+      {% endif %}
+    </div>
+    <a class="url" href="{{ section.settings.redirection_link }}"></a>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "homepage-banner",
+"settings": [
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"d-image"
+  },
+
+    {
+    "type":"image_picker",
+    "label":"Choose mobile image",
+    "id":"m-image"
+  },
+  {
+    "type":"url",
+    "label":"Redirection url",
+    "id":"redirection_link"
+  }
+],
+  "presets": [
+    {
+    "name": "homepage-banner"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

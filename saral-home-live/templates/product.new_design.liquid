@@ -1,0 +1,29 @@
+<style>
+.product-page .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    padding: 0px 0px!important;
+    margin: 0px auto!important;
+}
+  .desc_heading {
+    display: flex;
+    justify-content: flex-start!important;
+    gap: 20px;
+}
+  .desc_block.desc_wrap.visible,
+  .desc_block.about_wrap.visible {
+    margin-top: 30px;
+    border-top: 2px solid #DCDCDC!important;
+    border-bottom: 2px solid #DCDCDC!important;
+    opacity: .5;
+}
+  .desc_heading, .product-description .desc_block {
+    border-bottom: solid 0px #f6f6f6!important;
+}
+  .desc_heading button.active {
+    color: #2C2C2C!important;
+}
+.desc_heading button {
+    color: #929292!important;
+}
+</style>
+{% section 'main-product_new_template' %}
+{% render 'related_products_page' %} 

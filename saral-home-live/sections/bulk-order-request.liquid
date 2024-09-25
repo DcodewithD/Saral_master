@@ -1,0 +1,48 @@
+<style>
+      .bulk-order-request {
+        background: url(https://cdn.shopify.com/s/files/1/0256/3683/1318/files/Bulik-order.jpg?v=1672819105) no-repeat center;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9;
+        color: #464646;
+        padding: 40px 0;
+    }
+
+        .bulk-order-request  h2 {
+          text-align: center;
+      }
+  .bulk-order-request h2 {
+      color: black;
+      font-weight: 900;
+      margin-bottom: 30px;
+  }
+</style>
+<div id="navigateHere" class="bulk-order-request bulk-order-fix_padding">
+  <h2 class="">{{ section.settings.section_heading }}</h2>
+  {% include 'bulk-order-form' %}
+</div>
+{% schema %}
+  {
+    "name": "bulk-order-request",
+    "settings": [
+                  {
+            "type": "text",
+            "label": "section heading",
+            "id": "section_heading"
+          }
+      ],
+
+
+    "presets": [
+{
+"name": "bulk-order-request",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

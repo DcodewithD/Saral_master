@@ -1,0 +1,876 @@
+<!-- mega menu -->
+<style>
+  .shop-drop-right {
+  display: flex;
+  flex-direction: column-reverse;
+  }
+  .shop-drop{
+  position: fixed;
+  top: 65px;
+  z-index: 999;
+  background-color: #ffffff;
+  left: 0%;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding:20px 16px 5%;
+  box-shadow: 0px 16px 14px rgb(0 0 0 / 25%);
+  max-width: 30%;
+  }
+  .shop-drop-overlay{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(1px);
+  display:none;
+  opacity:0;
+  }
+  .shop-drop-overlay.visible{
+  display: block!important;
+  z-index:998;
+  opacity:1;
+  }
+  .shop-drop::-webkit-scrollbar {
+  width: 1em;
+  }
+  .shop-drop .footer__list-social.list-social:only-child{
+  justify-content:flex-start;
+  }
+  .drop-social{
+  margin-top: 30px;
+  margin-bottom: 35px;
+  }
+  .shop-drop .list-social__item .icon {
+  height: 1.5rem;
+  width: auto;
+  color:#2d2c2a;
+  }
+  .shop-button svg{
+  transition:all 0.3s ease-in;
+  transform: rotate(0deg);
+  }
+  .shop-button.visible svg{
+  transform: rotate(-180deg);
+  }
+  .shop-drop::-webkit-scrollbar-track {
+  box-shadow: none;
+  }
+
+  .shop-drop::-webkit-scrollbar-thumb {
+  background-color: #d5d5d5;
+  border-radius:20px;
+  }
+  .shop-drop ul{
+  list-style-type:none;
+  padding-left:0px;
+  margin-bottom:0px;
+  }
+  .shop-drop li,.shop-drop .customer-account{
+  display:flex;
+  }
+  .shop-drop a{
+  text-decoration: none;
+  color: #000;
+  }
+  .shop-drop-content{
+  display:flex;
+  justify-content:space-between;
+  flex-direction: column-reverse;
+  }
+  .nav-text{
+  flex:1;
+  }
+  .customer-account .blck {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  }
+  .nav-text p:first-of-type{
+  margin-bottom:0px;
+  }
+  .nav-text p:last-of-type{
+  font-size: 14px;
+  color: #6c6c6c;
+  font-weight: 400;
+  }
+  .customer-account .blck svg{
+  height: 24px;
+  width: auto;
+  }
+  .shop-drop .blck{
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3.5%;
+  margin: 0px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 6px rgb(0 0 0 / 6%);
+  }
+  .shop-drop-content>div:first-of-type{
+  flex:0 0 100%;
+  max-width:100%;
+  }
+  .nav-block.url-wrapper.blck {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  cursor:pointer;
+  }
+  .wrap_ .blck{
+  box-shadow:none;
+  margin:0px;
+  padding:5%;
+  border-radius:0px;
+  }
+  .wrap_{
+  backrgound-color:#fff;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 6px rgb(0 0 0 / 6%);
+  overflow:hidden;
+  }
+  ul.navigation-menu li:nth-child(odd) .blck{
+  background-color:#F4F4F4;
+  }
+  .nav-image {
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  .url-wrapper{
+  position:relative;
+  }
+  .url-link{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  z-index:4;
+  display:block!important;
+  }
+  .nav-block.open .nav-links{
+  max-height:
+  }
+  .drop-image-container{
+  margin:10px 0px;
+  overflow:hidden;
+  position:relative;
+  }
+  .nav-image img {
+  height: -webkit-fill-available;
+  width: auto;
+  border-radius: 5px;
+  }
+  .shop-drop-content>div:last-of-type{
+  flex:0 0 100%;
+  max-width:100S%;
+  }
+
+  .nav-links {
+  flex: 0 0 100%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.3s max-height ease-in-out;
+  }
+  .nav-block.open .nav-links{
+  max-height:900px;
+  }
+  .nav-block.open .nav-links{
+  max-height:900px;
+  }
+
+  .open .icon-arrow svg {
+  transform: rotate(180deg);
+  }
+
+  .icon-arrow svg{
+  transition: all 0.3s ease-in-out;
+
+  }
+
+  .shop-drop ul.navigation-menu li {
+  padding-left: 0px!important;
+  }
+
+  .list-social {
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+  .shop-drop .drop-navigation>div:nth-child(odd) {
+  background-color: #F4F4F4!important;
+  }
+
+  .bk3 {
+  position: relative;
+  flex: 0 0 calc(100%/3 - 20px*2/3);
+  max-width: calc(100%/3 - 20px*2/3);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  }
+  .bk2 {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+  .banner-kids {
+  position: relative;
+  margin: 10px 0px;
+  }
+
+  .banner-kids .bottom {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-left: 60px;
+  padding-right: 0px;
+  width: 65%;
+  }
+  .banner-kids .upper {
+  padding-left: 120px;
+  padding-right: 35px;
+  padding-top: 30px;
+  }
+
+  .banner-kids .upper h3 {
+  font-size: 20px;
+  font-family: var(--body_font)!important;
+  font-style: var(--body_font_bold);
+  color: white;
+  background: #BF47F8;
+  padding: 5px;
+  border-radius: 5px;
+  width: max-content;
+  font-weight: 900;
+  }
+
+  .banner-kids .upper p {
+  font-size: 10px;
+  font-family: var(--body_font)!important;
+  color: white;
+  }
+  .banner-kids .bk3 h4 {
+  color: white;
+  font-size: 8px;
+  margin: 0 auto;
+  text-align: center;
+  }
+  .shop-drop .nav-text>p:nth-child(1) {
+  color: #3A3844;
+  font-size: 20px!important;
+  font-family: var(--body_font)!important;
+  line-height: 22px;
+  margin-bottom: 3px;
+  }
+  .nav-sub-text p {
+  color: #808080!important;
+  font-size: 10px!important;
+  font-family: var(--body_font)!important;
+  font-weight: 100;
+  }
+  ul.navigation-menu li a {
+  color: #3A3844!important;
+  font-size: 20px!important;
+  font-family: var(--body_font)!important;
+
+  }
+
+  .nav-links ul li a {
+  font-size: 15px!important;
+  font-family: var(--body_font)!important;
+  padding-block: 10px!important;
+  color: #3A3844;
+  width: 100%;
+  }
+  .shop-drop .nav-links ul li {
+  padding-left: 2px!important;
+  }
+  .
+  .nav-links ul>li:nth-child(1) {
+  padding-top: 10px;
+  border-bottom: 0.1px solid #d6d6d6;
+  }
+  /*                                       .drop-navigation>.nav-block.url-wrapper.blck:nth-child(3)>.nav-links>ul>li:nth-child(2) {
+  border-bottom: 0.1px solid #d6d6d6;
+  } */
+  .drop-navigation>.nav-block.url-wrapper.blck:nth-child(3)>.nav-links>ul>li:nth-child(3) {
+  border-bottom: 0.1px solid #d6d6d6;
+  }
+  .shop-drop ul.navigation-menu li:before {
+  display: none;
+  }
+
+  .drop-social h3 {
+  font-size: 15px;
+  color: #3A3844;
+  }
+  .nav-links ul>li:nth-child(1) {
+  border-bottom: 0.1px solid #d6d6d6;
+  }
+  .nav-links ul>li:nth-child(3) {
+  border-top: 0.1px solid #d6d6d6;
+  }
+
+  .banner-kids .bk3 img {
+  width: 85%;
+  height: 85%;
+  }
+  .customer-account a.blck {
+  color: #3A3844!important;
+  font-size: 20px!important;
+  font-family: var(--body_font)!important;
+  }
+  .customer-account a.blck svg path {
+  fill: #3A3844!important;
+  }
+
+  @media only screen and (max-width: 749px) {
+  .banner-kids .bk3 h4 {
+  font-size: 8px;
+  }
+  .banner-kids .bk3 img {
+  width: 85%;
+  height: 85%;
+  }
+  .shop-drop {
+  top: 50px;
+  max-height: 100vh;
+  max-width:100%!important;
+
+  }
+  .banner-kids .upper {
+  padding-left: 130px;
+  padding-right: 80px;
+  padding-bottom: 5px;
+  padding-top: 50px;
+  }
+
+  .banner-kids .bottom {
+  gap: 20px;
+  width: 65%;
+  padding-left: 63px;
+
+  }
+  .bk3 {
+  flex: 0 0 calc(100%/3 - 20px*2/3);
+  max-width: calc(100%/3 - 20px*2/3);
+  align-items: center;
+  row-gap: 5px;
+  }
+  .shop-drop-content {
+  flex-direction: column-reverse!important;
+  }
+
+  /*                                                 .list-social {
+  justify-content: center;
+  } */
+  }
+
+  .list-social__item .icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  }
+
+  .list-social__link {
+  align-items: center;
+  display: flex;
+  padding-block: 1.3rem;
+  padding-right: 1.3rem;
+  color: rgb(var(--color-foreground));
+  }
+
+  .list-social__link:hover .icon {
+  transform: scale(1.07);
+  }
+
+
+  @media(min-width:650px){
+  .shop-drop{
+  max-width:30%;
+  transition: all .25s cubic-bezier(.165,.84,.44,1);
+  transform:translateY(-150%);
+  }
+  .shop-drop.visible{
+  transform: translateY(0%);
+  }
+  }
+  @media(max-width:650px){
+  .shop-drop-content{
+  flex-direction:column;
+  align-items:center;
+  }
+  .shop-drop{
+  left:50%;
+  transform:translate(-50%,-150%);
+  transition: all .25s cubic-bezier(.165,.84,.44,1);
+  width:100%;
+  }
+  .shop-drop.visible{
+  transform:translate(-50%,0%);
+  }
+  .header-new{
+  padding:14px;
+  }
+  .shop-drop-content>div:first-of-type,.shop-drop-content>div:last-of-type{
+  flex:0 0 100%;
+  max-width:100%;
+  width:100%;
+  }
+  .shop-drop .blck{
+  margin:0px;
+  }
+  }
+  .burger-toggle.visible .icon-hamburger{
+  display:none!important;
+  }
+  .burger-toggle.visible .icon-close{
+  display:block!important;
+  }
+
+  @media(max-width:420px){
+  .banner-kids .upper {
+  padding-left: 120px;
+  padding-right: 40px;
+  padding-bottom: 0px;
+  padding-top: 35px;
+  }
+  .banner-kids .bk3 h4 {
+  font-size: 6px;
+  }
+  }
+  @media(max-width:321px){
+  .banner-kids .upper {
+  padding-left: 100px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-top: 30px;
+  }
+  .banner-kids .upper h3 {
+  font-size: 15px;
+  }
+
+  .banner-kids .upper p {
+  font-size: 8px;
+  }
+
+  .banner-kids .bottom {
+  padding-left: 50px;
+  }
+
+  .banner-kids .bk3 h4 {
+  font-size: 5px;
+  }
+
+  }
+
+  @media(min-width:1299px){
+  .banner-kids .upper {
+  padding-left: 120px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  }
+  }
+</style>
+<div class="shop-drop-overlay"></div>
+<div class="shop-drop">
+  <div class="shop-drop-content">
+    <div class="shop-drop-left">
+      <!--
+        <div class="banner-kids" style="position:relative;">
+          <div class="background-image">
+            <img
+              class="d-image"
+              srcset="
+                {%- if section.settings.background_image.width >= 165 -%}{{ section.settings.background_image | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if section.settings.background_image.width >= 360 -%}{{ section.settings.background_image | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if section.settings.background_image.width >= 533 -%}{{ section.settings.background_image | img_url: '533x' }} 533w,{%- endif -%}
+                {%- if section.settings.background_image.width >= 720 -%}{{ section.settings.background_image | img_url: '720x' }} 720w,{%- endif -%}
+                {%- if section.settings.background_image.width >= 940 -%}{{ section.settings.background_image | img_url: '940x' }} 940w,{%- endif -%}
+                {%- if section.settings.background_image.width >= 1066 -%}{{ section.settings.background_image | img_url: '1066x' }} 1066w,{%- endif -%}
+                {{ section.settings.background_image | img_url: 'master' }} {{ section.settings.background_image.width }}w
+              "
+              src="{{ section.settings.background_image | img_url: '353x' }}"
+              alt="{{ section.settings.background_image.alt | escape }}"
+              loading="lazy"
+              class="motion-reduce"
+            >
+            <img
+              class="m-image"
+              srcset="
+                {%- if section.settings.background_image2.width >= 165 -%}{{ section.settings.background_image2 | img_url: '165x' }} 165w,{%- endif -%}
+                {%- if section.settings.background_image2.width >= 360 -%}{{ section.settings.background_image2 | img_url: '360x' }} 360w,{%- endif -%}
+                {%- if section.settings.background_image2.width >= 533 -%}{{ section.settings.background_image2 | img_url: '533x' }} 533w,{%- endif -%}
+                {%- if section.settings.background_image2.width >= 720 -%}{{ section.settings.background_image2 | img_url: '720x' }} 720w,{%- endif -%}
+                {%- if section.settings.background_image2.width >= 940 -%}{{ section.settings.background_image2 | img_url: '940x' }} 940w,{%- endif -%}
+                {%- if section.settings.background_image2.width >= 1066 -%}{{ section.settings.background_image2 | img_url: '1066x' }} 1066w,{%- endif -%}
+                {{ section.settings.background_image2 | img_url: 'master' }} {{ section.settings.background_image2.width }}w
+              "
+              src="{{ section.settings.background_image2 | img_url: '353x' }}"
+              alt="{{ section.settings.background_image2.alt | escape }}"
+              loading="lazy"
+              class="motion-reduce"
+            >
+          </div>
+
+          <div class="bk2">
+            <a href="https://saralhome.com/collections/paw-patrol">
+              <div class="upper">
+                <h3>{{ section.settings.main_text }}</h3>
+                <p>{{ section.settings.secondary_text }}</p>
+              </div>
+            </a>
+            <div class="bottom" style="position:relative">
+              <a
+                href="/collections/peppa-pig"
+                style="position:absolute;top:0px;left:0px;width:100%;height:100%;display:block;"
+              ></a>
+              <div class="bk3">
+                <img loading="lazy" src="{{ section.settings.image1 | image_url: width : 100  }}">
+                <h4>{{ section.settings.text1 }}</h4>
+                <a class="url" href="{{ section.settings.link1 }}"></a>
+              </div>
+              <div class="bk3">
+                <img loading="lazy" src="{{ section.settings.image2 | image_url: width : 100  }}">
+                <h4>{{ section.settings.text2 }}</h4>
+                <a class="url" href="{{ section.settings.link2 }}"></a>
+              </div>
+              <div class="bk3">
+                <img loading="lazy" src="{{ section.settings.image3 | image_url: width : 100  }}">
+                <h4>{{ section.settings.text3 }}</h4>
+                <a class="url" href="{{ section.settings.link3 }}"></a>
+              </div>
+              <div class="bk3">
+                <img loading="lazy" src="{{ section.settings.image4 | image_url: width : 100  }}">
+                <h4>{{ section.settings.text4 }}</h4>
+                <a class="url" href="{{ section.settings.link4 }}"></a>
+              </div>
+              <div class="bk3">
+                <img loading="lazy" src="{{ section.settings.image5 | image_url: width : 100  }}">
+                <h4>{{ section.settings.text5 }}</h4>
+                <a class="url" href="{{ section.settings.link5 }}"></a>
+              </div>
+              <div class="bk3">
+                <img loading="lazy" src="{{ section.settings.image6 | image_url: width : 100  }}">
+                <h4>{{ section.settings.text6 }}</h4>
+                <a class="url" href="{{ section.settings.link6 }}"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      -->
+      <div class="wrap_">
+        <div class="customer-account">
+          {% if customer %}
+            <a class="blck" href="/account">
+              {%- render 'icon-logout' -%}
+              {{- customer.first_name -}}
+            </a>
+          {% else %}
+            <a class="blck" href="/account/register">{% render 'icon-user' %}Login</a>
+          {% endif %}
+        </div>
+        <ul class="navigation-menu">
+          {% for link in linklists.footer.links %}
+            <li>
+              <a class="blck" href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="drop-social">
+        <h3>Connect with us</h3>
+        {% render 'social-icons' %}
+      </div>
+    </div>
+    <div class="shop-drop-right">
+      <!--
+        <div class="drop-image-container">
+          <img
+            srcset="
+              {%- if section.settings.drop_image.width >= 165 -%}{{ section.settings.drop_image | img_url: '165x' }} 165w,{%- endif -%}
+              {%- if section.settings.drop_image.width >= 360 -%}{{ section.settings.drop_image | img_url: '360x' }} 360w,{%- endif -%}
+              {%- if section.settings.drop_image.width >= 533 -%}{{ section.settings.drop_image | img_url: '533x' }} 533w,{%- endif -%}
+              {%- if section.settings.drop_image.width >= 720 -%}{{ section.settings.drop_image | img_url: '720x' }} 720w,{%- endif -%}
+              {%- if section.settings.drop_image.width >= 940 -%}{{ section.settings.drop_image | img_url: '940x' }} 940w,{%- endif -%}
+              {%- if section.settings.drop_image.width >= 1066 -%}{{ section.settings.drop_image | img_url: '1066x' }} 1066w,{%- endif -%}
+              {{ section.settings.drop_image | img_url: 'master' }} {{ section.settings.drop_image.width }}w
+            "
+            src="{{ section.settings.drop_image | img_url: '353x' }}"
+            alt="{{ section.settings.drop_image.alt | escape }}"
+            loading="lazy"
+            class="motion-reduce"
+          >
+          <a href="{{ section.settings.link }}" class="url-link"></a>
+        </div>
+      -->
+      <div class="drop-navigation">
+        {% for block in section.blocks %}
+          <div class="nav-block url-wrapper blck">
+            <div class="nav-image">
+              <img src="{{ block.settings.link_image | image_url: width : 100 }}">
+            </div>
+            <div class="nav-text">
+              <p>{{ block.settings.link_text }}</p>
+              <div class="nav-sub-text">
+                <p>{{ block.settings.link_sub_text }}</p>
+              </div>
+            </div>
+            {% if block.settings.navigation != blank -%}
+              <div class="icon-arrow">{% render 'icon-arrow' %}</div>
+            {%- endif %}
+            {% if block.settings.navigation == blank -%}
+              <a class="url-link" href="{{ block.settings.link }}"></a>
+            {%- endif %}
+            <div class="nav-links">
+              <ul>
+                {% for link in block.settings.navigation.links %}
+                  <li>
+                    {% if link.links.size > 0 %}
+                      <span class="sub-links-wrap">
+                        <span class="sub-link-head">{{ link.title }}</span>
+                        {% for childLink in link.links %}
+                          {% if childLink.links.size > 0 %}
+                            <span class="sub-link-wrap">
+                              <span class="sub-link-head">{{ childLink.title }}</span>
+                              {% for grandChild in childLink.links %}
+                                <a href="{{ grandChild.url }}">{{ grandChild.title }}</a>
+                              {% endfor %}
+                            </span>
+                          {% else %}
+                            <a hrerf="{{ childLink.url }}">{{ childLink.title }}</a>
+                          {% endif %}
+                        {% endfor %}
+                      </span>
+                    {% else %}
+                      <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.nav-block').each((ind,el)=>{
+    $(el).on("click",()=>{
+      el.classList.toggle("open");
+    })
+  })
+  $('.burger-toggle').on('click',function(e){
+    e.preventDefault();
+     $('.shop-drop')[0].classList.toggle('visible');
+     $('.burger-toggle')[0].classList.toggle('visible');
+    $(".shop-drop")[0].classList.contains("visible") ? $body[0].style.overflow = "hidden" : $body[0].style.overflow = "auto";
+    $("burger-toggle")[0].classList.toggle("visible");
+  })
+  $(document).on('click',function(e){
+    if(!e.target.classList.contains('shop-drop') && !e.target.classList.contains('burger-toggle') && !e.target.closest('.burger-toggle') && !e.target.closest('.shop-drop') ){
+         $('.shop-drop')[0]?.classList.remove('visible');
+         $('.burger-toggle')[0]?.classList.remove('visible');
+       $('.shop-drop-overlay')[0]?.classList.remove('visible');
+      $("burger-toggle")[0]?.classList.remove("visible");
+    }
+    setTimeout(function(){
+      if($('.shop-drop')[0].classList.contains('visible') ){
+        $('.shop-drop-overlay')[0].classList.add('visible');
+      }else{
+         $('.shop-drop-overlay')[0].classList.remove('visible');
+      }
+    },0)
+  })
+  $('.shop-drop-overlay').on("click",()=>{
+     $body[0].style.overflow = "auto";
+  })
+</script>
+{% schema %}
+{
+  "name": "Shop drop",
+  "settings": [
+    {
+      "type":"image_picker",
+      "label":"Dropdown image",
+      "id":"drop_image"
+    },
+    {
+     "type":"url",
+     "label":"Link",
+     "id":"link"
+    },
+    {
+      "type":"image_picker",
+      "label":"background image",
+      "id":"background_image"
+    },
+    {
+      "type":"image_picker",
+      "label":"background image2",
+      "id":"background_image2"
+    },
+    {
+      "type":"text",
+      "label":"Main text",
+      "id":"main_text"
+    },
+    {
+      "type":"text",
+      "label":"Secondary text",
+      "id":"secondary_text"
+    },
+    {
+      "type":"image_picker",
+      "label":"image1",
+      "id":"image1"
+    },
+    {
+      "type":"text",
+      "label":"text1",
+      "id":"text1"
+    },
+    {
+     "type":"url",
+     "label":"Link1",
+     "id":"link1"
+    },
+        {
+      "type":"image_picker",
+      "label":"image2",
+      "id":"image2"
+    },
+    {
+      "type":"text",
+      "label":"text2",
+      "id":"text2"
+    },
+    {
+     "type":"url",
+     "label":"Link2",
+     "id":"link2"
+    },
+        {
+      "type":"image_picker",
+      "label":"image3",
+      "id":"image3"
+    },
+    {
+      "type":"text",
+      "label":"text3",
+      "id":"text3"
+    },
+    {
+     "type":"url",
+     "label":"Link3",
+     "id":"link3"
+    },
+        {
+      "type":"image_picker",
+      "label":"image4",
+      "id":"image4"
+    },
+    {
+      "type":"text",
+      "label":"text4",
+      "id":"text4"
+    },
+    {
+     "type":"url",
+     "label":"Link4",
+     "id":"link4"
+    },
+        {
+      "type":"image_picker",
+      "label":"image5",
+      "id":"image5"
+    },
+    {
+      "type":"text",
+      "label":"text5",
+      "id":"text5"
+    },
+    {
+     "type":"url",
+     "label":"Link5",
+     "id":"link5"
+    },
+        {
+      "type":"image_picker",
+      "label":"image6",
+      "id":"image6"
+    },
+    {
+      "type":"text",
+      "label":"text6",
+      "id":"text6"
+    },
+    {
+     "type":"url",
+     "label":"Link6",
+     "id":"link6"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "link",
+      "name": "link",
+      "settings": [
+      {
+      "type":"image_picker",
+      "label":"Link image",
+      "id":"link_image"
+    },
+    {
+      "type":"text",
+      "label":"Link text",
+      "id":"link_text"
+    },
+    {
+      "type":"text",
+      "label":"Link Sub text",
+      "id":"link_sub_text"
+    },
+    {
+     "type":"url",
+     "label":"Link",
+     "id":"link"
+    },
+        {
+     "type":"link_list",
+     "label":"Select Navigation",
+     "id":"navigation"
+    }
+      ]
+    }
+  ],
+  "presets": [
+{
+"name": "shop drop",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

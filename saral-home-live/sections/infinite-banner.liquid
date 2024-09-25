@@ -1,0 +1,305 @@
+{{ 'infinite-banner.css' | asset_url | stylesheet_tag }}
+
+<style>
+  .home-infinite-banner .infinite-banners-wrapper{
+    /* align-items: center; */
+  }
+  .home-infinite-banner .infinite-banner-block infinite-block .image-wrap{
+
+  }
+  .home-infinite-banner.infinite-banners-content{
+    background: #F2EFE4;
+    padding: 2%;
+  }
+
+
+  @media(max-width: 768px){
+    .home-infinite-banner .infinite-banners-wrapper .infinite-banner-block{
+      flex: 0 0 calc(100%/3 - calc(10px*1)/2);
+      max-width: calc(100%/3 - calc(10px*1)/2);
+    }
+    .home-full-section-width{
+    padding-left: 0;
+    padding-right: 0;
+    }
+  }
+</style>
+
+<script
+  src="{{ "infinite-banner.js" | asset_url }}"
+  defer
+  id="{{ section.id }}-inifinite-script"
+></script>
+{% style %}
+  {% assign desktop_gap = section.settings.blocks_gap_desktop | append : "px" %}
+  {% assign mobile_gap = section.settings.blocks_gap_mobile | append : "px" %}
+  {% assign desk_block_out = section.blocks.size | minus : section.settings.blocks_show_count_desktop %}
+  {% assign mob_block_out = section.blocks.size | minus : section.settings.blocks_show_count_mobile %}
+      .infinite-banners-wrapper{
+          gap:{{ desktop_gap }}
+      }
+    .infinite-banners-wrapper .infinite-banner-block{
+       flex:0 0 calc(100%/{{ section.settings.blocks_show_count_desktop }} - calc({{ desktop_gap }}*{{ section.settings.blocks_show_count_desktop | minus : 1 }})/{{ section.settings.blocks_show_count_desktop }});
+       max-width:calc(100%/{{ section.settings.blocks_show_count_desktop }} - calc({{ desktop_gap }}*{{ section.settings.blocks_show_count_desktop | minus : 1 }})/{{ section.settings.blocks_show_count_desktop }});
+       overflow:hidden;
+     }
+    @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform:translateX(calc(calc(calc(100%/{{ section.settings.blocks_show_count_desktop }} - calc({{ desktop_gap }}*{{ section.settings.blocks_show_count_desktop | minus : 1 }})/{{ section.settings.blocks_show_count_desktop }}) * {{ section.blocks.size }} + {{ section.blocks.size | times : section.settings.blocks_gap_desktop | append : "px" }}) * -1));
+      }
+    }
+    @media(max-width:768px){
+      .infinite-banners-wrapper{
+          gap:{{ mobile_gap }}
+      }
+      .infinite-banners-wrapper .infinite-banner-block{
+          flex:0 0 calc(100%/{{ section.settings.blocks_show_count_mobile }} - calc({{ mobile_gap }}*{{ section.settings.blocks_show_count_mobile | minus : 1 }})/{{ section.settings.blocks_show_count_mobile }});
+          max-width:calc(100%/{{ section.settings.blocks_show_count_mobile }} - calc({{ mobile_gap }}*{{ section.settings.blocks_show_count_mobile | minus : 1 }})/{{ section.settings.blocks_show_count_mobile }});
+          overflow:hidden;
+      }
+      .infinite-banners-wrapper{
+      animation: scroll {{ section.settings.animation_time_mobile | append : "s" }} linear infinite;
+      }
+      @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform:translateX(calc(calc(calc(100%/{{ section.settings.blocks_show_count_mobile }} - calc({{ mobile_gap }}*{{ section.settings.blocks_show_count_mobile | minus : 1 }})/{{ section.settings.blocks_show_count_mobile }}) * {{ section.blocks.size }} + {{ section.blocks.size | times : section.settings.blocks_gap_mobile | append : "px" }}) * -1));
+      }
+    }
+    }
+    .infinite-banners-wrapper{
+      animation: scroll {{ section.settings.animation_time_desktop | append : "s" }} linear infinite;
+    }
+{% endstyle %}
+<div id="infinite-banner-{{ section.id }}">
+  <div class="home-full-section-width section-width {% if section.settings.section_width != 'full-width' %}{% endif %}">
+    <div class="{% if section.settings.bottom_gap %} section-wrap {% endif %}">
+      {% if section.settings.section_heading != blank
+        or section.settings.section_sub_heading != blank
+        or section.settings.section_content != blank
+      %}
+        <div class="section-text text-{{ section.settings.text_align }}">
+          {% if section.settings.section_heading != blank %}
+            <h2 class="section-heading">
+              {{ section.settings.section_heading }}
+            </h2>
+          {% endif %}
+          {% if section.settings.section_sub_heading != blank %}
+            <h3 class="section-subheading">
+              {{ section.settings.section_sub_heading }}
+            </h3>
+          {% endif %}
+          {% if section.settings.section_content != blank %}
+            <p class="section-text">{{ section.settings.section_content }}</p>
+          {% endif %}
+        </div>
+      {% endif %}
+      <div class="home-infinite-banner infinite-banners-content">
+        <div class="infinite-banners-wrapper">
+          {% for block in section.blocks %}
+            <div class="infinite-banner-block">
+              {% if block.type == 'image' %}
+                {% assign image = block.settings.image %}
+                <div
+                  class="image-wrap"
+                  style="position:relative;padding-bottom:75px"
+                >
+                  <img
+                    style="position:absolute;top:0px;left:0px;"
+                    srcset="
+                      {%- if image.width >= 50 -%}{{ image | image_url: width: 50 }} 50w,{%- endif -%}
+                      {%- if image.width >= 110 -%}{{ image | image_url: width: 110 }} 100w,{%- endif -%}
+                      {%- if image.width >= 170 -%}{{ image | image_url: width: 170 }} 90w,{%- endif -%}
+                      {%- if image.width >= 250 -%}{{ image | image_url: width: 250 }} 250w,{%- endif -%}
+                      {%- if image.width >= 310 -%}{{ image | image_url: width: 310 }} 350w,{%- endif -%}
+                      {%- if image.width >= 370 -%}{{ image | image_url: width: 370 }} 370w,{%- endif -%}
+                      {%- if image.width >= 420 -%}{{ image | image_url: width: 420 }} 420w,{%- endif -%}
+                      {%- if image.width >= 500 -%}{{ image | image_url: width: 500 }} 500w,{%- endif -%}
+                    "
+                    src="{{ image | image_url: width: image.width }}"
+                    loading="lazy"
+                    alt="{{ image.alt | escape }}"
+                    width="{{ image.width }}"
+                    height="auto"
+                  >
+                </div>
+              {% else %}
+                <div class="text-wrap">
+                  {{ block.settings.text }}
+                </div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  document
+    .querySelector('#{{ section.id }}-inifinite-script')
+    .addEventListener('load', () => {
+      new InifiniteSlider({
+        wrapper: '#infinite-banner-{{ section.id }} .infinite-banners-wrapper',
+      }).slide();
+    });
+</script>
+{% schema %}
+{
+  "name": "infinite banner",
+  "settings": [
+    {
+      "type": "select",
+      "label": "t:sections.all.width.name",
+      "id": "section_width",
+      "options": [
+        {
+          "value": "full-width",
+          "label": "t:sections.all.width.options_1.label"
+        },
+        {
+          "value": "default-width",
+          "label": "t:sections.all.width.options_2.label"
+        }
+      ],
+      "default": "default-width"
+    },
+    {
+      "type": "checkbox",
+      "label": "Bottom gap",
+      "id": "bottom_gap",
+      "default": true
+    },
+    {
+      "type": "text",
+      "label": "t:sections.all.headings.heading.label",
+      "id": "section_heading",
+      "default": "Featured collection"
+    },
+    {
+      "type": "text",
+      "label": "t:sections.all.headings.sub_heading.label",
+      "id": "section_sub_heading"
+    },
+    {
+      "type": "textarea",
+      "label": "t:sections.all.headings.text.label",
+      "id": "section_content"
+    },
+    {
+      "type": "select",
+      "label": "t:sections.featured_collection.settings.text_align.name",
+      "id": "text_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.featured_collection.settings.text_align.options_1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.featured_collection.settings.text_align.options_2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.featured_collection.settings.text_align.options_3.label"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "label": "Blocks to show on desktop",
+      "id": "blocks_show_count_desktop",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 6,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "gap between blocks desktop",
+      "id": "blocks_gap_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 10,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Animation duration desktop",
+      "id": "animation_time_desktop",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 10,
+      "unit": "sec"
+    },
+    {
+      "type": "range",
+      "label": "Animation duration mobile",
+      "id": "animation_time_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 10,
+      "unit": "sec"
+    },
+    {
+      "type": "range",
+      "label": "Blocks to show on mobile",
+      "id": "blocks_show_count_mobile",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "default": 6,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "gap between blocks mobile",
+      "id": "blocks_gap_mobile",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "default": 10,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "choose image",
+          "id": "image"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "text",
+      "settings": [
+        {
+          "type": "richtext",
+          "label": "Text",
+          "id": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "infinite banner"
+    }
+  ]
+}
+{% endschema %}

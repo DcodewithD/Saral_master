@@ -1,0 +1,18 @@
+<div class="collection-sidebar-filter-headings" data-filter="{{ index }}">
+      {%- unless default_state == 'without_title' -%}
+        <div class="collection-sidebar-section__head{% if default_state == 'open' %} open{% endif %} "{% if is_accordion %} data-js-accordion-button{% endif %}>
+            <h5 class="d-flex align-items-center mb-0">
+                <span>
+                    {%- if section.settings.uppercase_filter_title -%}
+                        {{ title | upcase }}          
+                    {%- else -%}
+                        {{ title }}
+                    {%- endif -%}
+                </span>
+                    <i class="collection-sidebar-section__arrow">{% render 'icon-theme-229' %}</i>
+            </h5>
+        </div>
+    {%- else -%}
+        <div class="pt-20"></div>
+    {%- endunless -%}
+</div>

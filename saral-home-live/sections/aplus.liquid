@@ -1,0 +1,964 @@
+<style>
+  .aplus {
+      padding: 0px 120px;
+        display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+  }
+
+  .aplus .section-1, .section-2 {
+      display: flex;
+    gap:25px;
+  }
+
+  .aplus .section-1 .inner, .section-2 .inner {
+      flex: 0 0 calc(100%/3 - 25px*2/3);
+      max-width: calc(100%/3 - 25px*2/3);
+  }
+
+  .aplus .section-3 {
+      background: radial-gradient(25.52% 266.75% at 83.25% 50%, {{section.settings.bg-color-s3-1}} 0%, {{section.settings.bg-color-s3-2}} 100%);
+  }
+
+  .aplus .section-3 .inner-3 {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 65%;
+      max-width: 65%;
+  }
+
+  .aplus .section-3 .inner-2 {
+      display: flex;
+  }
+
+  .aplus .section-3 .inner-6 {
+      flex: 0 0 30%;
+      max-width: 30%;
+  }
+
+  .aplus .section-3  .inner-3 .inner-4 {
+      display: flex;
+    background: {{section.settings.bg-color-s3-inner4}};
+      margin: 30px 0px;
+      padding: 10px 40px;
+      gap: 20px;
+        align-items: center;
+  }
+
+  .aplus .section-3 .inner-3 .inner-4 .card-image-wrap {
+      width: 12%;
+      background: transparent!important;
+    padding-bottom: 6%!important;
+  }
+
+  .aplus .section-3 .inner-3 .inner-5 {
+      padding: 0px 40px;
+        font-size: 30px;
+  }
+
+  .aplus .section-3 .inner-3 .inner-4 h5 {
+      font-size: 30px;
+      color: white;
+      font-weight: 900;
+      margin-bottom: 0px;
+  }
+
+  .aplus .section-3 .inner-3 .inner-4 h5 p {
+      font-size: 30px;
+      color: white;
+      font-weight: 900;
+      margin-bottom: 0px;
+  }
+
+  .aplus .section-4 .inner-1 {
+      display: flex;
+      background: {{section.settings.bg-color-s4-inner1}};
+      margin: 30px 0px 10px;
+      padding: 10px 40px;
+      gap: 20px;
+      align-items: center;
+  }
+
+  .aplus .section-4 .inner-2 {
+      display: flex;
+      gap: 25px;
+      padding: 0px 40px;
+      position: relative;
+  }
+
+  .aplus .section-4 {
+      background: {{section.settings.bg-color-s4-1}};
+        display: flex;
+      flex-direction: column;
+    padding-bottom: 10px;
+  }
+
+  .aplus .section-4 .inner-1 .card-image-wrap {
+      width: 8%;
+      background: transparent!important;
+      padding-bottom: 4%!important;
+  }
+
+  .aplus .section-4 .inner-2 .inner-3 {
+      flex: 0 0 calc(100%/4 - 25px*3/4);
+      max-width: calc(100%/4 - 25px*3/4);
+      text-align: center;
+  }
+
+  .section-4 .card-image-wrap {
+      background: transparent!important;
+  }
+
+  .section-4 .inner-1 h5 {
+      font-size: 30px;
+      color: white;
+      font-weight: 900;
+    margin-bottom: 0px;
+  }
+
+  .section-4 .inner-1 h5 p {
+      font-size: 30px;
+      color: white;
+      font-weight: 900;
+    margin-bottom: 0px;
+  }
+
+  .aplus .banner p {
+      font-size: 20px;
+      color: black;
+      font-family: var(--body_font);
+    margin-top: 20px;
+  }
+
+    .section-1 p {
+      font-size: 20px;
+      color: black;
+      font-family: var(--body_font);
+    margin-top: 20px;
+  }
+
+  .section-2 h5 {
+      color: black;
+      font-size: 20px;
+      font-weight: 900;
+      margin-top: 20px;
+  }
+    .section-2 p {
+      font-size: 20px;
+      color: black;
+      font-family: var(--body_font);
+    margin-top: 10px;
+  }
+
+  .section-3 p {
+      color: black;
+      font-size: 35px;
+  }
+
+  .section-4 .inner-2 .inner-3 h5 {
+      color: #44614A;
+      font-size: 25px;
+  }
+
+  .section-4 .inner-2 .inner-3 h5 p {
+      color: #000000;
+      font-size: 25px;
+  }
+
+    @media(max-width:1399px){
+      .section-3 p {
+      font-size: 29px;
+  }
+    }
+
+  @media(max-width:425px){
+    .aplus {
+      padding: 0px 16px;
+      row-gap: 25px;
+  }
+    .aplus .banner p {
+      font-size: 15px;
+  }
+
+  .aplus .section-1, .section-2 {
+  flex-direction : column;
+  }
+
+  .aplus .section-1 .inner, .section-2 .inner {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  .section-1 p {
+      font-size: 15px;
+  }
+
+  .section-2 h5 {
+      font-size: 15px;
+  }
+
+  .section-2 p {
+      font-size: 15px;
+  }
+
+  .aplus .section-3 .inner-2 {
+      flex-direction: column;
+  }
+
+  .aplus .section-3 .inner-3 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .aplus .section-3 .inner-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+  .aplus .section-3 .inner-3 .inner-5 {
+      padding: 0px 10px;
+  }
+
+  .section-3 p {
+      font-size: 10px;
+  }
+
+  .section-3 p {
+      font-size: 20px;
+  }
+
+  .aplus .section-3  .inner-3 .inner-4 {
+      margin: 15px 0px;
+    padding: 10px 20px 10px 20px;
+  }
+
+  .aplus .section-3 .inner-3 .inner-4 .card-image-wrap {
+      width: 20%;
+      padding-bottom: 10%!important;
+  }
+
+  .aplus .section-3 .inner-3 .inner-4 h5 {
+      font-size: 20px;
+  }
+
+  .aplus .section-3 .inner-3 .inner-4 h5 p {
+      font-size: 20px;
+  }
+
+  .section-4 .inner-1 h5 {
+      font-size: 15px;
+  }
+  .section-4 .inner-1 h5 p {
+      font-size: 15px;
+  }
+  .aplus .section-4 .inner-1 .card-image-wrap {
+      width: 20%;
+      padding-bottom: 10%!important;
+  }
+
+  .aplus .section-4 .inner-2 {
+      padding: 0px 10px;
+          flex-direction: row;
+      flex-wrap: wrap;
+  }
+  .aplus .section-4 .inner-2 .inner-3 {
+      flex: 0 0 45%;
+      max-width: 45%;
+      text-align: center;
+  }
+  .section-4 .inner-2 .inner-3 h5 {
+      font-size: 18px;
+  }
+
+  .section-4 .inner-2 .inner-3 h5 p {
+      font-size: 18px;
+  }
+
+  .aplus .section-4 .inner-1 {
+      padding: 10px 20px 10px 20px;
+  }
+  }
+</style>
+{% if section.settings['m-image'] != blank %}
+  <div class="aplus">
+    <div class="banner">
+      {% assign mob_image = section.settings['m-image'] %}
+      <div
+        class="m-image"
+        style="position:relative;padding-bottom:{{ 100 | divided_by : mob_image.aspect_ratio }}%"
+      >
+        <img
+          loading="lazy"
+          style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+          srcset="
+            {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 350w,{%- endif -%}
+            {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 375 }} 450w,{%- endif -%}
+            {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 400 }} 470w,{%- endif -%}
+            {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 425 }} 490w,{%- endif -%}
+            {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 450 }} 500w,{%- endif -%}
+            {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 500}} 500w,{%- endif -%}
+            {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+            {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+            {{ mob_image | image_url }} {{ mob_image.width }}w
+          "
+          src="{{ mob_image | image_url: width: 400 }}"
+          loading="lazy"
+          alt="{{ mob_image.alt | escape }}"
+          width="{{ mob_image.width }}"
+          height="auto"
+        >
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+        {% endif %}
+      </div>
+      {% assign desk_image = section.settings['d-image'] %}
+
+      <div
+        class="d-image"
+        style="position:relative;padding-bottom:{{ 100 | divided_by : desk_image.aspect_ratio }}%"
+      >
+        <img
+          style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+          srcset="
+            {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 350w,{%- endif -%}
+            {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 375 }} 450w,{%- endif -%}
+            {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 400 }} 470w,{%- endif -%}
+            {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 425 }} 490w,{%- endif -%}
+            {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 450 }} 500w,{%- endif -%}
+            {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 500}} 500w,{%- endif -%}
+            {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 500 }} 500w,{%- endif -%}
+            {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 500 }} 500w,{%- endif -%}
+            {{ desk_image | image_url }} {{ desk_image.width }}w
+          "
+          src="{{ desk_image | image_url: width: 400 }}"
+          loading="lazy"
+          alt="{{ desk_image.alt | escape }}"
+          width="{{ desk_image.width }}"
+          height="auto"
+        >
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+        {% endif %}
+      </div>
+      <p>{{ section.settings['banner-text'] }}</p>
+    </div>
+    <div class="section-1">
+      <div class="inner">
+        {% assign media = section.settings.section_image1 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <p>{{ section.settings.text1 }}</p>
+        <!-- <a href="" class="url"></a> -->
+      </div>
+      <div class="inner">
+        {% assign media = section.settings.section_image2 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <p>{{ section.settings.text2 }}</p>
+        <!-- <a href="" class="url"></a> -->
+      </div>
+      <div class="inner">
+        {% assign media = section.settings.section_image3 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <p>{{ section.settings.text3 }}</p>
+        <!-- <a href="" class="url"></a> -->
+      </div>
+    </div>
+    <div class="section-2">
+      <div class="inner">
+        {% assign media = section.settings.section_image4 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <h5>{{ section.settings['text4-h'] }}</h5>
+        <p>{{ section.settings.text4 }}</p>
+        <!-- <a href="" class="url"></a> -->
+      </div>
+      <div class="inner">
+        {% assign media = section.settings.section_image5 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <h5>{{ section.settings['text5-h'] }}</h5>
+        <p>{{ section.settings.text5 }}</p>
+        <!-- <a href="" class="url"></a> -->
+      </div>
+      <div class="inner">
+        {% assign media = section.settings.section_image6 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <h5>{{ section.settings['text6-h'] }}</h5>
+        <p>{{ section.settings.text6 }}</p>
+        <!-- <a href="" class="url"></a> -->
+      </div>
+    </div>
+    <div class="section-3">
+      <div class="inner-1">
+        <div class="inner-2">
+          <div class="inner-3">
+            <div class="inner-4">
+              {% assign media = section.settings.section_image9 %}
+              <div
+                class="card-image-wrap"
+                style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+              >
+                <img
+                  loading="lazy"
+                  srcset="
+                    {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ media | image_url }} {{ media.width }}w
+                  "
+                  src="{{ media | image_url: width: 533 }}"
+                  alt="{{ media.alt | escape }}"
+                  loading="lazy"
+                  sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+                  width="{{ card_media.width }}"
+                  height="{{ card_media.height }}"
+                  style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+                >
+              </div>
+              <h5>{{ section.settings['text7-h'] }}</h5>
+            </div>
+            <div class="inner-5">
+              <p>{{ section.settings.text7 }}</p>
+            </div>
+          </div>
+          <div class="inner-6">
+            {% assign media = section.settings.section_image10 %}
+            <div
+              class="card-image-wrap"
+              style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+            >
+              <img
+                loading="lazy"
+                srcset="
+                  {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ media | image_url }} {{ media.width }}w
+                "
+                src="{{ media | image_url: width: 533 }}"
+                alt="{{ media.alt | escape }}"
+                loading="lazy"
+                sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+                width="{{ card_media.width }}"
+                height="{{ card_media.height }}"
+                style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-4">
+      <div class="inner-1">
+        {% assign media = section.settings.section_image13 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <h5>{{ section.settings['text8-h'] }}</h5>
+      </div>
+      <div class="inner-2">
+        <div class="inner-3">
+          {% assign media = section.settings.section_image14 %}
+          <div
+            class="card-image-wrap"
+            style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+          >
+            <img
+              loading="lazy"
+              srcset="
+                {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ media | image_url }} {{ media.width }}w
+              "
+              src="{{ media | image_url: width: 533 }}"
+              alt="{{ media.alt | escape }}"
+              loading="lazy"
+              sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+              width="{{ card_media.width }}"
+              height="{{ card_media.height }}"
+              style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+            >
+          </div>
+          <h5>{{ section.settings['text9-h'] }}</h5>
+          <a class="url" href="{{ section.settings.link1 }}"></a>
+        </div>
+        <div class="inner-3">
+          {% assign media = section.settings.section_image15 %}
+          <div
+            class="card-image-wrap"
+            style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+          >
+            <img
+              loading="lazy"
+              srcset="
+                {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ media | image_url }} {{ media.width }}w
+              "
+              src="{{ media | image_url: width: 533 }}"
+              alt="{{ media.alt | escape }}"
+              loading="lazy"
+              sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+              width="{{ card_media.width }}"
+              height="{{ card_media.height }}"
+              style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+            >
+          </div>
+          <h5>{{ section.settings['text10-h'] }}</h5>
+          <a class="url" href="{{ section.settings.link2 }}"></a>
+        </div>
+        <div class="inner-3">
+          {% assign media = section.settings.section_image16 %}
+          <div
+            class="card-image-wrap"
+            style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+          >
+            <img
+              loading="lazy"
+              srcset="
+                {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ media | image_url }} {{ media.width }}w
+              "
+              src="{{ media | image_url: width: 533 }}"
+              alt="{{ media.alt | escape }}"
+              loading="lazy"
+              sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+              width="{{ card_media.width }}"
+              height="{{ card_media.height }}"
+              style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+            >
+          </div>
+          <h5>{{ section.settings['text11-h'] }}</h5>
+          <a class="url" href="{{ section.settings.link3 }}"></a>
+        </div>
+        <div class="inner-3">
+          {% assign media = section.settings.section_image17 %}
+          <div
+            class="card-image-wrap"
+            style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+          >
+            <img
+              loading="lazy"
+              srcset="
+                {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                {{ media | image_url }} {{ media.width }}w
+              "
+              src="{{ media | image_url: width: 533 }}"
+              alt="{{ media.alt | escape }}"
+              loading="lazy"
+              sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+              width="{{ card_media.width }}"
+              height="{{ card_media.height }}"
+              style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+            >
+          </div>
+          <h5>{{ section.settings['text12-h'] }}</h5>
+          <a class="url" href="{{ section.settings.link4 }}"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "aplus",
+    "settings": [
+              {
+          "type":"image_picker",
+          "label":"Mobile Banner Image",
+          "id":"m-image"
+        },
+        {
+          "type":"image_picker",
+          "label":"Dekstop Banner Image",
+          "id":"d-image"
+        },
+        {
+          "type":"richtext",
+          "label":"Banner under text",
+          "id":"banner-text"
+        },
+            {
+    "type":"image_picker",
+    "label":"Image 1",
+    "id":"section_image1"
+  },
+          {
+          "type":"richtext",
+          "label":"Text 1",
+          "id":"text1"
+        },
+                  {
+    "type":"image_picker",
+    "label":"Image 2",
+    "id":"section_image2"
+  },
+          {
+          "type":"richtext",
+          "label":"Text 2",
+          "id":"text2"
+        },
+                        {
+    "type":"image_picker",
+    "label":"Image 3",
+    "id":"section_image3"
+  },
+          {
+          "type":"richtext",
+          "label":"Text 3",
+          "id":"text3"
+        },
+      {
+    "type":"image_picker",
+    "label":"Image 4",
+    "id":"section_image4"
+  },
+                {
+          "type":"richtext",
+          "label":"Text 4 heading",
+          "id":"text4-h"
+        },
+          {
+          "type":"richtext",
+          "label":"Text 4",
+          "id":"text4"
+        },
+      {
+    "type":"image_picker",
+    "label":"Image 5",
+    "id":"section_image5"
+  },
+                {
+          "type":"richtext",
+          "label":"Text 5 heading",
+          "id":"text5-h"
+        },
+          {
+          "type":"richtext",
+          "label":"Text 5",
+          "id":"text5"
+        },
+            {
+    "type":"image_picker",
+    "label":"Image 6",
+    "id":"section_image6"
+  },
+              {
+    "type":"color",
+    "label":"Background Color",
+    "id":"bg-color-s3-1"
+  },
+                {
+    "type":"color",
+    "label":"Background Color",
+    "id":"bg-color-s3-2"
+  },
+                {
+          "type":"richtext",
+          "label":"Text 6 heading",
+          "id":"text6-h"
+        },
+          {
+          "type":"richtext",
+          "label":"Text 6",
+          "id":"text6"
+        },
+                      {
+    "type":"color",
+    "label":"Background Color",
+    "id":"bg-color-s3-inner4"
+  },
+                {
+    "type":"image_picker",
+    "label":"Image 9",
+    "id":"section_image9"
+  },
+                  {
+          "type":"richtext",
+          "label":"Text 7 heading",
+          "id":"text7-h"
+        },
+                {
+          "type":"richtext",
+          "label":"Text 7",
+          "id":"text7"
+        },
+                      {
+    "type":"image_picker",
+    "label":"Image 10",
+    "id":"section_image10"
+  },
+                  {
+    "type":"color",
+    "label":"Background Color",
+    "id":"bg-color-s4-1"
+  },
+                        {
+    "type":"color",
+    "label":"Background Color",
+    "id":"bg-color-s4-inner1"
+  },
+                          {
+    "type":"image_picker",
+    "label":"Image 13",
+    "id":"section_image13"
+  },
+                   {
+          "type":"richtext",
+          "label":"Text 8 heading",
+          "id":"text8-h"
+        },
+                            {
+    "type":"image_picker",
+    "label":"Image 14",
+    "id":"section_image14"
+  },
+                   {
+          "type":"richtext",
+          "label":"Text 9 heading",
+          "id":"text9-h"
+        },
+                            {
+    "type":"image_picker",
+    "label":"Image 15",
+    "id":"section_image15"
+  },
+                   {
+          "type":"richtext",
+          "label":"Text 10 heading",
+          "id":"text10-h"
+        },
+                                  {
+    "type":"image_picker",
+    "label":"Image 16",
+    "id":"section_image16"
+  },
+                   {
+          "type":"richtext",
+          "label":"Text 11 heading",
+          "id":"text11-h"
+        },
+                                        {
+    "type":"image_picker",
+    "label":"Image 17",
+    "id":"section_image17"
+  },
+                   {
+          "type":"richtext",
+          "label":"Text 12 heading",
+          "id":"text12-h"
+        },
+          {
+     "type":"url",
+     "label":"Link1",
+     "id":"link1"
+    },
+        {
+     "type":"url",
+     "label":"Link2",
+     "id":"link2"
+    },
+        {
+     "type":"url",
+     "label":"Link3",
+     "id":"link3"
+    },
+        {
+     "type":"url",
+     "label":"Link4",
+     "id":"link4"
+    }
+    ],
+    "presets": [
+{
+"name": "aplus",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

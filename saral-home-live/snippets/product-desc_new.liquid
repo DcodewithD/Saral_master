@@ -1,0 +1,321 @@
+<style>
+      .desc_block.about_wrap ul li {
+        font-family: var(--heading_font)!important;
+        color: #858585;
+    }
+
+      .desc_heading{
+      	display:flex;
+        justify-content:center;
+        gap:20px;
+      }
+      .return_blocks{
+      	display:flex;
+        justify-content:center;
+        gap:40px;
+        padding:2%;
+      }
+      .return_blocks span{
+      	font-size:14px;
+      }
+      .product-description{
+      	margin-top:40px;
+      }
+      .desc_heading button{
+      	border:none;
+        background-color:transparent;
+        /* font-family:'ARIAL-BOLD'; */
+        font-size:16px;
+        padding: 12px 4px;
+        cursor:pointer;
+        transition:all 0.3s ease-in;
+      }
+      .desc_heading button.active{
+      	border-bottom:solid 2px #000;
+      }
+      .desc_heading,.product-description .desc_block{
+      	border-bottom:solid 1px #f6f6f6
+      }
+      .desc_wrap{
+
+      }
+      .desc_wrap p,.desc_wrap span{
+      	font-size:15px;
+        line-height:24px;
+            margin:4px 0px;
+      }
+      .desc_block{
+      	transition:all 0.3s ease-in;
+        display:none;
+        opacity:0;
+        padding:1% 4%;
+      }
+      .desc_wrap.desc_block{
+      	display:none;
+        opacity:0;
+      }
+      .return_block{
+      	display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+      }
+      .mob-btn{
+      	display:none;
+      }
+
+          .desc_block.visible{
+          display:block;
+          opacity:1;
+        }
+    .desc_block.desc_wrap>h3 {
+      font-size: 18px;
+  }
+
+      .desc_block.about_wrap>h3 {
+      font-size: 18px;
+  }
+
+    .desc_block.about_wrap>h6 {
+      font-size: 18px;
+
+  }
+
+  .desc_block.about_wrap span{
+        font-family: var(--body_font);
+  }
+  .desc_block {
+    padding: 2% 0%!important;
+}
+      @media(max-width:768px){
+        .desc_heading{
+        	display:none;
+        }
+        .desc_block{
+        	display:block;
+          opacity:1;
+          max-height:0px;
+          transition:all 0.3s ease-in;
+          overflow:hidden;
+        }
+        .return_block img{
+        	max-width:80px;
+        }
+        .return_block span{
+        	text-align:center;
+        }
+        .product-description button.active svg{
+        	transform:rotate(180deg);
+        }
+        .product-description button svg{
+        	width:16px;
+          height:16px;
+          transition:all 0.3s ease-in;
+        }
+        .product-description button{
+          margin:10px 0px;
+        	background-color:transparent;
+          width:100%;
+          border:none;
+          display:flex;
+          justify-content:space-between;
+        }
+        .desc_block.visible{
+        	 max-height:100%;
+        }
+        .desc_block{
+          display:none;
+          opacity:0;
+        }
+        .mob-btn{
+        	display:flex;
+        }
+        .desc_block{
+          padding:1% %;
+        }
+      }
+  .desc_block.desc_wrap.visible {
+    border-bottom: 0px!important;
+}
+</style>
+<div class="product-description" id="product-description-{{section.id}}">
+  <div class="page-width">
+    <div class="desc_heading">
+      {% if product.metafields.global.desc.value != blank -%}
+        <button class="active" data-target="desc_wrap">Product details</button>
+      {% endif %}
+      {% if product.metafields.global.about.value != blank -%}
+        <button data-target="about-wrap">Description</button>
+      {%- endif %}
+       {% if  product.metafields.global.size_gide.value != blank -%}
+        <button data-target="size_guide">Size guide</button>
+      {%- endif %}
+      {% if  product.metafields.global.ret_exg.value != blank -%}
+        <button data-target="ret_exg">Return & Exchange</button>
+      {%- endif %}
+      
+    </div>
+    {% if product.metafields.global.desc.value != blank %}
+      <button class="active mob-btn" data-target="desc_wrap">Product details{% render 'icon-caret' %}</button>
+      <div class="desc_block desc_wrap visible" data-target="desc_wrap">
+        {{ product.metafields.global.desc.value }}
+      </div>
+    {% endif %}
+    {% if product.metafields.global.about.value != blank %}
+      <button class="mob-btn" data-target="about-wrap">Description {% render 'icon-caret' %}</button>
+      <div class="desc_block about_wrap" data-target="about-wrap">
+        {{ product.metafields.global.about.value }}
+      </div>
+    {% endif %}
+     {% if product.metafields.global.size_gide.value != blank %}
+      <button class="mob-btn" data-target="size_guide">Size guide{% render 'icon-caret' %}</button>
+      <div class="desc_block about_wrap size_guide" data-target="size_guide">
+       {{ product.metafields.global.size_gide.value }}
+      </div>
+    {% endif %}
+     {% if product.metafields.global.ret_exg.value != blank %}
+      <button class="mob-btn" data-target="ret_exg">Return & Exchange{% render 'icon-caret' %}</button>
+      <div class="desc_block about_wrap" data-target="ret_exg">
+        {{ product.metafields.global.ret_exg.value }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  
+  
+  
+  
+  
+  
+    
+  
+//   const emptyP = document.querySelectorAll('.desc_block.desc_wrap p br');
+//   emptyP.forEach((el,ind)=>{
+//     el.style.display = 'none';
+//     el.closest("p").style.display = 'none';
+// })
+  
+  
+  
+  
+  
+ const divvvs = document.querySelectorAll('.desc_block td');
+
+// for (let x = 0; x < divvvs.length; x++) {
+//     const textt = divvvs[x];
+//     const content = div.textContent.trim();
+  
+//     if (content == '&nbsp;') {
+//         textt.style.display = 'none';
+//     }
+// } 
+divvvs.forEach((el,ind)=>{
+  let content = el.innerHTML.replace(/&nbsp;/g, '')
+   el.innerHTML = content;
+  console.log(el)
+  
+})
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  let button= document.querySelectorAll(".desc_heading button[data-target]");
+    console.log("here",button)
+  Array.from(button).forEach(
+    function(element,index){
+      element.addEventListener("click",function(){
+        this.classList.add("active")
+        console.log("button clicked")
+        let buttonTarget = this.dataset.target
+        console.log(buttonTarget)
+        let container = document.querySelector(`.desc_block[data-target='${buttonTarget}']`)
+        let mobButton = document.querySelector(`.mob-btn[data-target='${buttonTarget}']`)
+        container.classList.add("visible")
+        mobButton.classList.add("active");
+        Array.from(document.querySelectorAll(".desc_block")).forEach((el,ind)=>{
+          console.log(el)
+          if(el != container){
+            console.log(el)
+            el.classList.remove("visible")
+          }
+        })
+        Array.from(document.querySelectorAll(".mob-btn")).forEach((el,ind)=>{
+          console.log(el)
+          if(el != mobButton){
+            console.log(el)
+            el.classList.remove("active")
+          }
+        })
+        Array.from(document.querySelectorAll(".desc_heading button")).forEach((el,ind)=>{
+          console.log(el)
+          if(element != el){
+            console.log(el)
+            el.classList.remove("active")
+          }
+        })
+      })
+    }
+  );
+
+  let mobBtn = document.querySelectorAll(".mob-btn");
+  console.log(mobBtn)
+  let block = document.querySelectorAll(".desc_block");
+  Array.from(mobBtn).forEach(
+    function(element,index){
+      element.addEventListener("click",function(){
+  let buttonTargett = this.dataset.target
+        console.log(buttonTargett)
+        console.log("running")
+          element.classList.toggle("active");
+        let containerr = document.querySelector(`.desc_block[data-target='${buttonTargett}']`)
+          containerr.classList.toggle("visible");
+        
+        
+      })
+      
+    }
+  );
+
+
+
+
+
+
+</script>

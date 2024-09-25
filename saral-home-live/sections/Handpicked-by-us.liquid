@@ -1,0 +1,869 @@
+<style>
+        .toggle_content_wrap .wrapper div {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+    .handpicked .image_block.slick-slide {
+      padding-inline: 30px;
+  }
+
+          /* Handpicked-by-us */
+        /* .handpicked-content-wrap{
+        	display:flex;
+          flex-direction:row;
+          justify-content:space-between;
+        } */
+        /* .handpicked-content-wrap>div{
+        	flex:0 0 44%;
+          	position:relative;
+        } */
+        .handpicked-content-wrap button:focus{
+        	outline:none!important;
+        }
+        .handpicked-content-wrap button{
+            position: absolute;
+            border: none;
+            font-size: 19px;
+            aspect-ratio: 1/1;
+            padding: 0%;
+            border-radius: 40px;
+            background-color: #fff;
+            color: #000;
+            cursor: pointer;
+            opacity: 1;
+            pointer-events: auto;
+            width: 30px;
+            height: 30px;
+        }
+
+        .handpicked_wrap,.all-wrap{
+        	padding:45px 0px;
+          text-align:center;
+        }
+        .handpicked,.all-wrap{
+        	  background-color:#ffffff;
+        }
+        .handpicked_wrap .home-section-title,.all-wrap .home-section-title{
+        	margin-top:0px;
+        }
+        .sap a{
+        	text-align:center;margin-top:35px;text-decoration:underline;
+          	font-size:16px;
+          width:100%;
+        }
+
+        .handpicked-content-wrap button.close{
+        transform: rotate(136deg) translate(-50%);
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            animation: none;
+            background: #000;
+            color: #fff;
+          font-size: 25px;
+            padding-bottom: 5px;
+        }
+
+        .handpicked-content-wrap .bt-rt{
+        	bottom:16%;
+          	right:22%;
+              font-family: 'Muli';
+            padding-bottom: 2%;
+        }
+        .handpicked-content-wrap .tp-md{
+        	top:50%;
+          left:20%;
+          font-family: 'Muli';
+            padding-bottom: 2%;
+        }
+
+        .handpicked-content-wrap{
+          	gap:20px;
+            flex-wrap:wrap;
+              margin-bottom: 30px;
+          }
+        /*   .handpicked-content-wrap>div{
+          	flex:0 0 100%;
+          } */
+
+        .handpicked_wrap {
+            padding: 20px 16px 20px;
+        }
+
+        .toggler_block.visible .toggle_content_wrap{
+        	opacity:1;
+          pointer-events:auto;
+        }
+        .toggle_content_wrap p{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            row-gap: 10px;
+        }
+        .toggle_content_wrap p span:not(.toggle_content_wrap p span:nth-child(1)){
+            display: flex;
+            align-items: flex-end;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 20px;
+            text-decoration-line: line-through;
+            color: #3A3844;
+              font-family: var(--body_font);
+        }
+
+        .toggle_content_wrap p span:nth-child(1) {
+        grid-column: span 3;
+            font-family: CormorantGaramond-Regular;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            text-align: left;
+              padding-right: 5px;
+          flex: 0 0 100%;
+        }
+        .toggler_block.visible>button{
+        	opacity:0;
+          pointer-events:none;
+        }
+
+        .toggle_content_wrap {
+            position: absolute;
+            bottom: 2%;
+            left: 49.5%;
+            transform: translateX(-50%);
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,18%);
+            transition: all 0.3s ease-in;
+            width: 82%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .image_block .wrapper {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            gap: 20px;
+          cursor:pointer;
+        }
+
+        .toggle-image img {
+            width: 100px;
+          border-radius:6px;
+        }
+
+        .toggler_block.visible .toggle_content_wrap{
+        	opacity:1;
+          pointer-events:auto;
+        }
+
+        .toggler_block.visible>button{
+        	opacity:0;
+          pointer-events:none;
+        }
+
+        .handpicked-content-wrap .close {
+            font-weight: 100;
+            line-height: 0px;
+            text-shadow: 0px 0px;
+        }
+
+        .handpicked_wrap h2.home-section-title {
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 28px;
+            text-align: center;
+            color: #525159;
+            margin: 20px 0px 30px;
+          font-family: var(--heading_font)!important;
+          letter-spacing: 0px!important;
+        }
+
+        .sap {
+            text-align: center;
+        }
+
+        .sap a button {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            color: #3A3844;
+            background: none;
+            border: none;
+            padding: 14px 0px 37px;
+        }
+
+
+        @keyframes scalebg {
+         0% {
+             background:#fff;
+              color:#000;
+           box-shadow:0px 0px 0px #fff;
+            }
+          50% {
+            background:#000;
+              color:#fff;
+            box-shadow:rgb(255 255 255) 4px 0px 0px, rgb(255 255 255) 3.88377px 0.957263px 0px, rgb(255 255 255) 3.54182px 1.85889px 0px, rgb(255 255 255) 2.99404px 2.65249px 0px, rgb(255 255 255) 2.27226px 3.29194px 0px, rgb(255 255 255) 1.41842px 3.74006px 0px, rgb(255 255 255) 0.482147px 3.97084px 0px, rgb(255 255 255) -0.482147px 3.97084px 0px, rgb(255 255 255) -1.41842px 3.74006px 0px, rgb(255 255 255) -2.27226px 3.29194px 0px, rgb(255 255 255) -2.99404px 2.65249px 0px, rgb(255 255 255) -3.54182px 1.85889px 0px, rgb(255 255 255) -3.88377px 0.957263px 0px, rgb(255 255 255) -4px -1.2865e-15px 0px, rgb(255 255 255) -3.88377px -0.957263px 0px, rgb(255 255 255) -3.54182px -1.85889px 0px, rgb(255 255 255) -2.99404px -2.65249px 0px, rgb(255 255 255) -2.27226px -3.29194px 0px, rgb(255 255 255) -1.41842px -3.74006px 0px, rgb(255 255 255) -0.482147px -3.97084px 0px, rgb(255 255 255) 0.482147px -3.97084px 0px, rgb(255 255 255) 1.41842px -3.74006px 0px, rgb(255 255 255) 2.27226px -3.29194px 0px, rgb(255 255 255) 2.99404px -2.65249px 0px, rgb(255 255 255) 3.54182px -1.85889px 0px, rgb(255 255 255) 3.88377px -0.957263px 0px;
+          }
+          100% {
+            background:#fff;
+              color:#000;
+            box-shadow:0px 0px 0px #fff;
+          }
+        }
+        .toggler_block button{
+            animation: scalebg 2s linear 2s infinite;
+
+        }
+
+        .handpicked button.slick-next.slick-arrow {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            position: absolute;
+            right: 8px;
+            top: 50%;
+          font-size: 0px;
+        }
+
+        .handpicked button.slick-prev.slick-arrow {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            position: absolute;
+            left: -12px;
+            top: 50%;
+          font-size: 0px;
+        }
+
+        .handpicked .image_block {
+            position: relative;
+        }
+
+    /*     .handpicked .slick-list.draggable {
+            margin-left: 5px;
+        } */
+
+        .handpicked button.slick-next.slick-arrow:after {
+            content: '';
+            position: absolute;
+            background: transparent;
+            width: 22px;
+            height: 22px;
+            border: solid 5px #000;
+            border-top: none;
+            border-left: 0px;
+            border-radius: 4px;
+            transform: rotate(-48deg);
+        }
+
+        .handpicked button.slick-prev.slick-arrow:before {
+            content: '';
+            position: absolute;
+            background: transparent;
+            width: 22px;
+            height: 22px;
+            border: solid 5px #000;
+            border-top: none;
+            border-left: 0px;
+            border-radius: 4px;
+            transform: rotate(135deg);
+        }
+
+        .handpicked .image_block .card-image-wrap {
+            width: 100%;
+            height: 350px;
+            padding: 0px 25px;
+        }
+
+        @media(min-width:768px){
+            .handpicked .image_block.slick-slide {
+          margin-left: 10px;
+          padding-inline: 10px;
+      }
+        .handpicked .slick-track {
+          margin-left: -10px;
+      }
+          .toggle_content_wrap p{
+            row-gap: 0px;
+        }
+
+        .handpicked-content-wrap button.close{
+        transform: rotate(136deg) translate(-50%);
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            animation: none;
+            background: #000;
+            color: #fff;
+          font-size: 30px;
+            padding-bottom: 5px;
+        }
+
+        .toggle_content_wrap{
+        	position:absolute;
+          bottom:2%;
+          left:50%;
+          transform:translateX(-50%);
+          background-color:#fff;
+          border-radius:10px;
+          box-shadow:0 0 10px rgba(0,0,0,18%);
+          transition:all 0.3s ease-in;
+          width:80%;
+          opacity:0;
+          pointer-events:none;
+        }
+
+        .handpicked-content-wrap button{
+            position: absolute;
+            border: none;
+            font-size: 25px;
+            aspect-ratio: 1/1;
+            padding: 0%;
+            border-radius: 40px;
+            background-color: #fff;
+            color: #000;
+            cursor: pointer;
+            opacity: 1;
+            pointer-events: auto;
+            width: 30px;
+            height: 30px;
+        }
+
+        .handpicked button.slick-next.slick-arrow {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            position: absolute;
+            right: 0px;
+            top: 50%;
+          font-size: 0px;
+        }
+
+        .handpicked button.slick-prev.slick-arrow {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            position: absolute;
+            left: -29px;
+            top: 50%;
+          font-size: 0px;
+        }
+
+        /* .handpicked img {
+            width: 95%;
+            height: 95%;
+        } */
+
+        .handpicked-content-wrap button{
+          font-size:25px;
+        }
+          .handpicked_wrap h2.home-section-title {
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 49px;
+            margin: 20px 0px 40px;
+        }
+
+        /* .handpicked-content-wrap {
+            flex-wrap: nowrap;
+            display: flex;
+            flex-direction: row;
+              justify-content: center;
+        } */
+
+        /* .handpicked-content-wrap>div {
+            flex: 0 0 40%;
+            max-width: 40%;
+        } */
+
+        button.bt-rt {
+            width: 40px;
+            height: 40px;
+            font-size: 24px;
+        }
+
+        button.tp-md{
+              width: 40px;
+            height: 40px;
+            font-size: 24px;
+        }
+
+        button.close {
+            font-size: 35px;
+            padding-bottom: 6px;
+        }
+
+        .handpicked_wrap {
+            padding: 0px 120px!important;
+            margin: 30px auto!important;
+          overflow:hidden;
+        }
+
+        .toggle_content_wrap p span:nth-child(1) {
+            font-size: 13px;
+              line-height: 20px;
+            padding-bottom: 10px;
+          padding-right: 10px;
+          flex: 0 0 100%;
+        }
+
+        .toggle_content_wrap p span:not(.toggle_content_wrap p span:nth-child(1)) {
+            font-size: 11px;
+          text-align:left;
+        }
+        }
+
+        .toggle_content_wrap p span.compare_price {
+            text-decoration-line: unset!important;
+        }
+
+
+        /* Handpicked-by-us */
+</style>
+<div id="handpicked-by-us-{{section.id}}" class="handpicked">
+  <div class="handpicked_wrap">
+    <h2 class="home-section-title">Handpicked By Saral</h2>
+    <div class="handpicked-content-wrap">
+      <div class="image_block">
+        {% assign media = section.settings.section_image1 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <div class="toggler_block">
+          <button class="bt-rt">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/products/saral-home-neo-shaggy-microfiber-anti-skid-mats-2?_pos=7&_sid=9d7fd7721&_ss=r&variant=39402813784242';">
+                <div class="toggle-image">
+                  <img
+                    width="50px"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/81G51INDgcL._SL1440_592f1ff1-6be0-4ccb-aba4-464b090552dd_50x.jpg?v=1669465707"
+                  >
+                </div>
+                <p>
+                  <span>Neo Shaggy Microfiber Bathmat Mats</span><span class="compare_price">{{ 49900 | money }}</span
+                  ><span>{{ 109900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image_block">
+        {% assign media = section.settings.section_image2 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <div class="toggler_block">
+          <button class="bt-rt">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/collections/curtains/products/firki-damask-cotton-yellow-blackout-door-curtains?variant=43630117847274';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/SOS-1898-BLUE-CRT4X7FEET-2PC-1_8776eb1b-2436-458c-8b9d-576eea42e6a1_50x.jpg?v=1669461819"
+                  >
+                </div>
+                <p>
+                  <span>Chevron Damask Cotton Curtain for living room</span
+                  ><span class="compare_price">{{ 179900 | money }}</span><span>{{ 299900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="toggler_block ">
+          <button class="tp-md">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/collections/curtains/products/chevron-damask-cotton-curtain-for-living-room-1?variant=42760285454570';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/SOS-1897-YELLOW-CRT4X7FEET-2PC-1_939fd91e-fdbf-43fb-8f3b-ef0b9d7c641c_50x.jpg?v=1669461650"
+                  >
+                </div>
+                <p>
+                  <span>Firki Damask Cotton Blackout Door Curtains</span
+                  ><span class="compare_price">{{ 159900 | money }}</span><span>{{ 249900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image_block">
+        {% assign media = section.settings.section_image3 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <div class="toggler_block">
+          <button class="bt-rt">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/products/copy-of-firki-design-washable-cotton-sofa-cover-throw-multiple-size-available?_pos=1&_sid=3dd49ac76&_ss=r&variant=43698921963754';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/SOS-1012-PINK140X210-4_446ea456-d709-4c9f-9a1e-d3a3bcaf3dc8_50x.jpg?v=1669466011"
+                  >
+                </div>
+                <p>
+                  <span>Firki Washable Cotton Sofa Cover/ Throw</span
+                  ><span class="compare_price">{{ 109900 | money }}</span><span>{{ 149900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image_block">
+        {% assign media = section.settings.section_image4 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <div class="toggler_block">
+          <button class="bt-rt">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/collections/unicorn/products/saral-home-unicorn-soft-microfiber-antiskid-yoga-excercise-mat-blue-70x170-cm';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/Untitled-3_4f149186-4893-4fbb-8a73-d25758fb747c_50x.jpg?v=1669464235"
+                  >
+                </div>
+                <p>
+                  <span>Unicorn Soft Microfiber Antiskid Yoga/Excercise Mat</span
+                  ><span class="compare_price">{{ 99900 | money }}</span><span>{{ 139900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="toggler_block ">
+          <button class="tp-md">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/collections/unicorn/products/saral-home-unicorn-cotton-single-size-bedcover-60x90-with-1-pillow-cover-17x27-1';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/SOS-1882-BLUE_170f1cae-4868-410e-97dc-d5713e12090a_50x.jpg?v=1669464072"
+                  >
+                </div>
+                <p>
+                  <span>Unicorn Cotton Single Size Bedcover with 1 Pillow Cover</span
+                  ><span class="compare_price">{{ 79900 | money }}</span><span>{{ 109900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image_block">
+        {% assign media = section.settings.section_image5 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <div class="toggler_block">
+          <button class="bt-rt">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/products/saral-home-combo-of-cotton-bedsheet-with-pillow-covers-quilts-maroon?_pos=1&_sid=13c4d062a&_ss=r&variant=38254776680626';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/SOS-1587-MAROON-3_6b981769-dd8d-4553-8e78-3200d7180d70_50x.jpg?v=1669466289"
+                  >
+                </div>
+                <p>
+                  <span>4 PC COMBO-1 Bedsheet(90*100) +2 Pillow covers+ Quilts(90*100)</span
+                  ><span class="compare_price">{{ 359900 | money }}</span><span>{{ 579900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image_block">
+        {% assign media = section.settings.section_image6 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            width="50"
+            height="auto"
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <div class="toggler_block">
+          <button class="bt-rt">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/products/saral-home-blue-cotton-printed-table-mat-pack-of-2-pc-38x38-cms-1?_pos=3&_psq=Saral%20Home%20Blue%20Cotton%20Printed%20Table%20Mat&_ss=e&_v=1.0';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/SOS-1865-CP180X270-BEIGE_50x.jpg?v=1669465398"
+                  >
+                </div>
+                <p>
+                  <span>Tiles Carpetst</span><span class="compare_price">{{ 499900 | money }}</span
+                  ><span>{{ 699900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+        <div class="toggler_block ">
+          <button class="tp-md">+</button>
+          <div class="toggle_content_wrap">
+            <div class="wrapper">
+              <div onclick="location.href='https://saralhome.com/products/saral-home-blue-cotton-printed-table-mat-pack-of-2-pc-38x38-cms-1?_pos=3&_psq=Saral%20Home%20Blue%20Cotton%20Printed%20Table%20Mat&_ss=e&_v=1.0';">
+                <div class="toggle-image">
+                  <img
+                    width="50"
+                    height="auto"
+                    loading="lazy"
+                    src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/Untitled-2_5b4e6708-363e-42a5-9eca-6021203dd857_50x.jpg?v=1669465131"
+                  >
+                </div>
+                <p>
+                  <span>Gudda Style Cushion Cover 2pc (45 X 45 cm)</span
+                  ><span class="compare_price">{{ 54900 | money }}</span><span>{{ 74900 | money }}</span>
+                </p>
+              </div>
+              <button class="close">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    $('.toggler_block button').each(function(ind,el){
+    $(el).on('click',function(){
+      let block = $(el).closest('.toggler_block')[0];
+      if(el.classList.contains('close')){
+    		block.classList.remove('visible');
+      }else{
+    		block.classList.add('visible');
+      }
+      $('.toggler_block').each(function(ind,el){
+        if(el != block){
+        	el.classList.remove('visible');
+        }
+      })
+    })
+  })
+</script>
+<script></script>
+{% schema %}
+{
+  "name": "Handpicked by us",
+  "settings": [
+      {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image1"
+  },
+    {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image2"
+  },
+    {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image3"
+  },
+    {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image4"
+  },
+    {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image5"
+  },
+    {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image6"
+  }
+  ],
+	"presets":[
+	 {
+		"name":"Handpicked by us"
+	 }
+	]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

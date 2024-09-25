@@ -1,0 +1,133 @@
+
+<style>
+  button.accordion-button.collapsed {
+    border-bottom: 1px solid;
+}
+  
+  button.accordion-button.collapsed {
+    line-height: 24px;
+    font-size: 17px;
+    font-weight: 400;
+    padding: 40px 20px;
+    border-radius: 0px!important;
+}
+  .col-6.acc {
+    padding: 0pc 10pc 0pc 0pc;
+}
+  
+element.style {
+}
+  .col-md-6.acc.col-12 {
+    padding-right: 100px!important;
+}
+h2.titt p {
+    padding: 20px 5px 0px 2px;
+    color: black!important;
+}
+  .fix_padding {
+    padding: 50px ;
+}
+ 
+  @media (max-width:1024px)
+  {
+    .col-md-6.acc.col-12 {
+    padding-right: 100px!important;
+  
+  }
+    button.accordion-button.collapsed {
+    padding: 30px 20px;
+}
+  }
+ @media (max-width:425px)
+ {
+ 	button.accordion-button.collapsed {
+    padding: 20px 20px;
+}
+   .fix_padding {
+    padding: 20px 10px;
+}
+    .col-md-6.acc.col-12 {
+    padding: 10px!important;
+  
+  }
+ }
+</style>
+<div class="container-fluid fix_padding">
+  <div class="row">
+  
+    <h2 class="hed">{{section.settings.tit}}</h2>
+  
+ 
+    <div class="col-md-6 col-12 py-3">
+      <div class="immg">
+        <center><img src="{{section.settings.imgg | img_url: 'master'}}" class="image-fluid " ></center>
+
+      </div>
+    </div>
+  <div class="col-md-6 acc col-12 py-3">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+  {% for block in section.blocks %} 
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne-{{forloop.index}}">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-{{forloop.index}}" aria-expanded="false" aria-controls="flush-collapseOne-{{forloop.index}}">
+       {{block.settings.hd}}
+      </button>
+    </h2>
+    <div id="flush-collapseOne-{{forloop.index}}" class="accordion-collapse collapse" aria-labelledby="flush-headingOne-{{forloop.index}}" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">{{block.settings.dn}}</div>
+    </div>
+  </div>
+ {%endfor%} 
+    </div>
+
+</div>
+  </div>
+    </div>
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+  					{
+  					"type":"text",
+  					"label":"Title",
+  					"id":"tit"
+  					},
+  					{
+ 						"type":"image_picker",
+  						"label":"Image",
+  						"id":"imgg"
+  					}
+  ],
+"blocks":[{
+			"type":"blog",
+			"name":"img_and_accordion",
+			"settings":[
+{
+  					"type":"text",
+  					"label":"Head",
+  					"id":"hd"
+  					},
+{
+  					"type":"richtext",
+  					"label":"Discription",
+  					"id":"dn"
+  					}
+			
+]
+}],
+"presets":
+[
+	{
+	"name":"image_and_Accordion"
+	}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,81 @@
+<style>
+  .product_slider_slider{
+  	display:flex;
+    flex-direction:row;
+        gap:40px;
+    flex-wrap:noWrap;
+    overflow-x:auto;
+    scroll-snap-type:x;
+        margin-left: 30px;
+  }
+  .product_slider_slider>product-item{
+  	flex:0 0 23%;
+    max-width:23%;
+    scroll-snap-align:start;
+  }
+  @media(max-width:768px){
+    .product_slider_slider>product-item{
+    	flex:0 0 80%;
+      max-width:80%;
+    }
+    .product_slider_slider{
+  	display:flex;
+    flex-direction:row;
+        gap:24px;
+    flex-wrap:noWrap;
+    overflow-x:auto;
+    scroll-snap-type:x;
+        margin-left: .0px;
+  }
+  }
+</style>
+
+<div class="container-fluid fix_padding"> 
+<div class="{{section.id}}">
+  <div class="product_slider">
+    <div class="product_slider_head">
+      <h2 class="hed">{{section.settings.hed}}</h2>
+    </div>
+    <div class="product_slider_slider">
+    	{%- for product in section.settings.collect.products limit:10 -%}
+      	  {% include 'product-collection' with url_without_collection: true %}
+      	{%- endfor -%}
+    </div>
+    {% include 'shop-all-products',collection:section.settings.collect %}
+  </div>
+</div>
+</div>
+{% schema %}
+  {
+    "name": "collection scroller",
+    "settings": [
+		{
+		   "type":"collection",
+			"label":"Choose collection",
+			"id":"collect"
+		},
+			{
+				"type":"text",
+				"label":"Heading",
+				"id":"hed"
+			}
+,
+			{
+				"type":"url",
+				"label":"Link Show All Product",
+				"id":"sap"
+			}
+	],
+	"presets":[
+	   {
+		"name":"Collection product slider"
+	   }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

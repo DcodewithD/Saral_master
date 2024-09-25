@@ -1,0 +1,148 @@
+<style>
+  .collection-slider {
+      margin: 30px 0px;
+      padding: 0px 120px;
+  }
+
+  /* .collection-slider h2{
+    margin-top:0px!important;
+  } */
+
+    .collection-slider .inside {
+      display: flex;
+      column-gap: 25px;
+          padding-top: 10px;
+          flex-wrap: wrap;
+  }
+
+  .collection-slider .inner {
+      flex: 0 0 calc(100%/4 - 25px*3/4);
+      max-width: calc(100%/4 - 25px*3/4);
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 7%);
+    position:relative;
+    border-radius: 8px;
+  }
+
+  .collection-slider img {
+      width: 100%;
+  }
+
+  .collection-slider p {
+      background: white;
+      text-align: center;
+      padding: 15px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      font-family: var(--body_font);
+      color: #3A3844;
+        margin: 0px;
+    font-size: 20px;
+  }
+
+  @media(max-width:768px){
+    .collection-slider {
+      margin: 20px 0px;
+      padding: 25px 16px;
+      background: #FAF8F5;
+  }
+
+    .collection-slider .inside {
+      column-gap: 25px;
+      row-gap: 25px;
+  }
+
+    .collection-slider .inner {
+      flex: 0 0 calc(100%/2 - 25px/2);
+      max-width: calc(100%/2 - 25px/2);
+  }
+
+    .collection-slider p {
+      padding: 10px;
+      font-size: 16px;
+  }
+  }
+</style>
+<div class="collection-slider">
+  <h2 class="hed">{{ section.settings.section_name }}</h2>
+  <div class="inside">
+    {% for block in section.blocks %}
+      <div class="inner">
+        {% comment %}<img src="{{ block.settings.section_image  | image_url }}">{% endcomment %}
+        {% assign media = block.settings.section_image %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <p>{{ block.settings.collection_name }}</p>
+        <a class="url" href="{{ block.settings.redirection_link }}"></a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% schema %}
+{
+"name": "collection-slider",
+"settings": [
+    {
+    "type":"text",
+    "label":"Section name",
+    "id":"section_name"
+  }
+],
+  "blocks":[
+    {
+      "type":"slide",
+      "name":"slide",
+      "settings":[
+          {
+            "type":"image_picker",
+            "label":"Choose image",
+            "id":"section_image"
+          },
+          {
+            "type":"text",
+            "label":"Collection name",
+            "id":"collection_name"
+          },
+          {
+            "type":"url",
+            "label":"Redirection url",
+            "id":"redirection_link"
+          }
+      ]
+    }
+  ],
+  "presets": [
+    {
+    "name": "collection-slider",
+    "category": "ADVANCED LAYOUT"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

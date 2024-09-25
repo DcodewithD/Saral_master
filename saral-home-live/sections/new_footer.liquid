@@ -1,0 +1,65 @@
+<style>
+  
+.new_footer ul:not(.list-unstyled):not([list-unstyled]) li::before {
+  content: none!important;
+  visibility: hidden;
+  display: none!important;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+.f2 *:before {
+  content: none !important;
+  visibility: hidden;
+  display: none !important;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  width: 0;
+}
+</style>
+
+<div class="container-fluid">
+  <div class="footer_box">
+    <div class=" f1">
+      <h2>
+        Let’s <br>
+        Connect
+      </h2>
+      <p>News, Events, offers, & new addition to menu.</p>
+      <p>A few a month.</p>
+    </div>
+    <div class="f2">
+      <div class="mnu1">
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+        </ul>
+      </div>
+      <div class="mnu2">
+        <ul>
+          <li>A</li>
+          <li>B</li>
+          <li>C</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Section name",
+  "settings": []
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

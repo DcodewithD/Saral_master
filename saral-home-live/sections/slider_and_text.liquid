@@ -1,0 +1,49 @@
+<div class="container-fluid">
+<div class="row">
+  <div class="col-3 s_text p-0">
+    <div class="sl_text">
+      <h2 class="s_h">Brighten up your space with rugs that are built to last</h2>
+      <p class="s_p">CARPETS AND RUGS</p>
+      <center><button class="s_button">SHOP NOW</button></center>
+    </div>
+  </div>
+  <div class="col-9 p-0">
+    <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/In-Stock_Week_2_Website.jpg?v=1654165798" class="image-fluid">
+  </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+       <img src="{{block.settings.slider_image_desk | img_url: 'master'}}" class="image-fluid">
+    </div>
+    <div class="col-12">
+       <div class="p-5">
+                <h2 class="s_h">{{block.settings.alt_desk}}</h2>
+                <p class="s_p">{{block.settings.ralt_desk}}</p>
+                <center><a href="{{block.settings.slider_link}}"><button class="s_button">SHOP NOW</button></a></center>
+              </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [],
+  
+"presets":[{
+"category":"Image_text_slider",
+"name":"Image_text_slider"
+}]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

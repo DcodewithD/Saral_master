@@ -1,0 +1,152 @@
+<style>
+                        .why-bulk-order {
+                          text-align: center;
+                          background: #f2f2f2;
+                      }
+                        .why-bulk-order h2, p {
+                          color: black;
+                      }
+                    .why-bulk-order h2 {
+                      color: black;
+                      font-weight: 900;
+                  }
+                      .why-bulk-order .sec-1 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 25px;
+                        margin-bottom: 30px;
+                    }
+              .why-bulk-order .sec-1 .sec-2 {
+                  flex: 0 0 calc(100%/4 - 25px*3/4);
+                  max-width: calc(100%/4 - 25px*3/4);
+              }
+                    }
+                  .why-bulk-order p {
+                    margin-bottom: 30px;
+                }
+              .why-bulk-order .sec-1 .sec-2 h3 {
+                font-size: 20px;
+            }
+            .why-bulk-order .sec-1 .sec-2 .card-image-wrap {
+               background: #f2f2f2!important;
+          }
+          .why-bulk-order .sec-1 .sec-2 .card-image-wrap img {
+            position: absolute!important;
+            top: 50%!important;
+            left: 50%!important;
+            width: 100%!important;
+            max-width: 100px!important;
+            height: auto!important;
+            transform: translate(-50%,-50%)!important;
+        }
+
+        @media(max-width:768px){
+          .why-bulk-order .sec-1 {
+          flex-wrap: wrap;
+      }
+          .why-bulk-order .sec-1 .sec-2 {
+          flex: 0 0 calc(100%/2 - 25px/2);
+          max-width: calc(100%/2 - 25px/2);
+      }
+          .why-bulk-order .sec-1 .sec-2 h3 {
+        font-size: 15px;
+    }
+          .why-bulk-order .sec-1 .sec-2 .card-image-wrap img {
+      max-width: 50px!important;
+  }
+        }
+</style>
+<div class="why-bulk-order bulk-order-fix_padding">
+  <h2 class="">{{ section.settings.section_heading }}</h2>
+  <p>{{ section.settings.section_info }}</p>
+  <div class="sec-1">
+    {% for block in section.blocks %}
+      <div class="sec-2">
+        {% assign img = block.settings.image1 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:50%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if img.width >= 165 -%}{{ img | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if img.width >= 360 -%}{{ img | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if img.width >= 533 -%}{{ img | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if img.width >= 720 -%}{{ img | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if img.width >= 940 -%}{{ img | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if img.width >= 1066 -%}{{ img | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ img | image_url }} {{ img.width }}w
+            "
+            src="{{ img | image_url: width: 150 }}"
+            alt="{{ img.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ img.width }}"
+            height="{{ img.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <h3>{{ block.settings.section_text1 }}</h3>
+      </div>
+    {% endfor %}
+  </div>
+  <p>{{ section.settings.section_info2 }}</p>
+</div>
+{% schema %}
+  {
+    "name": "why-bulk-order",
+    "settings": [
+                  {
+            "type": "text",
+            "label": "section heading",
+            "id": "section_heading"
+          },
+                  {
+            "type": "text",
+            "label": "section info",
+            "id": "section_info"
+          },
+                                          {
+            "type": "text",
+            "label": "section info2",
+            "id": "section_info2"
+          }
+      ],
+      "blocks" : [
+        {
+          "type":"image",
+          "name":"image",
+          "settings":[
+
+      {
+    "type":"image_picker",
+    "label":"Choose mobile image",
+    "id":"image1"
+  },
+                    {
+            "type": "text",
+            "label": "section text",
+            "id": "section_text1"
+          }
+          ]
+        }
+
+      ],
+
+
+    "presets": [
+{
+"name": "why-bulk-order",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

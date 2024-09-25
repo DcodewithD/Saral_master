@@ -1,0 +1,52 @@
+<style>
+  .desk-vid-wrap video{
+    margin-bottom:4rem;
+  }
+  .desk-vid-wrap video,
+  .mob-vid-wrap video {
+    width: 100%;
+  }
+  .mob-vid-wrap {
+    display: none;
+  }
+
+  @media screen and (max-width: 750px) {
+    .mob-vid-wrap {
+      display: block;
+    }
+    .desk-vid-wrap {
+      display: none;
+    }
+  }
+</style>
+
+<div class="vid-banner-section">
+  <div class="desk-vid-wrap">
+    {{ section.settings.desk_video | video_tag: image_size: '1100x', autoplay: true, loop: true, controls: false, muted: true }}
+  </div>
+  <div class="mob-vid-wrap">
+    {{ section.settings.mob_video | video_tag: image_size: '1100x', autoplay: true, loop: true, controls: false, muted: true }}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "homepage-videobanner",
+    "settings": [
+      {
+        "type": "video",
+        "id": "desk_video",
+        "label": "Desktop Video"
+      }, {
+        "type": "video",
+        "id": "mob_video",
+        "label": "Mobile Video"
+      }
+    ],
+    "presets": [
+      {
+        "name": "homepage-videobanner"
+      }
+    ]
+  }
+{% endschema %}

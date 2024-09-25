@@ -1,0 +1,32 @@
+{%- if script == 'product' -%} 
+ <script type='text/javascript' src='https://{{ shop.permanent_domain }}/apps/opc-express-proxy2/global-cdn' defer='defer'></script> 
+ <script type='text/javascript' src='https://{{ shop.permanent_domain }}/apps/opc-express-proxy2/math-min' defer='defer' rel='preload'></script> 
+ <link href='https://{{ shop.permanent_domain }}/apps/opc-express-proxy2/option-custom' rel='stylesheet' type='text/css' media='all'> 
+ <link href='https://{{ shop.permanent_domain }}/apps/opc-express-proxy2/cartCalculation' rel='stylesheet' type='text/css' media='all'> 
+ <div> 
+ <product-options-section> 
+ <span class='product-id' id='{{ product.id }}' price='{{product.selected_or_first_available_variant.price}}' compareprice='{{product.selected_or_first_available_variant.compare_at_price}}' isavailable='{{product.selected_or_first_available_variant.available}}' metadata01='{{ block.settings.metadata01 }}'  metadata02='{{ block.settings.metadata02 }}'  metadata03='{{ block.settings.metadata03 }}'  metadata04='{{ block.settings.metadata04 }}'  metadata05='{{ block.settings.metadata05 }}' style='display: none' ></span> 
+ <div class='optionTitle'></div> 
+ <div class='product-custom-option'></div> 
+ <div class='option-price-container'></div> 
+ <div class='add-to-cart-container'></div> 
+ <div class='product-error-msg'></div>  
+ <div class='custom-loading'></div> 
+ <div class='custom-cart-view'></div> 
+ </product-options-section> 
+ </div> 
+ {%-  endif -%} 
+ {%-  if script == 'cart' -%} 
+ <script type='text/javascript' src='https://{{ shop.permanent_domain }}/apps/opc-express-proxy2/cartCalculationScript' defer='defer'></script>  
+ {%-  endif -%} 
+ {%-  if script == 'jquery' -%}  
+ {% comment %} JQUERY CONFLICTS CAN STOP OPC FROM WORKING. YOU CAN REMOVE THE THEME SCRIPT {% render 'opc-includes', script: 'cart' %} 
+ IF YOU KNOW JQUERY IS LOADED IN ANOTHER WAY AND YOU HAVE VERSION 3.5.1 OR GREATER{% endcomment %} 
+ <script>if(typeof jQuery=='undefined'){ 
+ var headTag = document.getElementsByTagName('head')[0]; 
+ var jqTag = document.createElement('script'); 
+ jqTag.type = 'text/javascript'; 
+ jqTag.src = 'https://code.jquery.com/jquery-3.5.1.min.js'; 
+ headTag.appendChild(jqTag);} 
+ </script> 
+ {%-  endif -%} 

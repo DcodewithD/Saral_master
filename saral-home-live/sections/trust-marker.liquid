@@ -1,0 +1,89 @@
+<style>
+  div#trust-marker-template--16436770078954__1664181099fe18f2ac {
+    padding: 20px 16px;
+}
+
+  .trust.container.desc_block.care {
+    border: 1px solid #3B3A3D;
+    border-radius: 4px;
+    padding: 10px;
+    overflow: hidden;
+}
+  
+  .trust .trust_content.row {
+    display: flex;
+}
+
+  .trust .trust_content.row .trust_block.col-3.d-flex.justify-content-between.flex-column.align-items-center {
+    flex: 0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    row-gap: 8px;
+    border-left: 1px solid #523F33;
+}
+
+  .trust_block.col-3.d-flex.justify-content-between.flex-column.align-items-center p {
+    margin-bottom: 0px!important;
+    font-family: 'WorkSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: #3B3A3D;
+}
+
+.trust_block.col-3.d-flex.justify-content-between.flex-column.align-items-center svg {
+    width: 50%;
+    height: 50%;
+}
+
+@media (min-width:768px){
+  .trust{
+    display:none!Important
+  }
+}
+</style>
+<div id="trust-marker-{{section.id}}">
+  <div class="trust container desc_block care">
+    <div class="trust-marker-wrap">
+      <div class="trust-wrap">
+        <div class="trust_content row">
+          <div class="trust_block col-3 d-flex justify-content-between flex-column align-items-center">
+          	{% render 'icon-directCustomer' %}
+            <p>Direct to customer</p>
+          </div>
+          <div class="trust_block col-3 d-flex justify-content-between flex-column align-items-center">
+          	{% render 'icon-authentic' %}
+            <p>Authentic design</p>
+          </div>
+          <div class="trust_block col-3 d-flex justify-content-between flex-column align-items-center">
+          	{% render 'icon-tax' %}
+            <p>OEKO-TEX</p>
+          </div>
+          <div class="trust_block col-3 d-flex justify-content-between flex-column align-items-center">
+          	{% render 'icon-grow' %}
+            <p>High performance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Trust marker",
+    "settings": [],
+	"presets":[
+		{
+		  "name":"Trust marker"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

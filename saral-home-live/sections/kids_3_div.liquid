@@ -1,0 +1,308 @@
+<style>
+                                              .kids_box {
+            display: flex;
+            column-gap: 25px;
+            padding: 0;
+        }
+                                              .kids_box * {
+            /* font-family: var(--button-font); */
+        }
+                                              .kids_long_img {
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                flex-direction: column;
+                                            }
+                                              .kid_2div {
+                                                display: flex;
+                                            }
+
+                                            .kids_long_img {
+        width: 42%;
+        align-items: flex-start;
+    }
+                                            .kids_2_img {
+                                              width: 60%;
+                                          }
+                                          .kid_text {
+                                            display: flex;
+                                            align-items: center;
+                                            padding: 30px 0px;
+                                            background: #489576;
+                                            width: 100%;
+                                            color: white;
+                                        }
+                                        .kid_text div {
+                                          width: 50%;
+                                      }
+                                      .k_button {
+                                        text-align: center;
+                                    }
+                                      .k_button button {
+                                        padding: 10px 18px;
+                                        border-radius: 50px;
+                                        background: #ff000000;
+                                        border: 2px solid white;
+                                        color: white;
+                                        font-size: 16px;
+                                    }
+                                      .k_text h4, p {
+                                        color: white;
+                                    }
+
+                                    .kid_2div.text.top {
+                                      background: #eb6054;
+                                      display: flex;
+                                      flex-direction: column;
+                                      justify-content: space-between;
+                                      align-items: baseline;
+                                      padding: 30px 20px;
+                                  }
+                                   .kid_2div.text.bottom{
+                                      background: #ed703b;
+                                      display: flex;
+                                      flex-direction: column;
+                                      justify-content: space-between;
+                                      align-items: baseline;
+                                      padding: 30px 20px;
+                                  }
+                                  .kids_2_img {
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 25px;
+            }
+                                .kids_long_img_box {
+                                  width: 100%;
+
+                              }
+                                .kid_text div {
+                                  margin-left: 15px;
+                              }
+                              .kid_2div.text {
+                                width: 40%;
+
+                            }
+       
+                .kid_2div {
+                  flex: 0 0 40%;
+              }
+    .k_button {
+      margin: 0px!important;
+  }
+
+                            @media(max-width:600px)
+                            {
+                              .kids_box {
+                              display: flex;
+                              flex-direction: column;
+                          }
+                              .kids_long_img {
+                              width: 100%;
+                          }
+                              .kids_2_img {
+                            width: 100%;
+                          }
+                             .kid_2div.text {
+                        width: 80%;
+                    }
+                              .k_text p {
+                          font-size: 11px;
+                      }
+                      .k_text h4 {
+                          font-size: 15px;
+                      }
+                              .k_button button {
+                                font-size: 12px;
+                      }
+                              .kid_2div.text.top {
+                                      padding: 12px 10px;
+                                  }
+                                   .kid_2div.text.bottom{
+
+                                      padding: 12px 10px;
+                                  }
+
+                              .kids_long_img_box {
+                      width: 100%;
+                  }
+                              .kid_2div {
+                    display: flex;
+
+                }
+                     .kids_long_img {
+                    margin-bottom: 20px;
+                }
+                              .kids_2_img {
+              row-gap: 20px;
+          }
+                              .kid_2div {
+                  flex: 0 0 46%;
+              }
+                            }
+</style>
+<div class="container-fluid section-padding">
+  <div class=" section-wrap">
+    <div class="">
+      <div class="kids_box">
+        <div class="kids_long_img">
+          <a href="{{ section.settings.ul1 }}">
+            <div class="kids_long_img_box">
+              <div class="kid_img">
+                <img
+                  src="{{ section.settings.img1 | image_url }}"
+                  alt="images"
+                >
+              </div>
+              <div class="kid_text">
+                <div class="k_text">
+                  <h4>{{ section.settings.txt1 }}</h4>
+                  <p>{{ section.settings.pra1 }}</p>
+                </div>
+                <div class="k_button">
+                  <button>{{ section.settings.btn1 }}</button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="kids_2_img">
+          <a href="{{ section.settings.ul2 }}">
+            <div class="kid_2div">
+              <div class="kid_2div text top">
+                <div class="k_text">
+                  <h4>{{ section.settings.txt2 }}</h4>
+                  <p>{{ section.settings.pra2 }}</p>
+                </div>
+                <div class="k_button">
+                  <button>{{ section.settings.btn2 }}</button>
+                </div>
+              </div>
+              <div class="kid_2div_img">
+                <img
+                  src="{{ section.settings.img2 | image_url }}"
+                  alt="image"
+                >
+              </div>
+            </div>
+          </a>
+          <a href="{{ section.settings.ul3 }}">
+            <div class="kid_2div">
+              <div class="kid_2div_img">
+                <img
+                  src="{{ section.settings.img3 | image_url }}"
+                  alt="image"
+                >
+              </div>
+              <div class="kid_2div text bottom">
+                <div class="k_text">
+                  <h4>{{ section.settings.txt3 }}</h4>
+                  <p>{{ section.settings.pra3 }}</p>
+                </div>
+                <div class="k_button">
+                  <button>{{ section.settings.btn3 }}</button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "kids 3 div",
+  "settings": [
+    {
+  "type": "image_picker",
+  "label": "1st Image",
+  "id": "img1"
+},
+    {
+      "type": "image_picker",
+      "label": "2nd Image",
+      "id": "img2"
+    },
+    {
+      "type": "image_picker",
+      "label": "3rd Image",
+      "id": "img3"
+    },
+    {
+      "type": "text",
+      "label": "1st div title",
+      "id": "txt1"
+    },
+    {
+      "type": "text",
+      "label": "1st div sub-text",
+      "id": "pra1"
+    },
+    {
+      "type": "text",
+      "label": "1st div button text",
+      "id": "btn1"
+    },
+    {
+      "type": "text",
+      "label": "2st div title",
+      "id": "txt2"
+    },
+    {
+      "type": "text",
+      "label": "2st div sub-text",
+      "id": "pra2"
+    },
+    {
+      "type": "text",
+      "label": "2st div button text",
+      "id": "btn2"
+    },
+    {
+      "type": "text",
+      "label": "3st div title",
+      "id": "txt3"
+    },
+    {
+      "type": "text",
+      "label": "3st div sub-text",
+      "id": "pra3"
+    },
+    {
+      "type": "text",
+      "label": "3st div button text",
+      "id": "btn3"
+    },
+    {
+      "type":"url",
+      "label":"Img url 1",
+      "id":"ul1"
+    },
+    {
+      "type":"url",
+      "label":"Img url 2",
+      "id":"ul2"
+    },
+    {
+      "type":"url",
+      "label":"Img url 3",
+      "id":"ul3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "kids 3 div",
+      "category": "blog"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

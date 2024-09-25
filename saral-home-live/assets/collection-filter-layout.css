@@ -1,0 +1,89 @@
+.sidebar-collection-filters-head-wrapper{
+  flex:0 0 40%;
+  max-width:40%;
+  background-color:ghostwhite;
+  min-height:92vh;
+}
+.collection-sidebar-filter-headings{
+  padding:0 10%;
+  border-bottom:solid 1px #dedede;
+}
+.sidebar-collection-filter-values-wrap .collection-sidebar-section{
+  padding:0 10%;
+  border-bottom:none;
+}
+.collection-sidebar-filter-headings.active{
+  background-color:#fff;
+}
+.collection-sidebar-filter-headings{
+  cursor:pointer;
+}
+.sidebar-collection-filter-values-wrap{
+  flex: 0 0 60%;
+    max-width: 60%;
+    max-height: 92vh;
+    overflow-y: auto;
+}
+.popup .collection-sidebar-type-1 .sidebar-collection-filters-head-wrapper .collection-sidebar-section__head{
+  max-width:100%;
+}
+#FacetsWrapperDesktop{
+  display:flex;
+}
+.popup-sidebar .collection-filters__content-wrapper.d-flex.flex-wrap.pt-2.pb-10{
+  flex-direction:column;
+}
+.popup-sidebar__head{
+    padding: 4%;
+    border-bottom: solid 1px ghostwhite;
+}
+.popup h5.d-flex.align-items-center.mb-0 span{
+  font-size:12px;
+}
+.popup .collection-sidebar-type-1 .collection-sidebar-section__head{
+  padding:8px 0px;
+}
+.popup-sidebar__close h5.d-flex.align-items-center span{
+  font-family: "WorkSans-Regular";
+  font-size:16px!important;
+}
+.popup-sidebar__close{
+  justify-content:space-between;
+}
+.collection-sidebar-section {
+  pointer-events:none;
+  display:none!important;
+  transition:opacity 0.3s ease-in-out;
+  opacity:0;
+}
+.collection-sidebar-section.active{
+  display:flex!important;
+  pointer-events:auto;
+}
+.collection-filters__content-wrapper.d-flex.flex-wrap.pt-2.pb-10>label{
+  flex:0 0 100%!important;
+  max-width:100%!important;
+}
+.collection-filters__content-wrapper .col-6,.popup .collection-sidebar-section__accordion{
+  flex:0 0 100%!important;
+  max-width:100%!important;
+}
+.collection-sidebar-type-1 .collection-sidebar{
+  margin-top:0px;
+}
+.popup-sidebar{
+  position:relative;
+}
+.clear-all-btn{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 40%;
+    z-index: 100;
+    border: none;
+    padding: 2%;
+    background: #fff;
+  border-top:solid 1px #dedede;
+    font-family: "WorkSans-Regular";
+  font-size:14px!important;
+}

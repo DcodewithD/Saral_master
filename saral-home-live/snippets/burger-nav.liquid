@@ -1,0 +1,220 @@
+<style>
+    .hamburger-navigation-all{
+      position:fixed;
+      top:0px;
+      left:0px;
+      min-width:35vw;
+      z-index:1000;
+      background-color:#fff;
+      height:100vh;
+      max-width:35vw;
+      overflow-y:auto;
+      touch-action:pan-y;
+      padding:16px;
+      overflow-x:hidden;
+      transform:translateX(-100%);
+      transition:transform 0.3s ease-in-out;
+    }
+    .hamburger-navigation-all.visible{
+      transform:translateX(0%);
+    }
+    .hamburger-drop.visible{
+      pointer-events:auto;
+      opacity:1;
+    }
+    .hamburger-drop{
+      position:fixed;
+      left:0px;
+      top:0px;
+      width:100%;
+      height:100%;
+      background-color:rgba(0,0,0,20%);
+      z-index:999;
+      opacity:0;
+      pointer-events:none;
+    }
+    .hamburger-navigation-all .menu__item,.hamburger-navigation-all .burger-toggle,.hamburger-navigation-all .menu___back {
+      margin-bottom:20px;
+    }
+    .hamburger-navigation-all .burger-toggle.icon__close svg,.hamburger-navigation-all  .menu___back svg{
+      height:24px;
+      width:auto;
+    }
+    .hamburger-navigation-all .burger-toggle,.hamburger-navigation-all .menu___back{
+      border:none;
+      background-color:transparent;
+    }
+    .menu__item.menu__item--has-children.position-lg-relative a i{
+      display:block!important;
+    }
+    .menu__item.menu__item--has-children.position-lg-relative a i svg{
+      fill:#000!importat;
+    }
+    .hamburger-navigation-all .menu.menu--main{
+      max-height:55vh;
+    }
+    .hamburger-navigation-all .menu__item--has-children svg{
+      fill:#000!important;
+    }
+    .hamburger-navigation-all .menu__dropdown{
+      left:0px!important;
+      top:0px!important;
+      height:100%!important;
+      width:100%!important;
+      box-shadow:none;
+      margin-left:0px!important;
+      transform:translateX(150%);
+      pointer-events:none;
+      transition:transform 0.3s ease-in-out;
+      background:#fff;
+    }
+    .hamburger-navigation-all .menu__panel[data-mobile-level="2"]{
+      transform:translate(0%);
+    }
+     .hamburger-navigation-all .menu__item.active .menu__dropdown{
+       pointer-events:auto;
+      transform:translateX(0%);
+    }
+    .hamburger-navigation-all .menu__item .menu__list{
+       opacity:1!important;
+    }
+    .hamburger-navigation-all .product_slider_slider{
+      margin-left:0px;
+      overflow-x:auto!important;
+    }
+    .hamburger-navigation-all .product_slider_head h2,.hamburger-navigation-all .sap{
+      text-align:left;
+      margin:20px 0px!important;
+    }
+    .hamburger-navigation-all .menu__item.active .menu__panel .menu__list{
+      display:inherit!important;
+      position:relative!important;
+    }
+    .hamburger-navigation-all .product_slider_slider::-webkit-scrollbar{
+      height:6px;
+    }
+     .hamburger-navigation-all::-webkit-scrollbar {
+      width: 10px;
+    }
+    .hamburger-navigation-all::-webkit-scrollbar-track,.hamburger-navigation-all .product_slider_slider::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .hamburger-navigation-all::-webkit-scrollbar-thumb,.hamburger-navigation-all .product_slider_slider::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius:60px;
+    }
+    .hamburger-navigation-all::-webkit-scrollbar-thumb:hover,.hamburger-navigation-all .product_slider_slide::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    .burger-toggle.header___icon{
+      background:transparent;
+      border:none;
+      margin-right:auto;
+    }
+
+    .hamburger-navigation-all button.burger-toggle.icon__close {
+      padding-left: 0px;
+  }
+
+    @media(max-width:768px){
+      .hamburger-navigation-all{
+        max-width:100vw;
+        width:100vw;
+      }
+      .hamburger-navigation-all .popup-navigation__search{
+        padding-left:0px!important;
+        padding-right:0px!important;
+        margin-bottom:20px;
+      }
+      .hamburger-navigation-all .popup-navigation__search>.container{
+        padding:0px;
+      }
+      .hamburger-navigation-all .menu.menu--main{
+          max-height:100vh;
+      }
+      .hamburger-navigation-all .menu__panel .menu__list{
+        display:block!important;
+        left:0%!important;
+      }
+    }
+</style>
+<div class="hamburger-drop burger-toggle"></div>
+<div class="hamburger-navigation-all">
+  <button class="burger-toggle icon__close">{% include 'icon-close' %}</button>
+  <button class="menu___back d-none ml-auto cursor-pointer" data-js-menu-back>{% include 'icon-back' %}</button>
+  {%- if settings.search_show -%}
+    <div
+      class="popup-navigation__search search d-lg-none d-md-none pt-lg-25 pb-lg-35 px-10 px-lg-0{% if settings.search_ajax %} js-popup-search-ajax{% endif %}"
+      data-js-max-products="6"
+    >
+      <div class="container">
+        <div class="d-none d-lg-flex align-items-lg-center mb-5 mb-lg-10">
+          <p class="m-0">{{ 'general.search.title' | t }}</p>
+          <i class="search__close ml-auto cursor-pointer" data-js-popup-close>{% include 'icon-theme-164' %}</i>
+        </div>
+        <form
+          class="position-relative d-flex align-items-center pb-5 pb-lg-15 mb-0 border-bottom"
+          action="{{ routes.search_url }}"
+          method="get"
+          role="search"
+        >
+          {%- if settings.search_show_only_products == true -%}
+            <input type="hidden" name="type" value="product">
+          {%- endif -%}
+          <input
+            type="search"
+            class="border-0 p-0 mb-0"
+            name="q"
+            id="Search"
+            value="{{ search.terms | escape }}"
+            placeholder="{{ 'general.search.placeholder' | t }}"
+          >
+          <input type="hidden" name="options[prefix]" value="last">
+          <label class="position-absolute right-0 mb-0 mr-0 m-lg-0 cursor-pointer" for="Search"
+            ><i>{% include 'icon-theme-168' %}</i></label
+          >
+        </form>
+        <div class="search__content">
+          <div class="search__result row pt-10 pt-lg-0 mt-20 mt-lg-30 d-none-important"></div>
+          <div class="search__view-all pb-20 pb-lg-0 mt-20 mt-lg-10 d-none-important">
+            <a href="{{ routes.search_url }}" class="btn-link">{{ 'general.popups.search.view_all_products' | t }}</a>
+          </div>
+        </div>
+        <p class="search__empty pb-20 pb-lg-0 mt-20 mt-lg-30 mb-0 d-none-important">
+          <a href="{{ routes.search_url }}" class="btn-link">{{ 'general.popups.search.empty_html' | t }}</a>
+        </p>
+      </div>
+    </div>
+  {%- endif -%}
+  {% include 'burger-get-menu' with section:section is_main_menu: is_main_menu centered:menu_centered %}
+  {% include 'navigation_slider' with collection:collection heading:heading %}
+</div>
+<!--
+  <script>
+    $('.menu__item--has-children a').each(function(ind,el){
+      console.log(el)
+      $(el).on('click',function(e){
+          e.preventDefault();
+          let wrap = el.closest('.menu__item');
+          let drop = wrap.querySelector('.menu__dropdown');
+          drop ? wrap.classList.add('active') : '';
+          if(drop){
+            $('.icon__close')[0].classList.add('d-none');
+            $('.menu___back')[0].classList.remove('d-none')
+          }
+      })
+    })
+    $('.menu___back').on('click',function(){
+        $('.icon__close')[0].classList.remove('d-none');
+        $('.menu___back')[0].classList.add('d-none');
+        $('.menu__item--has-children.active')[0].classList.remove('active');
+    })
+    $('.burger-toggle').each(function(ind,el){
+      $(el).on('click',function(e){
+        e.preventDefault();
+        $('.hamburger-navigation-all')[0].classList.toggle('visible');
+        $('.hamburger-drop')[0].classList.toggle('visible')
+      })
+    })
+  </script>
+-->

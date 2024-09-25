@@ -1,0 +1,420 @@
+<style>
+
+    .shop-by-room-container #banner-1, .shop-by-room-container #banner-2, .shop-by-room-container #banner-3, .shop-by-room-container #banner-4{
+      display: none;
+    }
+  
+    
+    
+    
+  
+    .room-detail-container a {
+      color: black!important;
+  }
+    .shop-by-room-section .shop-by-room-right{
+      margin-top: 5%;
+    }
+
+     .shop-by-room-section .section-width{
+        padding-right: var(--section-padding-desktop);
+     }
+
+
+    .shop-room-section-heading{
+      /* padding-bottom: 20px; */
+      font-family: var(--button-font);
+      margin-bottom: 0;
+    }
+
+
+    .shop-by-room-container{
+      display: flex;
+
+      gap: 40px;
+
+    }
+    .section-image-wrap {
+      flex: 0 0 60%;
+      max-width: 60%;
+
+    }
+       .shop-by-room-right {
+      flex: 0 0 37%;
+      max-width: 37%;
+
+    }
+
+
+
+    .room-detail-container{
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding-top: 42px;
+
+    }
+
+    .room-details{
+      border-bottom:1px solid #2c2c2c;
+      position: relative;
+      padding-bottom: 3%;
+
+    }
+
+    .room-details > svg{
+      position: absolute;
+      right:0;
+      top:10%;
+    }
+
+    .roomtype-heading{
+      font-size: 18px;
+      font-family: var(--button-font);
+      padding-bottom: 2.5px;
+    }
+
+    .roomtype-content{
+      font-size: 14px;
+      font-family: var(--content-font);
+      margin-top: 2.5px;
+      margin-bottom: 3px;
+    }
+      .shop-by-room-container .price-wrap{
+        max-width: 63% !important;
+      }
+
+
+
+    @media(min-width:768px){
+      .mob-image-wrap{
+        display:none;
+      }
+      .desk-image-wrap{
+        display:block;
+      }
+      .shop-by-room-container .active{
+      display: block !important;
+    }
+    }
+    @media(max-width:768px){
+
+          .shop-by-room-section .section-width{
+          padding-right: var(--section-padding-mobile);
+          padding-left: var(--section-padding-mobile);
+
+        }
+        .mob-image-wrap{
+          display:block;
+        }
+        .desk-image-wrap{
+          display:none !important;
+        }
+        .shop-by-room-container{
+          flex-direction: column;
+          gap: 15px;
+        }
+        .shop-room-section-heading{
+          padding-bottom: 2%;
+          font-family: var(--button-font) !important;
+          }
+        .section-image-wrap, .shop-by-room-right {
+          flex: 0 0 100%;
+          width: 100%;
+          max-width:100%;
+
+        .shop-by-room-section .shop-by-room-right{
+            margin-top: 0 !important;
+          }
+
+        .room-detail-container{
+          gap: 20px;
+          max-width: 100%;
+          padding-top: 16px;
+        }
+        .roomtype-heading{
+          font-size: 16px;
+        }
+
+        .roomtype-content{
+          font-size: 13px;
+        }
+          .section-padding-right {
+      padding-right: 0px!important;
+      padding: 20px!important;
+          }
+
+      }
+</style>
+
+<div class="section-width {% unless section.settings.section_width == 'full-width' %}section-padding-right{% endunless %}">
+  <div class="section-content section-wrap">
+    <div class="shop-by-room-container">
+      <div class="section-image-wrap">
+        
+        {% if section.settings.desk_image-1 != blank %}
+          {% assign desk_image = section.settings.desk_image-1 %}
+          
+          <div
+            id="banner-1"
+            class="desk-image-wrap active"
+            style="position:relative;padding-bottom:{{100 | divided_by : desk_image.aspect_ratio }}%"
+            data-id="1"
+          >
+            <img
+              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:100%;width:100%;"
+              srcset="
+                {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ desk_image | image_url }} {{ desk_image.width }}w
+              "
+              src="{{ desk_image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ desk_image.alt | escape }}"
+              width="{{ desk_image.width }}"
+              height="auto"
+            >
+          </div>
+        {% endif %}
+        
+        {% if section.settings.desk_image-2 != blank %}
+          {% assign desk_image = section.settings.desk_image-2 %}
+          
+          <div
+            id="banner-2"
+            class="desk-image-wrap"
+            style="position:relative;padding-bottom:{{100 | divided_by : desk_image.aspect_ratio }}%"
+            data-id="2"
+          >
+            <img
+              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:100%;width:100%;"
+              srcset="
+                {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ desk_image | image_url }} {{ desk_image.width }}w
+              "
+              src="{{ desk_image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ desk_image.alt | escape }}"
+              width="{{ desk_image.width }}"
+              height="auto"
+            >
+          </div>
+        {% endif %}
+        
+        {% if section.settings.desk_image-3 != blank %}
+          {% assign desk_image = section.settings.desk_image-3 %}
+          
+          <div
+            id="banner-3"
+            class="desk-image-wrap"
+            style="position:relative;padding-bottom:{{100 | divided_by : desk_image.aspect_ratio }}%"
+            data-id="3"
+          >
+            <img
+              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:100%;width:100%;"
+              srcset="
+                {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ desk_image | image_url }} {{ desk_image.width }}w
+              "
+              src="{{ desk_image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ desk_image.alt | escape }}"
+              width="{{ desk_image.width }}"
+              height="auto"
+            >
+          </div>
+        {% endif %}
+        
+        {% if section.settings.desk_image-4 != blank %}
+          {% assign desk_image = section.settings.desk_image-4 %}
+          
+          <div
+            id="banner-4"
+            class="desk-image-wrap"
+            style="position:relative;padding-bottom:{{100 | divided_by : desk_image.aspect_ratio }}%"
+            data-id="4"
+          >
+            <img
+              style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);height:100%;width:100%;"
+              srcset="
+                {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ desk_image | image_url }} {{ desk_image.width }}w
+              "
+              src="{{ desk_image | image_url: width: 1500 }}"
+              loading="lazy"
+              alt="{{ desk_image.alt | escape }}"
+              width="{{ desk_image.width }}"
+              height="auto"
+            >
+          </div>
+        {% endif %}
+    
+      </div>
+      
+      <div class="shop-by-room-right">
+        <h2 class="shop-room-section-heading h1">{{ section.settings.title }}</h2>
+
+        {% liquid
+          assign roomType-blocks = section.blocks | where: 'type', 'shopByRoomType'
+        %}
+        <div class="room-detail-container">
+          {% for room-detail in roomType-blocks %}
+            <a href="{{ room-detail.settings.ul}}">
+              <div class="room-details" data-id={{ forloop.index }}>
+                <svg width="12" height="12" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.79042 1.72325L16.2361 1.72325L16.2361 13.169M1.50024 16.4592L16.0758 1.88353" stroke="#2C2C2C" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="roomtype-heading">{{ room-detail.settings.roomTypeHeading }}</div>
+                <div class="roomtype-content">{{ room-detail.settings.roomTypeQuote }}</div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+const headings = document.querySelectorAll('.room-details');
+const images = document.querySelectorAll('.desk-image-wrap');
+  
+  headings.forEach((heading) => {
+    heading.addEventListener('mouseenter', () => {
+        const dataId = heading.getAttribute('data-id');
+        hideAllImages();
+        displayImage(dataId);
+    });
+});
+
+function hideAllImages() {
+    images.forEach((image) => {
+        image.classList.remove('active');
+    });
+}
+
+function displayImage(dataId) {
+    const imageToShow = document.querySelector(`.desk-image-wrap[data-id="${dataId}"]`);
+    imageToShow.classList.add('active');
+}
+</script>
+
+                    
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "shop-by-room",
+  "tag": "section",
+  "class": "shop-by-room-section",
+  "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Section Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "desk_image",
+          "label": "Image Desktop"
+        },
+        {
+          "type": "image_picker",
+          "id": "mob_image",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "image_picker",
+          "id": "desk_image-1",
+          "label": "Banner - 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "desk_image-2",
+          "label": "Banner - 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "desk_image-3",
+          "label": "Banner - 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "desk_image-4",
+          "label": "Banner - 4"
+        }
+  	],
+  	"blocks": [
+     	{
+       	"name": "ShopByRoomType",
+       	"type": "shopByRoomType",
+       	"settings": [
+                
+             	{
+             	"type": "text",
+             	"id": "roomTypeHeading",
+             	"label": "Room Type"
+             	},
+                {
+             	"type": "text",
+             	"id": "roomTypeQuote",
+             	"label": "Quote about Room"
+             	},
+          {
+      "type":"url",
+      "label":"page url",
+      "id":"ul"
+    }
+           ]
+     	}
+   	],
+    "presets": [
+    {
+      "name": "Shop-by-room",
+      "settings": {
+        "title": "Shop By Room Section"
+      },
+      "blocks": [
+        {
+          "type": "shopByRoomType"
+        },
+        {
+          "type": "shopByRoomType"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

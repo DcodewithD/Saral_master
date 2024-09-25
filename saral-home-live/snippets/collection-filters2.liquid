@@ -1,0 +1,187 @@
+<style>
+.collection-filters2 .sidebar-collection-filters-head-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+}
+  .collection-filters2 .sidebar-collection-filters-head-wrapper {
+    min-height: fit-content;
+    background: none;
+    display: flex;
+}
+.collection-filters2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+}
+.collection-control__view-wrapper {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+.collection-control .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.collection-filters2 .collection-sidebar-filter-headings {
+    padding: 0px;
+    border-bottom: none;
+}
+.collection-filters2 .sidebar-collection-filter-values-wrap .collection-sidebar-section{
+  padding: 20px!important;
+  position: absolute;
+    z-index: 1000000000;
+    background: white;
+    width: 30%;
+    max-height: 30vh;
+    overflow: hidden;
+    box-shadow: 1px 1px 2px #000;
+    overflow-y: auto;
+}
+.collection-filters2 .sidebar-collection-filter-values-wrap>.collection-sidebar-section:nth-child(1){
+  left: 0px;
+  top: 150%;
+}
+.collection-filters2 .sidebar-collection-filter-values-wrap>.collection-sidebar-section:nth-child(2){
+left: 50%;
+transform: translateX(-50%);
+top: 150%;
+}
+.collection-filters2 .sidebar-collection-filter-values-wrap>.collection-sidebar-section:nth-child(3){
+left: inherit;
+top: 150%;
+right: 5%;
+}
+.collection-filters2 .collection-sidebar-section__head h5 span {
+    font-family: var(--body_font);
+}
+</style>
+<div class="collection-filters2">
+  <collection-filters-form class="collection-filters d-block">
+                    <form id="CollectionFiltersForm" class="collection-filters__form mb-0" data-gtm-form-interact-id="0">
+                           <div class="sidebar-collection-filters-head-wrapper">
+                              {%- for filter in collection.filters -%}
+                                    {%- assign sidebar_section_title = settings_block.settings.title | default: filter.label | escape -%}
+                                    {% assign  title = sidebar_section_title %}
+                                    {%- assign sidebar_section_index = 'section-filters-' | append: forloop.index -%}
+                                    {% render 'collection-sidebar-filters-head2',title:title,index:sidebar_section_index %}
+                              {% endfor %}
+                            </div>
+                            <div class="sidebar-collection-filter-values-wrap">
+                              {%- for filter in collection.filters -%}
+                                  {%- assign settings_block = block -%}
+                                  {%- for iteration_block in setting_blocks -%}
+                                      {%- if iteration_block.settings.filter_name == filter.label -%}
+                                          {%- assign settings_block = iteration_block -%}
+                                          {%- break -%}
+                                      {%- endif -%}
+                                  {%- endfor -%}
+                                  {%- assign make_as_rounded = false -%}
+                                  {%- assign make_as_color = settings_block.settings.make_as_color -%}
+                                  {%- if section.settings.make_availability_as_rounded and filter.param_name == 'filter.v.availability' -%}
+                                      {%- assign make_as_rounded = true -%}
+                                      {%- assign make_as_color = false -%}
+                                  {%- endif -%}
+                                  {% capture sidebar_section_content %}
+                                      {% case filter.type %}
+                                      {% when 'list' %}
+                                          {%- assign filter_title = settings_block.settings.title | default: filter.label | escape -%}
+                                          
+                                          {%- assign hide_section = true -%}
+                                          {%- if settings_block.settings.layout contains 'col' -%}
+                                              {%- assign layout_columns = settings_block.settings.layout | remove: '_col' | abs -%}
+                                          {%- endif -%}
+                                          <div class="collection-filters__filters js-filter" data-index="{{ forloop.index }}">
+                                              {%- if section.settings.show_selected_filters_counter -%}
+                                              <div class="collection-filters__header d-flex">
+                                                  <span class="collection-filters__selected mr-10 facets__selected no-js-hidden">{{ 'collection_template.filters_selected' | t: count: filter.active_values.size }}</span>
+                                                  <facet-remove class="ml-auto">
+                                                      <a href="{{ filter.url_to_remove }}" class="collection-filters__reset btn-link btn-link--undecorated">
+                                                          {{ 'collection_template.reset' | t }}
+                                                      </a>
+                                                  </facet-remove>
+                                              </div>
+                                              {%- endif -%}
+                                              <div class="collection-filters__content"{% if make_as_color %} data-property="color"{% endif %}>
+                                                  <div class="collection-filters__content-wrapper{% if settings_block.settings.layout == 'row' %} d-flex flex-wrap pt-2 pb-10{% else %} row row--5 pt-1{% endif %}">   
+                                                      {%- capture filters_html -%}
+                                                          {%- assign items_counter = 0 -%}
+                                                          {%- for value in filter.values -%}
+                                                              {%- assign disable_checkbox = false -%}
+                                                              {%- if value.count == 0 and value.active == false -%}
+                                                                  {%- assign disable_checkbox = true -%}
+                                                              {%- else -%}
+                                                                  {%- assign hide_section = false -%}
+                                                              {%- endif -%}
+                                                              {%- if disable_checkbox and section.settings.hide_disabled_filters -%}
+                                                                  {%- continue -%}
+                                                              {%- endif -%}
+                                                              {%- if settings_block.settings.layout contains 'col' and layout_columns > 1 and settings_block.settings.max_column_size != 0 -%}
+                                                                  {%- if items_counter != 0 -%}
+                                                                      {%- assign items_counter_modulo = items_counter | modulo: settings_block.settings.max_column_size -%}
+                                                                      {%- if items_counter_modulo == 0 -%}
+                                                                          </div>
+                                                                          <div class="col-{{ 12 | divided_by: layout_columns }} mb-10">
+                                                                      {%- endif -%}
+                                                                  {%- endif -%}
+                                                                  {%- assign items_counter = items_counter | plus: 1 -%}
+                                                              {%- endif -%}
+                                                              <label for="Filter-{{ filter.label | escape }}-{{ forloop.index }}" class="collection-filters__checkbox{% if disable_checkbox %} collection-filters__checkbox--disabled{% if section.settings.hide_disabled_filters %} d-none-important{% endif %}{% endif %} {% if make_as_rounded %}input-boolean{% else %}input-checkbox{% endif %} d-flex align-items-center mb-15 mb-lg-10{% if settings_block.settings.layout == 'row' %} mr-15{% if make_as_color %} mr-lg-10 input-checkbox--unbordered{% endif %}{% endif %} cursor-pointer {% if filter_title == 'Color' %}color-label{% endif %}">
+                                                                  <input type="checkbox"
+                                                                  class="d-none"
+                                                                  name="{{ value.param_name }}"
+                                                                  value="{{ value.value }}"
+                                                                  id="Filter-{{ filter.label | escape }}-{{ forloop.index }}"
+                                                                  {% if value.active %}checked{% endif %}
+                                                                  {% if disable_checkbox %}disabled{% endif %}>
+                                                                  <span class="position-relative mr-8 {% if make_as_rounded %}d-flex border{% else %}d-block{% endif %}{% if make_as_color %}{% if settings_block.settings.layout contains 'col' %} mr-8{% endif %} rounded-circle standard-color-default standard-color-{% render 'product-get-options-strip-symbols' with value: value.label %}{% else %} mr-8 border{% endif %}"{% if make_as_color %} data-value="{% render 'product-get-options-strip-symbols' with value: value.label %}"{% endif %}>
+                                                                      {% if filter_title == 'Color' %}
+                                                                         {% assign val = value.label | downcase | replace : ' ',"_" %}
+                                                                         <span class="color-block"><img src="{{val | append : '_20x.png' | file_url }}"/></span>
+                                                                      {% endif %}
+                                                                      {% if make_as_rounded %}
+                                                                          <span class="position-absolute d-block border"></span>
+                                                                      {% else %}
+                                                                          <i class="d-none{% if make_as_color %} standard-color-arrow{% endif %}">{% render 'icon-theme-146' %}</i>
+                                                                      {% endif %}
+                                                                  </span>
+                                                                  {%- if make_as_color != true or settings_block.settings.layout contains 'col' -%}
+                                                                      <span>{{ value.label | escape }}{% if section.settings.show_filter_product_count %} ({{ value.count }}){% endif %}</span>
+                                                                  {%- else -%}
+                                                                    {% assign val = value.label %}
+                                                                    {% unless val contains 'Light' or val contains 'Dark' %}
+                                                                        {% assign val = val | replace : ' ' , ' & ' %}
+                                                                      {% if val contains 'Turq' %}
+                                                                        {% unless val contains 'Turquoise' %}
+                                                                            {% assign val = val | replace : 'Turq' , 'Turquoise' %}
+                                                                        {% endunless %}
+                                                                      {% endif %}
+                                                                    {% endunless %}
+                                                                      <span class="filter-color-label">{{val | downcase}}</span>
+                                                                  {% endif %}
+
+                                                              </label>
+                                                          {%- endfor -%}
+                                                      {%- endcapture -%}
+                                                      {%- if settings_block.settings.layout contains 'col' -%}
+                                                          <div class="col-{{ 12 | divided_by: layout_columns }} mb-10">
+                                                              {{ filters_html }}
+                                                          </div>
+                                                      {%- else -%}
+                                                          {{ filters_html }}
+                                                      {%- endif -%}
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      {% endcase %}
+                                  {% endcapture %}
+  
+                                  {%- assign sidebar_section_title = settings_block.settings.title | default: filter.label | escape -%}
+                                  {%- assign sidebar_section_index = 'section-filters-' | append: forloop.index -%}
+                                  {% render 'collection-sidebar-section2', content: sidebar_section_content, title: sidebar_section_title, settings_block: settings_block, has_content: true, content_type: content_type, hide_section: hide_section, show_border: show_border, index: sidebar_section_index %}
+                              {%- endfor -%}
+                            </div>
+                    </form>
+    </collection-filters-form>
+</div>

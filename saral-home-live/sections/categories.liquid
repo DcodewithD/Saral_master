@@ -1,0 +1,67 @@
+<style>
+  .row.cat h2.hed {
+    padding: 0px 0px 0px 60px;
+}
+</style>
+<div class="container-fluid fix_padding category_pg">
+  <div class="row cat">
+    
+      <h2 class="hed">{{section.settings.hed}} </h2>
+  
+</div>
+  <div class="container">
+<div class="row cat">
+  {% for block in section.blocks %}
+	<div class="col-md-3 col-4 icon_category">
+      
+      	{% if block.id == 'img' %}
+  	<center><img src="{{block.settings.img | img_url: 'master'}}" class="image-fluid " ></center>
+      {% else%}
+      <center> <p>{{block.settings.svgg}}</p></center>
+      {% endif %}
+      <center> <p>{{block.settings.nme}}</p></center>
+  </div>
+  {% endfor %}
+</div>
+  </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Category",
+    "settings": [{
+					"type":"text",
+					"label":"Head",
+					"id":"hed"
+				
+				}],
+	"blocks":[{
+				"type":"blog",
+				"name":"Category",
+				"settings":[{
+								"type":"image_picker",
+								"label":"image",
+								"id":"img"
+						
+							},
+							{
+								"type":"richtext",
+								"label":"Name",
+								"id":"nme"
+							},
+{
+								"type":"text",
+								"label":"SVG",
+								"id":"svgg"
+							}
+							]
+			}],
+"presets":[{"name":"category"}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

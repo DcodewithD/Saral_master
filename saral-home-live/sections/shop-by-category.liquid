@@ -1,0 +1,552 @@
+<style>
+      /* shop by category */
+      .sbc3 {
+      background: #FBFBFB;
+      }
+      .sbc3 .card-image-wrap {
+      background: #FBFBFB!important;
+      }
+
+      .sbc{
+      padding:20px 0px 20px;
+      }
+      .sbc h2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 28px;
+      color: #525159;
+      text-align: center;
+      font-family: var(--heading_font)!important;
+      letter-spacing: 0px;
+      }
+
+      .sbc-inner{
+      flex-direction:column-reverse;
+      display: flex;
+      gap: 30px;
+      }
+
+      .sbc2 {
+      display: flex;
+      row-gap: 20px;
+      flex-wrap: wrap;
+      padding-left: 16px;
+      padding-right: 16px;
+      column-gap: 25px;
+      justify-content: center;
+      flex: 0 0 100%;
+      max-width: 100%;
+      }
+
+      .sbc3 {
+      flex: 0 0 calc(100%/3 - 25px*3/3);
+      text-align: center;
+      align-items: center;
+      position:relative;
+      padding: 10px 0px;
+      padding-bottom: 10px;
+      border-radius:8px;
+      }
+
+      .sbc3 img {
+      height: 80%;
+      width: 100%;
+      border-radius:8px;
+      }
+
+      .sbc3 h5 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: center;
+      color: #3A3844;
+      padding-inline: 12px;
+      padding-top: 0px;
+
+      }
+
+      .sbc h2 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 28px;
+      color: #525159;
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      }
+
+      .sbc .sbc2 .sbc3 svg {
+      width: 100%;
+      height: 100%;
+      }
+
+    .sbc4 {
+        position: relative;
+        flex: 0 0 100%
+        max-width: 100%;
+    }
+
+      /*     .sbc3 {
+      transition: all 0.5s ease-in-out;
+      }
+
+      .sbc3:hover {
+      transform: scale(1.1);
+      } */
+
+      .sbc3:hover h5 {
+      font-weight: 900;
+      }
+
+      /* .sbc2>.sbc3:nth-child(1) {
+      border-right: 0.5px solid #242424;
+      }
+
+      .sbc2>.sbc3:nth-child(3) {
+      border-left: 0.5px solid #242424;
+      }
+
+      .sbc2>.sbc3:nth-child(4) {
+      border-right: 0.5px solid #242424;
+      }
+
+      .sbc2>.sbc3:nth-child(6) {
+      border-left: 0.5px solid #242424;
+      }
+
+      .sbc2>.sbc3:nth-child(7) {
+      border-right: 0.5px solid #242424;
+      } */
+      /* shop by category */
+
+
+      @media(min-width:768px){
+      .sbc-inner {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-direction: row;
+  }
+      .sbc2 {
+      row-gap: 20px!important;
+      padding: 0px 0px;
+      flex: 0 0 calc(72% - 25px);
+      max-width: calc(72% - 25px);
+      }
+
+        .sbc4 {
+        position: relative;
+        flex: 0 0 calc(28% - 25px);
+        max-width: calc(28% - 25px);
+    }
+
+      .sbc3 {
+      max-width: calc(100%/4 - 25px*3/4);
+      flex: 0 0 calc(100%/4 - 25px*3/4);
+      padding: 0px;
+      }
+
+      .sbc {
+      padding: 30px 120px 30px;
+      margin: 0px;
+      }
+
+      .sbc h2 {
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 49px;
+      color: #525159;
+      margin: 20px 0px 40px;
+      }
+
+      .sbc3 h5 {
+      font-size: 18px;
+      padding: 20px;
+      text-align:center;
+      padding-top:0px;
+      margin-bottom: 0px;
+      }
+
+      .sbc3 img {
+      height: 80%;
+      width: 100%;
+      }
+
+      .sbc .sbc2 .sbc3 svg {
+      width: 60%;
+      height: 60%;
+      }
+      }
+</style>
+<div class="sbc">
+  <h2>Shop By Category</h2>
+  <div class="sbc-inner">
+    <div class="sbc4">
+      {% assign media = section.settings.section_image9 %}
+      <div
+        class="card-image-wrap"
+        style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+      >
+        <img
+          loading="lazy"
+          srcset="
+            {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+            {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+            {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+            {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+            {{ media | image_url }} {{ media.width }}w
+          "
+          src="{{ media | image_url: width: 533 }}"
+          alt="{{ media.alt | escape }}"
+          loading="lazy"
+          sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+          width="{{ card_media.width }}"
+          height="{{ card_media.height }}"
+          style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+        >
+      </div>
+      <!-- <h5>Bathmats</h5> -->
+      <a href="{{ section.settings.image9-link }}" class="url"></a>
+    </div>
+    <div class="sbc2">
+      <div class="sbc3">
+        {% assign media = section.settings.section_image1 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Bedding</h5> -->
+        <a href="/collections/covers-quilts" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image2 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Table mats</h5> -->
+        <a href="/collections/bathmat" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image3 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Sofa covers</h5> -->
+        <a href="/collections/curtains" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image4 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Rugs</h5> -->
+        <a href="/collections/floor-carpet-runner" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image5 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Runners</h5> -->
+        <a href="/collections/mats" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image6 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Yoga mats</h5> -->
+        <a href="/collections/sofa-cushion-covers" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image7 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Doormats</h5> -->
+        <a href="/collections/fun-kids" class="url"></a>
+      </div>
+      <div class="sbc3">
+        {% assign media = section.settings.section_image8 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ media | image_url }} {{ media.width }}w
+            "
+            src="{{ media | image_url: width: 533 }}"
+            alt="{{ media.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ card_media.width }}"
+            height="{{ card_media.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <!-- <h5>Bathmats</h5> -->
+        <a href="collections/carpet-for-living-room" class="url"></a>
+      </div>
+      {% comment %}
+              <div class="sbc3">
+              {% assign media = section.settings.section_image9 %}
+              <div
+                class="card-image-wrap"
+                style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : media.aspect_ratio | times : 100 }}%"
+              >
+                <img
+                  loading="lazy"
+                  srcset="
+                    {%- if media.width >= 165 -%}{{ media | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if media.width >= 360 -%}{{ media | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if media.width >= 533 -%}{{ media | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if media.width >= 720 -%}{{ media | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if media.width >= 940 -%}{{ media | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if media.width >= 1066 -%}{{ media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ media | image_url }} {{ media.width }}w
+                  "
+                  src="{{ media | image_url: width: 533 }}"
+                  alt="{{ media.alt | escape }}"
+                  loading="lazy"
+                  sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+                  width="{{ card_media.width }}"
+                  height="{{ card_media.height }}"
+                  style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+                >
+              </div>
+        <!--       <h5>Bathmats</h5> -->
+              <a href="/collections/customisation" class="url"></a>
+            </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Shop By Category",
+    "settings": [
+      {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image1"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image2"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image3"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image4"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image5"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image6"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image7"
+  },
+  {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image8"
+  },
+    {
+    "type":"image_picker",
+    "label":"Choose image",
+    "id":"section_image9"
+  },
+  {
+    "type":"url",
+    "label":"Choose image 9 link",
+    "id":"image9-link"
+  }
+    ],
+    "presets": [
+{
+"name": "Shop By Category",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

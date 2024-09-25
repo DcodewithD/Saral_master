@@ -1,0 +1,168 @@
+{% if product.metafields.custom.pdp_six_card_1_ != blank %}
+   
+<style>
+  .a_img img {
+    width: 100%;
+}
+ .metafield-rich_text_field p{
+    margin: 0px;
+    padding: 20px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Inter-Regular';
+    line-height: 32px;
+}
+  .a_icons {
+    display: flex;
+    justify-content: space-between;
+}
+  .icon1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  .icon1 img {
+    width: 40%;
+}
+  .icon1 .metafield-rich_text_field p{
+    padding: 0;
+}
+  .a_section5 {
+    padding: 30px 0px;
+}
+  .product-page.a_pd {
+    padding-top: 90px;
+}
+   .a_desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  .metafield-rich_text_field p{
+    width: 100%;
+    text-align: center!important;
+}
+  div#d_down {
+    display: none;
+}
+  @media(max-width:786px)
+  {
+    .metafield-rich_text_field p{
+    margin: 0px;
+    padding: 20px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Inter-Regular';
+    line-height: 25px;
+}
+    .a_icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+    .icon1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    flex: 0 0 47%;
+}
+     .metafield-rich_text_field p{
+    width: 100%;
+    text-align: left!important;
+}
+   .a_section5 .metafield-rich_text_field p{
+    text-align: center !important;
+}
+  }
+</style>
+<div class="product-page a_pd" id="drop">
+<div class="container">
+<div class="amazon_section">
+  <div class="a_section1">
+    <div class="a_img">
+       <img src="{{ product.metafields.custom.pdp_six_card_1_ | img_url: 'master' }}">
+    </div>
+    <div class="a_desc">
+        {{ product.metafields.custom.newa_txt_1 | metafield_tag }}
+    </div>
+  </div>
+  <div class="a_section2">
+    <div class="a_img">
+       <img src="{{ product.metafields.custom.pdp_six_card_2_ | img_url: 'master' }}">
+    </div>
+    <div class="a_desc">
+      {{ product.metafields.custom.a_txt_2 | metafield_tag }}
+    </div>
+  </div>
+  {% if product.metafields.custom.pdp_six_card_3_ != blank %}
+  <div class="a_section3">
+    <div class="a_img">
+       <img src="{{ product.metafields.custom.pdp_six_card_3_ | img_url: 'master' }}">
+    </div>
+    <div class="a_desc">
+      {{ product.metafields.custom.a_txt_3 | metafield_tag}}
+    </div>
+  </div>
+    {% else %}
+  {% endif %}
+  {% if product.metafields.custom.pdp_six_card_4_ != blank %}
+  <div class="a_section4">
+    <div class="a_img">
+       <img src="{{ product.metafields.custom.pdp_six_card_4_ | img_url: 'master' }}">
+    </div>
+    <div class="a_desc">
+      {{ product.metafields.custom.a_txt_4 | metafield_tag }}
+    </div>
+  </div>
+  {% else %}
+    
+  {% endif %}
+  <div class="a_section5">
+    <h4>Care Instructions:</h4>
+    <div class="a_icons">
+      <div class="icon1">
+        <img src="{{ product.metafields.custom.a_icon1 | img_url: 'master' }}">
+        
+        <p class="a_text">{{ product.metafields.custom.a_icon_1_text }}</p>
+      </div>
+      <div class="icon1">
+         <img src="{{ product.metafields.custom.a_icon2 | img_url: 'master' }}">
+        <p class="a_text">{{ product.metafields.custom.a_icon_2_text }}</p>
+      </div>
+      <div class="icon1">
+         <img src="{{ product.metafields.custom.a_icon3 | img_url: 'master' }}">
+        <p class="a_text"> {{ product.metafields.custom.a_icon_3_text }}</p>
+      </div>
+      <div class="icon1">
+         <img src="{{ product.metafields.custom.a_icon4 | img_url: 'master' }}">
+        <p class="a_text">{{ product.metafields.custom.a_icon_4_text }}</p>
+      </div>
+      {% if product.metafields.custom.a_icon5 != blank %}
+      <div class="icon1">
+         <img src="{{ product.metafields.custom.a_icon5 | img_url: 'master' }}">
+        <p class="a_text">{{ product.metafields.custom.a_icon5_text }}</p>
+      </div>
+        {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+</div>
+  {% else %}
+  
+  {% endif %}
+{% schema %}
+  {
+    "name": "Amazon_A+",
+    "settings": [],
+    "presets":[
+      {
+        "name":"Amazon_A+"
+      }
+    ]
+  }
+{% endschema %}

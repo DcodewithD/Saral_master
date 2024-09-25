@@ -1,0 +1,13 @@
+<img
+    srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+    {%- if image.width >= 360 -%}{{ image | image_url: width: 250 }} 360w,{%- endif -%}
+    {%- if image.width >= 533 -%}{{ image | image_url: width: 300 }} 533w,{%- endif -%}
+    {%- if image.width >= 720 -%}{{ image | image_url: width: 300 }} 720w,{%- endif -%}
+    {%- if image.width >= 940 -%}{{ image | image_url: width: 300 }} 940w,{%- endif -%}
+    {%- if image.width >= 1066 -%}{{ image | image_url: width: 300 }} 1066w,{%- endif -%}
+    {{ image | image_url }} {{ image.width }}w"
+    src="{{ image | image_url: width: 533 }}"
+    alt="{{ image.alt | escape }}"
+    loading="lazy"
+    sizes=" (min-width: 990px) calc((100vw) / 3), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+>

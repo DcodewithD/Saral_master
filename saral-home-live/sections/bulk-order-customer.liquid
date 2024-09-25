@@ -1,0 +1,109 @@
+<style>
+          .bulk-order-customer h2 {
+              color: black;
+              text-align: center;
+              font-weight: 900;
+              margin-bottom: 30px;
+          }
+              .bulk-order-customer .boc1 {
+                display: flex;
+                justify-content: center;
+                gap: 25px;
+            }
+              .bulk-order-customer .boc3 {
+                box-shadow: 0px 0px 4px rgb(0 0 0 / 16%);
+                flex: 0 0 calc(100%/3 - 25px*2/3);
+                max-width: calc(100%/3 - 25px*2/3);
+                text-align: center;
+                    padding: 30px;
+            }
+          .bulk-order-customer .boc4 h3, span {
+            margin-bottom: 10px;
+        }
+            .bulk-order-customer .oc6 {
+            margin-bottom: 10px;
+        }
+              .bulk-order-customer p {
+            margin-bottom: 0px;
+        }
+
+        @media(max-width:768px){
+          .bulk-order-customer .boc1 {
+        overflow-x: auto;
+    }
+
+          .bulk-order-customer .boc3 {
+          flex: 0 0 80%;
+          max-width: 80%;
+      }
+          .bulk-order-customer .boc1 {
+      justify-content: flex-start!important;
+            padding: 5px;
+  }
+        }
+</style>
+<div class="bulk-order-customer bulk-order-fix_padding">
+  <h2 class="">{{ section.settings.section_heading }}</h2>
+  <div class="boc1">
+    {% for block in section.blocks %}
+      <div class="boc3">
+        <div class="boc4">
+          <h3>{{ block.settings.reviewer_name }}</h3>
+          <span>{{ block.settings.date }}</span>
+        </div>
+        {% include 'stars' %}
+        <p>{{ block.settings.text }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "bulk-order-customer",
+    "settings": [
+                  {
+            "type": "text",
+            "label": "section heading",
+            "id": "section_heading"
+          }
+      ],
+    "blocks":[
+    {
+      "type":"review",
+      "name":"review",
+      "settings":[
+        {
+          "type":"text",
+          "label":"Reviewer name",
+          "id":"reviewer_name"
+        },
+        {
+          "type":"textarea",
+          "label":"Review text",
+          "id":"text"
+        },
+        {
+          "type":"text",
+          "label":"Review date",
+          "id":"date"
+        }
+      ]
+    }
+  ],
+
+
+    "presets": [
+{
+"name": "bulk-order-customer",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

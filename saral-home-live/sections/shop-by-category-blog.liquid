@@ -1,0 +1,472 @@
+{% if section.settings.blog_name ==  article.metafields.custom.blog_name %}
+{{ 'shop-by-category_new.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'shop-by-category_new.js' | asset_url }}" defer></script>
+{% liquid
+  assign arrow_option = section.settings.arrows
+  if arrow_option == 'desktop_hide_mobile_hide'
+    assign arrow = false
+  else
+    assign arrow = true
+  endif
+  assign dots_option = section.settings.dots
+  if dots_option == 'desktop_hide_mobile_hide'
+    assign dots = false
+  else
+    assign dots = true
+  endif
+  assign maximum_count_desktop = section.settings.max_number_desktop | plus: 0
+
+  assign maximum_count_tablet = section.settings.max_number_tablet | plus: 0
+  assign maximum_count_mobile = section.settings.max_number_mobile | plus: 0
+%}
+{% style %}
+  .shop-by-category-section .secondary-button.active{
+    padding-bottom: 0;
+  }
+  .shop-by-category-section .card{
+    background-color: #fff;
+  }
+
+
+    .product-discount{
+      top: 3% !important;
+      right: 5% !important;
+
+    }
+    /* #shop-by-category-{{ section.id }} .category-head{
+      flex:0 0 calc(100%/{{ section.blocks.size }});
+      max-width:calc(100%/{{ section.blocks.size }});
+      min-width:fit-content;
+    } */
+     @media(min-width:768px){
+      #shop-by-category-{{ section.id }} .category-block-cards-wrapper .product-card{
+               overflow:hidden;
+       }
+     }
+     @media(max-width:768px){
+      #shop-by-category-{{ section.id }} .category-block-cards-wrapper{
+
+        flex-wrap:wrap;
+
+       }
+
+     }
+     @media(max-width:524px){
+      #shop-by-category-{{ section.id }} .category-block-cards-wrapper{
+         flex-wrap:wrap;
+       }
+      #shop-by-category-{{ section.id }} .category-block-cards-wrapper .product-card{
+         flex:0 0 50%;
+         max-width:50%;
+         overflow:hidden;
+       }
+     }
+     .category-block{
+      position:relative;
+      display:none;
+     }
+     .category-block.active{
+      display:inherit;
+      transition:opacity 0.3s ease-in-out;
+     }
+    #shop-by-category-{{ section.id }} .shop-by-category-slider-{{ section.id }}{
+         flex-wrap:nowrap;
+     }
+    {% if arrow_option == 'desktop_display_mobile_hide' %}
+      @media(max-width:768px){
+        #shop-by-category-{{ section.id }} .slider__arrows{
+          display:none;
+        }
+      }
+      @media(min-width:768px){
+        #shop-by-category-{{ section.id }} .slider__arrows{
+          display:flex;
+        }
+      }
+    {% elsif arrow_option == 'desktop_hide_mobile_hide' %}
+       #shop-by-category-{{ section.id }} .slider__arrows{
+        display:none;
+       }
+    {% else %}
+        #shop-by-category-{{ section.id }} .slider__arrows{
+          display:flex;
+        }
+    {% endif %}
+    {% if dots_option == 'desktop_display_mobile_hide' %}
+      @media(max-width:768px){
+        #shop-by-category-{{ section.id }} .slider-dots-wrapper{
+          display:none;
+        }
+      }
+      @media(min-width:768px){
+        #shop-by-category-{{ section.id }} .slider-dots-wrapper{
+          display:flex;
+        }
+
+      }
+    {% elsif dots_option == 'desktop_hide_mobile_hide' %}
+       #shop-by-category-{{ section.id }} .slider-dots-wrapper{
+        display:none;
+       }
+    {% else %}
+        #shop-by-category-{{ section.id }} .slider-dots-wrapper{
+          display:flex;
+        }
+    {% endif %}
+  @media screen and (max-width: 768px){
+    .shop-by-category-section .section-text.text-center{
+      display: block!important;
+    }
+  }
+{% endstyle %}
+<div
+  id="shop-by-category-{{ section.id }}"
+  class="shop-by-category-section"
+>
+  <div class="section-width {% unless section.settings.section_width == 'full-width' %}section-padding{% endunless %}">
+    <div class="section-content section-wrap">
+      <div class="section-text text-{{ section.settings.text_align }}" style="margin-bottom: 0;">
+        {% if section.settings.heading != blank %}
+          <h2 class="section-heading">Related Products</h2>
+        {% endif %}
+        {% if section.settings.sub_heading != blank %}
+          <h3 class="section-subheading">Related Products</h3>
+        {% endif %}
+        {% if section.settings.text %}
+          <p class="section-text">{{ section.settings.text }}</p>
+        {% endif %}
+      </div>
+      <div class="categories-wrap">
+        <div class="categories-wrap-head">
+          {% for block in section.blocks %}
+            <button
+              class="category-head secondary-button {% if forloop.index == 1 %}active{% endif %}"
+              data-block="collection-{{ section.id }}-{{ forloop.index }}"
+            >
+              {% if block.settings.title == blank -%}
+                {{- block.settings.collection.title -}}
+              {%- else -%}
+                {{- block.settings.title -}}
+              {%- endif %}
+            </button>
+          {% endfor %}
+          <a href="{{ section.settings.extra-btn-link-desk }}">{{ section.settings['extra-btn-text-desk'] }}</a>
+        </div>
+        <div class="c-bx">
+          <div class="categories-block-wrap">
+            {% for block in section.blocks %}
+              <div
+                class="category-block {% if forloop.index == 1 %}active{% endif %}"
+                data-id="collection-{{ section.id }}-{{ forloop.index }}"
+              >
+                <div class="category-block-cards-wrapper {{ forloop.index }} shop-by-category-slider-{{ section.id }} shop-by-category-slider-{{ section.id }}-{{ forloop.index }}">
+                  {% if block.settings.collection.products.size > 0 %}
+                    {% for product in block.settings.collection.products limit: 6 %}
+                      {% render 'product-card_new', product: product %}
+                    {% endfor %}
+                  {% else %}
+                    {% for i in (1..4) %}
+                      {% render 'product-card-placeholder_new' %}
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    
+    
+let pbtn = document.querySelector('.bttn_prev');
+let nbtn = document.querySelector('.bttn_next');
+let parentxContainer = document.querySelector('.parentx');
+
+
+pbtn.addEventListener('click',()={
+  console.log('prev CLicked');
+   parentxContainer.scrollLeft += 280;
+});
+nbtn.addEventListener('click',()={
+  console.log('Next CLicked');
+   parentxContainer.scrollLeft -= 280;
+});
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {% for block in section.blocks %}
+      this["options-{{ section.id }}-{{ forloop.index }}"] = {
+      parent: ".shop-by-category-slider-{{ section.id }}-{{ forloop.index }}",
+      arrows: {{ arrow }},
+      dots: {{ dots }},
+      autoPlay:false,
+    };
+    productSlider(this["options-{{ section.id }}-{{ forloop.index }}"]);
+    document.querySelector(`#shop-by-category-{{ section.id }} .category-head[data-block="${document.querySelector(".shop-by-category-slider-{{ section.id }}-{{ forloop.index }}").closest('.category-block').dataset.id}"]`).addEventListener("click",()=>{
+      setTimeout(()=>{
+       productSlider(this["options-{{ section.id }}-{{ forloop.index }}"]);
+
+      })
+    });
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  {% endif %}
+  {% schema %}
+  {
+    "name": "Shop-by-category-blog",
+    "tag": "section",
+    "max_blocks": 4,
+    "settings": [
+      {
+        "type": "select",
+        "label": "t:sections.all.width.name",
+        "id": "section_width",
+        "options": [
+          {
+            "value": "full-width",
+            "label": "t:sections.all.width.options_1.label"
+          },
+          {
+            "value": "default-width",
+            "label": "t:sections.all.width.options_2.label"
+          }
+        ],
+        "default": "default-width"
+      },
+      {
+        "type": "text",
+        "label": "Heading",
+        "default": "Related Products",
+        "id": "heading"
+      },
+      {
+        "type": "text",
+        "label": "Blog-name",
+        "default": "Related Products",
+        "id": "blog_name"
+      },
+      {
+        "type": "text",
+        "label": "t:sections.all.headings.sub_heading.label",
+        "id": "sub_heading"
+      },
+      {
+        "type": "textarea",
+        "label": "t:sections.all.headings.text.label",
+        "id": "text"
+      },
+
+
+      {
+        "type": "select",
+        "label": "t:sections.featured_collection.settings.text_align.name",
+        "id": "text_align",
+        "options": [
+          {
+            "value": "left",
+            "label": "t:sections.featured_collection.settings.text_align.options_1.label"
+          },
+          {
+            "value": "center",
+            "label": "t:sections.featured_collection.settings.text_align.options_2.label"
+          },
+          {
+            "value": "right",
+            "label": "t:sections.featured_collection.settings.text_align.options_3.label"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "select",
+        "label": "t:sections.featured_collection.settings.product_number_desktop.label",
+        "id": "max_number_desktop",
+        "options": [
+          {
+            "value": "2",
+            "label": "t:sections.featured_collection.settings.product_number_desktop.options_1.label"
+          },
+          {
+            "value": "3",
+            "label": "t:sections.featured_collection.settings.product_number_desktop.options_2.label"
+          },
+          {
+            "value": "4",
+            "label": "t:sections.featured_collection.settings.product_number_desktop.options_3.label"
+          }
+        ],
+        "default": "4"
+      },
+      {
+        "type": "select",
+        "label": "t:sections.featured_collection.settings.product_number_tablet.label",
+        "id": "max_number_tablet",
+        "options": [
+          {
+            "value": "2",
+            "label": "t:sections.featured_collection.settings.product_number_tablet.options_1.label"
+          },
+          {
+            "value": "3",
+            "label": "t:sections.featured_collection.settings.product_number_tablet.options_2.label"
+          },
+          {
+            "value": "4",
+            "label": "t:sections.featured_collection.settings.product_number_tablet.options_3.label"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "type": "select",
+        "label": "t:sections.featured_collection.settings.product_number_mobile.label",
+        "id": "max_number_mobile",
+        "options": [
+          {
+            "value": "1",
+            "label": "t:sections.featured_collection.settings.product_number_mobile.options_1.label"
+          },
+          {
+            "value": "2",
+            "label": "t:sections.featured_collection.settings.product_number_mobile.options_2.label"
+          },
+          {
+            "value": "3",
+            "label": "t:sections.featured_collection.settings.product_number_mobile.options_3.label"
+          },
+          {
+            "value": "4",
+            "label": "t:sections.featured_collection.settings.product_number_mobile.options_4.label"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "select",
+        "label": "t:sections.featured_collection.settings.display_arrows.label",
+        "id": "arrows",
+        "options": [
+          {
+            "value": "desktop_display_mobile_hide",
+            "label": "t:sections.featured_collection.settings.display_arrows.options_1.label"
+          },
+          {
+            "value": "desktop_hide_mobile_hide",
+            "label": "t:sections.featured_collection.settings.display_arrows.options_2.label"
+          },
+          {
+            "value": "desktop_display_mobile_display",
+            "label": "t:sections.featured_collection.settings.display_arrows.options_3.label"
+          }
+        ],
+        "default": "desktop_display_mobile_hide"
+      },
+      {
+        "type": "select",
+        "label": "t:sections.featured_collection.settings.display_dots.label",
+        "id": "dots",
+        "options": [
+          {
+            "value": "desktop_display_mobile_hide",
+            "label": "t:sections.featured_collection.settings.display_dots.options_1.label"
+          },
+          {
+            "value": "desktop_hide_mobile_hide",
+            "label": "t:sections.featured_collection.settings.display_dots.options_2.label"
+          },
+          {
+            "value": "desktop_display_mobile_display",
+            "label": "t:sections.featured_collection.settings.display_dots.options_3.label"
+          }
+        ],
+        "default": "desktop_display_mobile_hide"
+      },
+      {
+        "type": "text",
+        "id": "extra-btn-text-mob",
+        "label":"Extra Button Text Mobile"
+      },
+      {
+        "type": "text",
+        "id": "extra-btn-link-mob",
+        "label":"Extra Button Link Mobile"
+      },
+      {
+        "type": "text",
+        "id": "extra-btn-text-desk",
+        "label":"Extra Button Text Desktop"
+      },
+      {
+        "type": "text",
+        "id": "extra-btn-link-desk",
+        "label":"Extra Button Link Desktop"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "collection",
+        "settings": [
+          {
+            "type": "collection",
+            "label": "choose collection",
+            "id": "collection"
+          },
+          {
+            "type": "text",
+            "label": "Collection name",
+            "id": "title",
+            "default": "Collection title"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Shop-by-category-blog",
+        "blocks": [
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          },
+          {
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+</div>

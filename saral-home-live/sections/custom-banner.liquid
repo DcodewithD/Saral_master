@@ -1,0 +1,111 @@
+<style>
+ 
+  .custom-coll-banner {
+    margin-bottom: 4rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
+  }
+
+  /* Desktop content - Visible only on screens larger than 768px */
+  .desk-content {
+    display: block;
+  }
+
+  /* Mobile content - Hidden on larger screens */
+  .mob-content {
+    display: none;
+  }
+
+  /* Styles for screens 768px or smaller */
+  @media screen and (max-width: 768px) {
+    .custom-coll-banner {
+      margin-bottom: 4rem;
+    }
+
+    /* Hide desktop content */
+    .desk-content {
+      display: none;
+    }
+ .custom-coll-banner{
+     margin-right: 1rem;
+    margin-left: 1rem;
+ }
+    
+
+    /* Show mobile content */
+    .mob-content {
+      display: block;
+    }
+  }
+</style>
+
+<div class="custom-coll-banner">
+  {% assign desk_image = section.settings.desk-img %}
+  {% assign mob_image = section.settings.mob-img %}
+  <div class="desk-image desk-content" style="position:relative;width:100%;padding-bottom:{{ 100 | divided_by : desk_image.aspect_ratio }}%">
+    <img
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%"
+      srcset="
+                {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if desk_image.width >= 550 -%}{{ desk_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ desk_image | image_url }} {{ desk_image.width }}w
+              "
+      src="{{ desk_image | image_url: width: 1500 }}"
+      alt="{{ desk_image.alt | escape }}"
+      width="{{ desk_image.width }}"
+      height="auto"
+      loading="lazy">
+  </div>
+  <div class="mob-image mob-content" style="position:relative;width:100%;padding-bottom:{{ 1 | divided_by : mob_image.aspect_ratio | times : 100 }}%">
+    <img
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%"
+      srcset="
+                {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 375w,{%- endif -%}
+                {%- if mob_image.width >= 550 -%}{{ mob_image | image_url: width: 550 }} 550w,{%- endif -%}
+                {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 750 }} 750w,{%- endif -%}
+                {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                {{ mob_image | image_url }} {{ mob_image.width }}w
+              "
+      src="{{ mob_image | image_url: width: 1500 }}"
+      alt="{{ mob_image.alt | escape }}"
+      width="{{ mob_image.width }}"
+      height="auto"
+      loading="lazy">
+  </div>
+</div>
+{% schema %}
+{
+  "name": "custom-banner",
+  
+  "settings": [
+{
+        "type": "image_picker",
+        "id": "desk-img",
+        "label": "Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob-img",
+        "label": "Mobile Image"
+      }
+    ] ,
+       "presets": [
+    {
+      "name": "custom-banner",
+      
+    }
+  ]
+}
+{% endschema %}

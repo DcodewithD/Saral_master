@@ -1,0 +1,190 @@
+<div class="whatmore-base">
+  <div>
+    <div id="whatmoreShopId" data="{{ shop.id }}"></div>
+
+    {%- if section.settings.heading -%}
+      <div class="hed" id="whatmoreHeading" data="{{ section.settings.heading }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['color-primary'] -%}
+      <div id="whatmorePrimaryColor" data="{{ section.settings.color-primary }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['color-secondary'] -%}
+      <div id="whatmoreSecondaryColor" data="{{ section.settings.color-secondary }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['title-font-size'] -%}
+      <div id="whatmoreTitleFontSize" data="{{ section.settings.title-font-size }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['landscape-padding'] -%}
+      <div id="whatmoreLandscapePadding" data="{{ section.settings.landscape-padding }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['top-bottom-padding'] -%}
+      <div id="whatmoreTopBottomPadding" data="{{ section.settings.top-bottom-padding }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['scroll-video-tile-size'] -%}
+      <div id="whatmoreVideoTileSize" data="{{ section.settings.scroll-video-tile-size }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['title-font'] -%}
+      {% assign title_font = section.settings['title-font'] %}
+
+      {% style %}
+        {{ title_font | font_face | replace_first: title_font.family, "whatmoreTitleFontFamily"}}
+      {% endstyle %}
+
+      <!-- <div id="whatmoreTitleFont" data={{ title_font.family }}> </div> -->
+      <div id="whatmoreTitleFont" data="whatmoreTitleFontFamily"></div>
+    {%- endif -%}
+
+    {%- if section.settings['primary-font'] -%}
+      {% assign primary_font = section.settings['primary-font'] %}
+
+      {% style %}
+        {{ primary_font | font_face | replace_first: primary_font.family, "whatmorePrimaryFontFamily"}}
+      {% endstyle %}
+
+      <div id="whatmorePrimaryFont" data="whatmorePrimaryFontFamily"></div>
+    {%- endif -%}
+
+    {%- if section.settings['show-views'] -%}
+      <div id="whatmoreShowViews" data="{{ section.settings.show-views }}"></div>
+    {%- endif -%}
+
+    {%- if section.settings['template-type'] -%}
+      <div class="whatmore-template-type" data="{{ section.settings.template-type }}"></div>
+    {%- endif -%}
+
+    {% if request.design_mode %}
+      <div id="whatmoreIsInDesignMode" data="true"></div>
+    {% else %}
+      <div id="whatmoreIsInDesignMode" data="false"></div>
+    {% endif %}
+
+    <div class="whatmore-render-root"></div>
+  </div>
+  <script type="text/javascript" src="https://d1qflh9ill7vje.cloudfront.net/whatmore.js" defer="defer"></script>
+  <link rel="stylesheet" href="https://d1qflh9ill7vje.cloudfront.net/whatmore.css" type="text/css" media="all">
+</div>
+
+{% schema %}
+  {
+    "name": "Whatmore Carousel",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Watch and Buy!"
+      },
+      {
+        "type": "select",
+        "id": "template-type",
+        "label": "Tile Type",
+        "options": [
+          {
+            "value": "template-a",
+            "label": "Video-Card"
+          },
+          {
+            "value": "template-a-1",
+            "label": "Video-Card with see-more option."
+          },
+          {
+            "value": "template-b",
+            "label": "Product-Video-Card"
+          }
+        ],
+        "default": "template-a"
+      },
+      {
+        "type": "select",
+        "id": "show-views",
+        "label": "Video View Count",
+        "options": [
+          {
+            "value": "show",
+            "label": "Show Views"
+          },
+          {
+            "value": "hide",
+            "label": "Hide Views"
+          }
+        ],
+        "default": "show"
+      },
+      {
+        "label": "Primary Theme Color",
+        "id": "color-primary",
+        "type": "color",
+        "default": "#0390fc"
+      },
+      {
+        "label": "Secondary Theme Color",
+        "id": "color-secondary",
+        "type": "color",
+        "default": "#1398E3"
+      },
+      {
+        "type": "font_picker",
+        "id": "title-font",
+        "label": "Title font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "font_picker",
+        "id": "primary-font",
+        "label": "Primary font",
+        "default": "sans-serif"
+      },
+      {
+        "type": "range",
+        "id": "title-font-size",
+        "min": 8,
+        "max": 101,
+        "step": 1,
+        "unit": "px",
+        "label": "Title Font size",
+        "default": 40
+      },
+      {
+        "type": "number",
+        "id": "landscape-padding",
+        "label": "Horizontal padding in Desktop/Laptop",
+        "default": 40
+      },
+      {
+        "type": "number",
+        "id": "top-bottom-padding",
+        "label": "Vertical padding",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "scroll-video-tile-size",
+        "label": "Scroll-Video-Tile size ( in percentage ) ",
+        "default": 80,
+        "step": 5,
+        "min": 40,
+        "max": 100
+      }
+    ],
+    "presets": [
+      {
+        "name": "Whatmore Carousel"
+      }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,20 @@
+<div class="product-page" id="d_down">  
+<div class="container">
+{% if  product.metafields.global.desc.value == blank %}
+  <div class="prod_desc">{{product.description}}</div>
+{% else %}
+  {% include 'product-desc' %}
+{% endif %}
+</div>
+</div>
+{% schema %}
+  {
+    "name": "Product_desc",
+    "settings": [],
+    "presets":[
+      {
+        "name":"Product_desc"
+      }
+    ]
+  }
+{% endschema %}

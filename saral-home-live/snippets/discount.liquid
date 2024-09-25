@@ -1,0 +1,19 @@
+{% comment %} <style>
+  .product-discount p{
+    color: #fff !important;
+  }
+</style>
+
+<div class="product-discount">
+ 
+  {% if product.selected_or_first_available_variant.compare_at_price > product.selected_or_first_available_variant.price
+  %}
+    {% assign discount = product.selected_or_first_available_variant.compare_at_price
+      | minus: product.selected_or_first_available_variant.price
+      | times: 100
+      | divided_by: product.selected_or_first_available_variant.compare_at_price
+    %}
+    
+  {% endif %}
+</div>
+ {% endcomment %}

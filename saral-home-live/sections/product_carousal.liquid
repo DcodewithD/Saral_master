@@ -1,0 +1,219 @@
+<style>
+                  .container.slid {
+                    margin-right: 0;
+                    padding: 0;
+                }
+      button.prev svg {
+          transform: rotate(180deg);
+      }
+                        .parent {
+                          display: flex;
+                          flex-wrap: nowrap;
+                          overflow-x: auto;
+                          width: 100%;
+                          margin: 0 auto;
+                          gap: 25px;
+                          scroll-snap-type: x mandatory;
+                          scroll-behavior: smooth;
+                        }
+                        .child {
+                          position: relative;
+                          top: 0;
+                          left: 0px;
+                      }
+                        .child {
+                          width: 400px;
+                          flex: 0 0 calc(100% / 4 - 50px);
+                          max-width: calc(100% / 4 - 50px);
+                          scroll-snap-align: start;
+                        }
+                      .buttn p {
+                  background: white;
+                  padding: 10px 20px;
+                  width: max-content;
+                  color: black;
+                  border-radius: 50px;
+                  font-size: 18px;
+              }
+                    .buttn {
+                      display: flex;
+                      position: absolute;
+                      bottom: 0px;
+                      text-align: center;
+                      width: 100%;
+                      justify-content: center;
+                  }
+              .parent_box button.prev {
+                position: absolute;
+                left: 0px;
+                z-index: 10;
+                border-radius: 50%;
+            padding: 6px 14px;
+            background: white;
+            color: black;
+            font-weight: 400;
+            border: 0px;
+            }
+               .parent_box button.next {
+                position: absolute;
+              right: 0px;
+                z-index: 10;
+                 border-radius: 50%;
+            padding: 6px 14px;
+             background: white;
+            color: black;
+            font-weight: 400;
+            border: 0px;
+            }
+            .parent_box {
+                position: relative;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+      .child a img {
+        width: 100vw;
+    }
+    .slid {
+      padding-left: 120px;
+  }
+            @media(max-width:600px)
+            {
+              .parent_box button.next {
+
+            border: 1px solid #b5b5b5;
+        }
+              .parent_box button.prev {
+
+            border: 1px solid #b5b5b5;
+        }
+              .buttn p {
+            font-size: 15px;
+        }
+              .carousal-main-heading {
+            font-size: 24px;
+            letter-spacing: 0;
+            margin-left: 20px;
+        }
+              .parent {
+              display: flex;
+              flex-wrap: nowrap;
+              overflow-x: auto;
+              width: 90%;
+              margin: 0 auto;
+              gap: 20px;
+              scroll-snap-type: x mandatory;
+              scroll-behavior: smooth;
+          }
+              .child {
+              width: 400px;
+              /* background-color: red; */
+              flex: 0 0 calc(100% / 1 - 143px);
+              max-width: calc(100% / 1 - 143px);
+              scroll-snap-align: start;
+          }
+              .slid {
+      padding-left: 0px;
+  }
+            }
+</style>
+<div class="section-content section-wrap">
+  <div class=" slid">
+    <div class="section-head">
+      <h2 class="carousal-main-heading h1">{{ section.settings.heading }}</h2>
+      {% if section.settings['sub-heading'] != blank %}
+        <h3 class="carousal-sub-heading">{{ section.settings['sub-heading'] }}</h3>
+      {% endif %}
+    </div>
+
+    <div class="parent_box">
+      <button class="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+          <path d="M1 13L7 7L1 1" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <div class="parent">
+        {% for block in section.blocks %}
+          <div class="child">
+            <a href="{{ block.settings.link }}">
+              <img src="{{ block.settings.image | image_url }}" alt="collection">
+              <div class="buttn">
+                <p>{{ block.settings['btn-text'] }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+      <button class="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
+          <path d="M1 13L7 7L1 1" stroke="#1E1E1E" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+  let prevBtn = document.querySelector(".prev");
+  let nextBtn = document.querySelector(".next");
+  let childWidth = document.querySelector(".child").clientWidth;
+  let scrollParent = document.querySelector(".parent");
+  nextBtn.addEventListener("click", () => {
+    scrollParent.scrollBy(childWidth, 0);
+  });
+  prevBtn.addEventListener("click", () => {
+    scrollParent.scrollBy(-childWidth, 0);
+  });
+</script>
+{% schema %}
+{
+  "name": "product_carousal",
+  "settings": [
+    {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "sub-heading",
+          "label": "Sub Heading"
+        }
+  ],
+  "blocks": [
+     	{
+       	"name": "carousal-images",
+       	"type": "carousal-images",
+       	"settings": [
+             	{
+             	"type": "image_picker",
+             	"id": "image",
+             	"label": "Image"
+             	},
+                {
+             	"type": "text",
+             	"id": "btn-text",
+             	"label": "Button Text"
+             	},
+                {
+             	"type": "url",
+             	"id": "link",
+             	"label": "Link"
+             	}
+           ]
+        }
+  ],
+  "presets": [
+    {
+      "name": "product_carousal"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

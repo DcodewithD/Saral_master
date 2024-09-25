@@ -1,0 +1,94 @@
+<style>
+  .hide {
+          display:none!important;
+        }
+</style>
+
+<div class="nav-drop"></div>
+  <mobile-navbar class="nav-mobile">
+    <button class="nav-close">{% render 'icon-close' %}</button>
+    
+    <div class="upper-level">
+      {% for link in section.settings.navigation2.links %}
+        {% liquid
+          assign linkTitle = link.title | downcase | replace: ' ', '-'
+          
+          for block in section.blocks
+          assign refer = block.settings.refrence | downcase | replace: ' ', '-'
+          case refer
+           when linkTitle
+           assign block_style = block.type
+        
+           assign image = block.settings.fimage1
+           assign block_url = block.settings.url1
+           assign block_tits = block.settings.text1
+           assign image_2 = block.settings.image_2
+           assign block_titi = block.settings.text2
+           assign block_url2 = block.settings.link2
+           
+        break         
+        endcase
+        endfor
+        %}
+        <div class="dropdown">
+          <div class="level">
+            <a
+              class="upper-level-li"
+              href="{{ link.url }}"
+            >
+              {{- link.title }}
+            </a>
+            {% if link.levels > 0 %} {% render 'icon-caret' %} {% endif -%}
+          </div>
+          {% if link.levels > 0 %}
+            <div class="level-1 hide nested-item">
+              {% for childLink in link.links %}
+                <div class="level">
+                  <a
+                    href="{{ childLink.url }}"
+                  >
+                    {{- childLink.title }}
+                    {% if childLink.levels > 0 and settings.dropdown == 'nested' %}
+                      {% render 'icon-caret' %}
+                    {% endif -%}
+                  </a>
+                  {%- if childLink.levels > 0 %}{% render 'icon-caret' %}{% endif -%}
+                </div>
+                {% if childLink.levels > 0 %}
+                  <div class="level-2 hide">
+                    {% for grandChild in childLink.links %}
+                      <a href="{{ grandChild.url }}">{{ grandChild.title }}</a>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            
+           {% if block_style == 'style' %}
+             <div class="img-mob-mega">
+               {% if image != blank %}
+               <div class="dfgdjk">
+                <a href="{{ block_url }}" class="gsdh"> 
+                 <img src={{ image | img_url: 'master' }} width="250px">
+                  <div class="laskjdlk">{{ block_tits }}</div> 
+                </a>
+               </div>  
+               {% endif %}
+             </div>
+              <div class="img-mob-mega">
+               {% if image_2 != blank %}
+                <div class="dfgdjk"> 
+                <a href="{{ block_url2 }}" class="gsdh"> 
+                 <img src={{ image_2 | img_url: 'master' }} width="250px">
+                 <div class="laskjdlk">{{ block_titi }}</div>
+                </a>
+                </div>
+               {% endif %}
+             </div>
+           {% endif %}
+            </div>
+          {% endif %}
+           
+        </div>
+      {% endfor %}
+    </div>
+  </mobile-navbar>

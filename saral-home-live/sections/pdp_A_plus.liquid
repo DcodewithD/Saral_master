@@ -1,0 +1,164 @@
+<style>
+
+  /* ??????????????????????????? */
+  .img_N_btn_cont {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+        margin-bottom: 30px;
+        flex: 0 0 30%;
+}
+  .six_box_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-top:40px;
+}
+ .btn_cont p {
+    margin: 0px;
+       text-transform: uppercase;
+}
+.btn_cont {
+    text-align: center;
+    padding: 20px;
+}
+  .img_cont img {
+    width: 100%;
+}
+   .a+_desktop_img
+    {display:block;}
+   img.a\+_mobile_img {
+    display: none;
+}
+  p.a+_ccategory_tx {
+    margin: 0px;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family:'Inter-Regular';
+}
+  .full_screen_img img {
+    width: 100%;
+}
+  .a_desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  p.a_text {
+    width: 80%;
+    text-align: center!important;
+}
+  @media(max-width:786px)
+  {
+    .six_box_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+    padding-top: 40px;
+}
+    .img_N_btn_cont {
+    flex: 0 0 48%;
+}
+   img.a\+_desktop_img {
+    display: none;
+}
+  img.a\+_mobile_img {
+    display: block;
+}
+    p.a\+_ccategory_tx {
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+    p.a_text {
+    width: 100%;
+    text-align: left;
+}
+  }
+</style>
+{% if product.metafields.custom.pdp_full_1_a_img_desktop != blank %}
+  <div class="full_screen_img">
+    <img src="{{ product.metafields.custom.pdp_full_1_a_img_desktop | img_url: 'master'}}" class="a+_desktop_img">
+     <img src="{{ product.metafields.custom.pdp_full_1_a_img_mobile | img_url: 'master' }}" class="a+_mobile_img">
+  </div>
+  <div class="container">
+    <div class="six_box_container">
+      <div class="img_N_btn_cont">
+        <div class="img_cont">
+          <img src="{{ product.metafields.custom.pdp_six_card_1_ | img_url: 'master' }}">
+          <p class="a+_ccategory_tx"> {{ product.metafields.custom.a_txt_1 }}</p>
+        </div>
+        <!-- <div class="btn_cont">
+          <p>tests</p>
+        </div> -->
+      </div>
+       <div class="img_N_btn_cont">
+        <div class="img_cont">
+           <img src="{{ product.metafields.custom.pdp_six_card_2_ | img_url: 'master' }}">
+           <p class="a+_ccategory_tx"> {{ product.metafields.custom.a_txt_2 }}</p>
+        </div>
+        <!-- <div class="btn_cont">
+          <p>tests</p>
+        </div> -->
+      </div>
+
+       <div class="img_N_btn_cont">
+        <div class="img_cont">
+           <img src="{{ product.metafields.custom.pdp_six_card_3_ | img_url: 'master' }}">
+           <p class="a+_ccategory_tx"> {{ product.metafields.custom.a_txt_3 }}</p>
+        </div>
+        <!-- <div class="btn_cont">
+          <p>tests</p>
+        </div> -->
+      </div>
+       <div class="img_N_btn_cont">
+        <div class="img_cont">
+           <img src="{{ product.metafields.custom.pdp_six_card_4_ | img_url: 'master' }}">
+           <p class="a+_ccategory_tx"> {{ product.metafields.custom.a_txt_4 }}</p>
+        </div>
+        <!-- <div class="btn_cont">
+          <p>tests</p>
+        </div> -->
+      </div>
+       <div class="img_N_btn_cont">
+        <div class="img_cont">
+         <img src="{{ product.metafields.custom.pdp_six_card_5_ | img_url: 'master' }}">
+           <p class="a+_ccategory_tx"> {{ product.metafields.custom.a_txt_5 }}</p>
+        </div>
+        <!-- <div class="btn_cont">
+          <p>tests</p>
+        </div> -->
+      </div>
+       <div class="img_N_btn_cont">
+        <div class="img_cont">
+          <img src="{{ product.metafields.custom.pdp_six_card_6_ | img_url: 'master' }}">
+           <p class="a+_ccategory_tx"> {{ product.metafields.custom.a_txt_6 }}</p>
+        </div>
+        <!-- <div class="btn_cont">
+          <p>tests</p>
+        </div> -->
+      </div>
+      
+    </div>
+  </div>
+  <div class="full_screen_img">
+    <img src="{{ product.metafields.custom.pdp_full_2_a_img_desktop | img_url: 'master' }}" class="a+_desktop_img">
+     <img src="{{ product.metafields.custom.pdp_full_2_a_img_mobile | img_url: 'master'  }}" class="a+_mobile_img">
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "PDP_A+",
+    "settings": [],
+    "presets":[
+      {
+        "category":"text",
+      "name":"PDP_A+"
+      }
+    ]
+  }
+{% endschema %}

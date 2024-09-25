@@ -1,0 +1,93 @@
+<div class="container-fluid py-3">
+<div class="row">
+  <div class="col-12 m-0">
+        <h2 class="hed">{{section.settings.h_text}}</h2>
+ </div>
+  </div>
+</div>
+<div class="container-fluid r_c" style="background-image: url('https://cdn.shopify.com/s/files/1/0256/3683/1318/files/image_80.png?v=1654199015');">
+
+  <div class="container">
+	<div class="row r_txt">
+       {%for block in section.blocks %}
+
+    	<div class="col-md-6 col-12 icon_and txt">
+          <div class="col-3 p_img">
+			 <img src="{{block.settings.r_img | img_url: 'master'}}" class="image-fluid">
+          </div>
+          <div class="col-9 p_text">
+            <h5 class="ph_text p-0 m-0">{{block.settings.rh_text}}</h5>
+            <div class="ph_text">
+            {{block.settings.r_text}}
+            </div>
+          </div>
+    </div>
+      {% endfor %}
+      <div class="col-12 bttn">
+            <a href="{{block.settings.url}}"> <center> <button class="r_btn">{{section.settings.btn_text}} </button></center></a>
+       </div>
+  </div>
+</div>
+</div>
+  {% schema %}
+  {
+    "name": "icon_and_text",
+    "blocks": [{
+  			"type":"blogs",
+			"name":"icon_and_text",
+  			"settings":[{
+  					"type":"image_picker",
+  					"id":"r_img",
+  					"label":"Icon image"
+					},
+  {
+  					"type":"text",
+  					"id":"rh_text",
+  					"label":"title"
+					},
+  					{
+  					"type":"richtext",
+  					"id":"r_text",
+  					"label":"Discription"
+					}	
+  						]
+  }],
+  "settings":[
+  {
+  					"type":"image_picker",
+  					"id":"b_img",
+  					"label":"Background Img"
+					},
+  {
+ 					 "type":"text",
+  					"id":"h_text",
+  					"label":"Heading"
+  
+  },
+  {
+ 					 "type":"text",
+  					"id":"btn_text",
+  					"label":"Button Name"
+  
+  },
+  {
+  "type":"url",
+  					"id":"url",
+  					"label":"Link"
+  
+  }
+  ],
+  
+  "presets": [
+    {
+      "name": "icon_and _text"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

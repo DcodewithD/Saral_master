@@ -1,0 +1,42 @@
+<style>
+  .offers_box div a img {
+    width: 100% !important;
+}
+.offers_box div {
+    width: 50%;
+}
+.offers_box {
+    display: flex;
+}
+  .bogo img {
+    border-radius: 10px 0 0 10px;
+}
+  .gift img {
+    border-radius: 0px 10px 10px 0px;
+}
+</style>
+<div class="section-width section-padding">
+  <div class="offers_box">
+    <div class="bogo">
+      <a href="">
+      <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/frame-26103102-66ee820f72eab.webp?v=1726906914">
+      </a>
+      </div>
+    <div class="gift">
+      <a href="">
+      <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/frame-26103101-66ee820fc4b9e.webp?v=1726906914">
+      </a>
+      </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "offer_boxes",
+    "settings": [],
+    "presets": [
+    {
+      "name": "offer_boxes"
+    }
+  ]
+  }
+{% endschema %}

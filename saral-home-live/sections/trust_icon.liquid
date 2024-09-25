@@ -1,0 +1,140 @@
+<style>
+  button.whatsapp-icon {
+    border-radius: 8px!important;
+    width: 353px!important;
+    height: 48px!important;
+    min-height: 48px!important;
+    color: #4d4d4d!important;
+    text-align: center!important;
+    font-family: var(--heading-font1)!important;
+    font-size: 16px!important;
+    text-transform: capitalize;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    margin-bottom: 20px;
+    display: block!important;
+}
+  .ct .pi {
+    display: flex!important;
+}
+.pi2 img {
+    width: 20%;
+    text-align: center;
+}
+  .pi2 p {
+    font-size: 15px;
+    line-height: 30px;
+    color: black;
+    margin-top: 12px;
+}
+.ct {
+    background: #F7F7F7;
+    display: flex;
+    font-family: cursive;
+    align-items: center;
+    padding-top: 18px;
+}  
+  .ct .pi {
+    display: flex !important;
+    padding: 25px 0;
+}
+@media(max-width:768px){
+  button.whatsapp-icon{
+      height: 48px!important;
+    min-height: 48px!important;
+    width: 251px!important;
+}
+  .pi2 p {
+    color: black;
+    margin-top: 10px;
+}
+  .ct .pi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0px;
+    padding: 0px 0px!important;
+    flex-wrap:wrap;
+}
+  .pi2 p {
+    font-size: 11px!important;
+    line-height: 30px;
+    /* color: black; */
+    margin-top: 12px;
+}
+  .ct {
+    background: #F7F7F7;
+    display: flex;
+    font-family: cursive;
+    align-items: center;
+    padding-top: 25px!important;
+}
+  .pi2 {
+    flex: 0 0 50%;
+    max-width: 50% ;
+}
+  .ct .pi {
+    display: flex !important;
+    gap: 25px 0;
+}
+  .pi2 img {
+    width: 30%;
+    text-align: center;
+}
+}
+
+  
+</style>
+
+<div class="ct product-page">
+<div class="container">
+<p class="hidee">Having any trouble purchasing this item:</p>
+<button type="button" class="whatsapp-icon">Buy On WhatsApp {% render 'icon-whatsapp' %}</button>
+<div class="pi">
+  <div class="pi2">
+      <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/frame-216-65fc185ed9029.webp?v=1711021872">
+  <p>Easy returns</p>
+  </div>
+  <div class="pi2">
+   <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/2-aaeHfbSFF-transformed.webp?v=1708618470">   
+  <p>Cash on delivery</p>
+  </div>
+  <div class="pi2">
+  <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/frame-220-65fc185f68657.webp?v=1711020221">    
+  <p>Fast delivery</p>
+  </div>
+  <div class="pi2">
+  <img src="https://cdn.shopify.com/s/files/1/0256/3683/1318/files/frame-21-65fc185e262f1.webp?v=1711020220">    
+  <p>Quality assured</p>
+  </div>
+</div>
+</div>
+</div>
+<style>
+  {% if product.price > 0 %}
+button.whatsapp-icon {
+    display: none!important;
+}
+.hidee{
+  display: none!important;
+}
+{% endif %}
+</style>
+
+
+{% schema %}
+  {
+      "name": "trust_icon",
+    "settings": [],
+    "presets":[
+      {
+        "category":"trust_icon",
+        "name":"trust_icon"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,176 @@
+<style>
+  .carousal-image-wrap a {
+      color: black;
+  }
+      section.home-carousal .section-padding{
+        padding-right: 0;
+      }
+      .carousal-image-block{
+        display: flex;
+        gap: 20px;
+        overflow-x: scroll;
+      }
+
+      .carousal-image-block::-webkit-scrollbar { /* WebKit */
+        width: 0;
+        height: 0;
+    }
+      .carousal-image-wrap{
+        padding-bottom: 24.6%;
+        flex: 0 0 calc(100%/4.8 - 20px*3/4);
+        max-width: calc(100%/4.8 - 20px*3/4);
+      }
+      .carousal-image-wrap img{
+        width: 100%;
+      }
+
+      .carousal-main-heading{
+        padding-bottom: 2%;
+        /* font-family: var(--heading-font); */
+      }
+      .carousal-sub-heading{
+        margin-bottom: 0;
+        padding-bottom: 50px;
+      }
+      .carousal-image-links{
+        padding: 10px 22px;
+        background: #fff;
+        border-radius: 30px;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 5%);
+        font-size: 18px;
+        width: max-content;
+        /* font-family: var(--button-font) !important; */
+
+      }
+
+       @media(max-width:768px){
+           section.home-carousal .section-padding{
+              padding-right: var(--section-padding-mobile);
+            }
+
+          .carousal-image-block{
+             padding-top: 15px;
+            overflow: hidden;
+            overflow-x: scroll;
+
+          }
+
+      .carousal-image-wrap {
+        flex: 0 0 calc(65% - 10px);
+        max-width: calc(65% - 10px);
+        padding-bottom: 63%;
+      }
+
+      .carousal-main-heading{
+
+      }
+      .carousal-sub-heading{
+        padding-bottom: 10px;
+      }
+      .carousal-image-links{
+      padding: 7px 21px;
+      font-size: 15px;
+      }
+
+
+    }
+</style>
+
+<div class="section-width {% unless section.settings.section_width == 'full-width' %}section-padding-left{% endunless %}">
+  <div class="section-content section-wrap">
+    <div class="section-head">
+      <h1 class="carousal-main-heading">{{ section.settings.heading }}</h1>
+      {% if section.settings['sub-heading'] != blank %}
+        <h3 class="carousal-sub-heading">{{ section.settings['sub-heading'] }}</h3>
+      {% endif %}
+    </div>
+
+    <div class="carousal-image-block">
+      {% for block in section.blocks %}
+        {% assign image = block.settings.image %}
+        {% if image != blank %}
+          <div
+            class="carousal-image-wrap"
+            style="position:relative;"
+          >
+            <a aria-label="image-link" href="{{ block.settings.link }}">
+              <img
+                style="position:absolute;top:0px;left:0px;"
+                srcset="
+                  {%- if image.width >= 375 -%}{{ image | image_url: width: 375 }} 350w,{%- endif -%}
+                  {%- if image.width >= 750 -%}{{ image | image_url: width: 375 }} 450w,{%- endif -%}
+                  {%- if image.width >= 1100 -%}{{ image | image_url: width: 400 }} 470w,{%- endif -%}
+                  {%- if image.width >= 1500 -%}{{ image | image_url: width: 425 }} 490w,{%- endif -%}
+                  {%- if image.width >= 1780 -%}{{ image | image_url: width: 450 }} 500w,{%- endif -%}
+                  {%- if image.width >= 2000 -%}{{ image | image_url: width: 500 }} 500w,{%- endif -%}
+                  {%- if image.width >= 3000 -%}{{ image | image_url: width: 500 }} 500w,{%- endif -%}
+                  {%- if image.width >= 3840 -%}{{ image | image_url: width: 500 }} 500w,{%- endif -%}
+                "
+                src="{{ image | image_url: width: 400 }}"
+                sizes=" (min-width: 768px) calc({% if count > 1 %}(100vw) / 2){% else %} (100vw){% endif %}, (max-width: 768px) calc((100vw ))"
+                loading="lazy"
+                alt="{{ image.alt | escape }}"
+                width="{{ image.width }}"
+                height="auto"
+              >
+            </a>
+            <a class="carousal-image-links" href="{{ block.settings.link }}"> {{ block.settings['btn-text'] }} </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "home-carousal",
+  "tag": "section",
+  "class": "home-carousal",
+  "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "sub-heading",
+          "label": "Sub Heading"
+        }
+  	],
+  	"blocks": [
+     	{
+       	"name": "carousal-images",
+       	"type": "carousal-images",
+       	"settings": [
+             	{
+             	"type": "image_picker",
+             	"id": "image",
+             	"label": "Image"
+             	},
+                {
+             	"type": "text",
+             	"id": "btn-text",
+             	"label": "Button Text"
+             	},
+                {
+             	"type": "text",
+             	"id": "link",
+             	"label": "Link"
+             	}
+           ]
+     	}
+   	],
+   "presets": [
+    {
+      "name": "product_catalog",
+      "category": "blog"
+    }
+  ]
+}
+{% endschema %}

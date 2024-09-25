@@ -1,0 +1,205 @@
+<div class="banner-kids">
+  <div class="background-image">
+    <a href="https://saralhome.com/collections/paw-patrol">
+      <img
+        class="d-image"
+        srcset="
+          {%- if section.settings.background_image.width >= 165 -%}{{ section.settings.background_image | img_url: '165x' }} 165w,{%- endif -%}
+          {%- if section.settings.background_image.width >= 360 -%}{{ section.settings.background_image | img_url: '360x' }} 360w,{%- endif -%}
+          {%- if section.settings.background_image.width >= 533 -%}{{ section.settings.background_image | img_url: '533x' }} 533w,{%- endif -%}
+          {%- if section.settings.background_image.width >= 720 -%}{{ section.settings.background_image | img_url: '720x' }} 720w,{%- endif -%}
+          {%- if section.settings.background_image.width >= 940 -%}{{ section.settings.background_image | img_url: '940x' }} 940w,{%- endif -%}
+          {%- if section.settings.background_image.width >= 1066 -%}{{ section.settings.background_image | img_url: '1066x' }} 1066w,{%- endif -%}
+          {{ section.settings.background_image | img_url: 'master' }} {{ section.settings.background_image.width }}w
+        "
+        src="{{ section.settings.background_image | img_url: '353x' }}"
+        alt="{{ section.settings.background_image.alt | escape }}"
+        loading="lazy"
+        class="motion-reduce"
+      >
+    </a>
+    <img
+      class="m-image"
+      srcset="
+        {%- if section.settings.background_image2.width >= 165 -%}{{ section.settings.background_image2 | img_url: '165x' }} 165w,{%- endif -%}
+        {%- if section.settings.background_image2.width >= 360 -%}{{ section.settings.background_image2 | img_url: '360x' }} 360w,{%- endif -%}
+        {%- if section.settings.background_image2.width >= 533 -%}{{ section.settings.background_image2 | img_url: '533x' }} 533w,{%- endif -%}
+        {%- if section.settings.background_image2.width >= 720 -%}{{ section.settings.background_image2 | img_url: '720x' }} 720w,{%- endif -%}
+        {%- if section.settings.background_image2.width >= 940 -%}{{ section.settings.background_image2 | img_url: '940x' }} 940w,{%- endif -%}
+        {%- if section.settings.background_image2.width >= 1066 -%}{{ section.settings.background_image2 | img_url: '1066x' }} 1066w,{%- endif -%}
+        {{ section.settings.background_image2 | img_url: 'master' }} {{ section.settings.background_image2.width }}w
+      "
+      src="{{ section.settings.background_image2 | img_url: '353x' }}"
+      alt="{{ section.settings.background_image2.alt | escape }}"
+      loading="lazy"
+      class="motion-reduce"
+    >
+  </div>
+  <div class="bk2">
+    <div class="upper">
+      <h3>{{ section.settings.main_text }}</h3>
+      <p>{{ section.settings.secondary_text }}</p>
+    </div>
+    <div class="bottom">
+      <div class="kids">
+        <img loading="lazy" src="{{ section.settings.image1 }}">
+        <h4>{{ section.settings.text1 }}</h4>
+        <a class="url" href="{{ section.settings.link1 }}"></a>
+      </div>
+      <div class="kids">
+        <img loading="lazy" src="{{ section.settings.image2 }}">
+        <h4>{{ section.settings.text2 }}</h4>
+        <a class="url" href="{{ section.settings.link2 }}"></a>
+      </div>
+      <div class="kids">
+        <img loading="lazy" src="{{ section.settings.image3 }}">
+        <h4>{{ section.settings.text3 }}</h4>
+        <a class="url" href="{{ section.settings.link3 }}"></a>
+      </div>
+      <div class="kids">
+        <img loading="lazy" src="{{ section.settings.image4 }}">
+        <h4>{{ section.settings.text4 }}</h4>
+        <a class="url" href="{{ section.settings.link4 }}"></a>
+      </div>
+      <div class="kids">
+        <img loading="lazy" src="{{ section.settings.image5 }}">
+        <h4>{{ section.settings.text5 }}</h4>
+        <a class="url" href="{{ section.settings.link5 }}"></a>
+      </div>
+      <div class="kids">
+        <img loading="lazy" src="{{ section.settings.image6 }}">
+        <h4>{{ section.settings.text6 }}</h4>
+        <a class="url" href="{{ section.settings.link6 }}"></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "banner-kids",
+  "settings": [
+    {
+      "type":"image_picker",
+      "label":"background image",
+      "id":"background_image"
+    },
+    {
+      "type":"image_picker",
+      "label":"background image",
+      "id":"background_image2"
+    },
+    {
+      "type":"text",
+      "label":"Main text",
+      "id":"main_text"
+    },
+    {
+      "type":"text",
+      "label":"Secondary text",
+      "id":"secondary_text"
+    },
+    {
+      "type":"image_picker",
+      "label":"image1",
+      "id":"image1"
+    },
+    {
+      "type":"text",
+      "label":"text1",
+      "id":"text1"
+    },
+    {
+     "type":"url",
+     "label":"Link1",
+     "id":"link1"
+    },
+        {
+      "type":"image_picker",
+      "label":"image2",
+      "id":"image2"
+    },
+    {
+      "type":"text",
+      "label":"text2",
+      "id":"text2"
+    },
+    {
+     "type":"url",
+     "label":"Link2",
+     "id":"link2"
+    },
+        {
+      "type":"image_picker",
+      "label":"image3",
+      "id":"image3"
+    },
+    {
+      "type":"text",
+      "label":"text3",
+      "id":"text3"
+    },
+    {
+     "type":"url",
+     "label":"Link3",
+     "id":"link3"
+    },
+        {
+      "type":"image_picker",
+      "label":"image4",
+      "id":"image4"
+    },
+    {
+      "type":"text",
+      "label":"text4",
+      "id":"text4"
+    },
+    {
+     "type":"url",
+     "label":"Link4",
+     "id":"link4"
+    },
+        {
+      "type":"image_picker",
+      "label":"image5",
+      "id":"image5"
+    },
+    {
+      "type":"text",
+      "label":"text5",
+      "id":"text5"
+    },
+    {
+     "type":"url",
+     "label":"Link5",
+     "id":"link5"
+    },
+        {
+      "type":"image_picker",
+      "label":"image6",
+      "id":"image6"
+    },
+    {
+      "type":"text",
+      "label":"text6",
+      "id":"text6"
+    },
+    {
+     "type":"url",
+     "label":"Link6",
+     "id":"link6"
+    }
+  ],
+    "presets": [
+{
+"name": "banner-kids",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

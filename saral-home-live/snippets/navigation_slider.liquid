@@ -1,0 +1,49 @@
+<style>
+  .product_slider_slider{
+  	display:flex;
+    flex-direction:row;
+        gap:40px;
+    flex-wrap:noWrap;
+    overflow-x:auto;
+    scroll-snap-type:x;
+        margin-left: 30px;
+  }
+  .product_slider_slider>product-item{
+  	flex:0 0 23%;
+    max-width:23%;
+    scroll-snap-align:start;
+  }
+  @media(max-width:768px){
+    .product_slider_slider>product-item{
+    	flex:0 0 80%;
+      max-width:80%;
+    }
+    .product_slider_slider{
+  	display:flex;
+    flex-direction:row;
+        gap:24px;
+    flex-wrap:noWrap;
+    overflow-x:auto;
+    scroll-snap-type:x;
+        margin-left: .0px;
+  }
+  }
+</style>
+
+<div>
+  <div class="navigaton-slider">
+    <div class="product_slider">
+      <div class="product_slider_head">
+        <h2 class="hed">{{ heading }}</h2>
+      </div>
+      <div class="product_slider_slider">
+        {%- for product in collection.products -%}
+          {% include 'product-collection' with url_without_collection: true product:product %}
+        {%- endfor -%}
+      </div>
+      {% if collection.products.size > 0 %}
+        {% render 'shop-all-products', collection: settings.collect %}
+      {% endif %}
+    </div>
+  </div>
+</div>

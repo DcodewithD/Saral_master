@@ -1,0 +1,335 @@
+<style>
+    .waal2 summary {
+      padding: 24px 16px 28px!important;
+      background: #FFFDFA!important;
+      font-family: var(--body_font);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #000000;
+      display: flex;l
+      align-items: center;
+      justify-content: space-between;
+  }
+
+  .waal2 details{
+          border-bottom: 1px solid #dee2e6;
+  }
+
+    .waal2 details svg {
+      transition: all 0.3s ease-in;
+  }
+
+    .waal2 details[open] svg {
+      transform: rotate(180deg);
+  }
+
+  .waal2 details p {
+      padding-left: 0px!important;
+      padding-right: 0px!important;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: #3B3A3D;
+      font-family: var(--body_font);
+      padding-block: 16px;
+      margin: 0px;
+    padding-inline: 16px!important;
+    background: #FFFDFA!important;
+  }
+
+    .waal>h2:nth-child(1) {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 28px;
+      color: #525159;
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      font-family: var(--heading_font)!important;
+      letter-spacing: 0px!important;
+  }
+
+  .waal {
+      padding: 0px 16px;
+    margin:20px 0px;
+  }
+
+  .waal img {
+      width: 100%;
+      filter: drop-shadow(0px 0px 2px rgba(216, 201, 201, 0.25));
+  }
+
+  .waal2 {
+      padding: 20px 0px;
+  }
+
+  .waal2 button.accordion-button.collapsed {
+      padding: 16px 0px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #000000;
+  }
+
+  button.accordion-button.collapsed:focus {
+      box-shadow: none!important;
+    border-color:none!important;
+  }
+
+  .accordion-button:focus {
+      border-color: transparent!important;
+    border:none!important;
+    box-shadow:none!important;
+  }
+
+  button.accordion-button.collapsed:focus-visible {
+      box-shadow: none!important;
+  }
+
+  .accordion-button:not(.collapsed) {
+      background: white!important;
+      color: black!important;
+  }
+
+  .accordion-button:not(.collapsed)::after {
+      transform: var(--bs-accordion-btn-icon-transform)!important;
+      background-image: var(--bs-accordion-btn-icon)!important;
+  }
+
+  button.accordion-button {
+      padding-left: 0px;
+      padding-right: 0px;
+  }
+
+  .accordion-body {
+      padding-left: 0px!important;
+      padding-right: 0px!important;
+    font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #3B3A3D;
+  }
+
+  .waal2 h2 {
+      font-family: var(--heading_font);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+    color:#3A3844;
+        margin-bottom: 20px;
+  }
+
+  .waal2 p {
+      font-family: var(--body_font);
+      color: #3A3844;
+      font-size: 15px;
+  }
+
+  .waal2 ul li {
+      list-style: disc;
+      padding-left: 0px;
+      font-size: 15px;
+      color: #3A3844;
+      padding-bottom: 15px;
+      line-height: 25px;
+  }
+
+  @media(min-width:768px){
+    .waal2 {
+      padding: 0px 0px;
+  }
+
+    .waal2 h2 {
+      font-size: 26px;
+      line-height: 40px;
+        margin-bottom: 20px;
+  }
+
+  .waal2 p {
+      font-family: var(--body_font);
+      color: #3A3844;
+      font-size: 20px;
+  }
+
+  .waal2 ul li {
+      list-style: disc;
+      padding-left: 0px;
+      font-size: 18px;
+      color: #3A3844;
+      padding-bottom: 15px;
+      line-height: 25px;
+  }
+
+
+    .waal2 summary{
+      font-size: 18px;
+      line-height: 25px;
+      color: #000000;
+  }
+
+    .waal {
+      padding: 0px 120px;
+      margin: 30px 0px;
+          display: flex;
+      flex-wrap: wrap;
+      column-gap:48px;
+  }
+
+  .waal>h2:nth-child(1) {
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 49px;
+      margin: 20px 0px 40px;
+    flex: 0 0 100%;
+      max-width: 100%;
+  }
+
+    .waal2 {
+      flex: 0 0 48%;
+      max-width: 48%;
+  }
+
+  .waal .d-image {
+      flex: 0 0 47%;
+      max-width: 47%;
+  }
+
+  .waal2 button.accordion-button.collapsed {
+      font-size: 18px;
+      line-height: 25px;
+      color: #000000;
+    padding: 40px 30px;
+  }
+
+  button.accordion-button {
+      background: #F5F9FA;
+  }
+
+  button.accordion-button.collapsed {
+      background: #F5F9FA;
+  }
+  }
+</style>
+<div class="waal">
+  <h2>We Are All About</h2>
+  {% assign mob_image = section.settings['m-image'] %}
+  {% assign desk_image = section.settings['d-image'] %}
+  <div
+    class="m-image"
+    style="position:relative;padding-bottom:{{ 100 | divided_by : mob_image.aspect_ratio }}%"
+  >
+    <img
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+      srcset="
+        {%- if mob_image.width >= 375 -%}{{ mob_image | image_url: width: 375 }} 350w,{%- endif -%}
+        {%- if mob_image.width >= 750 -%}{{ mob_image | image_url: width: 375 }} 450w,{%- endif -%}
+        {%- if mob_image.width >= 1100 -%}{{ mob_image | image_url: width: 400 }} 470w,{%- endif -%}
+        {%- if mob_image.width >= 1500 -%}{{ mob_image | image_url: width: 425 }} 490w,{%- endif -%}
+        {%- if mob_image.width >= 1780 -%}{{ mob_image | image_url: width: 450 }} 500w,{%- endif -%}
+        {%- if mob_image.width >= 2000 -%}{{ mob_image | image_url: width: 500}} 500w,{%- endif -%}
+        {%- if mob_image.width >= 3000 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+        {%- if mob_image.width >= 3840 -%}{{ mob_image | image_url: width: 500 }} 500w,{%- endif -%}
+        {{ mob_image | image_url }} {{ mob_image.width }}w
+      "
+      src="{{ mob_image | image_url: width: 400 }}"
+      loading="lazy"
+      alt="{{ mob_image.alt | escape }}"
+      width="{{ mob_image.width }}"
+      height="auto"
+    >
+    {% if block.settings.link != blank %}
+      <a href="{{ block.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+    {% endif %}
+  </div>
+  <div
+    class="d-image"
+    style="position:relative;padding-bottom:40%"
+  >
+    <img
+      style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"
+      srcset="
+        {%- if desk_image.width >= 375 -%}{{ desk_image | image_url: width: 375 }} 350w,{%- endif -%}
+        {%- if desk_image.width >= 750 -%}{{ desk_image | image_url: width: 375 }} 450w,{%- endif -%}
+        {%- if desk_image.width >= 1100 -%}{{ desk_image | image_url: width: 400 }} 470w,{%- endif -%}
+        {%- if desk_image.width >= 1500 -%}{{ desk_image | image_url: width: 425 }} 490w,{%- endif -%}
+        {%- if desk_image.width >= 1780 -%}{{ desk_image | image_url: width: 450 }} 500w,{%- endif -%}
+        {%- if desk_image.width >= 2000 -%}{{ desk_image | image_url: width: 500}} 500w,{%- endif -%}
+        {%- if desk_image.width >= 3000 -%}{{ desk_image | image_url: width: 500 }} 500w,{%- endif -%}
+        {%- if desk_image.width >= 3840 -%}{{ desk_image | image_url: width: 500 }} 500w,{%- endif -%}
+        {{ desk_image | image_url }} {{ desk_image.width }}w
+      "
+      src="{{ desk_image | image_url: width: 400 }}"
+      loading="lazy"
+      alt="{{ desk_image.alt | escape }}"
+      width="{{ desk_image.width }}"
+      height="auto"
+    >
+    {% if block.settings.link != blank %}
+      <a href="{{ block.settings.link }}" style="position:absolute;top:0px;left:0px;width:100%;height:100%;"></a>
+    {% endif %}
+  </div>
+
+  <div class="waal2">
+    <h2>
+      Our mission is to build well designed, world class quality, & functional home furnishing products at affordable
+      prices to make life Saral for everyone
+    </h2>
+    <p>We are all about:</p>
+    <ul>
+      <li>Premium quality materials for comfort & durability</li>
+      <li>OEKO-TEX certified products, so we make sure we do not harm environment as much as we can</li>
+      <li>Minimalistic designs to suit every home</li>
+    </ul>
+    {% comment %}
+          <details>
+        <summary>Quality {% render 'icon-chivron' %}</summary>
+        <p>Our products are made with premium quality materials, giving them a competitive edge and adding comfort to your home.</p>
+      </details>
+              <details>
+        <summary>Ecofriendly products {% render 'icon-chivron' %}</summary>
+        <p>Our products are zero waste, sustainable, and made with 100% natural and biodegradable raw materials.</p>
+      </details>
+              <details>
+        <summary>Easy living {% render 'icon-chivron' %}</summary>
+        <p>With minimalistic design, lightweight construction, and simple maintenance, our products are designed to make your life 'Saral.'</p>
+      </details>
+              <details>
+        <summary>Improving lifestyle {% render 'icon-chivron' %}</summary>
+        <p>With superior quality, low maintenance, and natural materials, our products are sure to make your home and life effortless, fulfilling, and 'Saral'.</p>
+      </details>
+    {% endcomment %}
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "We are all about",
+    "settings": [
+              {
+          "type":"image_picker",
+          "label":"Product image",
+          "id":"d-image"
+        },
+        {
+          "type":"image_picker",
+          "label":"Product mobile image",
+          "id":"m-image"
+        }
+    ],
+    "presets": [
+{
+"name": "We are all about",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

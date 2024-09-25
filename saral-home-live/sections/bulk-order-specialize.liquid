@@ -1,0 +1,139 @@
+<style>
+          .bulk-order-specialize {
+            text-align: center;
+        }
+      .bulk-order-specialize h2 {
+        font-weight: 900;
+            margin-bottom: 30px;
+    }
+          .bulk-order-specialize h2, p {
+            color: black;
+        }
+        .bulk-order-specialize .sec-1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 25px;
+              margin-bottom: 30px;
+      }
+      .bulk-order-specialize .sec-1 .sec-2 {
+          flex: 0 0 calc(100%/4 - 25px*3/4);
+          max-width: calc(100%/4 - 25px*3/4);
+        position: relative;
+      }
+    .bulk-order-specialize .sec-1 .sec-2 h3 {
+      font-size: 20px;
+      margin-top: 10px;
+  }
+
+  @media(max-width:768px){
+          .bulk-order-specialize .sec-1 .sec-2 {
+          flex: 0 0 calc(100%/3 - 25px*3/3);
+          max-width: calc(100%/3 - 25px*3/3);
+        position: relative;
+      }
+        .bulk-order-specialize .sec-1 .sec-2 h3 {
+      font-size: 15px;
+  }
+  }
+</style>
+<div class="bulk-order-specialize bulk-order-fix_padding">
+  <h2 class="">{{ section.settings.section_heading }}</h2>
+  <p>{{ section.settings.section_info }}</p>
+  <div class="sec-1">
+    {% for block in section.blocks %}
+      <div class="sec-2">
+        {% assign img = block.settings.image1 %}
+        <div
+          class="card-image-wrap"
+          style="position:relative;overflow:hidden;background-color:ghostwhite;padding-bottom:{{ 1 | divided_by : img.aspect_ratio | times : 100 }}%"
+        >
+          <img
+            loading="lazy"
+            srcset="
+              {%- if img.width >= 165 -%}{{ img | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if img.width >= 360 -%}{{ img | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if img.width >= 533 -%}{{ img | image_url: width: 533 }} 533w,{%- endif -%}
+              {%- if img.width >= 720 -%}{{ img | image_url: width: 720 }} 720w,{%- endif -%}
+              {%- if img.width >= 940 -%}{{ img | image_url: width: 940 }} 940w,{%- endif -%}
+              {%- if img.width >= 1066 -%}{{ img | image_url: width: 1066 }} 1066w,{%- endif -%}
+              {{ img | image_url }} {{ img.width }}w
+            "
+            src="{{ img | image_url: width: 533 }}"
+            alt="{{ img.alt | escape }}"
+            loading="lazy"
+            sizes=" (min-width: 990px) calc((100vw) / 4), (min-width: 750px) calc((100vw ) / 3), calc((100vw ) / 2)"
+            width="{{ img.width }}"
+            height="{{ img.height }}"
+            style="position:absolute;top:0px;left:0px;width:100%;height:auto"
+          >
+        </div>
+        <h3>{{ block.settings.section_text1 }}</h3>
+        <a class="url" href="{{ block.settings.image_url }}"></a>
+      </div>
+    {% endfor %}
+  </div>
+  <button onClick="navigateHere()" class="btn1">{{ section.settings.banner_button_1 }}</button>
+</div>
+{% schema %}
+  {
+    "name": "bulk-order-specialize",
+    "settings": [
+                  {
+            "type": "text",
+            "label": "section heading",
+            "id": "section_heading"
+          },
+                  {
+            "type": "text",
+            "label": "section info",
+            "id": "section_info"
+          },
+                                          {
+            "type": "text",
+            "label": "banner button 1",
+            "id": "banner_button_1"
+          }
+      ],
+      "blocks" : [
+        {
+          "type":"image",
+          "name":"image",
+          "settings":[
+
+      {
+    "type":"image_picker",
+    "label":"Choose mobile image",
+    "id":"image1"
+  },
+          {
+            "type": "text",
+            "label": "section text",
+            "id": "section_text1"
+          },
+          {
+          "type":"url",
+          "label":"Image url",
+          "id":"image_url"
+        }
+          ]
+        }
+
+      ],
+
+
+    "presets": [
+{
+"name": "bulk-order-specialize",
+"category": "ADVANCED LAYOUT"
+}
+]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,113 @@
+<style>
+  .pdp-info {
+    width: 100%;
+  }
+
+  .pdp-info .info {
+    padding: 20px;
+    border-bottom: 1px solid gray;
+  }
+
+  .pdp-info .info .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+  }
+
+  .pdp-info .info .d-none {
+    display: none;
+  }
+
+  .pdp-info .info .des p {
+    font-weight: 400!important;
+    font-size: 15px!important;
+  }
+
+  .pdp-info .info .title .icon svg {
+    transition: .3s ease;
+  }
+
+  .pdp-info .info .title .rotate svg {
+    transform: rotate(180deg);
+  }
+
+  .pdp-info .info .des p {
+    font-weight: 400!important;
+    font-size: 15px!important;
+    font-family: unset;
+    padding-top: 10px;
+  }
+
+  .pdp-info .info .title p {
+    margin: 0px;
+    color: #555555;
+    font-weight: 400;
+    font-family: 'Inter-Regular';
+  }
+</style>
+
+<div class="pdp-info">
+  <div class="info" tabindex="0" id="card1">
+    <div class="title" onclick="onClickDisplayHandler('card1')">
+      <p>Instruction</p>
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none" class="iconn">
+            <path d="M0.502441 1L4.50244 5L8.50244 1" stroke="#666666" stroke-linecap="round"></path>
+          </svg>
+        </span>
+    </div>
+    <div class="des d-none">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo veniam harum expedita, necessitatibus ipsum quisquam eum iusto! Temporibus quasi consequatur aliquid maxime?</p>
+    </div>
+  </div>
+  <div class="info" tabindex="0" id="card2">
+    <div class="title" onclick="onClickDisplayHandler('card2')">
+      <p>Notes</p>
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6" fill="none" class="iconn">
+          <path d="M0.502441 1L4.50244 5L8.50244 1" stroke="#666666" stroke-linecap="round"></path>
+        </svg>
+      </span>
+    </div>
+    <div class="des d-none">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo veniam harum expedita, necessitatibus ipsum quisquam eum iusto! Temporibus quasi consequatur aliquid maxime?</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const cards = document.querySelectorAll('.info');
+
+  function onClickDisplayHandler(cardId) {
+    cards.forEach((card) => {
+      const desDiv = card.querySelector('.des');
+      const iconDiv = card.querySelector('.icon');
+      if (card.id === cardId) {
+        desDiv.classList.toggle('d-none');
+        if(iconDiv.classList.contains('rotate')) iconDiv.classList.remove('rotate');
+        else iconDiv.classList.add('rotate');
+      } else {
+        desDiv.classList.add('d-none');
+        iconDiv.classList.remove('rotate');
+      }
+    });
+  }
+  const hideAllDes = () => {
+    cards.forEach((item) => {
+      const des = item.querySelector('.des');
+      const iconDiv = item.querySelector('.icon');
+      des.classList.add('d-none');
+      iconDiv.classList.remove('rotate');
+    });
+  };
+
+  // Clicking outside the cards will hide all descriptions
+  document.addEventListener('click', function (event) {
+    const isClickInside = document.querySelector('.pdp-info').contains(event.target);
+    if (!isClickInside) {
+      hideAllDes();
+    }
+  });
+</script>
