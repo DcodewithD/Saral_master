@@ -1,1 +1,2489 @@
-{"current":{"collect":"best-selling-items","hed":"Best Sellers","purchase_code":"31b8e1db-e82b-4c66-b6dc-9803e2a906de","presentation_enable":false,"logo_types":"svg","logo_svg_file":"svg-logo-sticky2","logo_width":100,"logo_mobile_svg_file":"svg-logo-sticky2","logo_mobile_width":72,"logo_sticky_svg_file":"svg-logo-sticky2","logo_sticky_image":"shopify:\/\/shop_images\/image_1_Traced.png","logo_sticky_width":34,"logo_footer_svg_file":"svg-logo-sticky","logo_footer_image":"","logo_footer_width":64,"logo_footer_mobile_svg_file":"svg-logo-sticky","logo_footer_mobile_image":"shopify:\/\/shop_images\/image_1_Traced.png","logo_footer_mobile_width":64,"favicon":"shopify:\/\/shop_images\/FAV_32x32_f74cc440-3548-495d-9f07-38696309d3a2.png","layout_container":"fullwidth","layout_show_breadcrumbs":true,"layout_pagination_type":"infinite_scroll","layout_enable_rtl":false,"layout_images_lazyload":true,"layout_settings_file":"default","layout_age_confirmation":false,"layout_age_confirmation_image":"","layout_age_confirmation_image_width":600,"layout_age_confirmation_checkbox":true,"color_theme_primary":"","color_theme_body":"","color_theme_c":"","color_theme_head_c":"","color_theme_link_c":"","color_theme":"","color_theme2":"","color_theme3":"","color_theme4":"","color_theme5":"","color_theme6":"","color_theme7":"","color_theme8":"","color_theme9":"","color_theme10":"","color_theme11":"","color_theme12":"","font_base":"work_sans_n4","font_base_apply_to_all":true,"font_base_type":"none","font_size_body":13,"font_heading":"noto_serif_n4","font_heading_type":"none","font_size_h1":44,"font_size_h2":32,"font_size_h3":24,"font_size_h4":18,"font_size_h5":15,"font_size_h6":13,"font_button":"garamond_n4","font_size_button":13,"font_size_input":13,"font_menu":"garamond_n4","font_size_menu":13,"font_size_menu_list":13,"font_size_menu_title":15,"font_size_menu_mobile":15,"font_load_alternative":false,"font_alternative":"garamond_n4","font_alternative_type":"none","collection_show_sidebar":"desktop_and_mobile","collection_sidebar_position":"dropdown","collection_enable_sticky":true,"product_format_pjpg":true,"product_cursor":"","product_show_custom_options":true,"product_enable_variants_section":true,"product_hide_options_without_availability_variants":false,"product_variant_auto_select":"enable","product_auto_selected_options":"","product_options_listing_visibility":"all","product_variant_change_on_hover":true,"product_options_type_circle_color":"Color","product_options_type_circle_image":"Select color","product_options_type_square_color":"Colour","product_options_type_square_image":"Material 2","product_options_type_select":"Select","product_options_type_large_text":"Size","product_collection_image_height_percent":128,"product_collection_image_size":"contain","product_collection_image_border_radius":0,"product_replace_images_hover":true,"product_collection_show_label_in_stock":false,"product_collection_show_label_pre_order":true,"product_collection_show_label_out_stock":true,"product_collection_show_label_sale":true,"product_collection_show_label_new":true,"product_collection_show_label_hot":true,"product_collection_centered_info":false,"product_collection_more_info_type":"vendor","product_collection_show_title":true,"product_collection_show_price":true,"product_collection_show_button_quick_view":true,"product_collection_show_countdown":true,"product_collection_show_images_navigation":true,"product_collection_show_options":true,"product_collection_show_quantity":false,"product_collection_show_button_add_to_cart":true,"product_collection_show_button_add_to_wishlist":true,"product_collection_show_button_add_to_compare":true,"product_collection_show_reviews":true,"product_collection_hide_reviews_counter":true,"product_collection_hide_reviews_mobile_counter":true,"product_collection_show_sku":true,"product_collection_show_barcode":false,"product_collection_show_availability":true,"product_collection_show_type":true,"product_collection_show_vendor":true,"product_collection_show_description":true,"product_collection_list_show_quantity":false,"product_info_layout":"1","product_info_show_mobile_thumbnails":true,"product_info_show_btn_fullscreen":true,"product_info_show_btn_video":true,"product_info_video_autoplay":true,"product_info_enable_zoom":true,"product_info_zoom_scale_coef":2,"product_info_gallery_height_and_size_path":"collection","product_info_gallery_height_percent":128,"product_info_gallery_grouped":"tag","product_info_show_label_in_stock":false,"product_info_show_label_pre_order":false,"product_info_show_label_out_stock":false,"product_info_show_label_sale":false,"product_info_show_label_new":false,"product_info_show_label_hot":false,"product_info_show_collections":false,"product_info_show_title":true,"product_info_show_reviews":false,"product_info_hide_reviews_counter":false,"product_info_show_sku":false,"product_info_show_barcode":false,"product_info_show_availability":false,"product_info_show_type":false,"product_info_show_vendor":false,"product_info_show_price":true,"product_info_show_sale_details":true,"product_info_show_taxes":false,"product_info_payment_terms":false,"product_info_show_countdown":false,"product_info_show_stock_countdown":false,"product_info_show_stock_countdown_range":false,"product_stock_countdown_min":10,"product_info_show_delivery_countdown":false,"product_info_show_visitors":false,"product_visitors_min":10,"product_visitors_max":25,"product_visitors_stroke":4,"product_visitors_interval_min":2,"product_visitors_interval_max":6,"product_info_show_top_border":false,"product_info_show_options":true,"product_info_show_size_guide":false,"product_info_size_guide_page_content":"","product_info_show_delivery_return":false,"product_info_delivery_return_page_content":"","product_info_show_message":false,"product_info_show_notes":false,"product_info_show_quantity":true,"product_info_button_layout":"3","product_info_show_button_add_to_cart":true,"product_info_show_button_add_to_wishlist":false,"product_info_show_button_add_to_compare":false,"product_info_show_free_shipping":true,"product_info_show_payments":true,"product_info_show_social_share_buttons":false,"product_info_social_share_buttons_type":"1","product_info_page_show_usage_info_sidebar":true,"product_footbar_enable":true,"product_footbar_show_title":true,"product_footbar_show_price":true,"product_footbar_show_reviews":true,"product_footbar_show_options":true,"product_footbar_show_quantity":true,"product_footbar_show_button_add_to_cart":true,"search_show":true,"search_show_only_products":true,"search_ajax":true,"price_show_sale_separator":false,"show_multiple_currencies":false,"currency_format":"money_with_currency_format","supported_currencies":"USD EUR GBP","supported_currencies_short_names":"US($)|UE(€)|BP(£)","supported_currencies_full_names":"USD - US Dollar|EUR - Euro|GBP - British Pound","default_currency":"USD","cart_show_header_button":true,"cart_ajax":true,"cart_icon":"","cart_popup_enable":true,"cart_popup_show_quantity_input":true,"cart_show_vendor":false,"cart_show_notes":true,"cart_show_free_shipping":false,"cart_free_shipping_value":"20000","shipping_calculator":"Enabled","shipping_calculator_default_country":"United States","compare_show_description":true,"compare_show_collection":true,"compare_show_availability":true,"compare_show_product_type":true,"compare_show_vendor":true,"compare_show_sku":true,"compare_show_barcode":true,"compare_show_options":true,"compare_description_max_size":100,"social_share_image":"shopify:\/\/shop_images\/Frame_7.1_2.png","social_facebook":"","social_twitter":"","social_instagram":"","social_pinterest":"","social_youtube":"","social_behance":"","social_skype":"","social_share_enable_facebook":true,"social_share_enable_twitter":true,"social_share_enable_pinterest":true,"social_share_enable_linkedin":true,"social_share_enable_buffer":true,"social_share_enable_reddit":true,"subscription_method":"shopify","subscription_mailchimp_form_action":"\/\/myshopify.us18.list-manage.com\/subscribe\/post?u=8a50b61e56896303a04d0243e&amp;id=3c3d06b907","subscription_popup_enable":false,"subscription_popup_layout":"4","subscription_popup_show_icon":true,"subscription_popup_text_line_01":"ULTIMATE SALE","subscription_popup_text_line_02":"20%Off","subscription_popup_text_line_03":"All Clothing. Limited time offer!","subscription_popup_text_line_04":"","subscription_popup_show_form":false,"subscription_popup_text_input_placeholder":"Enter Please Your Email Address","subscription_popup_text_submit_button_text":"SUBSCRIBE!","subscription_popup_text_button":"SHOP NOW!","subscription_popup_text_dont_show_again":"","subscription_popup_text_close":"NO, THANK YOU","subscription_popup_image":"shopify:\/\/shop_images\/subscription-03.jpg","subscription_popup_image_width":600,"subscription_popup_image_format_pjpg":true,"subscription_popup_insert_image":"","subscription_popup_insert_image_width":200,"subscription_popup_insert_image_format_pjpg":false,"subscription_popup_link":"shopify:\/\/collections\/womens","subscription_popup_show_once":"true","subscription_popup_delay":4,"subscription_popup_cookies_life":"1","subscription_confirmation_popup_enable":true,"subscription_confirmation_popup_success_message":"Thanks for subscribing!","subscription_confirmation_popup_success_button":"Continue shopping","blog_show_sidebar":"hide","blog_sidebar_position":"right","blog_enable_sticky":true,"article_show_sidebar":"hide","article_sidebar_position":"right","article_enable_sticky":true,"account_show_header_button":true,"account_popup_enable":false,"account_popup_sign_up_info_page_content":"","account_popup_show_subscription":true,"account_page_sing_up_page_content":"","services_show_header_button":true,"services_popup_enable":true,"services_popup_page_content":"","app_language":"links_list","app_language_link_list":"languages","button_border_radius":0,"input_border_radius":0,"promobox_image_border_radius":0,"promobox_format_pjpg":true,"notification_cookies_enable":false,"notification_cookies_button_information_link":"","notification_cookies_delay":0,"notification_cookies_show_once":false,"notification_cookies_cookies_life":"1","notification_products_enable":true,"notification_products_collection":"featured","notification_products_range_min":2,"notification_products_range_max":20,"notification_products_delay":8,"notification_products_interval_min":10,"notification_products_interval_max":18,"notification_products_time_life":14,"layout_preloader_image":"","layout_preloader_image_size":50,"layout_preloader_opacity":0.8,"promobox_animation_duration":0.5,"tooltips_enable":false,"tooltips_animation_type":"scale","header_animation_sticky_opacity":0.9,"header_tape_animation_duration":0,"product_hover_animation_type":"fade","buttons_animation_icon_enable":false,"button_add_to_cart_animation_enable":false,"dev_enable_custom_css":false,"dev_enable_custom_js":false,"checkout_logo_image":"shopify:\/\/shop_images\/svg-logo-sticky2.svg","checkout_logo_position":"left","checkout_logo_size":"medium","checkout_body_background_color":"#fff","checkout_input_background_color_mode":"white","checkout_sidebar_background_image":"","checkout_sidebar_background_color":"#fafafa","checkout_heading_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'","checkout_body_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'","checkout_accent_color":"#63453d","checkout_button_color":"#63453d","checkout_error_color":"#e32c2b","product_info_show_text_countdown":true,"product_text_countdown_reset_time":2,"product_text_countdown_delivery_time":3,"product_text_countdown_delivery_format":"Day DD\/MM\/YYYY","product_text_countdown_delivery_excludes":"Saturday, Sunday","layout_enable_preloader":false,"product_set_first_image_by_variant":true,"javascript_loader_jquery_first":true,"product_show_review_loading":false,"product_collection_hide_empty_reviews":true,"product_info_hide_empty_reviews":true,"collection_tag_filters_logic":"and","collection_only_available":false,"collection_enable_fullwidth_head_section":true,"collection_enable_product_carousel_section":true,"collection_builder_mode":"","product_info_description_place":"tabs","product_button_addtocart_size":"default","product_info_page_enable_sticky_gallery":true,"product_info_page_show_button_dynamic_checkout":true,"product_info_page_show_dynamic_checkout_confirmation":true,"product_info_page_styled_dynamic_checkout":true,"product_info_page_show_related_products":true,"product_info_page_sidebar":"off","product_info_page_enable_sticky_sidebar":true,"color_skin":"default","color_theme_paragraph_c":"","color_theme_link_act_c":"","typography_skin":"default","dev_enable_content_for_header":true,"product_info_show_arrows":true,"product_info_quick_show_full_details":true,"product_info_payments_type":"dark","wishlist_enable":true,"compare_enable":true,"payment_footer_sequence":"1,2,3,4,5,6,7,8,9","payment_product_sequence":"10,11,12,1,2,3,4,5,6,7,8,9","payment_icon_1_show":true,"payment_icon_1_code":"","payment_icon_1_image":"","payment_icon_1_url":"","payment_icon_1_tooltip":"","payment_icon_2_show":true,"payment_icon_2_code":"","payment_icon_2_image":"","payment_icon_2_url":"","payment_icon_2_tooltip":"","payment_icon_3_show":true,"payment_icon_3_code":"","payment_icon_3_image":"","payment_icon_3_url":"","payment_icon_3_tooltip":"","payment_icon_4_show":true,"payment_icon_4_code":"","payment_icon_4_image":"","payment_icon_4_url":"","payment_icon_4_tooltip":"","payment_icon_5_show":true,"payment_icon_5_code":"","payment_icon_5_image":"","payment_icon_5_url":"","payment_icon_5_tooltip":"","payment_icon_6_show":true,"payment_icon_6_code":"","payment_icon_6_image":"","payment_icon_6_url":"","payment_icon_6_tooltip":"","payment_icon_7_show":true,"payment_icon_7_code":"","payment_icon_7_image":"","payment_icon_7_url":"","payment_icon_7_tooltip":"","payment_icon_8_show":true,"payment_icon_8_code":"","payment_icon_8_image":"","payment_icon_8_url":"","payment_icon_8_tooltip":"","payment_icon_9_show":true,"payment_icon_9_code":"","payment_icon_9_image":"","payment_icon_9_url":"","payment_icon_9_tooltip":"","payment_icon_10_show":true,"payment_icon_10_code":"","payment_icon_10_image":"","payment_icon_10_url":"","payment_icon_10_tooltip":"","payment_icon_11_show":true,"payment_icon_11_code":"","payment_icon_11_image":"","payment_icon_11_url":"","payment_icon_11_tooltip":"","payment_icon_12_show":true,"payment_icon_12_code":"","payment_icon_12_image":"","payment_icon_12_url":"","payment_icon_12_tooltip":"","social_share_facebook":"#","social_share_twitter":"#","social_share_pinterest":"#","social_share_linkedin":"#","social_share_buffer":"#","social_share_reddit":"#","subscription_confirmation_popup_button_type":"1","show_free_shipping":true,"social_google":"","sections":{"product-variants":{"type":"product-variants","blocks":{"1582766687353":{"type":"option_images","settings":{"product":"sweater-with-slogan","property_value_1":"Colour|Pink","property_value_2":"Colour|White","property_value_3":"","property_value_4":"","property_value_5":"","property_value_6":"","property_value_7":"","property_value_8":"","property_value_9":"","property_value_10":""}},"1582767119041":{"type":"option_images","settings":{"product":"jersey-graphic-tee","property_value_1":"Select color|LightPink","property_value_2":"Select color|Gainsboro","property_value_3":"","property_value_4":"","property_value_5":"","property_value_6":"","property_value_7":"","property_value_8":"","property_value_9":"","property_value_10":""}},"1582767138198":{"type":"option_images","settings":{"product":"round-neck-sweater","property_value_1":"Select color|Black","property_value_2":"Select color|Yellow","property_value_3":"Select color|Pink","property_value_4":"Select color|White","property_value_5":"","property_value_6":"","property_value_7":"","property_value_8":"","property_value_9":"","property_value_10":""}},"1582767162351":{"type":"option_images","settings":{"product":"trainers-with-heel-detail","property_value_1":"Color|PowderBlue","property_value_2":"Color|Pink","property_value_3":"","property_value_4":"","property_value_5":"","property_value_6":"","property_value_7":"","property_value_8":"","property_value_9":"","property_value_10":""}},"1582767223711":{"type":"option_images","settings":{"product":"hoodie-with-slogan","property_value_1":"Colour|Black","property_value_2":"Colour|Gainsboro","property_value_3":"","property_value_4":"","property_value_5":"","property_value_6":"","property_value_7":"","property_value_8":"","property_value_9":"","property_value_10":""}},"1582769733910":{"type":"option_colors","settings":{"product":"belted-chino-trousers","property_value_1":"Color|Green","color_1":"#337563","property_value_2":"Color|Pink","color_2":"#e7c7c2","property_value_3":"Color|Gainsboro","color_3":"#d5d2d1","property_value_4":"","color_4":"","property_value_5":"","color_5":"","property_value_6":"","color_6":"","property_value_7":"","color_7":"","property_value_8":"","color_8":"","property_value_9":"","color_9":"","property_value_10":"","color_10":""}}},"block_order":["1582766687353","1582767119041","1582767138198","1582767162351","1582767223711","1582769733910"],"settings":{}},"header":{"type":"header","blocks":{"new_announcement_bar_gWekgN":{"type":"new_announcement_bar","settings":{"title_1":"ld","title_2":"lkkh"}},"1525791872612":{"type":"tape","disabled":true,"settings":{"delay":0,"style":"1","transparent_bg":false,"content":"offer"}},"1527372910910":{"type":"megamenu","settings":{"for_item":"Layouts","grid":2,"second_level_column":false,"second_level_column_size":24,"wrap":false,"wrapper_grid":12,"column_left_type":"none","column_left_size":0,"column_right_type":"2","column_right_size":0,"enable_width_limit":false,"width_limit":630}},"1527384342086":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"NEW IN","text_line_2":"Spring\/Summer 2020 Collection","text_line_3":"Text line 3","style":"3","button_1":"","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-2-2","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527385504306":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"SALE & SPECIAL OFFERS","text_line_2":"Get up to 20% off","text_line_3":"Text line 3","style":"3","button_1":"","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-2-2","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527373213741":{"type":"megamenu","settings":{"for_item":"Shop","grid":2,"second_level_column":false,"second_level_column_size":20,"wrap":false,"wrapper_grid":12,"column_left_type":"none","column_left_size":0,"column_right_type":"8\/12-4\/12","column_right_size":0,"enable_width_limit":false,"width_limit":630}},"1527432364326":{"type":"megamenu_products","settings":{"title":"Featured products","collection":"featured","products_per_row":"2","products_rows":1}},"1583964796904":{"type":"megamenu_brands","settings":{"title":"Top brands","url":"\/collections\/womens?q=vd_:Calvin%20Klein","size_of_images":"2","image_size_1":80,"url_1":"https:\/\/shella-demo.myshopify.com\/collections\/vendors?q=Calvin%20Klein","image_size_2":80,"url_2":"https:\/\/shella-demo.myshopify.com\/collections\/vendors?q=Chanel","image_size_3":80,"url_3":"https:\/\/shella-demo.myshopify.com\/collections\/vendors?q=Dior","image_size_4":80,"url_4":"https:\/\/shella-demo.myshopify.com\/collections\/vendors?q=Giorgio%20Armani","image_size_5":80,"url_5":"https:\/\/shella-demo.myshopify.com\/collections\/vendors?q=Levi%27s","image_size_6":80,"url_6":"https:\/\/shella-demo.myshopify.com\/collections\/vendors?q=Versace","image_size_7":80,"url_7":"","image_size_8":80,"url_8":"","image_size_9":80,"url_9":"","image_size_10":80,"url_10":""}},"1527373220764":{"type":"megamenu","settings":{"for_item":"Women's","grid":2,"second_level_column":false,"second_level_column_size":50,"wrap":false,"wrapper_grid":12,"column_left_type":"none","column_left_size":0,"column_right_type":"2*2","column_right_size":0,"enable_width_limit":false,"width_limit":630}},"1527418910812":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"NEW IN","text_line_2":"Spring\/Summer 2020 Collection","text_line_3":"Text line 3","style":"3","button_1":"Button text","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-3","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527420420060":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"SALE & SPECIAL OFFERS","text_line_2":"Get up to 20% off","text_line_3":"Text line 3","style":"3","button_1":"Button text","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-3","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527420550360":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"FEATURED","text_line_2":"Popular Items","text_line_3":"Text line 3","style":"3","button_1":"Button text","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-3","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527420557049":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"COMING SOON","text_line_2":"Autumn 2020 Collection","text_line_3":"Text line 3","style":"3","button_1":"Button text","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-3","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527373227613":{"type":"megamenu","settings":{"for_item":"Men's","grid":2,"second_level_column":false,"second_level_column_size":10,"wrap":false,"wrapper_grid":12,"column_left_type":"1","column_left_size":0,"column_right_type":"1","column_right_size":0,"enable_width_limit":false,"width_limit":630}},"1527385990580":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"NEW IN","text_line_2":"Spring\/Summer 2020 Collection","text_line_3":"Text line 3","style":"3","button_1":"","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-2-2","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527386066314":{"type":"megamenu_promobox","settings":{"title":"","url":"shopify:\/\/collections","image_size":400,"color_image_mask":"","image_mask_opacity":0.5,"text_line_1":"SALE & SPECIAL OFFERS","text_line_2":"Get up to 20% off","text_line_3":"Text line 3","style":"3","button_1":"Button text","button_1_url":"","color_button_type_1":"default","button_2":"Button text #2","button_2_url":"","color_button_type_2":"default","list_1":"","custom_html":"","type":"type-3","content_position":"center","content_align":"center","animation_to":"center","animation_from":"none","animation_opacity":"none","customization_class":""}},"1527422624107":{"type":"megamenu_title_image","settings":{"for_item":"Men's+Clothing","image_size":170,"for_item_2":"Men's+Shoes","image_size_2":200,"for_item_3":"Men's+Accessories","image_size_3":200,"for_item_4":"","image_size_4":200,"for_item_5":"","image_size_5":200}},"1543698183190":{"type":"megamenu_label","settings":{"type":"hot","text":"","for_item":"Layouts+Layouts+Home V1","for_item_2":"Layouts+Layouts+Home V3","for_item_3":"Layouts+Layouts+Home V6","for_item_4":"Women's+Shoes+Heels","for_item_5":"Layouts+Layouts+Home V17","for_item_6":"Layouts+Skins+Skin 4 - One Product","for_item_7":"Shop+Collection layouts+Look book","for_item_8":"Shop+Single Product Layouts+3D Models and Video","for_item_9":"Layouts+Skins+Skin 12 - Cannabis","for_item_10":"Shop+Collection layouts+List Products V2","for_item_11":"Shop+Single Product Layouts+Pre Order","for_item_12":"Layouts+Layouts+Home V18","for_item_13":"Shop+Product options+Gallery width","for_item_14":"","for_item_15":""}},"1527438870190":{"type":"megamenu_label","settings":{"type":"new","text":"","for_item":"Women's+Clothing+Dresses","for_item_2":"Shop+product options+Custom Image, Text","for_item_3":"Layouts+Layouts+Home V18","for_item_4":"Shop+Collection layouts+List Products V2","for_item_5":"Shop+Single Product Layouts+Pre Order","for_item_6":"Layouts+Skins+Skin 12 - Cannabis","for_item_7":"Layouts+Layouts+Home V16","for_item_8":"Layouts+Layouts+Home V17","for_item_9":"Shop+Single Product Layouts+Product V5 — Grid","for_item_10":"Layouts+Skins+Skin 13 - Wine","for_item_11":"Layouts+Skins+Skin 14 - Food Delivery","for_item_12":"Layouts+Skins+Skin 15 - Lenses","for_item_13":"Layouts+Skins+Skin 16 - Cakes","for_item_14":"Layouts+Skins+Skin 17 - Plants","for_item_15":"Layouts+Skins+Skin 18 - Pasta"}},"1582328455745":{"type":"megamenu_label","settings":{"type":"new","text":"SLIDER","for_item":"Layouts+Layouts+Home V8","for_item_2":"","for_item_3":"","for_item_4":"","for_item_5":"","for_item_6":"","for_item_7":"","for_item_8":"","for_item_9":"","for_item_10":"","for_item_11":"","for_item_12":"","for_item_13":"","for_item_14":"","for_item_15":""}},"1567840286505":{"type":"megamenu_label","settings":{"type":"sale","text":"ACTIVE","for_item":"Layouts+Layouts+Home V1","for_item_2":"","for_item_3":"","for_item_4":"","for_item_5":"","for_item_6":"","for_item_7":"","for_item_8":"","for_item_9":"","for_item_10":"","for_item_11":"","for_item_12":"","for_item_13":"","for_item_14":"","for_item_15":""}},"1591272472793":{"type":"megamenu_label","settings":{"type":"sale","text":"SALE","for_item":"Buy now!","for_item_2":"Men's+clothing+jackets","for_item_3":"Men's+Shoes","for_item_4":"","for_item_5":"","for_item_6":"","for_item_7":"","for_item_8":"","for_item_9":"","for_item_10":"","for_item_11":"","for_item_12":"","for_item_13":"","for_item_14":"","for_item_15":""}},"1593945756616":{"type":"menu","settings":{"for_item":"Gallery","menu":""}}},"block_order":["new_announcement_bar_gWekgN","1525791872612","1527372910910","1527384342086","1527385504306","1527373213741","1527432364326","1583964796904","1527373220764","1527418910812","1527420420060","1527420550360","1527420557049","1527373227613","1527385990580","1527386066314","1527422624107","1543698183190","1527438870190","1582328455745","1567840286505","1591272472793","1593945756616"],"settings":{"announcement":"Free same-day delivery for all orders before 3pm!","type":"2","slider_collection":"","slider_heading":"","style":"1","transparent_bg":"disable","logo_mobile_centered":true,"height":70,"items_padding":0,"menu":"main-menu","show_menu_arrows":true,"show_menu_hover_underline":false,"vertical_menu":"","fixed_vertical_menu":false,"additional_line_info_page_content":"","sticky":"desktop_and_mobile","desktop_sticky_type":"slim","hide_sticky_when_scroll_down":true}},"footer":{"type":"footer","blocks":{"1586284608625":{"type":"subscription","settings":{"title":"NEWS | EVENTS | OFFERS & NEW ADDITION TO MENU","paragraph":"SIGN UP TO OUR NEWSLETTER","placeholder":"Enter Your Email Address","button_text":"SUBSCRIBE!"}},"1586284525260":{"type":"menu","disabled":true,"settings":{"title":"menu","show_title_on_desktop":true,"menu":"main-menu","size":0,"rows_limit":0}},"1586284527889":{"type":"menu","disabled":true,"settings":{"title":"","show_title_on_desktop":true,"menu":"","size":0,"rows_limit":0}},"1586284530934":{"type":"menu","disabled":true,"settings":{"title":"","show_title_on_desktop":true,"menu":"","size":0,"rows_limit":0}},"1586284576772":{"type":"custom_html","disabled":true,"settings":{"title":"Here to help","show_title_on_desktop":true,"page_content":""}},"1586284588048":{"type":"social_media","disabled":true,"settings":{"title":"Follow us","show_facebook":true,"show_twitter":true,"show_instagram":true,"show_pinterest":true,"show_youtube":true,"show_behance":true,"show_skype":true}},"footer-0":{"type":"copyright","disabled":true,"settings":{"page_content":"include-footer-copyright-3"}},"1586284627913":{"type":"payments","disabled":true,"settings":{}},"list_FDCyHe":{"type":"list","settings":{"list_title":"Bed Covers","list_url":"https:\/\/saralhome.com\/collections\/bedcovers"}},"list_idLcwp":{"type":"list","settings":{"list_title":"Bedsheet","list_url":"https:\/\/saralhome.com\/collections\/bedsheet"}},"list_ED4BNr":{"type":"list","settings":{"list_title":"Cotton Bedsheet","list_url":"https:\/\/saralhome.com\/collections\/cotton-bedsheets"}},"list_iFpD7e":{"type":"list","settings":{"list_title":"Combo Bedsheets","list_url":"https:\/\/saralhome.com\/collections\/combo"}},"list_FXUdQQ":{"type":"list","settings":{"list_title":"Bedding Sets","list_url":"https:\/\/saralhome.com\/collections\/bedding"}},"list_zKp4bL":{"type":"list","settings":{"list_title":"Cover Quilts","list_url":""}},"list_3ez9hr":{"type":"list","settings":{"list_title":"Curtains","list_url":"https:\/\/saralhome.com\/collections\/curtains"}},"list_7m9Ckc":{"type":"list","settings":{"list_title":"Window Curtains","list_url":"https:\/\/saralhome.com\/collections\/window-curtains"}},"list_Qw3YxH":{"type":"list","settings":{"list_title":"Door Curtains","list_url":"https:\/\/saralhome.com\/collections\/door-curtains"}},"list_z4gBcR":{"type":"list","settings":{"list_title":"Sofa covers","list_url":"https:\/\/saralhome.com\/collections\/sofa-cover"}},"list_ggATRX":{"type":"list","settings":{"list_title":"Cushions Covers","list_url":"https:\/\/saralhome.com\/collections\/cushions"}},"list_nzBefG":{"type":"list","settings":{"list_title":"Sofa Cushion Covers","list_url":"https:\/\/saralhome.com\/collections\/sofa-cushion-covers"}},"list_3QbQXN":{"type":"list","settings":{"list_title":"Mats","list_url":"https:\/\/saralhome.com\/collections\/mats"}},"list_4Yddxj":{"type":"list","settings":{"list_title":"Tablemats","list_url":"https:\/\/saralhome.com\/collections\/table-mat"}},"list_LtYfVD":{"type":"list","settings":{"list_title":"Bathmats","list_url":"https:\/\/saralhome.com\/collections\/bathmat"}},"list_BjRb4i":{"type":"list","settings":{"list_title":"Door mats","list_url":"https:\/\/saralhome.com\/collections\/door-mat"}},"list_xYD87G":{"type":"list","settings":{"list_title":"Yoga mats","list_url":"https:\/\/saralhome.com\/collections\/yogamats"}},"list_FqGqJd":{"type":"list","settings":{"list_title":"Carpets","list_url":"https:\/\/saralhome.com\/collections\/carpet-for-living-room"}},"list_N9hBDd":{"type":"list","settings":{"list_title":"Floor Carpet","list_url":"https:\/\/saralhome.com\/collections\/floor-runner"}},"list_id6PDQ":{"type":"list","settings":{"list_title":"Carpets and Rugs","list_url":"https:\/\/saralhome.com\/collections\/rugs-carpet"}},"list_zhn7UA":{"type":"list","settings":{"list_title":"Custom Carpet Rugs","list_url":"https:\/\/saralhome.com\/collections\/customization"}},"list_xHTQrU":{"type":"list","settings":{"list_title":"Cotton Yoga Mats","list_url":"https:\/\/saralhome.com\/collections\/cotton-yoga-mats"}},"list_9RBa6r":{"type":"list","settings":{"list_title":"Peppa Pigs","list_url":"https:\/\/saralhome.com\/collections\/peppa-pig"}},"list_E7YRaY":{"type":"list","settings":{"list_title":"saral home sale","list_url":"https:\/\/saralhome.com\/collections\/sale-sale-sale"}},"list_WprEgg":{"type":"list","settings":{"list_title":"Curtains","list_url":"https:\/\/saralhome.com\/collections\/curtains"}},"list_nVf9xY":{"type":"list","settings":{"list_title":"Blackout Curtains","list_url":"https:\/\/saralhome.com\/collections\/blackout-curtains"}},"list_r8UcMa":{"type":"list","settings":{"list_title":"Cotton Curtains","list_url":"https:\/\/saralhome.com\/collections\/cotton-curtains"}},"list_LiRpj7":{"type":"list","settings":{"list_title":"sofa cover set","list_url":"https:\/\/saralhome.com\/collections\/sofa-cover"}},"list_GtV8DA":{"type":"list","settings":{"list_title":"Carpets for living room","list_url":"https:\/\/saralhome.com\/collections\/carpet-for-living-room"}},"list_QqipLh":{"type":"list","settings":{"list_title":"Exercise Mats","list_url":"https:\/\/saralhome.com\/collections\/exercise-mats"}},"list_FzmrXh":{"type":"list","settings":{"list_title":"Bedside runner","list_url":"https:\/\/saralhome.com\/collections\/bedside-runners"}},"list_WhfGPw":{"type":"list","settings":{"list_title":"King size bed sheets","list_url":"https:\/\/saralhome.com\/collections\/king-size-bedsheets"}},"list_RhB6yK":{"type":"list","settings":{"list_title":"Queen Size Bedsheets","list_url":"shopify:\/\/collections\/queen-size-bedsheets"}},"list_nDdtFf":{"type":"list","settings":{"list_title":"Rugs Carpet","list_url":"https:\/\/saralhome.com\/collections\/rugs-carpet"}},"list_agGa4N":{"type":"list","settings":{"list_title":"Runners","list_url":"https:\/\/saralhome.com\/collections\/floor-carpet-runner"}},"list_UVQDea":{"type":"list","settings":{"list_title":"Table Runners","list_url":"https:\/\/saralhome.com\/collections\/table-runner"}}},"block_order":["1586284608625","1586284525260","1586284527889","1586284530934","1586284576772","1586284588048","footer-0","1586284627913","list_FDCyHe","list_idLcwp","list_ED4BNr","list_iFpD7e","list_FXUdQQ","list_zKp4bL","list_3ez9hr","list_7m9Ckc","list_Qw3YxH","list_z4gBcR","list_ggATRX","list_nzBefG","list_3QbQXN","list_4Yddxj","list_LtYfVD","list_BjRb4i","list_xYD87G","list_FqGqJd","list_N9hBDd","list_id6PDQ","list_zhn7UA","list_xHTQrU","list_9RBa6r","list_E7YRaY","list_WprEgg","list_nVf9xY","list_r8UcMa","list_LiRpj7","list_GtV8DA","list_QqipLh","list_FzmrXh","list_WhfGPw","list_RhB6yK","list_nDdtFf","list_agGa4N","list_UVQDea"],"settings":{"placeholder":"Enter Your Email Address","button_text":"SUBSCRIBE","txt1":"The design is in the details.","sub_txt1":"We stand behind what we make, designed to maximize longevity & minimize impact.","txt2":"In relentless pursuit of quality.","sub_txt2":"Masterfully crafted in India, using innovative fabrics from the world's top mills.","txt3":"Straightforward pricing.","sub_txt3":"We are upfront about how our materials is made. Same for pricing. No markups, no middlemen.","type":"3","style":"2","show_logo":true,"show_button_back_to_top":false,"enable_fixed":true}},"carousel-products":{"type":"carousel-products","blocks":{"1586291186708":{"type":"collection","settings":{"title":"","collection":"trending-now-hp"}}},"block_order":["1586291186708"],"settings":{"show_title":true,"container":"boxed","size_of_columns":"4","max_count":6,"autoplay":true,"speed":5,"infinite":true,"arrows":true,"bullets":true}},"carousel-related-products":{"type":"carousel-related-products","settings":{"type":"related","title":"Related Products","size_of_columns":"4","max_count":6,"autoplay":true,"speed":5,"infinite":true,"arrows":true,"bullets":true}},"product-fixed-sizebar":{"type":"product-fixed-sizebar","blocks":{"1586291806417":{"type":"text_line","settings":{"icon":"","text":"","min_value":"200","max_value":"500"}},"1586291808135":{"type":"text_line","settings":{"icon":"","text":"","min_value":"30","max_value":"100"}},"1586291810188":{"type":"text_line","settings":{"icon":"","text":"","min_value":"100","max_value":"200"}}},"block_order":["1586291806417","1586291808135","1586291810188"],"settings":{}},"home-builder":{"type":"home-builder","settings":{"title":"","container":"boxed","size_of_columns":"1","margins_for_columns":"none","align_of_columns":"top_center","disable_column_paddings":false,"precedence":"","customization_class":""}},"footer-bottom":{"type":"footer-bottom","blocks":{"0ae3af75-882a-4d2e-8e17-320ca8b0dfdd":{"type":"menu","settings":{"title":"Shop","show_title_on_desktop":true,"menu":"main-menu","size":0,"rows_limit":0}},"0e98d693-1929-44ae-ada8-cd84f90e9c6a":{"type":"menu","settings":{"title":"Quick links","show_title_on_desktop":true,"menu":"footer","size":0,"rows_limit":0}},"376ee7cc-9bf4-4842-8535-6201b79d569a":{"type":"menu","disabled":true,"settings":{"title":"","show_title_on_desktop":true,"menu":"","size":0,"rows_limit":0}},"2f104d20-4a50-44e8-bf34-ddbaa46909ba":{"type":"custom_html","disabled":true,"settings":{"title":"Here to help","show_title_on_desktop":true,"page_content":""}},"36f44e52-7727-457f-988a-47c4e1e05f46":{"type":"social_media","settings":{"title":"Social media","show_facebook":true,"show_twitter":true,"show_instagram":true,"show_pinterest":false,"show_youtube":false,"show_behance":false,"show_skype":false}},"190cc8df-8461-4fb6-b9ad-9e9757e13a1b":{"type":"copyright","settings":{"page_content":""}}},"block_order":["0ae3af75-882a-4d2e-8e17-320ca8b0dfdd","0e98d693-1929-44ae-ada8-cd84f90e9c6a","376ee7cc-9bf4-4842-8535-6201b79d569a","2f104d20-4a50-44e8-bf34-ddbaa46909ba","36f44e52-7727-457f-988a-47c4e1e05f46","190cc8df-8461-4fb6-b9ad-9e9757e13a1b"],"settings":{"type":"5","style":"1","show_logo":false,"show_button_back_to_top":true,"enable_fixed":true}},"3989a779-4058-4af9-9182-d6761cd4f425":{"type":"new-homepage-slider","blocks":{"image_banner_KmdCd9":{"type":"image-banner","settings":{"mob_image":"shopify:\/\/shop_images\/carpet-for-living-room.webp","desk_image":"shopify:\/\/shop_images\/living-room-carpets.webp","link":"shopify:\/\/collections\/carpet-for-living-room","banner_heading":"","banner_subHeading":"","banner_button":"","url":"","text_position_desktop":"center","text_position_mobile":"center","button_bg":"default","btn_gap":40}},"image_banner_inL4bn":{"type":"image-banner","settings":{"mob_image":"shopify:\/\/shop_images\/blue-sofa-throw.webp","desk_image":"shopify:\/\/shop_images\/sofa-throw.webp","link":"shopify:\/\/collections\/sofa-cushion-covers","banner_heading":"","banner_subHeading":"","banner_button":"","url":"","text_position_desktop":"center","text_position_mobile":"center","button_bg":"default","btn_gap":40}},"image_banner_YVzEdG":{"type":"image-banner","settings":{"mob_image":"shopify:\/\/shop_images\/bed-comforter.webp","desk_image":"shopify:\/\/shop_images\/bedroom-comforter.webp","link":"shopify:\/\/collections\/bedding","banner_heading":"","banner_subHeading":"","banner_button":"","url":"","text_position_desktop":"center","text_position_mobile":"center","button_bg":"default","btn_gap":40}},"image_banner_eUe3Yz":{"type":"image-banner","settings":{"mob_image":"shopify:\/\/shop_images\/blue-bedsheet-for-bedroom.webp","desk_image":"shopify:\/\/shop_images\/beautiful-bedsheet.webp","link":"shopify:\/\/collections\/bedsheet","banner_heading":"","banner_subHeading":"","banner_button":"","url":"","text_position_desktop":"center","text_position_mobile":"center","button_bg":"default","btn_gap":40}},"image_banner_rqkwMQ":{"type":"image-banner","settings":{"mob_image":"shopify:\/\/shop_images\/best-table-mats.webp","desk_image":"shopify:\/\/shop_images\/dining-table-mats.webp","link":"shopify:\/\/collections\/mats","banner_heading":"","banner_subHeading":"","banner_button":"","url":"","text_position_desktop":"center","text_position_mobile":"center","button_bg":"default","btn_gap":40}},"image_banner_D7eHna":{"type":"image-banner","settings":{"mob_image":"shopify:\/\/shop_images\/designer-bedsheet.webp","desk_image":"shopify:\/\/shop_images\/brown-bedsheet.webp","link":"shopify:\/\/collections\/bedsheet","banner_heading":"","banner_subHeading":"","banner_button":"","url":"","text_position_desktop":"center","text_position_mobile":"center","button_bg":"default","btn_gap":40}}},"block_order":["image_banner_KmdCd9","image_banner_inL4bn","image_banner_YVzEdG","image_banner_eUe3Yz","image_banner_rqkwMQ","image_banner_D7eHna"],"disabled":true,"settings":{"section_width":"default-width","section_border":"curved","show_arrows":true,"show_dots":true,"dots_bg":"rgba(0,0,0,0)","dots_bg_active":"#000000"}},"shop-drop":{"type":"shop-drop","blocks":{"d4e4553f-c0c3-4519-b6c3-c252b99ef0a4":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Bathmat_bb1d68da-8c52-49fd-9ba4-5feee13e4377.jpg","link_text":"Bathmats","link_sub_text":"Bloom everyday with anti-skid bathmats","link":"shopify:\/\/collections\/bathmat","navigation":""}},"0986b8da-6783-4144-9642-33fced2b07b8":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Curtains_8b8daeed-c76f-470b-aa50-db5903221691.jpg","link_text":"Curtains","link_sub_text":"Easily add a chic, airy dimension to any space with these stylish curtains.","link":"shopify:\/\/collections\/curtains","navigation":""}},"4f5c1b73-e375-40c7-93c8-871edb90f5da":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Runners_48570f93-f6c7-4779-8e5d-34c351389051.jpg","link_text":"Runners","link_sub_text":"Bring home the Elegant Runners to instantly Spruce up your Space.","link":"shopify:\/\/collections\/floor-carpet-runner","navigation":""}},"3b29d52c-2c1f-421a-ab8a-2da1f45277f2":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Bad_covers.jpg","link_text":"Bed Covers","link_sub_text":"Gorgeous designs at unbeatable prices","link":"shopify:\/\/collections\/bedcovers","navigation":""}},"0bb889ad-8baf-4f2d-90da-9775ad373e99":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Table_-_Door_-_Yoga_mats.jpg","link_text":"Table\/Door\/Yoga mats","link_sub_text":"Tablemats, Doormats & Yogamats","link":"shopify:\/\/collections\/table-mat","navigation":""}},"11826279-677d-4621-b4af-9a0da0dcbf42":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Sofathrows_cushion_covers.jpg","link_text":"Sofathrows & Cushion Covers","link_sub_text":"Soft textured, vibrant colored designs for all","link":"shopify:\/\/collections\/sofa-cushion-covers","navigation":""}},"7a2558aa-57a1-44af-97b5-70cedecee311":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Carpets_rugs.jpg","link_text":"Carpets & Rugs","link_sub_text":"Carpets & Rugs that make the house feel like home.","link":"https:\/\/saralhome.com\/collections\/carpet-for-living-room","navigation":""}},"497cd123-7e46-4de3-a330-e2dac757a7d9":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Customisation.jpg","link_text":"Customization","link_sub_text":"Customise your own carpets, rugs & yogamat to add life to your floors.","link":"shopify:\/\/collections\/customization","navigation":""}},"1aee43b5-2dcd-4575-9bca-5d51bcabacd8":{"type":"link","settings":{"link_image":"shopify:\/\/shop_images\/Fun_Kids_1.jpg","link_text":"Fun Kids","link_sub_text":"Vibrant, cool & Classy products for your kids right at your doorstep","link":"shopify:\/\/collections\/fun-kids","navigation":""}}},"block_order":["d4e4553f-c0c3-4519-b6c3-c252b99ef0a4","0986b8da-6783-4144-9642-33fced2b07b8","4f5c1b73-e375-40c7-93c8-871edb90f5da","3b29d52c-2c1f-421a-ab8a-2da1f45277f2","0bb889ad-8baf-4f2d-90da-9775ad373e99","11826279-677d-4621-b4af-9a0da0dcbf42","7a2558aa-57a1-44af-97b5-70cedecee311","497cd123-7e46-4de3-a330-e2dac757a7d9","1aee43b5-2dcd-4575-9bca-5d51bcabacd8"],"settings":{"drop_image":"shopify:\/\/shop_images\/CD.png","link":"shopify:\/\/collections\/customization","background_image":"shopify:\/\/shop_images\/Mob_4.png","background_image2":"shopify:\/\/shop_images\/Mob_4.png","main_text":"Fun Kids","secondary_text":"Vibrant, cool & Classy products for your kids right at your doorstep","image1":"shopify:\/\/shop_images\/Pawpatrol.png","text1":"Paw Patrol","link1":"shopify:\/\/collections\/paw-patrol","image2":"shopify:\/\/shop_images\/peppa.png","text2":"Peppa Pig","link2":"shopify:\/\/collections\/peppa-pig","image3":"shopify:\/\/shop_images\/shark.png","text3":"Baby Shark","link3":"shopify:\/\/collections\/baby-shark","image4":"shopify:\/\/shop_images\/Unicorn.png","text4":"Unicorn","link4":"shopify:\/\/collections\/unicorn","image5":"shopify:\/\/shop_images\/Butterfly.png","text5":"Shapemats","link5":"shopify:\/\/collections\/shape-mat","image6":"shopify:\/\/shop_images\/dino.png","text6":"Dinosaur","link6":"shopify:\/\/collections\/saral-home-dinosaur"}},"bulk-order-banner":{"type":"bulk-order-banner","settings":{"m-image":"shopify:\/\/shop_images\/rug_a4235e51-82a4-40bf-b905-2c9d8e335065.jpg","d-image":"shopify:\/\/shop_images\/Rugs_D.jpg","banner_text_1":"Great Savings","banner_text_2":"Exclusive Price on Every Bulk order","banner_button_1":"Book Now","banner_text_3":"or","banner_button_2":"+91 81999 51914"}},"bulk-order-specialize":{"type":"bulk-order-specialize","blocks":{"710bcfb3-a3da-4be0-b127-4b14c85ddb7b":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7135_0027998f-6f65-46f8-8bfd-f2d7869ba191.webp","section_text1":"Bedding","image_url":"shopify:\/\/collections\/bedding"}},"14a7f546-de63-4a07-a808-8ff2e5ebd0cd":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7137_23a11653-d7c5-42de-ae9a-74a23b8c46ab.webp","section_text1":"Table mats","image_url":"shopify:\/\/collections\/table-mat"}},"74be5172-5bbc-4e81-a11d-548a701da7b4":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7138_398355e3-fdd4-4ee1-9598-a225ee3cc27d.webp","section_text1":"Sofa covers","image_url":"shopify:\/\/collections\/sofa-cover"}},"8bcc97bf-8f8d-4443-8866-a4df0478db0f":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7139_9eb64257-ce4a-4ae7-937a-212ba94b6a97.webp","section_text1":"Rugs","image_url":"shopify:\/\/collections\/rugs"}},"05e5b87d-1741-4369-8006-c58a177e8eb4":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7133_696d58bf-4a9e-41d9-9dd4-40bfbd18b8b1.webp","section_text1":"Runners","image_url":"shopify:\/\/collections\/floor-carpet-runner"}},"0b61259b-078f-47f4-b418-247dd985782c":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7134_8b192ddc-e714-4fa5-80e4-909a217773d4.webp","section_text1":"Yoga mats","image_url":"shopify:\/\/collections\/yogamats"}},"680e522a-3dd3-44cd-a8dd-fd26db71573c":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7013_f24d812b-20fb-4bc6-8108-b3f7ad8c7358.webp","section_text1":"Doormats","image_url":"shopify:\/\/collections\/door-mat"}},"c8ac6ca3-2a05-4580-87b3-b1c98d08ac93":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/Frame_7136_add42942-1bb4-4895-92b6-57477b3aa192.webp","section_text1":"Bathmats","image_url":"shopify:\/\/collections\/bathmat"}}},"block_order":["710bcfb3-a3da-4be0-b127-4b14c85ddb7b","14a7f546-de63-4a07-a808-8ff2e5ebd0cd","74be5172-5bbc-4e81-a11d-548a701da7b4","8bcc97bf-8f8d-4443-8866-a4df0478db0f","05e5b87d-1741-4369-8006-c58a177e8eb4","0b61259b-078f-47f4-b418-247dd985782c","680e522a-3dd3-44cd-a8dd-fd26db71573c","c8ac6ca3-2a05-4580-87b3-b1c98d08ac93"],"settings":{"section_heading":"Choose From Wide Range of Categories","section_info":"","banner_button_1":"Book Now"}},"why-bulk-order":{"type":"why-bulk-order","blocks":{"314ec2b6-df86-463c-9014-da7300617492":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/01.png","section_text1":"Wide Design Range"}},"46e08899-c18c-4581-8ad7-c2c4f6bd1460":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/02.png","section_text1":"Premium Quality"}},"8ebd6724-c013-4bb3-9187-515b1e905ffe":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/03.png","section_text1":"Affordable Price"}},"f46e0dc7-0d08-412b-8904-e2893c9e5cd7":{"type":"image","settings":{"image1":"shopify:\/\/shop_images\/04.png","section_text1":"Easy Return"}}},"block_order":["314ec2b6-df86-463c-9014-da7300617492","46e08899-c18c-4581-8ad7-c2c4f6bd1460","8ebd6724-c013-4bb3-9187-515b1e905ffe","f46e0dc7-0d08-412b-8904-e2893c9e5cd7"],"settings":{"section_heading":"Why Bulk Order with us?","section_info":"Here’s why you should choose us for your next bulk order","section_info2":"We ensure a timely & quality delivery for every order placed with Saral Home."}},"bulk-order-request":{"type":"bulk-order-request","settings":{"section_heading":"Share your bulk order request"}},"bulk-order-customer":{"type":"bulk-order-customer","blocks":{"1813cf0c-0d80-402a-8931-133d1b2c17e3":{"type":"review","settings":{"reviewer_name":"Nikhil","text":"It's a good product design and absorbance is decent enough.","date":"23\/01\/2022"}},"4bf8ca3b-a514-40f4-94ca-8132e81982ce":{"type":"review","settings":{"reviewer_name":"Gurpreet","text":"It's very soft, light weight, washable. Size is also perfect.","date":"24\/05\/2022"}},"971f8226-b095-45e5-8358-74c5cf6ded6a":{"type":"review","settings":{"reviewer_name":"Mahi","text":"Very nice product. Good to use in table. Material is also good.","date":"1\/08\/2022"}}},"block_order":["1813cf0c-0d80-402a-8931-133d1b2c17e3","4bf8ca3b-a514-40f4-94ca-8132e81982ce","971f8226-b095-45e5-8358-74c5cf6ded6a"],"settings":{"section_heading":"Customer Testimonials"}},"8083d295-e552-42e8-828a-b2cf3ec30f31":{"type":"home-carousal","blocks":{"54f8fbaf-33d0-4034-9515-0d23b368d7c4":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-66ee78ec6077f.webp","btn-text":"BEDDINGS","link":"https:\/\/saralhome.com\/collections\/covers-quilts"}},"8e46fc94-6929-4c59-9f8a-22ce27269afb":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-1-66ee78ec5aff0.webp","btn-text":"BATHMATS","link":"https:\/\/saralhome.com\/collections\/bathmat"}},"b9307abe-dfbf-40e6-bc67-23392f3e24f5":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-2-66ee78edb45f2.webp","btn-text":"CURTAINS","link":"https:\/\/saralhome.com\/collections\/curtains"}},"b1332690-c473-4f74-876b-468ae2fafef3":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-3-66ee78edd949f.webp","btn-text":"FLOOR RUNNERS","link":"https:\/\/saralhome.com\/collections\/floor-carpet-runner"}},"334fe0f7-0594-42d8-a0bb-7d6e0929f58f":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-4-66ee78ef42b48.webp","btn-text":"MATS","link":"https:\/\/saralhome.com\/collections\/mats"}},"7c4abb51-3d18-4b72-9db6-08b250709b76":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-5-66ee78ef7098b.webp","btn-text":"SOFA COVERS","link":"https:\/\/saralhome.com\/collections\/sofa-cushion-covers"}},"a43767e4-edd0-478e-9893-f1ae8ab73f60":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-6-66ee78f0ab4cc.webp","btn-text":"FUN KIDS","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"0661cdd0-f4c1-4cc0-8e82-cda6240ca31e":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/container-7-66ee78f0d36f0.webp","btn-text":"RUGS & CARPETS","link":"https:\/\/saralhome.com\/collections\/carpet-for-living-room"}}},"block_order":["54f8fbaf-33d0-4034-9515-0d23b368d7c4","8e46fc94-6929-4c59-9f8a-22ce27269afb","b9307abe-dfbf-40e6-bc67-23392f3e24f5","b1332690-c473-4f74-876b-468ae2fafef3","334fe0f7-0594-42d8-a0bb-7d6e0929f58f","7c4abb51-3d18-4b72-9db6-08b250709b76","a43767e4-edd0-478e-9893-f1ae8ab73f60","0661cdd0-f4c1-4cc0-8e82-cda6240ca31e"],"settings":{"heading":"BUDGET FRIENDLY CHOICES","sub-heading":""}},"63003b79-4ef6-41fa-809a-3026e42a56bf":{"type":"ship-info-section","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Frame_6838.jpg","heading":"We ship","sub-heading":"Direct To Customer","content-1":"We offer high-quality, affordable home goods that are delivered straight to your door. We believe that everyone deserves to have beautiful, comfortable home goods without having to pay a premium. That's why we offer our products at a fraction of the cost of traditional retailers. That's why all of our products are made from sustainable materials.","in-content-image":"shopify:\/\/shop_images\/image_437.png","in-content-heading":"Standard 100 Certified","content-2":""}},"2065659c-5bca-4c13-888d-381ed895b60e":{"type":"shop-by-category_new","blocks":{"2065659c-5bca-4c13-888d-381ed895b60e-collection-2":{"type":"collection","settings":{"collection":"new-arrivals-september-2024","title":"New Arrivals"}},"2065659c-5bca-4c13-888d-381ed895b60e-collection-3":{"type":"collection","settings":{"collection":"best-seller-2023","title":"Best Selling"}}},"block_order":["2065659c-5bca-4c13-888d-381ed895b60e-collection-2","2065659c-5bca-4c13-888d-381ed895b60e-collection-3"],"settings":{"section_width":"default-width","heading":"","sub_heading":"","text":"","text_align":"center","max_number_desktop":"4","max_number_tablet":"3","max_number_mobile":"1","arrows":"desktop_display_mobile_hide","dots":"desktop_display_mobile_hide","extra-btn-text-mob":"","extra-btn-link-mob":"","extra-btn-text-desk":"","extra-btn-link-desk":""}},"8e3b3f5b-82cc-46cb-8f57-64777bc94674":{"type":"instafeed","settings":{"heading_size":20,"feed_width":100,"html_area":""}},"94b55726-ded0-46dc-8508-1b86b6050510":{"type":"whatmore","custom_css":["@media (max-width: 500px) {.whatmore-carousel-events > div > p {font-size: 24px; }}"],"settings":{"heading":"Take a closer look","template-type":"template-a","show-views":"show","color-primary":"#2c2c2c","color-secondary":"#1398e3","title-font":"inter_n4","primary-font":"inter_n4","title-font-size":36,"landscape-padding":40,"top-bottom-padding":20,"scroll-video-tile-size":80}},"e36b7cb4-d63b-41e2-b3d9-176807057cb4":{"type":"whatmore","disabled":true,"settings":{"heading":"Watch and Buy!","template-type":"template-a","show-views":"show","color-primary":"#000000","color-secondary":"#000000","title-font":"noto_serif_n4","primary-font":"noto_serif_n4","title-font-size":22,"landscape-padding":40,"top-bottom-padding":20,"scroll-video-tile-size":80}},"f82b449c-3755-489c-aded-8fdec846e22e":{"type":"home-featured-banner","blocks":{"f82b449c-3755-489c-aded-8fdec846e22e-slide-1":{"type":"slide","settings":{"mob_image":"shopify:\/\/shop_images\/Custom_size_carpets.jpg","desk_image":"shopify:\/\/shop_images\/custom-size-carpets-1-66ee72be2e587.webp","pageurl":"shopify:\/\/collections\/customization","ul":"","banner_heading":"","banner_subHeading":"","banner_button":"","text_position_desktop":"center","text_position_mobile":"center","text_bg_color":"#e7e7e7","button_bg":"default","btn_gap":40}}},"block_order":["f82b449c-3755-489c-aded-8fdec846e22e-slide-1"],"settings":{"section_width":"full-width","bottom_gap":true,"section_border":"default","show_arrows":false,"show_dots":false,"enable_autoplay":false,"autoplay_duration":5,"dots_bg":"#cbcbcb","dots_bg_active":"#000000"}},"main-product_new_template":{"type":"main-product_new_template","settings":{"gallery_size":"6","sidebar":"off","enable_sticky_sidebar":true,"show_tabs":true,"show_tab_description":true,"show_tab_reviews":true,"scrolling_to_opened_tab":false,"tabs_type":"tabs"}},"related-product-section":{"type":"related-product-section","settings":{"heading":"","sub-heading-1":"Related Products","sub-heading-2":""}},"top-rated-product-section":{"type":"top-rated-product-section","settings":{"heading":"","sub-heading-1":"Top Rated Product","sub-heading-2":"","button-text":"","button-link":"","collection":"top-rated-picks"}},"product_carousal_kids_CjPF9W":{"type":"product_carousal_kids","blocks":{"carousal_images_LmLMLz":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-66ee7cab5cdef.webp","btn-text":"Peppa Pig","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_DbVwiE":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-66ee78f21bd88.webp","btn-text":"Paw Patrol","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_Xqz7LK":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-1-66ee78f22ca47.webp","btn-text":"Transformers","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_xYPmRR":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-2-66ee78f374b64.webp","btn-text":"Unicorn","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_VnX8Rb":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-3-66ee78f37d715.webp","btn-text":"Dinosaur","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_6QnjcN":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-4-66ee78f4b8021.webp","btn-text":"Baby Shark","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_bUV7WA":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-5-66ee78f4c8a36.webp","btn-text":"Shaped Mat","link":"https:\/\/saralhome.com\/collections\/fun-kids"}},"carousal_images_wdRt8H":{"type":"carousal-images","settings":{"image":"shopify:\/\/shop_images\/kids-carpets-imgjpg-6-66ee78f6299cf.webp","btn-text":"Explore More","link":"https:\/\/saralhome.com\/collections\/fun-kids"}}},"block_order":["carousal_images_LmLMLz","carousal_images_DbVwiE","carousal_images_Xqz7LK","carousal_images_xYPmRR","carousal_images_VnX8Rb","carousal_images_6QnjcN","carousal_images_bUV7WA","carousal_images_wdRt8H"],"settings":{"heading":"PLAYFUL AND PRACTICAL DECOR FOR KIDS","sub-heading":""}},"offer_boxes_8dMEzn":{"type":"offer_boxes","disabled":true,"settings":{}},"homepage_videobanner_DL698U":{"type":"homepage-videobanner","settings":{"desk_video":"shopify:\/\/files\/videos\/Saralweb.mp4","mob_video":"shopify:\/\/files\/videos\/saral web.mp4"}},"custom_ship_info_section_eMNPLb":{"type":"customShip-info-section","custom_css":[],"settings":{"desk_video":"shopify:\/\/files\/videos\/DGERGEG.mp4","mob_video":"shopify:\/\/files\/videos\/DGERGEG.mp4","heading":"WE SHIP","sub-heading":"DIRECT TO CUSTOMER","content-1":"We offer high-quality, affordable home goods that are delivered straight to your door. We believe that everyone deserves to have beautiful, comfortable home goods without having to pay a premium. That's why we offer our products at a fraction of the cost of traditional retailers. That's why all of our products are made from sustainable materials.","in-content-image":"shopify:\/\/shop_images\/image_437_e4aea916-e6a8-48a7-ab54-26102c01dd18.png","in-content-heading":"Standard 100 Certified"}},"custom_banner_bmLaXj":{"type":"custom-banner","settings":{"desk-img":"shopify:\/\/shop_images\/banner-desk.png","mob-img":"shopify:\/\/shop_images\/banner-mobile.png"}}},"content_for_index":["homepage_videobanner_DL698U","3989a779-4058-4af9-9182-d6761cd4f425","94b55726-ded0-46dc-8508-1b86b6050510","offer_boxes_8dMEzn","custom_banner_bmLaXj","2065659c-5bca-4c13-888d-381ed895b60e","f82b449c-3755-489c-aded-8fdec846e22e","product_carousal_kids_CjPF9W","e36b7cb4-d63b-41e2-b3d9-176807057cb4","63003b79-4ef6-41fa-809a-3026e42a56bf","custom_ship_info_section_eMNPLb","8083d295-e552-42e8-828a-b2cf3ec30f31","8e3b3f5b-82cc-46cb-8f57-64777bc94674"],"blocks":{"16510219240223340300":{"type":"shopify:\/\/apps\/whatmore-live\/blocks\/app-embed\/20db8a72-315a-4364-8885-64219ee48303","disabled":false,"settings":{"minimized_video_position":"left","horizontal-padding":5,"vertical-padding":5,"app-size":30,"minimized_video_position_landscape":"left","horizontal-padding-landscape":5,"vertical-padding-landscape":5,"app-size-landscape":50,"video-title":"watch & shop","use-variant":"false","primary-font":"sans-serif","color-secondary":"#1398E3"}},"10605408327587305396":{"type":"shopify:\/\/apps\/eg-auto-add-to-cart\/blocks\/app-embed\/0f7d4f74-1e89-4820-aec4-6564d7e535d2","disabled":false,"settings":{"version":"v3"}},"14060646107696862457":{"type":"shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","disabled":false,"settings":{}}}}}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "collect": "best-selling-items",
+    "hed": "Best Sellers",
+    "purchase_code": "31b8e1db-e82b-4c66-b6dc-9803e2a906de",
+    "presentation_enable": false,
+    "logo_types": "svg",
+    "logo_svg_file": "svg-logo-sticky2",
+    "logo_width": 100,
+    "logo_mobile_svg_file": "svg-logo-sticky2",
+    "logo_mobile_width": 72,
+    "logo_sticky_svg_file": "svg-logo-sticky2",
+    "logo_sticky_image": "shopify://shop_images/image_1_Traced.png",
+    "logo_sticky_width": 34,
+    "logo_footer_svg_file": "svg-logo-sticky",
+    "logo_footer_image": "",
+    "logo_footer_width": 64,
+    "logo_footer_mobile_svg_file": "svg-logo-sticky",
+    "logo_footer_mobile_image": "shopify://shop_images/image_1_Traced.png",
+    "logo_footer_mobile_width": 64,
+    "favicon": "shopify://shop_images/FAV_32x32_f74cc440-3548-495d-9f07-38696309d3a2.png",
+    "layout_container": "fullwidth",
+    "layout_show_breadcrumbs": true,
+    "layout_pagination_type": "infinite_scroll",
+    "layout_enable_rtl": false,
+    "layout_images_lazyload": true,
+    "layout_settings_file": "default",
+    "layout_age_confirmation": false,
+    "layout_age_confirmation_image": "",
+    "layout_age_confirmation_image_width": 600,
+    "layout_age_confirmation_checkbox": true,
+    "color_theme_primary": "",
+    "color_theme_body": "",
+    "color_theme_c": "",
+    "color_theme_head_c": "",
+    "color_theme_link_c": "",
+    "color_theme": "",
+    "color_theme2": "",
+    "color_theme3": "",
+    "color_theme4": "",
+    "color_theme5": "",
+    "color_theme6": "",
+    "color_theme7": "",
+    "color_theme8": "",
+    "color_theme9": "",
+    "color_theme10": "",
+    "color_theme11": "",
+    "color_theme12": "",
+    "font_base": "work_sans_n4",
+    "font_base_apply_to_all": true,
+    "font_base_type": "none",
+    "font_size_body": 13,
+    "font_heading": "noto_serif_n4",
+    "font_heading_type": "none",
+    "font_size_h1": 44,
+    "font_size_h2": 32,
+    "font_size_h3": 24,
+    "font_size_h4": 18,
+    "font_size_h5": 15,
+    "font_size_h6": 13,
+    "font_button": "garamond_n4",
+    "font_size_button": 13,
+    "font_size_input": 13,
+    "font_menu": "garamond_n4",
+    "font_size_menu": 13,
+    "font_size_menu_list": 13,
+    "font_size_menu_title": 15,
+    "font_size_menu_mobile": 15,
+    "font_load_alternative": false,
+    "font_alternative": "garamond_n4",
+    "font_alternative_type": "none",
+    "collection_show_sidebar": "desktop_and_mobile",
+    "collection_sidebar_position": "dropdown",
+    "collection_enable_sticky": true,
+    "product_format_pjpg": true,
+    "product_cursor": "",
+    "product_show_custom_options": true,
+    "product_enable_variants_section": true,
+    "product_hide_options_without_availability_variants": false,
+    "product_variant_auto_select": "enable",
+    "product_auto_selected_options": "",
+    "product_options_listing_visibility": "all",
+    "product_variant_change_on_hover": true,
+    "product_options_type_circle_color": "Color",
+    "product_options_type_circle_image": "Select color",
+    "product_options_type_square_color": "Colour",
+    "product_options_type_square_image": "Material 2",
+    "product_options_type_select": "Select",
+    "product_options_type_large_text": "Size",
+    "product_collection_image_height_percent": 128,
+    "product_collection_image_size": "contain",
+    "product_collection_image_border_radius": 0,
+    "product_replace_images_hover": true,
+    "product_collection_show_label_in_stock": false,
+    "product_collection_show_label_pre_order": true,
+    "product_collection_show_label_out_stock": true,
+    "product_collection_show_label_sale": true,
+    "product_collection_show_label_new": true,
+    "product_collection_show_label_hot": true,
+    "product_collection_centered_info": false,
+    "product_collection_more_info_type": "vendor",
+    "product_collection_show_title": true,
+    "product_collection_show_price": true,
+    "product_collection_show_button_quick_view": true,
+    "product_collection_show_countdown": true,
+    "product_collection_show_images_navigation": true,
+    "product_collection_show_options": true,
+    "product_collection_show_quantity": false,
+    "product_collection_show_button_add_to_cart": true,
+    "product_collection_show_button_add_to_wishlist": true,
+    "product_collection_show_button_add_to_compare": true,
+    "product_collection_show_reviews": true,
+    "product_collection_hide_reviews_counter": true,
+    "product_collection_hide_reviews_mobile_counter": true,
+    "product_collection_show_sku": true,
+    "product_collection_show_barcode": false,
+    "product_collection_show_availability": true,
+    "product_collection_show_type": true,
+    "product_collection_show_vendor": true,
+    "product_collection_show_description": true,
+    "product_collection_list_show_quantity": false,
+    "product_info_layout": "1",
+    "product_info_show_mobile_thumbnails": true,
+    "product_info_show_btn_fullscreen": true,
+    "product_info_show_btn_video": true,
+    "product_info_video_autoplay": true,
+    "product_info_enable_zoom": true,
+    "product_info_zoom_scale_coef": 2,
+    "product_info_gallery_height_and_size_path": "collection",
+    "product_info_gallery_height_percent": 128,
+    "product_info_gallery_grouped": "tag",
+    "product_info_show_label_in_stock": false,
+    "product_info_show_label_pre_order": false,
+    "product_info_show_label_out_stock": false,
+    "product_info_show_label_sale": false,
+    "product_info_show_label_new": false,
+    "product_info_show_label_hot": false,
+    "product_info_show_collections": false,
+    "product_info_show_title": true,
+    "product_info_show_reviews": false,
+    "product_info_hide_reviews_counter": false,
+    "product_info_show_sku": false,
+    "product_info_show_barcode": false,
+    "product_info_show_availability": false,
+    "product_info_show_type": false,
+    "product_info_show_vendor": false,
+    "product_info_show_price": true,
+    "product_info_show_sale_details": true,
+    "product_info_show_taxes": false,
+    "product_info_payment_terms": false,
+    "product_info_show_countdown": false,
+    "product_info_show_stock_countdown": false,
+    "product_info_show_stock_countdown_range": false,
+    "product_stock_countdown_min": 10,
+    "product_info_show_delivery_countdown": false,
+    "product_info_show_visitors": false,
+    "product_visitors_min": 10,
+    "product_visitors_max": 25,
+    "product_visitors_stroke": 4,
+    "product_visitors_interval_min": 2,
+    "product_visitors_interval_max": 6,
+    "product_info_show_top_border": false,
+    "product_info_show_options": true,
+    "product_info_show_size_guide": false,
+    "product_info_size_guide_page_content": "",
+    "product_info_show_delivery_return": false,
+    "product_info_delivery_return_page_content": "",
+    "product_info_show_message": false,
+    "product_info_show_notes": false,
+    "product_info_show_quantity": true,
+    "product_info_button_layout": "3",
+    "product_info_show_button_add_to_cart": true,
+    "product_info_show_button_add_to_wishlist": false,
+    "product_info_show_button_add_to_compare": false,
+    "product_info_show_free_shipping": true,
+    "product_info_show_payments": true,
+    "product_info_show_social_share_buttons": false,
+    "product_info_social_share_buttons_type": "1",
+    "product_info_page_show_usage_info_sidebar": true,
+    "product_footbar_enable": true,
+    "product_footbar_show_title": true,
+    "product_footbar_show_price": true,
+    "product_footbar_show_reviews": true,
+    "product_footbar_show_options": true,
+    "product_footbar_show_quantity": true,
+    "product_footbar_show_button_add_to_cart": true,
+    "search_show": true,
+    "search_show_only_products": true,
+    "search_ajax": true,
+    "price_show_sale_separator": false,
+    "show_multiple_currencies": false,
+    "currency_format": "money_with_currency_format",
+    "supported_currencies": "USD EUR GBP",
+    "supported_currencies_short_names": "US($)|UE(€)|BP(£)",
+    "supported_currencies_full_names": "USD - US Dollar|EUR - Euro|GBP - British Pound",
+    "default_currency": "USD",
+    "cart_show_header_button": true,
+    "cart_ajax": true,
+    "cart_icon": "",
+    "cart_popup_enable": true,
+    "cart_popup_show_quantity_input": true,
+    "cart_show_vendor": false,
+    "cart_show_notes": true,
+    "cart_show_free_shipping": false,
+    "cart_free_shipping_value": "20000",
+    "shipping_calculator": "Enabled",
+    "shipping_calculator_default_country": "United States",
+    "compare_show_description": true,
+    "compare_show_collection": true,
+    "compare_show_availability": true,
+    "compare_show_product_type": true,
+    "compare_show_vendor": true,
+    "compare_show_sku": true,
+    "compare_show_barcode": true,
+    "compare_show_options": true,
+    "compare_description_max_size": 100,
+    "social_share_image": "shopify://shop_images/Frame_7.1_2.png",
+    "social_facebook": "",
+    "social_twitter": "",
+    "social_instagram": "",
+    "social_pinterest": "",
+    "social_youtube": "",
+    "social_behance": "",
+    "social_skype": "",
+    "social_share_enable_facebook": true,
+    "social_share_enable_twitter": true,
+    "social_share_enable_pinterest": true,
+    "social_share_enable_linkedin": true,
+    "social_share_enable_buffer": true,
+    "social_share_enable_reddit": true,
+    "subscription_method": "shopify",
+    "subscription_mailchimp_form_action": "//myshopify.us18.list-manage.com/subscribe/post?u=8a50b61e56896303a04d0243e&amp;id=3c3d06b907",
+    "subscription_popup_enable": false,
+    "subscription_popup_layout": "4",
+    "subscription_popup_show_icon": true,
+    "subscription_popup_text_line_01": "ULTIMATE SALE",
+    "subscription_popup_text_line_02": "20%Off",
+    "subscription_popup_text_line_03": "All Clothing. Limited time offer!",
+    "subscription_popup_text_line_04": "",
+    "subscription_popup_show_form": false,
+    "subscription_popup_text_input_placeholder": "Enter Please Your Email Address",
+    "subscription_popup_text_submit_button_text": "SUBSCRIBE!",
+    "subscription_popup_text_button": "SHOP NOW!",
+    "subscription_popup_text_dont_show_again": "",
+    "subscription_popup_text_close": "NO, THANK YOU",
+    "subscription_popup_image": "shopify://shop_images/subscription-03.jpg",
+    "subscription_popup_image_width": 600,
+    "subscription_popup_image_format_pjpg": true,
+    "subscription_popup_insert_image": "",
+    "subscription_popup_insert_image_width": 200,
+    "subscription_popup_insert_image_format_pjpg": false,
+    "subscription_popup_link": "shopify://collections/womens",
+    "subscription_popup_show_once": "true",
+    "subscription_popup_delay": 4,
+    "subscription_popup_cookies_life": "1",
+    "subscription_confirmation_popup_enable": true,
+    "subscription_confirmation_popup_success_message": "Thanks for subscribing!",
+    "subscription_confirmation_popup_success_button": "Continue shopping",
+    "blog_show_sidebar": "hide",
+    "blog_sidebar_position": "right",
+    "blog_enable_sticky": true,
+    "article_show_sidebar": "hide",
+    "article_sidebar_position": "right",
+    "article_enable_sticky": true,
+    "account_show_header_button": true,
+    "account_popup_enable": false,
+    "account_popup_sign_up_info_page_content": "",
+    "account_popup_show_subscription": true,
+    "account_page_sing_up_page_content": "",
+    "services_show_header_button": true,
+    "services_popup_enable": true,
+    "services_popup_page_content": "",
+    "app_language": "links_list",
+    "app_language_link_list": "languages",
+    "button_border_radius": 0,
+    "input_border_radius": 0,
+    "promobox_image_border_radius": 0,
+    "promobox_format_pjpg": true,
+    "notification_cookies_enable": false,
+    "notification_cookies_button_information_link": "",
+    "notification_cookies_delay": 0,
+    "notification_cookies_show_once": false,
+    "notification_cookies_cookies_life": "1",
+    "notification_products_enable": true,
+    "notification_products_collection": "featured",
+    "notification_products_range_min": 2,
+    "notification_products_range_max": 20,
+    "notification_products_delay": 8,
+    "notification_products_interval_min": 10,
+    "notification_products_interval_max": 18,
+    "notification_products_time_life": 14,
+    "layout_preloader_image": "",
+    "layout_preloader_image_size": 50,
+    "layout_preloader_opacity": 0.8,
+    "promobox_animation_duration": 0.5,
+    "tooltips_enable": false,
+    "tooltips_animation_type": "scale",
+    "header_animation_sticky_opacity": 0.9,
+    "header_tape_animation_duration": 0,
+    "product_hover_animation_type": "fade",
+    "buttons_animation_icon_enable": false,
+    "button_add_to_cart_animation_enable": false,
+    "dev_enable_custom_css": false,
+    "dev_enable_custom_js": false,
+    "checkout_logo_image": "shopify://shop_images/svg-logo-sticky2.svg",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#63453d",
+    "checkout_button_color": "#63453d",
+    "checkout_error_color": "#e32c2b",
+    "product_info_show_text_countdown": true,
+    "product_text_countdown_reset_time": 2,
+    "product_text_countdown_delivery_time": 3,
+    "product_text_countdown_delivery_format": "Day DD/MM/YYYY",
+    "product_text_countdown_delivery_excludes": "Saturday, Sunday",
+    "layout_enable_preloader": false,
+    "product_set_first_image_by_variant": true,
+    "javascript_loader_jquery_first": true,
+    "product_show_review_loading": false,
+    "product_collection_hide_empty_reviews": true,
+    "product_info_hide_empty_reviews": true,
+    "collection_tag_filters_logic": "and",
+    "collection_only_available": false,
+    "collection_enable_fullwidth_head_section": true,
+    "collection_enable_product_carousel_section": true,
+    "collection_builder_mode": "",
+    "product_info_description_place": "tabs",
+    "product_button_addtocart_size": "default",
+    "product_info_page_enable_sticky_gallery": true,
+    "product_info_page_show_button_dynamic_checkout": true,
+    "product_info_page_show_dynamic_checkout_confirmation": true,
+    "product_info_page_styled_dynamic_checkout": true,
+    "product_info_page_show_related_products": true,
+    "product_info_page_sidebar": "off",
+    "product_info_page_enable_sticky_sidebar": true,
+    "color_skin": "default",
+    "color_theme_paragraph_c": "",
+    "color_theme_link_act_c": "",
+    "typography_skin": "default",
+    "dev_enable_content_for_header": true,
+    "product_info_show_arrows": true,
+    "product_info_quick_show_full_details": true,
+    "product_info_payments_type": "dark",
+    "wishlist_enable": true,
+    "compare_enable": true,
+    "payment_footer_sequence": "1,2,3,4,5,6,7,8,9",
+    "payment_product_sequence": "10,11,12,1,2,3,4,5,6,7,8,9",
+    "payment_icon_1_show": true,
+    "payment_icon_1_code": "",
+    "payment_icon_1_image": "",
+    "payment_icon_1_url": "",
+    "payment_icon_1_tooltip": "",
+    "payment_icon_2_show": true,
+    "payment_icon_2_code": "",
+    "payment_icon_2_image": "",
+    "payment_icon_2_url": "",
+    "payment_icon_2_tooltip": "",
+    "payment_icon_3_show": true,
+    "payment_icon_3_code": "",
+    "payment_icon_3_image": "",
+    "payment_icon_3_url": "",
+    "payment_icon_3_tooltip": "",
+    "payment_icon_4_show": true,
+    "payment_icon_4_code": "",
+    "payment_icon_4_image": "",
+    "payment_icon_4_url": "",
+    "payment_icon_4_tooltip": "",
+    "payment_icon_5_show": true,
+    "payment_icon_5_code": "",
+    "payment_icon_5_image": "",
+    "payment_icon_5_url": "",
+    "payment_icon_5_tooltip": "",
+    "payment_icon_6_show": true,
+    "payment_icon_6_code": "",
+    "payment_icon_6_image": "",
+    "payment_icon_6_url": "",
+    "payment_icon_6_tooltip": "",
+    "payment_icon_7_show": true,
+    "payment_icon_7_code": "",
+    "payment_icon_7_image": "",
+    "payment_icon_7_url": "",
+    "payment_icon_7_tooltip": "",
+    "payment_icon_8_show": true,
+    "payment_icon_8_code": "",
+    "payment_icon_8_image": "",
+    "payment_icon_8_url": "",
+    "payment_icon_8_tooltip": "",
+    "payment_icon_9_show": true,
+    "payment_icon_9_code": "",
+    "payment_icon_9_image": "",
+    "payment_icon_9_url": "",
+    "payment_icon_9_tooltip": "",
+    "payment_icon_10_show": true,
+    "payment_icon_10_code": "",
+    "payment_icon_10_image": "",
+    "payment_icon_10_url": "",
+    "payment_icon_10_tooltip": "",
+    "payment_icon_11_show": true,
+    "payment_icon_11_code": "",
+    "payment_icon_11_image": "",
+    "payment_icon_11_url": "",
+    "payment_icon_11_tooltip": "",
+    "payment_icon_12_show": true,
+    "payment_icon_12_code": "",
+    "payment_icon_12_image": "",
+    "payment_icon_12_url": "",
+    "payment_icon_12_tooltip": "",
+    "social_share_facebook": "#",
+    "social_share_twitter": "#",
+    "social_share_pinterest": "#",
+    "social_share_linkedin": "#",
+    "social_share_buffer": "#",
+    "social_share_reddit": "#",
+    "subscription_confirmation_popup_button_type": "1",
+    "show_free_shipping": true,
+    "social_google": "",
+    "sections": {
+      "product-variants": {
+        "type": "product-variants",
+        "blocks": {
+          "1582766687353": {
+            "type": "option_images",
+            "settings": {
+              "product": "sweater-with-slogan",
+              "property_value_1": "Colour|Pink",
+              "property_value_2": "Colour|White",
+              "property_value_3": "",
+              "property_value_4": "",
+              "property_value_5": "",
+              "property_value_6": "",
+              "property_value_7": "",
+              "property_value_8": "",
+              "property_value_9": "",
+              "property_value_10": ""
+            }
+          },
+          "1582767119041": {
+            "type": "option_images",
+            "settings": {
+              "product": "jersey-graphic-tee",
+              "property_value_1": "Select color|LightPink",
+              "property_value_2": "Select color|Gainsboro",
+              "property_value_3": "",
+              "property_value_4": "",
+              "property_value_5": "",
+              "property_value_6": "",
+              "property_value_7": "",
+              "property_value_8": "",
+              "property_value_9": "",
+              "property_value_10": ""
+            }
+          },
+          "1582767138198": {
+            "type": "option_images",
+            "settings": {
+              "product": "round-neck-sweater",
+              "property_value_1": "Select color|Black",
+              "property_value_2": "Select color|Yellow",
+              "property_value_3": "Select color|Pink",
+              "property_value_4": "Select color|White",
+              "property_value_5": "",
+              "property_value_6": "",
+              "property_value_7": "",
+              "property_value_8": "",
+              "property_value_9": "",
+              "property_value_10": ""
+            }
+          },
+          "1582767162351": {
+            "type": "option_images",
+            "settings": {
+              "product": "trainers-with-heel-detail",
+              "property_value_1": "Color|PowderBlue",
+              "property_value_2": "Color|Pink",
+              "property_value_3": "",
+              "property_value_4": "",
+              "property_value_5": "",
+              "property_value_6": "",
+              "property_value_7": "",
+              "property_value_8": "",
+              "property_value_9": "",
+              "property_value_10": ""
+            }
+          },
+          "1582767223711": {
+            "type": "option_images",
+            "settings": {
+              "product": "hoodie-with-slogan",
+              "property_value_1": "Colour|Black",
+              "property_value_2": "Colour|Gainsboro",
+              "property_value_3": "",
+              "property_value_4": "",
+              "property_value_5": "",
+              "property_value_6": "",
+              "property_value_7": "",
+              "property_value_8": "",
+              "property_value_9": "",
+              "property_value_10": ""
+            }
+          },
+          "1582769733910": {
+            "type": "option_colors",
+            "settings": {
+              "product": "belted-chino-trousers",
+              "property_value_1": "Color|Green",
+              "color_1": "#337563",
+              "property_value_2": "Color|Pink",
+              "color_2": "#e7c7c2",
+              "property_value_3": "Color|Gainsboro",
+              "color_3": "#d5d2d1",
+              "property_value_4": "",
+              "color_4": "",
+              "property_value_5": "",
+              "color_5": "",
+              "property_value_6": "",
+              "color_6": "",
+              "property_value_7": "",
+              "color_7": "",
+              "property_value_8": "",
+              "color_8": "",
+              "property_value_9": "",
+              "color_9": "",
+              "property_value_10": "",
+              "color_10": ""
+            }
+          }
+        },
+        "block_order": [
+          "1582766687353",
+          "1582767119041",
+          "1582767138198",
+          "1582767162351",
+          "1582767223711",
+          "1582769733910"
+        ],
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "new_announcement_bar_gWekgN": {
+            "type": "new_announcement_bar",
+            "settings": {
+              "title_1": "ld",
+              "title_2": "lkkh"
+            }
+          },
+          "1525791872612": {
+            "type": "tape",
+            "disabled": true,
+            "settings": {
+              "delay": 0,
+              "style": "1",
+              "transparent_bg": false,
+              "content": "offer"
+            }
+          },
+          "1527372910910": {
+            "type": "megamenu",
+            "settings": {
+              "for_item": "Layouts",
+              "grid": 2,
+              "second_level_column": false,
+              "second_level_column_size": 24,
+              "wrap": false,
+              "wrapper_grid": 12,
+              "column_left_type": "none",
+              "column_left_size": 0,
+              "column_right_type": "2",
+              "column_right_size": 0,
+              "enable_width_limit": false,
+              "width_limit": 630
+            }
+          },
+          "1527384342086": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "NEW IN",
+              "text_line_2": "Spring/Summer 2020 Collection",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-2-2",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527385504306": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "SALE & SPECIAL OFFERS",
+              "text_line_2": "Get up to 20% off",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-2-2",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527373213741": {
+            "type": "megamenu",
+            "settings": {
+              "for_item": "Shop",
+              "grid": 2,
+              "second_level_column": false,
+              "second_level_column_size": 20,
+              "wrap": false,
+              "wrapper_grid": 12,
+              "column_left_type": "none",
+              "column_left_size": 0,
+              "column_right_type": "8/12-4/12",
+              "column_right_size": 0,
+              "enable_width_limit": false,
+              "width_limit": 630
+            }
+          },
+          "1527432364326": {
+            "type": "megamenu_products",
+            "settings": {
+              "title": "Featured products",
+              "collection": "featured",
+              "products_per_row": "2",
+              "products_rows": 1
+            }
+          },
+          "1583964796904": {
+            "type": "megamenu_brands",
+            "settings": {
+              "title": "Top brands",
+              "url": "/collections/womens?q=vd_:Calvin%20Klein",
+              "size_of_images": "2",
+              "image_size_1": 80,
+              "url_1": "https://shella-demo.myshopify.com/collections/vendors?q=Calvin%20Klein",
+              "image_size_2": 80,
+              "url_2": "https://shella-demo.myshopify.com/collections/vendors?q=Chanel",
+              "image_size_3": 80,
+              "url_3": "https://shella-demo.myshopify.com/collections/vendors?q=Dior",
+              "image_size_4": 80,
+              "url_4": "https://shella-demo.myshopify.com/collections/vendors?q=Giorgio%20Armani",
+              "image_size_5": 80,
+              "url_5": "https://shella-demo.myshopify.com/collections/vendors?q=Levi%27s",
+              "image_size_6": 80,
+              "url_6": "https://shella-demo.myshopify.com/collections/vendors?q=Versace",
+              "image_size_7": 80,
+              "url_7": "",
+              "image_size_8": 80,
+              "url_8": "",
+              "image_size_9": 80,
+              "url_9": "",
+              "image_size_10": 80,
+              "url_10": ""
+            }
+          },
+          "1527373220764": {
+            "type": "megamenu",
+            "settings": {
+              "for_item": "Women's",
+              "grid": 2,
+              "second_level_column": false,
+              "second_level_column_size": 50,
+              "wrap": false,
+              "wrapper_grid": 12,
+              "column_left_type": "none",
+              "column_left_size": 0,
+              "column_right_type": "2*2",
+              "column_right_size": 0,
+              "enable_width_limit": false,
+              "width_limit": 630
+            }
+          },
+          "1527418910812": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "NEW IN",
+              "text_line_2": "Spring/Summer 2020 Collection",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "Button text",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-3",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527420420060": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "SALE & SPECIAL OFFERS",
+              "text_line_2": "Get up to 20% off",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "Button text",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-3",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527420550360": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "FEATURED",
+              "text_line_2": "Popular Items",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "Button text",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-3",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527420557049": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "COMING SOON",
+              "text_line_2": "Autumn 2020 Collection",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "Button text",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-3",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527373227613": {
+            "type": "megamenu",
+            "settings": {
+              "for_item": "Men's",
+              "grid": 2,
+              "second_level_column": false,
+              "second_level_column_size": 10,
+              "wrap": false,
+              "wrapper_grid": 12,
+              "column_left_type": "1",
+              "column_left_size": 0,
+              "column_right_type": "1",
+              "column_right_size": 0,
+              "enable_width_limit": false,
+              "width_limit": 630
+            }
+          },
+          "1527385990580": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "NEW IN",
+              "text_line_2": "Spring/Summer 2020 Collection",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-2-2",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527386066314": {
+            "type": "megamenu_promobox",
+            "settings": {
+              "title": "",
+              "url": "shopify://collections",
+              "image_size": 400,
+              "color_image_mask": "",
+              "image_mask_opacity": 0.5,
+              "text_line_1": "SALE & SPECIAL OFFERS",
+              "text_line_2": "Get up to 20% off",
+              "text_line_3": "Text line 3",
+              "style": "3",
+              "button_1": "Button text",
+              "button_1_url": "",
+              "color_button_type_1": "default",
+              "button_2": "Button text #2",
+              "button_2_url": "",
+              "color_button_type_2": "default",
+              "list_1": "",
+              "custom_html": "",
+              "type": "type-3",
+              "content_position": "center",
+              "content_align": "center",
+              "animation_to": "center",
+              "animation_from": "none",
+              "animation_opacity": "none",
+              "customization_class": ""
+            }
+          },
+          "1527422624107": {
+            "type": "megamenu_title_image",
+            "settings": {
+              "for_item": "Men's+Clothing",
+              "image_size": 170,
+              "for_item_2": "Men's+Shoes",
+              "image_size_2": 200,
+              "for_item_3": "Men's+Accessories",
+              "image_size_3": 200,
+              "for_item_4": "",
+              "image_size_4": 200,
+              "for_item_5": "",
+              "image_size_5": 200
+            }
+          },
+          "1543698183190": {
+            "type": "megamenu_label",
+            "settings": {
+              "type": "hot",
+              "text": "",
+              "for_item": "Layouts+Layouts+Home V1",
+              "for_item_2": "Layouts+Layouts+Home V3",
+              "for_item_3": "Layouts+Layouts+Home V6",
+              "for_item_4": "Women's+Shoes+Heels",
+              "for_item_5": "Layouts+Layouts+Home V17",
+              "for_item_6": "Layouts+Skins+Skin 4 - One Product",
+              "for_item_7": "Shop+Collection layouts+Look book",
+              "for_item_8": "Shop+Single Product Layouts+3D Models and Video",
+              "for_item_9": "Layouts+Skins+Skin 12 - Cannabis",
+              "for_item_10": "Shop+Collection layouts+List Products V2",
+              "for_item_11": "Shop+Single Product Layouts+Pre Order",
+              "for_item_12": "Layouts+Layouts+Home V18",
+              "for_item_13": "Shop+Product options+Gallery width",
+              "for_item_14": "",
+              "for_item_15": ""
+            }
+          },
+          "1527438870190": {
+            "type": "megamenu_label",
+            "settings": {
+              "type": "new",
+              "text": "",
+              "for_item": "Women's+Clothing+Dresses",
+              "for_item_2": "Shop+product options+Custom Image, Text",
+              "for_item_3": "Layouts+Layouts+Home V18",
+              "for_item_4": "Shop+Collection layouts+List Products V2",
+              "for_item_5": "Shop+Single Product Layouts+Pre Order",
+              "for_item_6": "Layouts+Skins+Skin 12 - Cannabis",
+              "for_item_7": "Layouts+Layouts+Home V16",
+              "for_item_8": "Layouts+Layouts+Home V17",
+              "for_item_9": "Shop+Single Product Layouts+Product V5 — Grid",
+              "for_item_10": "Layouts+Skins+Skin 13 - Wine",
+              "for_item_11": "Layouts+Skins+Skin 14 - Food Delivery",
+              "for_item_12": "Layouts+Skins+Skin 15 - Lenses",
+              "for_item_13": "Layouts+Skins+Skin 16 - Cakes",
+              "for_item_14": "Layouts+Skins+Skin 17 - Plants",
+              "for_item_15": "Layouts+Skins+Skin 18 - Pasta"
+            }
+          },
+          "1582328455745": {
+            "type": "megamenu_label",
+            "settings": {
+              "type": "new",
+              "text": "SLIDER",
+              "for_item": "Layouts+Layouts+Home V8",
+              "for_item_2": "",
+              "for_item_3": "",
+              "for_item_4": "",
+              "for_item_5": "",
+              "for_item_6": "",
+              "for_item_7": "",
+              "for_item_8": "",
+              "for_item_9": "",
+              "for_item_10": "",
+              "for_item_11": "",
+              "for_item_12": "",
+              "for_item_13": "",
+              "for_item_14": "",
+              "for_item_15": ""
+            }
+          },
+          "1567840286505": {
+            "type": "megamenu_label",
+            "settings": {
+              "type": "sale",
+              "text": "ACTIVE",
+              "for_item": "Layouts+Layouts+Home V1",
+              "for_item_2": "",
+              "for_item_3": "",
+              "for_item_4": "",
+              "for_item_5": "",
+              "for_item_6": "",
+              "for_item_7": "",
+              "for_item_8": "",
+              "for_item_9": "",
+              "for_item_10": "",
+              "for_item_11": "",
+              "for_item_12": "",
+              "for_item_13": "",
+              "for_item_14": "",
+              "for_item_15": ""
+            }
+          },
+          "1591272472793": {
+            "type": "megamenu_label",
+            "settings": {
+              "type": "sale",
+              "text": "SALE",
+              "for_item": "Buy now!",
+              "for_item_2": "Men's+clothing+jackets",
+              "for_item_3": "Men's+Shoes",
+              "for_item_4": "",
+              "for_item_5": "",
+              "for_item_6": "",
+              "for_item_7": "",
+              "for_item_8": "",
+              "for_item_9": "",
+              "for_item_10": "",
+              "for_item_11": "",
+              "for_item_12": "",
+              "for_item_13": "",
+              "for_item_14": "",
+              "for_item_15": ""
+            }
+          },
+          "1593945756616": {
+            "type": "menu",
+            "settings": {
+              "for_item": "Gallery",
+              "menu": ""
+            }
+          }
+        },
+        "block_order": [
+          "new_announcement_bar_gWekgN",
+          "1525791872612",
+          "1527372910910",
+          "1527384342086",
+          "1527385504306",
+          "1527373213741",
+          "1527432364326",
+          "1583964796904",
+          "1527373220764",
+          "1527418910812",
+          "1527420420060",
+          "1527420550360",
+          "1527420557049",
+          "1527373227613",
+          "1527385990580",
+          "1527386066314",
+          "1527422624107",
+          "1543698183190",
+          "1527438870190",
+          "1582328455745",
+          "1567840286505",
+          "1591272472793",
+          "1593945756616"
+        ],
+        "settings": {
+          "announcement": "Free same-day delivery for all orders before 3pm!",
+          "type": "2",
+          "slider_collection": "",
+          "slider_heading": "",
+          "style": "1",
+          "transparent_bg": "disable",
+          "logo_mobile_centered": true,
+          "height": 70,
+          "items_padding": 0,
+          "menu": "main-menu",
+          "show_menu_arrows": true,
+          "show_menu_hover_underline": false,
+          "vertical_menu": "",
+          "fixed_vertical_menu": false,
+          "additional_line_info_page_content": "",
+          "sticky": "desktop_and_mobile",
+          "desktop_sticky_type": "slim",
+          "hide_sticky_when_scroll_down": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1586284608625": {
+            "type": "subscription",
+            "settings": {
+              "title": "NEWS | EVENTS | OFFERS & NEW ADDITION TO MENU",
+              "paragraph": "SIGN UP TO OUR NEWSLETTER",
+              "placeholder": "Enter Your Email Address",
+              "button_text": "SUBSCRIBE!"
+            }
+          },
+          "1586284525260": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "menu",
+              "show_title_on_desktop": true,
+              "menu": "main-menu",
+              "size": 0,
+              "rows_limit": 0
+            }
+          },
+          "1586284527889": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "",
+              "show_title_on_desktop": true,
+              "menu": "",
+              "size": 0,
+              "rows_limit": 0
+            }
+          },
+          "1586284530934": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "",
+              "show_title_on_desktop": true,
+              "menu": "",
+              "size": 0,
+              "rows_limit": 0
+            }
+          },
+          "1586284576772": {
+            "type": "custom_html",
+            "disabled": true,
+            "settings": {
+              "title": "Here to help",
+              "show_title_on_desktop": true,
+              "page_content": ""
+            }
+          },
+          "1586284588048": {
+            "type": "social_media",
+            "disabled": true,
+            "settings": {
+              "title": "Follow us",
+              "show_facebook": true,
+              "show_twitter": true,
+              "show_instagram": true,
+              "show_pinterest": true,
+              "show_youtube": true,
+              "show_behance": true,
+              "show_skype": true
+            }
+          },
+          "footer-0": {
+            "type": "copyright",
+            "disabled": true,
+            "settings": {
+              "page_content": "include-footer-copyright-3"
+            }
+          },
+          "1586284627913": {
+            "type": "payments",
+            "disabled": true,
+            "settings": {}
+          },
+          "list_FDCyHe": {
+            "type": "list",
+            "settings": {
+              "list_title": "Bed Covers",
+              "list_url": "https://saralhome.com/collections/bedcovers"
+            }
+          },
+          "list_idLcwp": {
+            "type": "list",
+            "settings": {
+              "list_title": "Bedsheet",
+              "list_url": "https://saralhome.com/collections/bedsheet"
+            }
+          },
+          "list_ED4BNr": {
+            "type": "list",
+            "settings": {
+              "list_title": "Cotton Bedsheet",
+              "list_url": "https://saralhome.com/collections/cotton-bedsheets"
+            }
+          },
+          "list_iFpD7e": {
+            "type": "list",
+            "settings": {
+              "list_title": "Combo Bedsheets",
+              "list_url": "https://saralhome.com/collections/combo"
+            }
+          },
+          "list_FXUdQQ": {
+            "type": "list",
+            "settings": {
+              "list_title": "Bedding Sets",
+              "list_url": "https://saralhome.com/collections/bedding"
+            }
+          },
+          "list_zKp4bL": {
+            "type": "list",
+            "settings": {
+              "list_title": "Cover Quilts",
+              "list_url": ""
+            }
+          },
+          "list_3ez9hr": {
+            "type": "list",
+            "settings": {
+              "list_title": "Curtains",
+              "list_url": "https://saralhome.com/collections/curtains"
+            }
+          },
+          "list_7m9Ckc": {
+            "type": "list",
+            "settings": {
+              "list_title": "Window Curtains",
+              "list_url": "https://saralhome.com/collections/window-curtains"
+            }
+          },
+          "list_Qw3YxH": {
+            "type": "list",
+            "settings": {
+              "list_title": "Door Curtains",
+              "list_url": "https://saralhome.com/collections/door-curtains"
+            }
+          },
+          "list_z4gBcR": {
+            "type": "list",
+            "settings": {
+              "list_title": "Sofa covers",
+              "list_url": "https://saralhome.com/collections/sofa-cover"
+            }
+          },
+          "list_ggATRX": {
+            "type": "list",
+            "settings": {
+              "list_title": "Cushions Covers",
+              "list_url": "https://saralhome.com/collections/cushions"
+            }
+          },
+          "list_nzBefG": {
+            "type": "list",
+            "settings": {
+              "list_title": "Sofa Cushion Covers",
+              "list_url": "https://saralhome.com/collections/sofa-cushion-covers"
+            }
+          },
+          "list_3QbQXN": {
+            "type": "list",
+            "settings": {
+              "list_title": "Mats",
+              "list_url": "https://saralhome.com/collections/mats"
+            }
+          },
+          "list_4Yddxj": {
+            "type": "list",
+            "settings": {
+              "list_title": "Tablemats",
+              "list_url": "https://saralhome.com/collections/table-mat"
+            }
+          },
+          "list_LtYfVD": {
+            "type": "list",
+            "settings": {
+              "list_title": "Bathmats",
+              "list_url": "https://saralhome.com/collections/bathmat"
+            }
+          },
+          "list_BjRb4i": {
+            "type": "list",
+            "settings": {
+              "list_title": "Door mats",
+              "list_url": "https://saralhome.com/collections/door-mat"
+            }
+          },
+          "list_xYD87G": {
+            "type": "list",
+            "settings": {
+              "list_title": "Yoga mats",
+              "list_url": "https://saralhome.com/collections/yogamats"
+            }
+          },
+          "list_FqGqJd": {
+            "type": "list",
+            "settings": {
+              "list_title": "Carpets",
+              "list_url": "https://saralhome.com/collections/carpet-for-living-room"
+            }
+          },
+          "list_N9hBDd": {
+            "type": "list",
+            "settings": {
+              "list_title": "Floor Carpet",
+              "list_url": "https://saralhome.com/collections/floor-runner"
+            }
+          },
+          "list_id6PDQ": {
+            "type": "list",
+            "settings": {
+              "list_title": "Carpets and Rugs",
+              "list_url": "https://saralhome.com/collections/rugs-carpet"
+            }
+          },
+          "list_zhn7UA": {
+            "type": "list",
+            "settings": {
+              "list_title": "Custom Carpet Rugs",
+              "list_url": "https://saralhome.com/collections/customization"
+            }
+          },
+          "list_xHTQrU": {
+            "type": "list",
+            "settings": {
+              "list_title": "Cotton Yoga Mats",
+              "list_url": "https://saralhome.com/collections/cotton-yoga-mats"
+            }
+          },
+          "list_9RBa6r": {
+            "type": "list",
+            "settings": {
+              "list_title": "Peppa Pigs",
+              "list_url": "https://saralhome.com/collections/peppa-pig"
+            }
+          },
+          "list_E7YRaY": {
+            "type": "list",
+            "settings": {
+              "list_title": "saral home sale",
+              "list_url": "https://saralhome.com/collections/sale-sale-sale"
+            }
+          },
+          "list_WprEgg": {
+            "type": "list",
+            "settings": {
+              "list_title": "Curtains",
+              "list_url": "https://saralhome.com/collections/curtains"
+            }
+          },
+          "list_nVf9xY": {
+            "type": "list",
+            "settings": {
+              "list_title": "Blackout Curtains",
+              "list_url": "https://saralhome.com/collections/blackout-curtains"
+            }
+          },
+          "list_r8UcMa": {
+            "type": "list",
+            "settings": {
+              "list_title": "Cotton Curtains",
+              "list_url": "https://saralhome.com/collections/cotton-curtains"
+            }
+          },
+          "list_LiRpj7": {
+            "type": "list",
+            "settings": {
+              "list_title": "sofa cover set",
+              "list_url": "https://saralhome.com/collections/sofa-cover"
+            }
+          },
+          "list_GtV8DA": {
+            "type": "list",
+            "settings": {
+              "list_title": "Carpets for living room",
+              "list_url": "https://saralhome.com/collections/carpet-for-living-room"
+            }
+          },
+          "list_QqipLh": {
+            "type": "list",
+            "settings": {
+              "list_title": "Exercise Mats",
+              "list_url": "https://saralhome.com/collections/exercise-mats"
+            }
+          },
+          "list_FzmrXh": {
+            "type": "list",
+            "settings": {
+              "list_title": "Bedside runner",
+              "list_url": "https://saralhome.com/collections/bedside-runners"
+            }
+          },
+          "list_WhfGPw": {
+            "type": "list",
+            "settings": {
+              "list_title": "King size bed sheets",
+              "list_url": "https://saralhome.com/collections/king-size-bedsheets"
+            }
+          },
+          "list_RhB6yK": {
+            "type": "list",
+            "settings": {
+              "list_title": "Queen Size Bedsheets",
+              "list_url": "shopify://collections/queen-size-bedsheets"
+            }
+          },
+          "list_nDdtFf": {
+            "type": "list",
+            "settings": {
+              "list_title": "Rugs Carpet",
+              "list_url": "https://saralhome.com/collections/rugs-carpet"
+            }
+          },
+          "list_agGa4N": {
+            "type": "list",
+            "settings": {
+              "list_title": "Runners",
+              "list_url": "https://saralhome.com/collections/floor-carpet-runner"
+            }
+          },
+          "list_UVQDea": {
+            "type": "list",
+            "settings": {
+              "list_title": "Table Runners",
+              "list_url": "https://saralhome.com/collections/table-runner"
+            }
+          }
+        },
+        "block_order": [
+          "1586284608625",
+          "1586284525260",
+          "1586284527889",
+          "1586284530934",
+          "1586284576772",
+          "1586284588048",
+          "footer-0",
+          "1586284627913",
+          "list_FDCyHe",
+          "list_idLcwp",
+          "list_ED4BNr",
+          "list_iFpD7e",
+          "list_FXUdQQ",
+          "list_zKp4bL",
+          "list_3ez9hr",
+          "list_7m9Ckc",
+          "list_Qw3YxH",
+          "list_z4gBcR",
+          "list_ggATRX",
+          "list_nzBefG",
+          "list_3QbQXN",
+          "list_4Yddxj",
+          "list_LtYfVD",
+          "list_BjRb4i",
+          "list_xYD87G",
+          "list_FqGqJd",
+          "list_N9hBDd",
+          "list_id6PDQ",
+          "list_zhn7UA",
+          "list_xHTQrU",
+          "list_9RBa6r",
+          "list_E7YRaY",
+          "list_WprEgg",
+          "list_nVf9xY",
+          "list_r8UcMa",
+          "list_LiRpj7",
+          "list_GtV8DA",
+          "list_QqipLh",
+          "list_FzmrXh",
+          "list_WhfGPw",
+          "list_RhB6yK",
+          "list_nDdtFf",
+          "list_agGa4N",
+          "list_UVQDea"
+        ],
+        "settings": {
+          "placeholder": "Enter Your Email Address",
+          "button_text": "SUBSCRIBE",
+          "txt1": "The design is in the details.",
+          "sub_txt1": "We stand behind what we make, designed to maximize longevity & minimize impact.",
+          "txt2": "In relentless pursuit of quality.",
+          "sub_txt2": "Masterfully crafted in India, using innovative fabrics from the world's top mills.",
+          "txt3": "Straightforward pricing.",
+          "sub_txt3": "We are upfront about how our materials is made. Same for pricing. No markups, no middlemen.",
+          "type": "3",
+          "style": "2",
+          "show_logo": true,
+          "show_button_back_to_top": false,
+          "enable_fixed": true
+        }
+      },
+      "carousel-products": {
+        "type": "carousel-products",
+        "blocks": {
+          "1586291186708": {
+            "type": "collection",
+            "settings": {
+              "title": "",
+              "collection": "trending-now-hp"
+            }
+          }
+        },
+        "block_order": [
+          "1586291186708"
+        ],
+        "settings": {
+          "show_title": true,
+          "container": "boxed",
+          "size_of_columns": "4",
+          "max_count": 6,
+          "autoplay": true,
+          "speed": 5,
+          "infinite": true,
+          "arrows": true,
+          "bullets": true
+        }
+      },
+      "carousel-related-products": {
+        "type": "carousel-related-products",
+        "settings": {
+          "type": "related",
+          "title": "Related Products",
+          "size_of_columns": "4",
+          "max_count": 6,
+          "autoplay": true,
+          "speed": 5,
+          "infinite": true,
+          "arrows": true,
+          "bullets": true
+        }
+      },
+      "product-fixed-sizebar": {
+        "type": "product-fixed-sizebar",
+        "blocks": {
+          "1586291806417": {
+            "type": "text_line",
+            "settings": {
+              "icon": "",
+              "text": "",
+              "min_value": "200",
+              "max_value": "500"
+            }
+          },
+          "1586291808135": {
+            "type": "text_line",
+            "settings": {
+              "icon": "",
+              "text": "",
+              "min_value": "30",
+              "max_value": "100"
+            }
+          },
+          "1586291810188": {
+            "type": "text_line",
+            "settings": {
+              "icon": "",
+              "text": "",
+              "min_value": "100",
+              "max_value": "200"
+            }
+          }
+        },
+        "block_order": [
+          "1586291806417",
+          "1586291808135",
+          "1586291810188"
+        ],
+        "settings": {}
+      },
+      "home-builder": {
+        "type": "home-builder",
+        "settings": {
+          "title": "",
+          "container": "boxed",
+          "size_of_columns": "1",
+          "margins_for_columns": "none",
+          "align_of_columns": "top_center",
+          "disable_column_paddings": false,
+          "precedence": "",
+          "customization_class": ""
+        }
+      },
+      "footer-bottom": {
+        "type": "footer-bottom",
+        "blocks": {
+          "0ae3af75-882a-4d2e-8e17-320ca8b0dfdd": {
+            "type": "menu",
+            "settings": {
+              "title": "Shop",
+              "show_title_on_desktop": true,
+              "menu": "main-menu",
+              "size": 0,
+              "rows_limit": 0
+            }
+          },
+          "0e98d693-1929-44ae-ada8-cd84f90e9c6a": {
+            "type": "menu",
+            "settings": {
+              "title": "Quick links",
+              "show_title_on_desktop": true,
+              "menu": "footer",
+              "size": 0,
+              "rows_limit": 0
+            }
+          },
+          "376ee7cc-9bf4-4842-8535-6201b79d569a": {
+            "type": "menu",
+            "disabled": true,
+            "settings": {
+              "title": "",
+              "show_title_on_desktop": true,
+              "menu": "",
+              "size": 0,
+              "rows_limit": 0
+            }
+          },
+          "2f104d20-4a50-44e8-bf34-ddbaa46909ba": {
+            "type": "custom_html",
+            "disabled": true,
+            "settings": {
+              "title": "Here to help",
+              "show_title_on_desktop": true,
+              "page_content": ""
+            }
+          },
+          "36f44e52-7727-457f-988a-47c4e1e05f46": {
+            "type": "social_media",
+            "settings": {
+              "title": "Social media",
+              "show_facebook": true,
+              "show_twitter": true,
+              "show_instagram": true,
+              "show_pinterest": false,
+              "show_youtube": false,
+              "show_behance": false,
+              "show_skype": false
+            }
+          },
+          "190cc8df-8461-4fb6-b9ad-9e9757e13a1b": {
+            "type": "copyright",
+            "settings": {
+              "page_content": ""
+            }
+          }
+        },
+        "block_order": [
+          "0ae3af75-882a-4d2e-8e17-320ca8b0dfdd",
+          "0e98d693-1929-44ae-ada8-cd84f90e9c6a",
+          "376ee7cc-9bf4-4842-8535-6201b79d569a",
+          "2f104d20-4a50-44e8-bf34-ddbaa46909ba",
+          "36f44e52-7727-457f-988a-47c4e1e05f46",
+          "190cc8df-8461-4fb6-b9ad-9e9757e13a1b"
+        ],
+        "settings": {
+          "type": "5",
+          "style": "1",
+          "show_logo": false,
+          "show_button_back_to_top": true,
+          "enable_fixed": true
+        }
+      },
+      "3989a779-4058-4af9-9182-d6761cd4f425": {
+        "type": "new-homepage-slider",
+        "blocks": {
+          "image_banner_KmdCd9": {
+            "type": "image-banner",
+            "settings": {
+              "mob_image": "shopify://shop_images/carpet-for-living-room.webp",
+              "desk_image": "shopify://shop_images/living-room-carpets.webp",
+              "link": "shopify://collections/carpet-for-living-room",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "url": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          },
+          "image_banner_inL4bn": {
+            "type": "image-banner",
+            "settings": {
+              "mob_image": "shopify://shop_images/blue-sofa-throw.webp",
+              "desk_image": "shopify://shop_images/sofa-throw.webp",
+              "link": "shopify://collections/sofa-cushion-covers",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "url": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          },
+          "image_banner_YVzEdG": {
+            "type": "image-banner",
+            "settings": {
+              "mob_image": "shopify://shop_images/bed-comforter.webp",
+              "desk_image": "shopify://shop_images/bedroom-comforter.webp",
+              "link": "shopify://collections/bedding",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "url": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          },
+          "image_banner_eUe3Yz": {
+            "type": "image-banner",
+            "settings": {
+              "mob_image": "shopify://shop_images/blue-bedsheet-for-bedroom.webp",
+              "desk_image": "shopify://shop_images/beautiful-bedsheet.webp",
+              "link": "shopify://collections/bedsheet",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "url": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          },
+          "image_banner_rqkwMQ": {
+            "type": "image-banner",
+            "settings": {
+              "mob_image": "shopify://shop_images/best-table-mats.webp",
+              "desk_image": "shopify://shop_images/dining-table-mats.webp",
+              "link": "shopify://collections/mats",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "url": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          },
+          "image_banner_D7eHna": {
+            "type": "image-banner",
+            "settings": {
+              "mob_image": "shopify://shop_images/designer-bedsheet.webp",
+              "desk_image": "shopify://shop_images/brown-bedsheet.webp",
+              "link": "shopify://collections/bedsheet",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "url": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          }
+        },
+        "block_order": [
+          "image_banner_KmdCd9",
+          "image_banner_inL4bn",
+          "image_banner_YVzEdG",
+          "image_banner_eUe3Yz",
+          "image_banner_rqkwMQ",
+          "image_banner_D7eHna"
+        ],
+        "disabled": true,
+        "settings": {
+          "section_width": "default-width",
+          "section_border": "curved",
+          "show_arrows": true,
+          "show_dots": true,
+          "dots_bg": "rgba(0,0,0,0)",
+          "dots_bg_active": "#000000"
+        }
+      },
+      "shop-drop": {
+        "type": "shop-drop",
+        "blocks": {
+          "d4e4553f-c0c3-4519-b6c3-c252b99ef0a4": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Bathmat_bb1d68da-8c52-49fd-9ba4-5feee13e4377.jpg",
+              "link_text": "Bathmats",
+              "link_sub_text": "Bloom everyday with anti-skid bathmats",
+              "link": "shopify://collections/bathmat",
+              "navigation": ""
+            }
+          },
+          "0986b8da-6783-4144-9642-33fced2b07b8": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Curtains_8b8daeed-c76f-470b-aa50-db5903221691.jpg",
+              "link_text": "Curtains",
+              "link_sub_text": "Easily add a chic, airy dimension to any space with these stylish curtains.",
+              "link": "shopify://collections/curtains",
+              "navigation": ""
+            }
+          },
+          "4f5c1b73-e375-40c7-93c8-871edb90f5da": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Runners_48570f93-f6c7-4779-8e5d-34c351389051.jpg",
+              "link_text": "Runners",
+              "link_sub_text": "Bring home the Elegant Runners to instantly Spruce up your Space.",
+              "link": "shopify://collections/floor-carpet-runner",
+              "navigation": ""
+            }
+          },
+          "3b29d52c-2c1f-421a-ab8a-2da1f45277f2": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Bad_covers.jpg",
+              "link_text": "Bed Covers",
+              "link_sub_text": "Gorgeous designs at unbeatable prices",
+              "link": "shopify://collections/bedcovers",
+              "navigation": ""
+            }
+          },
+          "0bb889ad-8baf-4f2d-90da-9775ad373e99": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Table_-_Door_-_Yoga_mats.jpg",
+              "link_text": "Table/Door/Yoga mats",
+              "link_sub_text": "Tablemats, Doormats & Yogamats",
+              "link": "shopify://collections/table-mat",
+              "navigation": ""
+            }
+          },
+          "11826279-677d-4621-b4af-9a0da0dcbf42": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Sofathrows_cushion_covers.jpg",
+              "link_text": "Sofathrows & Cushion Covers",
+              "link_sub_text": "Soft textured, vibrant colored designs for all",
+              "link": "shopify://collections/sofa-cushion-covers",
+              "navigation": ""
+            }
+          },
+          "7a2558aa-57a1-44af-97b5-70cedecee311": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Carpets_rugs.jpg",
+              "link_text": "Carpets & Rugs",
+              "link_sub_text": "Carpets & Rugs that make the house feel like home.",
+              "link": "https://saralhome.com/collections/carpet-for-living-room",
+              "navigation": ""
+            }
+          },
+          "497cd123-7e46-4de3-a330-e2dac757a7d9": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Customisation.jpg",
+              "link_text": "Customization",
+              "link_sub_text": "Customise your own carpets, rugs & yogamat to add life to your floors.",
+              "link": "shopify://collections/customization",
+              "navigation": ""
+            }
+          },
+          "1aee43b5-2dcd-4575-9bca-5d51bcabacd8": {
+            "type": "link",
+            "settings": {
+              "link_image": "shopify://shop_images/Fun_Kids_1.jpg",
+              "link_text": "Fun Kids",
+              "link_sub_text": "Vibrant, cool & Classy products for your kids right at your doorstep",
+              "link": "shopify://collections/fun-kids",
+              "navigation": ""
+            }
+          }
+        },
+        "block_order": [
+          "d4e4553f-c0c3-4519-b6c3-c252b99ef0a4",
+          "0986b8da-6783-4144-9642-33fced2b07b8",
+          "4f5c1b73-e375-40c7-93c8-871edb90f5da",
+          "3b29d52c-2c1f-421a-ab8a-2da1f45277f2",
+          "0bb889ad-8baf-4f2d-90da-9775ad373e99",
+          "11826279-677d-4621-b4af-9a0da0dcbf42",
+          "7a2558aa-57a1-44af-97b5-70cedecee311",
+          "497cd123-7e46-4de3-a330-e2dac757a7d9",
+          "1aee43b5-2dcd-4575-9bca-5d51bcabacd8"
+        ],
+        "settings": {
+          "drop_image": "shopify://shop_images/CD.png",
+          "link": "shopify://collections/customization",
+          "background_image": "shopify://shop_images/Mob_4.png",
+          "background_image2": "shopify://shop_images/Mob_4.png",
+          "main_text": "Fun Kids",
+          "secondary_text": "Vibrant, cool & Classy products for your kids right at your doorstep",
+          "image1": "shopify://shop_images/Pawpatrol.png",
+          "text1": "Paw Patrol",
+          "link1": "shopify://collections/paw-patrol",
+          "image2": "shopify://shop_images/peppa.png",
+          "text2": "Peppa Pig",
+          "link2": "shopify://collections/peppa-pig",
+          "image3": "shopify://shop_images/shark.png",
+          "text3": "Baby Shark",
+          "link3": "shopify://collections/baby-shark",
+          "image4": "shopify://shop_images/Unicorn.png",
+          "text4": "Unicorn",
+          "link4": "shopify://collections/unicorn",
+          "image5": "shopify://shop_images/Butterfly.png",
+          "text5": "Shapemats",
+          "link5": "shopify://collections/shape-mat",
+          "image6": "shopify://shop_images/dino.png",
+          "text6": "Dinosaur",
+          "link6": "shopify://collections/saral-home-dinosaur"
+        }
+      },
+      "bulk-order-banner": {
+        "type": "bulk-order-banner",
+        "settings": {
+          "m-image": "shopify://shop_images/rug_a4235e51-82a4-40bf-b905-2c9d8e335065.jpg",
+          "d-image": "shopify://shop_images/Rugs_D.jpg",
+          "banner_text_1": "Great Savings",
+          "banner_text_2": "Exclusive Price on Every Bulk order",
+          "banner_button_1": "Book Now",
+          "banner_text_3": "or",
+          "banner_button_2": "+91 81999 51914"
+        }
+      },
+      "bulk-order-specialize": {
+        "type": "bulk-order-specialize",
+        "blocks": {
+          "710bcfb3-a3da-4be0-b127-4b14c85ddb7b": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7135_0027998f-6f65-46f8-8bfd-f2d7869ba191.webp",
+              "section_text1": "Bedding",
+              "image_url": "shopify://collections/bedding"
+            }
+          },
+          "14a7f546-de63-4a07-a808-8ff2e5ebd0cd": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7137_23a11653-d7c5-42de-ae9a-74a23b8c46ab.webp",
+              "section_text1": "Table mats",
+              "image_url": "shopify://collections/table-mat"
+            }
+          },
+          "74be5172-5bbc-4e81-a11d-548a701da7b4": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7138_398355e3-fdd4-4ee1-9598-a225ee3cc27d.webp",
+              "section_text1": "Sofa covers",
+              "image_url": "shopify://collections/sofa-covers"
+            }
+          },
+          "8bcc97bf-8f8d-4443-8866-a4df0478db0f": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7139_9eb64257-ce4a-4ae7-937a-212ba94b6a97.webp",
+              "section_text1": "Rugs",
+              "image_url": "shopify://collections/rugs"
+            }
+          },
+          "05e5b87d-1741-4369-8006-c58a177e8eb4": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7133_696d58bf-4a9e-41d9-9dd4-40bfbd18b8b1.webp",
+              "section_text1": "Runners",
+              "image_url": "shopify://collections/floor-carpet-runner"
+            }
+          },
+          "0b61259b-078f-47f4-b418-247dd985782c": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7134_8b192ddc-e714-4fa5-80e4-909a217773d4.webp",
+              "section_text1": "Yoga mats",
+              "image_url": "shopify://collections/yogamats"
+            }
+          },
+          "680e522a-3dd3-44cd-a8dd-fd26db71573c": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7013_f24d812b-20fb-4bc6-8108-b3f7ad8c7358.webp",
+              "section_text1": "Doormats",
+              "image_url": "shopify://collections/door-mat"
+            }
+          },
+          "c8ac6ca3-2a05-4580-87b3-b1c98d08ac93": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/Frame_7136_add42942-1bb4-4895-92b6-57477b3aa192.webp",
+              "section_text1": "Bathmats",
+              "image_url": "shopify://collections/bathmat"
+            }
+          }
+        },
+        "block_order": [
+          "710bcfb3-a3da-4be0-b127-4b14c85ddb7b",
+          "14a7f546-de63-4a07-a808-8ff2e5ebd0cd",
+          "74be5172-5bbc-4e81-a11d-548a701da7b4",
+          "8bcc97bf-8f8d-4443-8866-a4df0478db0f",
+          "05e5b87d-1741-4369-8006-c58a177e8eb4",
+          "0b61259b-078f-47f4-b418-247dd985782c",
+          "680e522a-3dd3-44cd-a8dd-fd26db71573c",
+          "c8ac6ca3-2a05-4580-87b3-b1c98d08ac93"
+        ],
+        "settings": {
+          "section_heading": "Choose From Wide Range of Categories",
+          "section_info": "",
+          "banner_button_1": "Book Now"
+        }
+      },
+      "why-bulk-order": {
+        "type": "why-bulk-order",
+        "blocks": {
+          "314ec2b6-df86-463c-9014-da7300617492": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/01.png",
+              "section_text1": "Wide Design Range"
+            }
+          },
+          "46e08899-c18c-4581-8ad7-c2c4f6bd1460": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/02.png",
+              "section_text1": "Premium Quality"
+            }
+          },
+          "8ebd6724-c013-4bb3-9187-515b1e905ffe": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/03.png",
+              "section_text1": "Affordable Price"
+            }
+          },
+          "f46e0dc7-0d08-412b-8904-e2893c9e5cd7": {
+            "type": "image",
+            "settings": {
+              "image1": "shopify://shop_images/04.png",
+              "section_text1": "Easy Return"
+            }
+          }
+        },
+        "block_order": [
+          "314ec2b6-df86-463c-9014-da7300617492",
+          "46e08899-c18c-4581-8ad7-c2c4f6bd1460",
+          "8ebd6724-c013-4bb3-9187-515b1e905ffe",
+          "f46e0dc7-0d08-412b-8904-e2893c9e5cd7"
+        ],
+        "settings": {
+          "section_heading": "Why Bulk Order with us?",
+          "section_info": "Here’s why you should choose us for your next bulk order",
+          "section_info2": "We ensure a timely & quality delivery for every order placed with Saral Home."
+        }
+      },
+      "bulk-order-request": {
+        "type": "bulk-order-request",
+        "settings": {
+          "section_heading": "Share your bulk order request"
+        }
+      },
+      "bulk-order-customer": {
+        "type": "bulk-order-customer",
+        "blocks": {
+          "1813cf0c-0d80-402a-8931-133d1b2c17e3": {
+            "type": "review",
+            "settings": {
+              "reviewer_name": "Nikhil",
+              "text": "It's a good product design and absorbance is decent enough.",
+              "date": "23/01/2022"
+            }
+          },
+          "4bf8ca3b-a514-40f4-94ca-8132e81982ce": {
+            "type": "review",
+            "settings": {
+              "reviewer_name": "Gurpreet",
+              "text": "It's very soft, light weight, washable. Size is also perfect.",
+              "date": "24/05/2022"
+            }
+          },
+          "971f8226-b095-45e5-8358-74c5cf6ded6a": {
+            "type": "review",
+            "settings": {
+              "reviewer_name": "Mahi",
+              "text": "Very nice product. Good to use in table. Material is also good.",
+              "date": "1/08/2022"
+            }
+          }
+        },
+        "block_order": [
+          "1813cf0c-0d80-402a-8931-133d1b2c17e3",
+          "4bf8ca3b-a514-40f4-94ca-8132e81982ce",
+          "971f8226-b095-45e5-8358-74c5cf6ded6a"
+        ],
+        "settings": {
+          "section_heading": "Customer Testimonials"
+        }
+      },
+      "8083d295-e552-42e8-828a-b2cf3ec30f31": {
+        "type": "home-carousal",
+        "blocks": {
+          "54f8fbaf-33d0-4034-9515-0d23b368d7c4": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-66ee78ec6077f.webp",
+              "btn-text": "BEDDINGS",
+              "link": "https://saralhome.com/collections/covers-quilts"
+            }
+          },
+          "8e46fc94-6929-4c59-9f8a-22ce27269afb": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-1-66ee78ec5aff0.webp",
+              "btn-text": "BATHMATS",
+              "link": "https://saralhome.com/collections/bathmat"
+            }
+          },
+          "b9307abe-dfbf-40e6-bc67-23392f3e24f5": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-2-66ee78edb45f2.webp",
+              "btn-text": "CURTAINS",
+              "link": "https://saralhome.com/collections/curtains"
+            }
+          },
+          "b1332690-c473-4f74-876b-468ae2fafef3": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-3-66ee78edd949f.webp",
+              "btn-text": "FLOOR RUNNERS",
+              "link": "https://saralhome.com/collections/floor-carpet-runner"
+            }
+          },
+          "334fe0f7-0594-42d8-a0bb-7d6e0929f58f": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-4-66ee78ef42b48.webp",
+              "btn-text": "MATS",
+              "link": "https://saralhome.com/collections/mats"
+            }
+          },
+          "7c4abb51-3d18-4b72-9db6-08b250709b76": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-5-66ee78ef7098b.webp",
+              "btn-text": "SOFA COVERS",
+              "link": "https://saralhome.com/collections/sofa-cushion-covers"
+            }
+          },
+          "a43767e4-edd0-478e-9893-f1ae8ab73f60": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-6-66ee78f0ab4cc.webp",
+              "btn-text": "FUN KIDS",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "0661cdd0-f4c1-4cc0-8e82-cda6240ca31e": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/container-7-66ee78f0d36f0.webp",
+              "btn-text": "RUGS & CARPETS",
+              "link": "https://saralhome.com/collections/carpet-for-living-room"
+            }
+          }
+        },
+        "block_order": [
+          "54f8fbaf-33d0-4034-9515-0d23b368d7c4",
+          "8e46fc94-6929-4c59-9f8a-22ce27269afb",
+          "b9307abe-dfbf-40e6-bc67-23392f3e24f5",
+          "b1332690-c473-4f74-876b-468ae2fafef3",
+          "334fe0f7-0594-42d8-a0bb-7d6e0929f58f",
+          "7c4abb51-3d18-4b72-9db6-08b250709b76",
+          "a43767e4-edd0-478e-9893-f1ae8ab73f60",
+          "0661cdd0-f4c1-4cc0-8e82-cda6240ca31e"
+        ],
+        "settings": {
+          "heading": "BUDGET FRIENDLY CHOICES",
+          "sub-heading": ""
+        }
+      },
+      "63003b79-4ef6-41fa-809a-3026e42a56bf": {
+        "type": "ship-info-section",
+        "disabled": true,
+        "settings": {
+          "image": "shopify://shop_images/Frame_6838.jpg",
+          "heading": "We ship",
+          "sub-heading": "Direct To Customer",
+          "content-1": "We offer high-quality, affordable home goods that are delivered straight to your door. We believe that everyone deserves to have beautiful, comfortable home goods without having to pay a premium. That's why we offer our products at a fraction of the cost of traditional retailers. That's why all of our products are made from sustainable materials.",
+          "in-content-image": "shopify://shop_images/image_437.png",
+          "in-content-heading": "Standard 100 Certified",
+          "content-2": ""
+        }
+      },
+      "2065659c-5bca-4c13-888d-381ed895b60e": {
+        "type": "shop-by-category_new",
+        "blocks": {
+          "2065659c-5bca-4c13-888d-381ed895b60e-collection-2": {
+            "type": "collection",
+            "settings": {
+              "collection": "new-arrivals-september-2024",
+              "title": "New Arrivals"
+            }
+          },
+          "2065659c-5bca-4c13-888d-381ed895b60e-collection-3": {
+            "type": "collection",
+            "settings": {
+              "collection": "best-seller-2023",
+              "title": "Best Selling"
+            }
+          }
+        },
+        "block_order": [
+          "2065659c-5bca-4c13-888d-381ed895b60e-collection-2",
+          "2065659c-5bca-4c13-888d-381ed895b60e-collection-3"
+        ],
+        "settings": {
+          "section_width": "default-width",
+          "heading": "",
+          "sub_heading": "",
+          "text": "",
+          "text_align": "center",
+          "max_number_desktop": "4",
+          "max_number_tablet": "3",
+          "max_number_mobile": "1",
+          "arrows": "desktop_display_mobile_hide",
+          "dots": "desktop_display_mobile_hide",
+          "extra-btn-text-mob": "",
+          "extra-btn-link-mob": "",
+          "extra-btn-text-desk": "",
+          "extra-btn-link-desk": ""
+        }
+      },
+      "8e3b3f5b-82cc-46cb-8f57-64777bc94674": {
+        "type": "instafeed",
+        "settings": {
+          "heading_size": 20,
+          "feed_width": 100,
+          "html_area": ""
+        }
+      },
+      "94b55726-ded0-46dc-8508-1b86b6050510": {
+        "type": "whatmore",
+        "custom_css": [
+          "@media (max-width: 500px) {.whatmore-carousel-events > div > p {font-size: 24px; }}"
+        ],
+        "settings": {
+          "heading": "Take a closer look",
+          "template-type": "template-a",
+          "show-views": "show",
+          "color-primary": "#2c2c2c",
+          "color-secondary": "#1398e3",
+          "title-font": "inter_n4",
+          "primary-font": "inter_n4",
+          "title-font-size": 36,
+          "landscape-padding": 40,
+          "top-bottom-padding": 20,
+          "scroll-video-tile-size": 80
+        }
+      },
+      "e36b7cb4-d63b-41e2-b3d9-176807057cb4": {
+        "type": "whatmore",
+        "disabled": true,
+        "settings": {
+          "heading": "Watch and Buy!",
+          "template-type": "template-a",
+          "show-views": "show",
+          "color-primary": "#000000",
+          "color-secondary": "#000000",
+          "title-font": "noto_serif_n4",
+          "primary-font": "noto_serif_n4",
+          "title-font-size": 22,
+          "landscape-padding": 40,
+          "top-bottom-padding": 20,
+          "scroll-video-tile-size": 80
+        }
+      },
+      "f82b449c-3755-489c-aded-8fdec846e22e": {
+        "type": "home-featured-banner",
+        "blocks": {
+          "f82b449c-3755-489c-aded-8fdec846e22e-slide-1": {
+            "type": "slide",
+            "settings": {
+              "mob_image": "shopify://shop_images/Custom_size_carpets.jpg",
+              "desk_image": "shopify://shop_images/custom-size-carpets-1-66ee72be2e587.webp",
+              "pageurl": "shopify://collections/customization",
+              "ul": "",
+              "banner_heading": "",
+              "banner_subHeading": "",
+              "banner_button": "",
+              "text_position_desktop": "center",
+              "text_position_mobile": "center",
+              "text_bg_color": "#e7e7e7",
+              "button_bg": "default",
+              "btn_gap": 40
+            }
+          }
+        },
+        "block_order": [
+          "f82b449c-3755-489c-aded-8fdec846e22e-slide-1"
+        ],
+        "settings": {
+          "section_width": "full-width",
+          "bottom_gap": true,
+          "section_border": "default",
+          "show_arrows": false,
+          "show_dots": false,
+          "enable_autoplay": false,
+          "autoplay_duration": 5,
+          "dots_bg": "#cbcbcb",
+          "dots_bg_active": "#000000"
+        }
+      },
+      "main-product_new_template": {
+        "type": "main-product_new_template",
+        "settings": {
+          "gallery_size": "6",
+          "sidebar": "off",
+          "enable_sticky_sidebar": true,
+          "show_tabs": true,
+          "show_tab_description": true,
+          "show_tab_reviews": true,
+          "scrolling_to_opened_tab": false,
+          "tabs_type": "tabs"
+        }
+      },
+      "related-product-section": {
+        "type": "related-product-section",
+        "settings": {
+          "heading": "",
+          "sub-heading-1": "Related Products",
+          "sub-heading-2": ""
+        }
+      },
+      "top-rated-product-section": {
+        "type": "top-rated-product-section",
+        "settings": {
+          "heading": "",
+          "sub-heading-1": "Top Rated Product",
+          "sub-heading-2": "",
+          "button-text": "",
+          "button-link": "",
+          "collection": "top-rated-picks"
+        }
+      },
+      "product_carousal_kids_CjPF9W": {
+        "type": "product_carousal_kids",
+        "blocks": {
+          "carousal_images_LmLMLz": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-66ee7cab5cdef.webp",
+              "btn-text": "Peppa Pig",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_DbVwiE": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-66ee78f21bd88.webp",
+              "btn-text": "Paw Patrol",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_Xqz7LK": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-1-66ee78f22ca47.webp",
+              "btn-text": "Transformers",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_xYPmRR": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-2-66ee78f374b64.webp",
+              "btn-text": "Unicorn",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_VnX8Rb": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-3-66ee78f37d715.webp",
+              "btn-text": "Dinosaur",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_6QnjcN": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-4-66ee78f4b8021.webp",
+              "btn-text": "Baby Shark",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_bUV7WA": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-5-66ee78f4c8a36.webp",
+              "btn-text": "Shaped Mat",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          },
+          "carousal_images_wdRt8H": {
+            "type": "carousal-images",
+            "settings": {
+              "image": "shopify://shop_images/kids-carpets-imgjpg-6-66ee78f6299cf.webp",
+              "btn-text": "Explore More",
+              "link": "https://saralhome.com/collections/fun-kids"
+            }
+          }
+        },
+        "block_order": [
+          "carousal_images_LmLMLz",
+          "carousal_images_DbVwiE",
+          "carousal_images_Xqz7LK",
+          "carousal_images_xYPmRR",
+          "carousal_images_VnX8Rb",
+          "carousal_images_6QnjcN",
+          "carousal_images_bUV7WA",
+          "carousal_images_wdRt8H"
+        ],
+        "settings": {
+          "heading": "PLAYFUL AND PRACTICAL DECOR FOR KIDS",
+          "sub-heading": ""
+        }
+      },
+      "offer_boxes_8dMEzn": {
+        "type": "offer_boxes",
+        "disabled": true,
+        "settings": {}
+      },
+      "homepage_videobanner_DL698U": {
+        "type": "homepage-videobanner",
+        "settings": {
+          "desk_video": "shopify://files/videos/Saralweb.mp4",
+          "mob_video": "shopify://files/videos/saral web.mp4"
+        }
+      },
+      "custom_ship_info_section_eMNPLb": {
+        "type": "customShip-info-section",
+        "custom_css": [],
+        "settings": {
+          "desk_video": "shopify://files/videos/DGERGEG.mp4",
+          "mob_video": "shopify://files/videos/DGERGEG.mp4",
+          "heading": "WE SHIP",
+          "sub-heading": "DIRECT TO CUSTOMER",
+          "content-1": "We offer high-quality, affordable home goods that are delivered straight to your door. We believe that everyone deserves to have beautiful, comfortable home goods without having to pay a premium. That's why we offer our products at a fraction of the cost of traditional retailers. That's why all of our products are made from sustainable materials.",
+          "in-content-image": "shopify://shop_images/image_437_e4aea916-e6a8-48a7-ab54-26102c01dd18.png",
+          "in-content-heading": "Standard 100 Certified"
+        }
+      },
+      "custom_banner_bmLaXj": {
+        "type": "custom-banner",
+        "settings": {
+          "desk-img": "shopify://shop_images/banner-desk.png",
+          "mob-img": "shopify://shop_images/banner-mobile.png"
+        }
+      }
+    },
+    "content_for_index": [
+      "homepage_videobanner_DL698U",
+      "3989a779-4058-4af9-9182-d6761cd4f425",
+      "94b55726-ded0-46dc-8508-1b86b6050510",
+      "offer_boxes_8dMEzn",
+      "custom_banner_bmLaXj",
+      "2065659c-5bca-4c13-888d-381ed895b60e",
+      "f82b449c-3755-489c-aded-8fdec846e22e",
+      "product_carousal_kids_CjPF9W",
+      "e36b7cb4-d63b-41e2-b3d9-176807057cb4",
+      "63003b79-4ef6-41fa-809a-3026e42a56bf",
+      "custom_ship_info_section_eMNPLb",
+      "8083d295-e552-42e8-828a-b2cf3ec30f31",
+      "8e3b3f5b-82cc-46cb-8f57-64777bc94674"
+    ],
+    "blocks": {
+      "16510219240223340300": {
+        "type": "shopify://apps/whatmore-live/blocks/app-embed/20db8a72-315a-4364-8885-64219ee48303",
+        "disabled": false,
+        "settings": {
+          "minimized_video_position": "left",
+          "horizontal-padding": 5,
+          "vertical-padding": 5,
+          "app-size": 30,
+          "minimized_video_position_landscape": "left",
+          "horizontal-padding-landscape": 5,
+          "vertical-padding-landscape": 5,
+          "app-size-landscape": 50,
+          "video-title": "watch & shop",
+          "use-variant": "false"
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  }
+}
